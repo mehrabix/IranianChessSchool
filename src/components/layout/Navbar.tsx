@@ -32,6 +32,8 @@ import {
   LogOut,
   Menu,
   ChessKnight,
+  Shield,
+  BookOpen,
 } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
@@ -43,6 +45,7 @@ const navLinks = [
   { href: '/blog', labelKey: 'blog', icon: FileText },
   { href: '/contact', labelKey: 'contact', icon: Mail },
   { href: '/pricing', labelKey: 'pricing', icon: CreditCard },
+  { href: '/courses', labelKey: 'courses', icon: BookOpen },
 ];
 
 export function Navbar() {
@@ -97,6 +100,15 @@ export function Navbar() {
                   <ChevronRight className="h-4 w-4" />
                   My Progress
                 </DropdownMenuItem>
+                {session.user?.role === 'ADMIN' && (
+                  <>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem render={<Link href="/admin" />}>
+                      <Shield className="h-4 w-4" />
+                      Admin
+                    </DropdownMenuItem>
+                  </>
+                )}
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={() => signOut()} className="text-destructive focus:text-destructive">
                   <LogOut className="h-4 w-4 mr-2" />
@@ -140,6 +152,14 @@ export function Navbar() {
                 <>
                   <div className="my-4 mx-3 h-px bg-border" />
                   <div className="px-3 py-2 text-sm text-muted-foreground">Logged in as {session.user?.name}</div>
+                  {session.user?.role === 'ADMIN' && (
+                    <Link href="/admin"
+                      className="flex items-center gap-3 px-3 py-2.5 text-base font-medium rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-all"
+                    >
+                      <Shield className="h-5 w-5 shrink-0" />
+                      Admin
+                    </Link>
+                  )}
                 </>
               )}
             </SheetContent>
