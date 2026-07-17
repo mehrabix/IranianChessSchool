@@ -20,6 +20,19 @@ Every feature/component MUST have tests before marking complete:
 
 Test files live next to source code. Use `pnpm test:unit`, `pnpm test:e2e`, or `pnpm test:all`.
 
+## Agents
+- `@code-review` — Reviews code for best practices, security, and issues (read-only)
+- `@debug` — Investigates build errors, runtime bugs, and test failures (read-only)
+- `@docs` — Writes and maintains documentation, locale files
+- `@test` — Runs unit, integration, and E2E tests
+
+## MCP Tools
+- `playwright` — Browser automation for E2E testing
+- `context7` — Search through library/framework docs
+- `gh_grep` — Search code examples on GitHub
+
+When you need to search docs or find code examples, use `context7` or `gh_grep` tools.
+
 ## Important
 - Never commit secrets or .env files
 - Follow the MASTERPLAN.md for phase roadmap
