@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Container } from '@/components/ui/container';
 import {
   ChessKnight, BookOpen, Users, Trophy, BarChart3, MessageCircle,
   Target, Sparkles, ChevronRight, Star, CheckCircle2, GraduationCap,
@@ -39,7 +40,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-200/20 via-transparent to-transparent pointer-events-none" />
         <div className="absolute top-20 right-20 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl" />
-        <div className="container relative z-10 py-20">
+        <Container size="xl" className="relative z-10 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border bg-emerald-50/50 text-sm font-medium text-emerald-700">
@@ -51,8 +52,8 @@ export default function HomePage() {
                 <span className="block text-emerald-600 mt-2">Think Deeper</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
-                Stop jumping between random YouTube videos and blitz games. 
-                Follow a structured curriculum designed by titled coaches 
+                Stop jumping between random YouTube videos and blitz games.
+                Follow a structured curriculum designed by titled coaches
                 that actually <span className="font-semibold text-foreground">builds real chess understanding</span>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -97,11 +98,11 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className="py-16 md:py-20 border-y bg-card/50">
-        <div className="container">
+        <Container size="lg">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center space-y-2">
@@ -111,11 +112,11 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className="py-20 md:py-28">
-        <div className="container">
+        <Container size="lg">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
               More Than Just a Course
@@ -140,11 +141,11 @@ export default function HomePage() {
               </Card>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className="py-20 md:py-28 bg-gradient-to-b from-emerald-50/30 to-background">
-        <div className="container">
+        <Container size="lg">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <Badge variant="secondary" className="px-4 py-1.5 text-sm">Structured Path</Badge>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
@@ -169,11 +170,11 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className="py-20 md:py-28">
-        <div className="container">
+        <Container size="lg">
           <div className="max-w-4xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
@@ -213,17 +214,17 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className="py-20 md:py-28 bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-900 text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_rgba(255,255,255,0.1)_0%,_transparent_50%)]" />
-        <div className="container relative z-10 text-center space-y-8 max-w-3xl mx-auto">
+        <Container size="lg" className="relative z-10 text-center space-y-8 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Ready to Transform Your Chess?
           </h2>
           <p className="text-lg text-emerald-100/80 max-w-xl mx-auto">
-            Join 1200+ students already improving with our structured program. 
+            Join 1200+ students already improving with our structured program.
             Start your 7-day free trial today.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -239,7 +240,7 @@ export default function HomePage() {
             </Link>
           </div>
           <p className="text-sm text-emerald-100/60">No commitment. Cancel anytime. Free for 7 days.</p>
-        </div>
+        </Container>
       </section>
     </>
   );
