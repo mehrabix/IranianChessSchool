@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "kids": "Kids",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Contact",
+    "pricing": "Pricing",
+    "signIn": "Sign In",
+    "tryFree": "Try Free",
+    "signOut": "Sign Out"
+  },
+  "footer": {
+    "description": "Master the game, think deeper. Structured chess training for all levels with real coaches and a supportive community.",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "contact": "Contact",
+    "copyright": "© 2026 Iranian Chess School. All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "badge": "Master the game, think deeper",
+      "title": "Iranian Chess School",
+      "subtitle": "Stop jumping between random YouTube videos and blitz games. Follow a structured program with real coaches, game reviews, and a community that actually helps you improve.",
+      "cta": "Try for Free",
+      "learnMore": "Learn More"
+    },
+    "stats": {
+      "students": "students improving",
+      "hours": "hours of material",
+      "reach": "chess players reached"
+    }
+  }
+}

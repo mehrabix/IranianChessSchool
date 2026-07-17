@@ -1,7 +1,8 @@
 'use client';
 
-import Link from 'next/link';
 import { useSession, signOut } from 'next-auth/react';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
@@ -32,19 +33,21 @@ import {
   Menu,
   ChessKnight,
 } from 'lucide-react';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 const navLinks = [
-  { href: '/', label: 'Home', icon: Home },
-  { href: '/about', label: 'About', icon: Info },
-  { href: '/kids', label: 'Kids', icon: Users },
-  { href: '/faq', label: 'FAQ', icon: HelpCircle },
-  { href: '/blog', label: 'Blog', icon: FileText },
-  { href: '/contact', label: 'Contact', icon: Mail },
-  { href: '/pricing', label: 'Pricing', icon: CreditCard },
+  { href: '/', labelKey: 'nav.home', icon: Home },
+  { href: '/about', labelKey: 'nav.about', icon: Info },
+  { href: '/kids', labelKey: 'nav.kids', icon: Users },
+  { href: '/faq', labelKey: 'nav.faq', icon: HelpCircle },
+  { href: '/blog', labelKey: 'nav.blog', icon: FileText },
+  { href: '/contact', labelKey: 'nav.contact', icon: Mail },
+  { href: '/pricing', labelKey: 'nav.pricing', icon: CreditCard },
 ];
 
 export function Navbar() {
   const { data: session } = useSession();
+  const t = useTranslations('nav');
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -58,12 +61,14 @@ export function Navbar() {
         <nav className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent">
-              {link.label}
+              {t(link.labelKey)}
             </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+
           {session ? (
             <DropdownMenu>
               <DropdownMenuTrigger render={<Button variant="ghost" className="relative h-8 w-8 rounded-full p-0" />}>
@@ -95,17 +100,17 @@ export function Navbar() {
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={() => signOut()} className="text-destructive focus:text-destructive">
                   <LogOut className="h-4 w-4 mr-2" />
-                  Sign Out
+                  {t('nav.signOut')}
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
             <>
               <Button variant="ghost" render={<Link href="/auth/signin" />}>
-                Sign In
+                {t('nav.signIn')}
               </Button>
               <Button render={<Link href="/pricing" />}>
-                Try Free
+                {t('nav.tryFree')}
               </Button>
             </>
           )}
@@ -127,7 +132,7 @@ export function Navbar() {
                     className="flex items-center gap-3 px-3 py-2.5 text-base font-medium rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-all"
                   >
                     <link.icon className="h-5 w-5 shrink-0" />
-                    {link.label}
+                    {t(link.labelKey)}
                   </Link>
                 ))}
               </nav>

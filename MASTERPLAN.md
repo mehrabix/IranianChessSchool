@@ -76,6 +76,7 @@ e2e/courses.spec.ts
 | **Analytics** | PostHog (self-hosted or cloud) |
 | **Deployment** | Vercel + Turso (SQLite edge) + Cloudinary (media) |
 | **Testing** | Vitest + Playwright |
+| **i18n** | next-intl with 7 languages: English, Persian (فارسی), Russian (Русский), Italian (Italiano), German (Deutsch), French (Français), Norwegian (Norsk) |
 | **CI/CD** | GitHub Actions |
 
 ---
@@ -1142,15 +1143,15 @@ export const bookings = sqliteTable('bookings', {
 - [ ] **Tests:** Vitest config + first unit tests for auth + Playwright E2E for login flow
 - [ ] Deploy to Vercel (preview)
 
-### Phase 2: Public Pages (Week 3–4)
-- [ ] Build Home page with all sections
-- [ ] Build About page with coach profiles
-- [ ] Build FAQ page with accordion
-- [ ] Build Contact page with form
-- [ ] Build Blog with CMS
-- [ ] Build Kids page
-- [ ] Build Pricing page
-- [ ] Responsive design + i18n (Farsi/English)
+- [x] Build Home page with all sections
+- [x] Build About page with coach profiles
+- [x] Build FAQ page with accordion
+- [x] Build Contact page with form
+- [x] Build Blog with CMS
+- [x] Build Kids page
+- [x] Build Pricing page
+- [x] Responsive design
+- [x] i18n setup (Persian, English, Russian, Italian, German, French, Norwegian) — next-intl, middleware, message files, language switcher
 - [ ] **Tests:** E2E for all public pages (Playwright), unit tests for components
 
 ### Phase 3: Learning Platform (Week 5–7)

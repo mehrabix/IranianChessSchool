@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/routing';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -33,7 +34,8 @@ const stats = [
   { value: '97%', label: 'Satisfaction Rate', icon: Sparkles },
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
+  const t = await getTranslations('home');
   return (
     <>
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-background via-emerald-50/30 to-background">

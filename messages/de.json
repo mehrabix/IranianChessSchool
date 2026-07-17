@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "kids": "Kinder",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "pricing": "Preise",
+    "signIn": "Anmelden",
+    "tryFree": "Kostenlos testen",
+    "signOut": "Abmelden"
+  },
+  "footer": {
+    "description": "Meistere das Spiel, denke tiefer. Strukturiertes Schachtraining für alle Niveaus mit echten Trainern und einer unterstützenden Community.",
+    "quickLinks": "Schnelllinks",
+    "followUs": "Folge uns",
+    "contact": "Kontakt",
+    "copyright": "© 2026 Iranian Chess School. Alle Rechte vorbehalten."
+  },
+  "home": {
+    "hero": {
+      "badge": "Meistere das Spiel, denke tiefer",
+      "title": "Iranian Chess School",
+      "subtitle": "Hör auf, zwischen zufälligen YouTube-Videos und Blitzpartien zu springen. Folge einem strukturierten Programm mit echten Trainern, Partieanalysen und einer Community, die dir wirklich hilft, dich zu verbessern.",
+      "cta": "Kostenlos testen",
+      "learnMore": "Mehr erfahren"
+    },
+    "stats": {
+      "students": "Schüler verbessern sich",
+      "hours": "Stunden Material",
+      "reach": "Schachspieler erreicht"
+    }
+  }
+}

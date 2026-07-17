@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Chi siamo",
+    "kids": "Bambini",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Contatti",
+    "pricing": "Prezzi",
+    "signIn": "Accedi",
+    "tryFree": "Prova gratis",
+    "signOut": "Esci"
+  },
+  "footer": {
+    "description": "Padroneggia il gioco, pensa più a fondo. Formazione scacchistica strutturata per tutti i livelli con coach reali e una community di supporto.",
+    "quickLinks": "Link rapidi",
+    "followUs": "Seguici",
+    "contact": "Contatti",
+    "copyright": "© 2026 Iranian Chess School. Tutti i diritti riservati."
+  },
+  "home": {
+    "hero": {
+      "badge": "Padroneggia il gioco, pensa più a fondo",
+      "title": "Iranian Chess School",
+      "subtitle": "Smetti di saltare tra video YouTube casuali e partite blitz. Segui un programma strutturato con coach reali, revisioni delle partite e una community che ti aiuta davvero a migliorare.",
+      "cta": "Prova gratis",
+      "learnMore": "Scopri di più"
+    },
+    "stats": {
+      "students": "studenti in miglioramento",
+      "hours": "ore di materiale",
+      "reach": "giocatori raggiunti"
+    }
+  }
+}

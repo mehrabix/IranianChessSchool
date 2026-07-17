@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "Hjem",
+    "about": "Om oss",
+    "kids": "Barn",
+    "faq": "FAQ",
+    "blog": "Blogg",
+    "contact": "Kontakt",
+    "pricing": "Priser",
+    "signIn": "Logg inn",
+    "tryFree": "Prøv gratis",
+    "signOut": "Logg ut"
+  },
+  "footer": {
+    "description": "Mestrer spillet, tenk dypere. Strukturert sjakktrening for alle nivåer med ekte trenere og et støttende fellesskap.",
+    "quickLinks": "Hurtiglenker",
+    "followUs": "Følg oss",
+    "contact": "Kontakt",
+    "copyright": "© 2026 Iranian Chess School. Alle rettigheter forbeholdt."
+  },
+  "home": {
+    "hero": {
+      "badge": "Mestrer spillet, tenk dypere",
+      "title": "Iranian Chess School",
+      "subtitle": "Slutt å hoppe mellom tilfeldige YouTube-videoer og blitz-partier. Følg et strukturert program med ekte trenere, partigjennomganger og et fellesskap som virkelig hjelper deg å bli bedre.",
+      "cta": "Prøv gratis",
+      "learnMore": "Les mer"
+    },
+    "stats": {
+      "students": "studenter forbedrer seg",
+      "hours": "timer med innhold",
+      "reach": "sjakkspillere nådd"
+    }
+  }
+}

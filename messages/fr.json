@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "kids": "Enfants",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Contact",
+    "pricing": "Tarifs",
+    "signIn": "Connexion",
+    "tryFree": "Essai gratuit",
+    "signOut": "Déconnexion"
+  },
+  "footer": {
+    "description": "Maîtrisez le jeu, pensez plus profondément. Formation aux échecs structurée pour tous les niveaux avec de vrais coachs et une communauté solidaire.",
+    "quickLinks": "Liens rapides",
+    "followUs": "Suivez-nous",
+    "contact": "Contact",
+    "copyright": "© 2026 Iranian Chess School. Tous droits réservés."
+  },
+  "home": {
+    "hero": {
+      "badge": "Maîtrisez le jeu, pensez plus profondément",
+      "title": "Iranian Chess School",
+      "subtitle": "Arrêtez de sauter entre des vidéos YouTube aléatoires et des parties blitz. Suivez un programme structuré avec de vrais coachs, des analyses de parties et une communauté qui vous aide vraiment à progresser.",
+      "cta": "Essai gratuit",
+      "learnMore": "En savoir plus"
+    },
+    "stats": {
+      "students": "étudiants en progrès",
+      "hours": "heures de contenu",
+      "reach": "joueurs d'échecs touchés"
+    }
+  }
+}

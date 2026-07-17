@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { ChessKnight, Video, Camera, MessageCircle, Send, Mail, ArrowUpRight } from 'lucide-react';
 import { Container } from '@/components/ui/container';
 
