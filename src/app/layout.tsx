@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { getLocale } from "next-intl/server";
-import { rtlLocales } from "@/i18n/routing";
+import { Inter, Vazirmatn } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -9,20 +7,50 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const vazirmatn = Vazirmatn({
+  variable: "--font-fa",
+  subsets: ["arabic"],
+});
+
 export const metadata: Metadata = {
   title: "Iranian Chess School — Master the Game, Think Deeper",
   description: "Structured chess training for all levels. Courses, puzzles, analysis, and community.",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = await getLocale();
-  const dir = rtlLocales.includes(locale as any) ? 'rtl' : 'ltr';
   return (
-    <html lang={locale} dir={dir} className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} ${vazirmatn.variable} h-full antialiased`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: [
+              "(function(){",
+              "var p=window.location.pathname;",
+              "var l=p.split('/')[1]||'en';",
+              "document.documentElement.dir=l==='fa'?'rtl':'ltr';",
+              "document.documentElement.lang=l;",
+              "document.documentElement.classList.toggle('font-fa',l==='fa');",
+              "var _popstate=function(){",
+              "var p2=window.location.pathname;",
+              "var l2=p2.split('/')[1]||'en';",
+              "document.documentElement.dir=l2==='fa'?'rtl':'ltr';",
+              "document.documentElement.lang=l2;",
+              "document.documentElement.classList.toggle('font-fa',l2==='fa');",
+              "};",
+              "window.addEventListener('popstate',_popstate);",
+              "var _pushState=history.pushState;",
+              "history.pushState=function(){_pushState.apply(this,arguments);setTimeout(_popstate,0);};",
+              "var _replaceState=history.replaceState;",
+              "history.replaceState=function(){_replaceState.apply(this,arguments);setTimeout(_popstate,0);};",
+              "})();",
+            ].join(''),
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         {children}
       </body>
