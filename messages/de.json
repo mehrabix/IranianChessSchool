@@ -12,24 +12,455 @@
     "signOut": "Abmelden"
   },
   "footer": {
-    "description": "Meistere das Spiel, denke tiefer. Strukturiertes Schachtraining für alle Niveaus mit echten Trainern und einer unterstützenden Community.",
+    "brand": "Iranian Chess School",
+    "description": "Beherrsche das Spiel, denke tiefer. Strukturiertes Schachtraining für alle Niveaus mit echten Trainern und einer unterstützenden Gemeinschaft.",
     "quickLinks": "Schnelllinks",
     "followUs": "Folge uns",
     "contact": "Kontakt",
-    "copyright": "© 2026 Iranian Chess School. Alle Rechte vorbehalten."
+    "email": "info@iranianchessschool.com",
+    "copyright": "© {year} Iranian Chess School. Alle Rechte vorbehalten."
   },
   "home": {
     "hero": {
-      "badge": "Meistere das Spiel, denke tiefer",
-      "title": "Iranian Chess School",
-      "subtitle": "Hör auf, zwischen zufälligen YouTube-Videos und Blitzpartien zu springen. Folge einem strukturierten Programm mit echten Trainern, Partieanalysen und einer Community, die dir wirklich hilft, dich zu verbessern.",
-      "cta": "Kostenlos testen",
-      "learnMore": "Mehr erfahren"
+      "badge": "Wir nehmen jetzt Schüler weltweit auf",
+      "title1": "Beherrsche das Spiel,",
+      "title2": "Denke tiefer",
+      "subtitle": "Hör auf, zwischen zufälligen YouTube-Videos und Blitzpartien hin und her zu springen. Folge einem strukturierten Lehrplan, der von titulierten Trainern entwickelt wurde und echtes Schachverständnis aufbaut.",
+      "cta": "Kostenlose Testversion starten",
+      "learnMore": "So funktioniert es",
+      "noCard": "Keine Kreditkarte",
+      "freeTrial": "7-tägige Testversion",
+      "cancelAnytime": "Jederzeit kündbar"
     },
     "stats": {
       "students": "Schüler verbessern sich",
-      "hours": "Stunden Material",
-      "reach": "Schachspieler erreicht"
+      "hours": "Stunden Inhalt",
+      "reach": "Globale Reichweite",
+      "satisfaction": "Zufriedenheitsrate"
+    },
+    "features": {
+      "heading": "Mehr als nur ein Kurs",
+      "subtitle": "Alles, was du brauchst, um vom Anfänger zum Vereinspieler zu werden – auf einer integrierten Plattform",
+      "structuredLessons": "Strukturierte Lektionen",
+      "structuredLessonsDesc": "Komplettes Trainingsprogramm von 0–2000 Elo mit schrittweisem Lehrplan",
+      "liveClasses": "Live-Gruppenkurse",
+      "liveClassesDesc": "Wöchentliche interaktive Sitzungen mit titulierten Trainern in kleinen Gruppen",
+      "gameReviews": "Partieanalysen",
+      "gameReviewsDesc": "Tiefgehende persönliche Analyse deiner Partien mit FM/WGM-Trainern",
+      "progressAnalytics": "Fortschrittsanalyse",
+      "progressAnalyticsDesc": "Verfolge Elo, Puzzle-Rating, Lektionsabschluss & Schwächenanalyse",
+      "community": "Lebendige Gemeinschaft",
+      "communityDesc": "Tritt 1200+ Verbesserern bei. Diskutiere, teile und wachse gemeinsam",
+      "aiTools": "KI-gestützte Werkzeuge",
+      "aiToolsDesc": "Stockfish-Analyse, KI-Trainer, Eröffnungs-explorer & tägliche Puzzles"
+    },
+    "levels": {
+      "heading": "Trainingsstufen",
+      "subtitle": "Vom ersten Zug bis zum Turnier — ein klarer Fahrplan",
+      "badge": "Strukturierter Weg",
+      "beginner": "Anfänger",
+      "beginnerRange": "0–500",
+      "beginnerDesc": "Lerne Regeln & grundlegende Taktiken",
+      "improver": "Fortgeschrittener",
+      "improverRange": "500–800",
+      "improverDesc": "Baue strategische Grundlagen auf",
+      "intermediate": "Mittelstufe",
+      "intermediateRange": "800–1200",
+      "intermediateDesc": "Beherrsche Schlüsselmuster",
+      "advanced": "Fortgeschritten",
+      "advancedRange": "1200–1600",
+      "advancedDesc": "Tiefes Stellungsspiel",
+      "clubPlayer": "Vereinspieler",
+      "clubPlayerRange": "1600–2000",
+      "clubPlayerDesc": "Turniervorbereitung"
+    },
+    "testimonials": {
+      "heading": "Warum Schüler uns wählen",
+      "subtitle": "Echte Ergebnisse von echten Schülern",
+      "student1Name": "Roman",
+      "student1Quote": "Die marginalen Gewinne durch konsequentes Training summieren sich mit der Zeit wirklich.",
+      "student1Rating": "1200 → 2245",
+      "student1Gain": "+1045",
+      "student2Name": "Annabella",
+      "student2Quote": "Dank Dina und der Gemeinschaft habe ich 400 Elo gewonnen, während ich hier war.",
+      "student2Rating": "597 → 1604",
+      "student2Gain": "+1007",
+      "student3Name": "Grace",
+      "student3Quote": "Ich habe den Frauenpreis in meiner Sektion beim Toronto Open gewonnen.",
+      "student3Rating": "1400 → 2014",
+      "student3Gain": "+614",
+      "points": "Punkte"
+    },
+    "cta": {
+      "heading": "Bereit, dein Schach zu transformieren?",
+      "subtitle": "Tritt 1200+ Schülern bei, die sich bereits mit unserem strukturierten Programm verbessern. Starte noch heute deine 7-tägige kostenlose Testversion.",
+      "cta": "Kostenlose Testversion starten",
+      "viewFaq": "FAQ ansehen",
+      "finePrint": "Keine Verpflichtung. Jederzeit kündbar. 7 Tage kostenlos."
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "Über uns",
+      "heading": "Unsere Mission",
+      "subtitle": "Wir glauben, dass jeder Schachspieler Zugang zu Weltklasse-Coaching verdient. Die Iranian Chess School vereint titulierte Trainer, strukturierten Lehrplan und eine unterstützende Gemeinschaft, um dir zu helfen, dein volles Potenzial zu entfalten."
+    },
+    "values": {
+      "heading": "Unsere Werte",
+      "subtitle": "Was uns ausmacht",
+      "structuredLearning": "Strukturiertes Lernen",
+      "structuredLearningDesc": "Keine zufälligen YouTube-Videos mehr. Folge einem bewährten Lehrplan, der von titulierten Trainern entwickelt wurde.",
+      "personalAttention": "Persönliche Betreuung",
+      "personalAttentionDesc": "Kleine Gruppenkurse und 1:1-Coaching stellen sicher, dass jeder Schüler die Hilfe bekommt, die er braucht.",
+      "provenResults": "Nachgewiesene Ergebnisse",
+      "provenResultsDesc": "Unsere Schüler haben durch unseren systematischen Ansatz 200–1000+ Elo-Punkte gewonnen.",
+      "lifetimeAccess": "Lebenslanger Zugang",
+      "lifetimeAccessDesc": "Lerne in deinem eigenen Tempo. Alle Kursmaterialien sind rund um die Uhr verfügbar."
+    },
+    "coaches": {
+      "heading": "Lerne unsere Trainer kennen",
+      "subtitle": "Lerne von den Besten des Spiels",
+      "coach1Name": "Dina",
+      "coach1Title": "Cheftrainerin — FM",
+      "coach1Bio": "FIDE-Meister mit über 15 Jahren Trainererfahrung. Spezialisiert auf Stellungsspiel und Endspiele.",
+      "coach2Name": "Alexandra",
+      "coach2Title": "Trainerin — WGM",
+      "coach2Bio": "Frauengroßmeisterin mit Leidenschaft für Taktiktraining. Trainiert fortgeschrittene Schüler.",
+      "fideProfile": "FIDE-Profil"
+    },
+    "cta": {
+      "heading": "Bereit, deine Reise zu beginnen?",
+      "subtitle": "Tritt 1200+ Schülern bei, die sich bereits mit unserem strukturierten Programm verbessern.",
+      "cta": "Loslegen",
+      "contactUs": "Kontaktiere uns"
+    }
+  },
+  "faq": {
+    "hero": {
+      "badge": "FAQ",
+      "heading": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über die Iranian Chess School wissen musst"
+    },
+    "categories": {
+      "general": "Allgemein",
+      "pricing": "Preise & Pläne",
+      "coaching": "Kurse & Coaching",
+      "time": "Zeitaufwand",
+      "technical": "Technisch"
+    },
+    "questions": {
+      "whatIs": {
+        "q": "Was ist die Iranian Chess School?",
+        "a": "Die Iranian Chess School ist eine umfassende Online-Schachtrainingsplattform mit strukturierten Kursen, Live-Kursen, Partieanalysen, Puzzles und einer unterstützenden Gemeinschaft. Wir helfen Spielern vom absoluten Anfänger bis 2000+ Elo, ihr Spiel zu verbessern."
+      },
+      "whoAreCoaches": {
+        "q": "Wer sind die Trainer?",
+        "a": "Unsere Trainer sind titulierte Spieler, darunter FIDE-Meister und Frauengroßmeisterinnen mit jahrelanger Lehrerfahrung. Sie geben persönliches Feedback und leiten Live-Gruppensitzungen."
+      },
+      "needFarsi": {
+        "q": "Muss ich Farsi können?",
+        "a": "Nein, alle Inhalte sind auf Englisch verfügbar. Unsere Trainer sprechen jedoch fließend Englisch und Farsi, um unsere internationale Gemeinschaft zu bedienen."
+      },
+      "howMuch": {
+        "q": "Wie viel kostet es?",
+        "a": "Wir bieten drei Pläne an: Standard (29 $/Monat), Premium (49 $/Monat) und VIP (199 $/Monat). Wir haben auch spezielle Kinderpläne. Jährliche Zahlung gibt dir 2 Monate gratis."
+      },
+      "freeTrial": {
+        "q": "Gibt es eine kostenlose Testversion?",
+        "a": "Ja! Wir bieten eine 7-tägige kostenlose Testversion für alle Pläne an. Keine Kreditkarte erforderlich. Du kannst jederzeit während der Testphase kostenlos kündigen."
+      },
+      "cancel": {
+        "q": "Kann ich jederzeit kündigen?",
+        "a": "Absolut. Du kannst dein Abonnement jederzeit kündigen. Dein Zugang bleibt bis zum Ende deines Abrechnungszeitraums bestehen. Keine Kündigungsgebühren."
+      },
+      "liveClasses": {
+        "q": "Wie funktionieren die Live-Kurse?",
+        "a": "Live-Gruppenkurse finden wöchentlich per Videokonferenz statt. Jede Sitzung konzentriert sich auf bestimmte Themen und beinhaltet eine Fragerunde. Premium- und VIP-Mitglieder erhalten vorrangigen Zugang."
+      },
+      "gameReview": {
+        "q": "Was ist eine Partieanalyse-Sitzung?",
+        "a": "Du reichst deine Partie ein (PGN oder Chess.com/Lichess-Link) und ein Trainer analysiert sie Zug für Zug, erklärt Fehler, bessere Alternativen und wichtige Lernpunkte."
+      },
+      "oneOnOne": {
+        "q": "Wie buche ich 1:1-Coaching?",
+        "a": "VIP-Mitglieder können 1:1-Sitzungen direkt über unser Buchungssystem buchen. Premium-Mitglieder erhalten monatliche Sitzungen. Die Sitzungen werden per Videoanruf durchgeführt."
+      },
+      "timeNeeded": {
+        "q": "Wie viel Zeit benötige ich?",
+        "a": "Wir empfehlen 3–5 Stunden pro Woche für optimale Fortschritte. Dies umfasst das Ansehen von Lektionen, das Lösen von Puzzles, das Spielen von Partien und die Nachbesprechung mit Trainern."
+      },
+      "ownPace": {
+        "q": "Kann ich in meinem eigenen Tempo lernen?",
+        "a": "Ja! Alle Kursmaterialien sind jederzeit verfügbar. Du kannst Lektionen ansehen, Puzzles lösen und in dem Tempo lernen, das für dich am besten ist."
+      },
+      "improvement": {
+        "q": "Wie lange dauert es, bis ich eine Verbesserung sehe?",
+        "a": "Die meisten Schüler sehen innerhalb von 4–6 Wochen konsequenten Trainings eine spürbare Verbesserung. Viele gewinnen in den ersten 3 Monaten 100–200 Elo."
+      },
+      "requirements": {
+        "q": "Was brauche ich, um loszulegen?",
+        "a": "Einen Computer oder ein Tablet mit Internetzugang. Für Live-Kurse benötigst du eine Kamera und ein Mikrofon. Die Plattform funktioniert auf allen modernen Browsern."
+      },
+      "importGames": {
+        "q": "Kann ich Partien von Chess.com oder Lichess importieren?",
+        "a": "Ja! Du kannst Partien sowohl von Chess.com als auch von Lichess importieren, indem du deinen Benutzernamen eingibst. Wir unterstützen auch den PGN-Datei-Upload."
+      },
+      "mobileApp": {
+        "q": "Habt ihr eine mobile App?",
+        "a": "Die Plattform ist vollständig responsiv und funktioniert hervorragend auf mobilen Browsern. Eine native mobile App befindet sich in der Entwicklung."
+      }
+    }
+  },
+  "blog": {
+    "hero": {
+      "badge": "Blog",
+      "heading": "Schachverbesserungs-Blog",
+      "subtitle": "Tipps, Strategien und Einblicke von unseren Trainern, die dir helfen, dich zu verbessern."
+    },
+    "posts": {
+      "post1Title": "Warum strukturiertes Lernen zufällige YouTube-Videos schlägt",
+      "post1Excerpt": "Die meisten Schachverbesserer verschwenden Jahre damit, zwischen zufälligen Inhalten hin und her zu springen. Hier erfährst du, warum ein strukturierter Ansatz der schnellste Weg zu 2000 Elo ist.",
+      "post1Date": "Jan 15, 2025",
+      "post1ReadTime": "5 Min",
+      "post1Category": "Lernen",
+      "post2Title": "Die 5 häufigsten Anfängerfehler (und wie man sie behebt)",
+      "post2Excerpt": "Vermeide diese häufigen Fallstricke, die Anfänger unter 1000 Elo festhalten. Einfache Korrekturen, die einen großen Unterschied machen.",
+      "post2Date": "Jan 10, 2025",
+      "post2ReadTime": "4 Min",
+      "post2Category": "Anfänger",
+      "post3Title": "Wie du deine Partien wie ein Großmeister analysierst",
+      "post3Excerpt": "Partieanalyse ist die effektivste Methode zur Verbesserung. Lerne einen systematischen Ansatz, der von titulierten Spielern verwendet wird.",
+      "post3Date": "Jan 5, 2025",
+      "post3ReadTime": "7 Min",
+      "post3Category": "Analyse",
+      "post4Title": "Eröffnungsprinzipien: Was jeder Spieler wissen sollte",
+      "post4Excerpt": "Hör auf, Eröffnungszüge auswendig zu lernen, und fang an, Prinzipien zu verstehen. Dieser Leitfaden deckt alles ab, was du für ein solides Eröffnungsrepertoire brauchst.",
+      "post4Date": "Dez 28, 2024",
+      "post4ReadTime": "6 Min",
+      "post4Category": "Eröffnungen",
+      "post5Title": "Der ultimative Taktiktrainings-Leitfaden",
+      "post5Excerpt": "Taktiken gewinnen Partien. Hier erfährst du, wie du dein Puzzle-Training für maximale Verbesserung strukturierst – vom Anfänger bis zum Fortgeschrittenen.",
+      "post5Date": "Dez 20, 2024",
+      "post5ReadTime": "8 Min",
+      "post5Category": "Taktik",
+      "post6Title": "Endspielgrundlagen: 5 Stellungen, die du kennen musst",
+      "post6Excerpt": "Beherrsche diese essenziellen Endspielstellungen und sieh zu, wie deine Wertung steigt. Praktisches Wissen, das Partien gewinnt.",
+      "post6Date": "Dez 15, 2024",
+      "post6ReadTime": "6 Min",
+      "post6Category": "Endspiele",
+      "readMore": "Weiterlesen"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Kontakt",
+      "heading": "Nimm Kontakt auf",
+      "subtitle": "Hast du eine Frage? Wir würden uns freuen, von dir zu hören."
+    },
+    "form": {
+      "heading": "Sende uns eine Nachricht",
+      "name": "Name",
+      "namePlaceholder": "Dein Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "du@beispiel.de",
+      "subject": "Betreff",
+      "subjectPlaceholder": "Wie können wir helfen?",
+      "message": "Nachricht",
+      "messagePlaceholder": "Erzähl uns mehr...",
+      "submit": "Nachricht senden",
+      "successTitle": "Nachricht gesendet!",
+      "successText": "Wir melden uns innerhalb von 24 Stunden bei dir."
+    },
+    "info": {
+      "heading": "Kontaktinformationen",
+      "email": "E-Mail",
+      "emailAddress": "info@iranianchessschool.com",
+      "whatsapp": "WhatsApp",
+      "phone": "+1 (234) 567-890",
+      "location": "Standort",
+      "locationText": "Online — Weltweit",
+      "followUs": "Folge uns",
+      "followUsText": "Bleibe in sozialen Medien für Tipps, Updates und Community-Events verbunden.",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "telegram": "Telegram"
+    }
+  },
+  "kids": {
+    "hero": {
+      "badge": "Kinderprogramm",
+      "heading": "Schachunterricht,",
+      "headingSpan": "den Kinder lieben",
+      "subtitle": "Schenke deinem Kind das Schachgeschenk. Unser Kinderprogramm macht Lernen spaßig, ansprechend und effektiv mit altersgerechtem Coaching und spielerischen Lektionen.",
+      "cta": "Kostenlos testen",
+      "learnMore": "Mehr erfahren",
+      "ages": "Alter 6–16",
+      "allLevels": "Alle Niveaus willkommen",
+      "freeTrial": "7-tägige Testversion"
+    },
+    "features": {
+      "heading": "Warum Kinder es lieben",
+      "subtitle": "Entwickelt für junge Lernende, geliebt von Eltern",
+      "funGames": "Spaß & Spiele",
+      "funGamesDesc": "Lerne Schach durch interaktive Spiele, Puzzles und Herausforderungen, die für junge Köpfe entwickelt wurden.",
+      "groupClasses": "Gruppenkurse",
+      "groupClassesDesc": "Wöchentliche Live-Kurse mit anderen Kindern auf dem gleichen Niveau. Gemeinsam lernen, gemeinsam wachsen.",
+      "achievements": "Erfolge",
+      "achievementsDesc": "Sammle Abzeichen, Sterne und Belohnungen, während du durch die Stufen fortschreitest und Fähigkeiten meisterst.",
+      "kidFriendly": "Kindgerechte Trainer",
+      "kidFriendlyDesc": "Geduldige, erfahrene Trainer, die wissen, wie man Schach für Kinder spannend macht.",
+      "safeEnvironment": "Sichere Umgebung",
+      "safeEnvironmentDesc": "Eltern-Dashboard, Fortschrittsberichte und vollständige Aufsicht in allen Live-Sitzungen.",
+      "provenMethod": "Bewährte Methode",
+      "provenMethodDesc": "Unser Lehrplan wurde von Kindheitspädagogen und titulierten Schachtrainern entwickelt."
+    },
+    "plans": {
+      "heading": "Kinderpläne",
+      "subtitle": "Wähle den richtigen Plan für dein Kind",
+      "standard": "Standard",
+      "standardPrice": "79 $",
+      "standardPeriod": "/Monat",
+      "standardF1": "Wöchentlicher Gruppenkurs",
+      "standardF2": "Puzzle-Zugang",
+      "standardF3": "Fortschrittsverfolgung",
+      "standardF4": "Eltern-Dashboard",
+      "standardF5": "Community-Zugang",
+      "standardCta": "Loslegen",
+      "premium": "Premium",
+      "premiumPrice": "249 $",
+      "premiumPeriod": "/Monat",
+      "premiumF1": "Alles im Standard",
+      "premiumF2": "2x wöchentliche Kurse",
+      "premiumF3": "Monatliche Partieanalyse",
+      "premiumF4": "1:1-Coaching-Sitzung",
+      "premiumF5": "Prioritäts-Support",
+      "premiumCta": "Premium wählen",
+      "mostPopular": "Am beliebtesten"
+    },
+    "cta": {
+      "heading": "Beginne die Schachreise deines Kindes",
+      "subtitle": "Gib ihnen die Fähigkeiten und das Selbstvertrauen, die Schach bietet. Tritt noch heute unserem Kinderprogramm bei.",
+      "cta": "7 Tage kostenlos testen"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "badge": "Preise",
+      "heading": "Einfache, transparente Preise",
+      "subtitle": "Starte kostenlos. Rüste auf, wenn du bereit bist."
+    },
+    "plans": {
+      "standard": "Standard",
+      "standardPrice": "29 $",
+      "standardPeriod": "/Monat",
+      "standardDesc": "Perfekt für selbstmotivierte Lernende",
+      "standardF1": "Vollständiger Zugriff auf Kursbibliothek",
+      "standardF2": "Puzzle-System mit Wertung",
+      "standardF3": "Community-Lesezugriff",
+      "standardF4": "Basis-Partieanalyse",
+      "standardF5": "Fortschrittsverfolgung",
+      "standardF6": "E-Mail-Support",
+      "standardCta": "Kostenlose Testversion starten",
+      "premium": "Premium",
+      "premiumPrice": "49 $",
+      "premiumPeriod": "/Monat",
+      "premiumDesc": "Am besten für ernsthafte Verbesserer",
+      "premiumF1": "Alles im Standard",
+      "premiumF2": "Wöchentliche Live-Gruppenkurse",
+      "premiumF3": "Monatliche Partieanalyse-Sitzung",
+      "premiumF4": "Erweiterte Analysewerkzeuge",
+      "premiumF5": "Community-Teilnahme",
+      "premiumF6": "Prioritäts-E-Mail-Support",
+      "premiumCta": "Premium wählen",
+      "vip": "VIP",
+      "vipPrice": "199 $",
+      "vipPeriod": "/Monat",
+      "vipDesc": "Für diejenigen, die alles wollen",
+      "vipF1": "Alles im Premium",
+      "vipF2": "Wöchentliches 1:1-Coaching",
+      "vipF3": "Wöchentliche Partieanalysen mit Dina",
+      "vipF4": "Prioritätsbuchung & Support",
+      "vipF5": "Persönlicher Studienplan",
+      "vipF6": "Direkte Trainer-Nachrichten",
+      "vipCta": "VIP wählen",
+      "mostPopular": "Am beliebtesten",
+      "finePrint": "Alle Pläne beinhalten eine 7-tägige kostenlose Testversion. Keine Kreditkarte erforderlich. Jederzeit kündbar."
+    },
+    "compare": {
+      "heading": "Pläne vergleichen",
+      "subtitle": "Finde den perfekten Plan für dein Niveau",
+      "feature": "Funktion",
+      "free": "Kostenlos",
+      "standard": "Standard",
+      "premium": "Premium",
+      "vip": "VIP",
+      "basicLessons": "Grundlektionen (Stufe 1)",
+      "allCourses": "Alle Kurse",
+      "puzzleAccess": "Puzzle-Zugang",
+      "communityAccess": "Community-Zugang",
+      "gameAnalysis": "Partieanalyse",
+      "groupClasses": "Gruppenkurse",
+      "gameReviews": "Partieanalysen",
+      "oneOnOne": "1:1-Coaching",
+      "check": "✓",
+      "cross": "✗",
+      "limited": "Eingeschränkt",
+      "readOnly": "Nur lesen",
+      "basic": "Basis",
+      "advanced": "Erweitert",
+      "weekly": "Wöchentlich",
+      "monthly": "Monatlich",
+      "weekly4x": "Wöchentlich (4x/Monat)"
+    },
+    "cta": {
+      "heading": "Nicht sicher, welcher Plan der richtige ist?",
+      "subtitle": "Starte mit unserer 7-tägigen kostenlosen Testversion. Keine Verpflichtung, keine Kreditkarte erforderlich.",
+      "cta": "7 Tage kostenlos testen"
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "Willkommen zurück",
+      "description": "Melde dich an, um deine Schachreise fortzusetzen",
+      "email": "E-Mail",
+      "emailPlaceholder": "du@beispiel.de",
+      "password": "Passwort",
+      "passwordPlaceholder": "Gib dein Passwort ein",
+      "submit": "Anmelden",
+      "invalidCredentials": "Ungültige Anmeldedaten",
+      "divider": "Oder fortfahren mit",
+      "google": "Google",
+      "github": "GitHub",
+      "noAccount": "Noch kein Konto?",
+      "signUp": "Registrieren"
+    },
+    "register": {
+      "title": "Konto erstellen",
+      "description": "Beginne deine strukturierte Schachreise",
+      "name": "Name",
+      "namePlaceholder": "Dein Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "du@beispiel.de",
+      "password": "Passwort",
+      "passwordPlaceholder": "Mind. 8 Zeichen",
+      "submit": "Konto erstellen",
+      "submitting": "Konto wird erstellt...",
+      "nameError": "Name ist zu kurz",
+      "emailError": "Gib eine gültige E-Mail ein",
+      "passwordError": "Passwort muss mindestens 8 Zeichen lang sein",
+      "registrationFailed": "Registrierung fehlgeschlagen",
+      "unexpectedError": "Ein unerwarteter Fehler ist aufgetreten",
+      "divider": "Oder fortfahren mit",
+      "google": "Google",
+      "github": "GitHub",
+      "hasAccount": "Bereits ein Konto?",
+      "signIn": "Anmelden"
+    },
+    "error": {
+      "title": "Authentifizierungsfehler",
+      "description": "Bei der Anmeldung ist ein Fehler aufgetreten",
+      "message": "Bitte versuche es erneut oder kontaktiere den Support, falls das Problem weiterhin besteht.",
+      "tryAgain": "Erneut versuchen"
     }
   }
 }

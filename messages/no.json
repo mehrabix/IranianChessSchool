@@ -12,24 +12,455 @@
     "signOut": "Logg ut"
   },
   "footer": {
-    "description": "Mestrer spillet, tenk dypere. Strukturert sjakktrening for alle nivåer med ekte trenere og et støttende fellesskap.",
-    "quickLinks": "Hurtiglenker",
+    "brand": "Iranian Chess School",
+    "description": "Mestre spillet, tenk dypere. Strukturert sjakktrening for alle nivåer med ekte trenere og et støttende fellesskap.",
+    "quickLinks": "Hurtigkoblinger",
     "followUs": "Følg oss",
     "contact": "Kontakt",
-    "copyright": "© 2026 Iranian Chess School. Alle rettigheter forbeholdt."
+    "email": "info@iranianchessschool.com",
+    "copyright": "© {year} Iranian Chess School. Alle rettigheter forbeholdt."
   },
   "home": {
     "hero": {
-      "badge": "Mestrer spillet, tenk dypere",
-      "title": "Iranian Chess School",
-      "subtitle": "Slutt å hoppe mellom tilfeldige YouTube-videoer og blitz-partier. Følg et strukturert program med ekte trenere, partigjennomganger og et fellesskap som virkelig hjelper deg å bli bedre.",
-      "cta": "Prøv gratis",
-      "learnMore": "Les mer"
+      "badge": "Tar nå imot studenter over hele verden",
+      "title1": "Mestre Spillet,",
+      "title2": "Tenk Dypere",
+      "subtitle": "Slutt å hoppe mellom tilfeldige YouTube-videoer og blitzpartier. Følg en strukturert læreplan designet av titulerte trenere som faktisk bygger ekte sjakkforståelse.",
+      "cta": "Start gratis prøveperiode",
+      "learnMore": "Se hvordan det fungerer",
+      "noCard": "Ingen kredittkort",
+      "freeTrial": "7 dagers gratis prøve",
+      "cancelAnytime": "Avslutt når som helst"
     },
     "stats": {
-      "students": "studenter forbedrer seg",
-      "hours": "timer med innhold",
-      "reach": "sjakkspillere nådd"
+      "students": "Elever som Forbedrer Seg",
+      "hours": "Timer med Innhold",
+      "reach": "Global Rekkevidde",
+      "satisfaction": "Tilfredshetsrate"
+    },
+    "features": {
+      "heading": "Mer enn Bare et Kurs",
+      "subtitle": "Alt du trenger for å gå fra nybegynner til klubbspiller i én integrert plattform",
+      "structuredLessons": "Strukturerte Leksjoner",
+      "structuredLessonsDesc": "Komplett treningsprogram fra 0–2000 Elo med steg-for-steg læreplan",
+      "liveClasses": "Live Gruppetimer",
+      "liveClassesDesc": "Ukentlige interaktive økter med titulerte trenere i små grupper",
+      "gameReviews": "Spillgjennomganger",
+      "gameReviewsDesc": "Dyp personlig analyse av dine partier med FM/WGM-trenere",
+      "progressAnalytics": "Fremdriftsanalyse",
+      "progressAnalyticsDesc": "Spor Elo, oppgavetrening, fullførte leksjoner og svakhetsanalyse",
+      "community": "Levende Fellesskap",
+      "communityDesc": "Bli med 1200+ som forbedrer seg. Diskuter, del og voks sammen",
+      "aiTools": "AI-drevne Verktøy",
+      "aiToolsDesc": "Stockfish-analyse, AI-trener, åpningsleksikon og daglige oppgaver"
+    },
+    "levels": {
+      "heading": "Treningsnivåer",
+      "subtitle": "Fra ditt første trekk til turneringsspill — en tydelig veikart",
+      "badge": "Strukturert Sti",
+      "beginner": "Nybegynner",
+      "beginnerRange": "0–500",
+      "beginnerDesc": "Lær regler & grunnleggende taktikk",
+      "improver": "Viderekommen",
+      "improverRange": "500–800",
+      "improverDesc": "Bygg strategisk grunnlag",
+      "intermediate": "Mellomnivå",
+      "intermediateRange": "800–1200",
+      "intermediateDesc": "Mestre nøkkelmønstre",
+      "advanced": "Avansert",
+      "advancedRange": "1200–1600",
+      "advancedDesc": "Dypt stillingsspill",
+      "clubPlayer": "Klubbspiller",
+      "clubPlayerRange": "1600–2000",
+      "clubPlayerDesc": "Turneringsforberedelse"
+    },
+    "testimonials": {
+      "heading": "Hvorfor Elever Velger Oss",
+      "subtitle": "Virkelige resultater fra virkelige elever",
+      "student1Name": "Roman",
+      "student1Quote": "De marginale gevinstene fra jevnlig trening summerer seg virkelig over tid.",
+      "student1Rating": "1200 → 2245",
+      "student1Gain": "+1045",
+      "student2Name": "Annabella",
+      "student2Quote": "Takket være Dina og fellesskapet fikk jeg 400 Elo mens jeg var her.",
+      "student2Rating": "597 → 1604",
+      "student2Gain": "+1007",
+      "student3Name": "Grace",
+      "student3Quote": "Jeg vant kvinnevinnerprisen i min seksjon på Toronto Open.",
+      "student3Rating": "1400 → 2014",
+      "student3Gain": "+614",
+      "points": "poeng"
+    },
+    "cta": {
+      "heading": "Klar til å Forvandle Ditt Sjakkspill?",
+      "subtitle": "Bli med 1200+ elever som allerede forbedrer seg med vårt strukturerte program. Start din 7-dagers gratis prøveperiode i dag.",
+      "cta": "Start gratis prøveperiode",
+      "viewFaq": "Se FAQ",
+      "finePrint": "Ingen forpliktelse. Avslutt når som helst. Gratis i 7 dager."
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "Om oss",
+      "heading": "Vår Misjon",
+      "subtitle": "Vi tror at hver sjakkspiller fortjener tilgang til trening i verdensklasse. Iranian Chess School samler titulerte trenere, strukturert læreplan og et støttende fellesskap for å hjelpe deg å nå ditt fulle potensial."
+    },
+    "values": {
+      "heading": "Våre Verdier",
+      "subtitle": "Hva som gjør oss annerledes",
+      "structuredLearning": "Strukturert Læring",
+      "structuredLearningDesc": "Ikke flere tilfeldige YouTube-videoer. Følg en utprøvd læreplan designet av titulerte trenere.",
+      "personalAttention": "Personlig Oppmerksomhet",
+      "personalAttentionDesc": "Små gruppetimer og 1-til-1-veiledning sikrer at hver elev får den hjelpen de trenger.",
+      "provenResults": "Dokumenterte Resultater",
+      "provenResultsDesc": "Våre elever har fått 200–1000+ Elo-poeng gjennom vår systematiske tilnærming.",
+      "lifetimeAccess": "Livstidstilgang",
+      "lifetimeAccessDesc": "Lær i ditt eget tempo. Alt kursmateriell er tilgjengelig 24/7."
+    },
+    "coaches": {
+      "heading": "Møt Våre Trenere",
+      "subtitle": "Lær fra de beste i spillet",
+      "coach1Name": "Dina",
+      "coach1Title": "Hovedtrener — FM",
+      "coach1Bio": "FIDE-mester med 15+ års erfaring innen trening. Spesialiserer seg på stillingsspill og sluttspill.",
+      "coach2Name": "Alexandra",
+      "coach2Title": "Trener — WGM",
+      "coach2Bio": "Kvinnelig stormester med lidenskap for taktisk trening. Trener elever på mellomnivå til avansert nivå.",
+      "fideProfile": "FIDE-profil"
+    },
+    "cta": {
+      "heading": "Klar til å starte reisen din?",
+      "subtitle": "Bli med 1200+ elever som allerede forbedrer seg med vårt strukturerte program.",
+      "cta": "Kom i gang",
+      "contactUs": "Kontakt oss"
+    }
+  },
+  "faq": {
+    "hero": {
+      "badge": "FAQ",
+      "heading": "Ofte Stilte Spørsmål",
+      "subtitle": "Alt du trenger å vite om Iranian Chess School"
+    },
+    "categories": {
+      "general": "Generelt",
+      "pricing": "Priser & Planer",
+      "coaching": "Timer & Veiledning",
+      "time": "Tidsforpliktelse",
+      "technical": "Teknisk"
+    },
+    "questions": {
+      "whatIs": {
+        "q": "Hva er Iranian Chess School?",
+        "a": "Iranian Chess School er en omfattende online sjakktreningsplattform med strukturerte kurs, live timer, spillgjennomganger, oppgaver og et støttende fellesskap. Vi hjelper spillere fra absolutte nybegynnere til 2000+ Elo å forbedre spillet sitt."
+      },
+      "whoAreCoaches": {
+        "q": "Hvem er trenerne?",
+        "a": "Trenerne våre er titulerte spillere, inkludert FIDE-mestere og kvinnelige stormestere med mange års undervisningserfaring. De gir personlig tilbakemelding og leder live gruppeøkter."
+      },
+      "needFarsi": {
+        "q": "Må jeg kunne farsi?",
+        "a": "Nei, alt innhold er tilgjengelig på engelsk. Trenerne våre er imidlertid flytende i både engelsk og farsi for å betjene det internasjonale fellesskapet vårt."
+      },
+      "howMuch": {
+        "q": "Hvor mye koster det?",
+        "a": "Vi tilbyr tre planer: Standard ($29/mnd), Premium ($49/mnd) og VIP ($199/mnd). Vi har også spesialiserte barneplaner. Årlig fakturering gir deg 2 måneder gratis."
+      },
+      "freeTrial": {
+        "q": "Finnes det en gratis prøveperiode?",
+        "a": "Ja! Vi tilbyr en 7-dagers gratis prøveperiode på alle planer. Ingen kredittkort kreves. Du kan avslutte når som helst i løpet av prøveperioden uten kostnad."
+      },
+      "cancel": {
+        "q": "Kan jeg avslutte når som helst?",
+        "a": "Absolutt. Du kan si opp abonnementet ditt når som helst. Tilgangen din fortsetter til slutten av faktureringsperioden. Ingen oppsigelsesgebyrer."
+      },
+      "liveClasses": {
+        "q": "Hvordan fungerer live timer?",
+        "a": "Live gruppetimer holdes ukentlig via videokonferanse. Hver økt fokuserer på spesifikke temaer og inkluderer spørsmål og svar. Premium- og VIP-medlemmer får prioritert tilgang."
+      },
+      "gameReview": {
+        "q": "Hva er en spillgjennomgangsøkt?",
+        "a": "Du sender inn partiet ditt (PGN eller Chess.com/Lichess-lenke) og en trener analyserer det trekk for trekk, og forklarer feil, bedre alternativer og viktige læringspunkter."
+      },
+      "oneOnOne": {
+        "q": "Hvordan bestiller jeg 1-til-1-veiledning?",
+        "a": "VIP-medlemmer kan bestille 1-til-1-økter direkte gjennom bookingsystemet vårt. Premium-medlemmer får månedlige økter. Øktene gjennomføres via videosamtale."
+      },
+      "timeNeeded": {
+        "q": "Hvor mye tid trenger jeg?",
+        "a": "Vi anbefaler 3–5 timer per uke for optimal fremgang. Dette inkluderer å se leksjoner, løse oppgaver, spille partier og gjennomgå med trenere."
+      },
+      "ownPace": {
+        "q": "Kan jeg lære i mitt eget tempo?",
+        "a": "Ja! Alt kursmateriell er tilgjengelig på forespørsel. Du kan se leksjoner, løse oppgaver og studere i det tempoet som passer deg."
+      },
+      "improvement": {
+        "q": "Hvor lang tid tar det før jeg ser forbedring?",
+        "a": "De fleste elever ser merkbar forbedring innen 4–6 uker med jevnlig trening. Mange oppnår 100–200 Elo i løpet av de første 3 månedene."
+      },
+      "requirements": {
+        "q": "Hva trenger jeg for å komme i gang?",
+        "a": "En datamaskin eller nettbrett med internettilgang. For live timer trenger du kamera og mikrofon. Plattformen fungerer på alle moderne nettlesere."
+      },
+      "importGames": {
+        "q": "Kan jeg importere partier fra Chess.com eller Lichess?",
+        "a": "Ja! Du kan importere partier fra både Chess.com og Lichess ved å skrive inn brukernavnet ditt. Vi støtter også PGN-filopplasting."
+      },
+      "mobileApp": {
+        "q": "Har dere en mobilapp?",
+        "a": "Plattformen er fullt responsiv og fungerer utmerket på mobilnettlesere. En native mobilapp er under utvikling."
+      }
+    }
+  },
+  "blog": {
+    "hero": {
+      "badge": "Blogg",
+      "heading": "Sjakkforbedringsblogg",
+      "subtitle": "Tips, strategier og innsikt fra våre trenere for å hjelpe deg med å forbedre deg."
+    },
+    "posts": {
+      "post1Title": "Hvorfor Strukturert Læring Slår Tilfeldige YouTube-Videoer",
+      "post1Excerpt": "De fleste som forbedrer sjakken sin kaster bort år på å hoppe mellom tilfeldig innhold. Her er hvorfor en strukturert tilnærming er den raskeste veien til 2000 Elo.",
+      "post1Date": "Jan 15, 2025",
+      "post1ReadTime": "5 min",
+      "post1Category": "Læring",
+      "post2Title": "Topp 5 Feil Nybegynnere Gjør (Og Hvordan Fikse Dem)",
+      "post2Excerpt": "Unngå disse vanlige fellene som holder nybegynnere fast under 1000 Elo. Enkle fikser som gir stor forskjell.",
+      "post2Date": "Jan 10, 2025",
+      "post2ReadTime": "4 min",
+      "post2Category": "Nybegynnere",
+      "post3Title": "Hvordan Gå Gjennom Partiene Dine Som en Stormester",
+      "post3Excerpt": "Partianalyse er den enkelt mest effektive måten å forbedre seg på. Lær en systematisk tilnærming brukt av titulerte spillere.",
+      "post3Date": "Jan 5, 2025",
+      "post3ReadTime": "7 min",
+      "post3Category": "Analyse",
+      "post4Title": "Åpningsprinsipper: Hva Enhver Spiller Bør Vite",
+      "post4Excerpt": "Slutt å memorere åpningsvarianter og begynn å forstå prinsipper. Denne guiden dekker alt du trenger for et solid åpningsrepertoar.",
+      "post4Date": "Dec 28, 2024",
+      "post4ReadTime": "6 min",
+      "post4Category": "Åpninger",
+      "post5Title": "Den Ultimative Veiledningen for Taktikktrening",
+      "post5Excerpt": "Taktikk vinner partier. Her er hvordan du strukturerer oppgavetreningen din for maksimal forbedring, fra nybegynner til avansert.",
+      "post5Date": "Dec 20, 2024",
+      "post5ReadTime": "8 min",
+      "post5Category": "Taktikk",
+      "post6Title": "Sluttspillgrunnleggende: 5 Stillinger Du Må Kunne",
+      "post6Excerpt": "Mestre disse essensielle sluttspillstillingene og se ratingen din stige. Praktisk kunnskap som vinner partier.",
+      "post6Date": "Dec 15, 2024",
+      "post6ReadTime": "6 min",
+      "post6Category": "Sluttspill",
+      "readMore": "Les mer"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Kontakt",
+      "heading": "Ta Kontakt",
+      "subtitle": "Har du et spørsmål? Vi vil gjerne høre fra deg."
+    },
+    "form": {
+      "heading": "Send oss en melding",
+      "name": "Navn",
+      "namePlaceholder": "Ditt navn",
+      "email": "E-post",
+      "emailPlaceholder": "du@eksempel.no",
+      "subject": "Emne",
+      "subjectPlaceholder": "Hvordan kan vi hjelpe?",
+      "message": "Melding",
+      "messagePlaceholder": "Fortell oss mer...",
+      "submit": "Send melding",
+      "successTitle": "Melding sendt!",
+      "successText": "Vi svarer deg innen 24 timer."
+    },
+    "info": {
+      "heading": "Kontaktinformasjon",
+      "email": "E-post",
+      "emailAddress": "info@iranianchessschool.com",
+      "whatsapp": "WhatsApp",
+      "phone": "+1 (234) 567-890",
+      "location": "Sted",
+      "locationText": "Online — Verden over",
+      "followUs": "Følg oss",
+      "followUsText": "Hold kontakten på sosiale medier for tips, oppdateringer og fellesskapsarrangementer.",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "telegram": "Telegram"
+    }
+  },
+  "kids": {
+    "hero": {
+      "badge": "Barneprogram",
+      "heading": "Sjakkundervisning",
+      "headingSpan": "Barn Elsker",
+      "subtitle": "Gi barnet ditt gaven av sjakk. Vårt barneprogram gjør læring morsomt, engasjerende og effektivt med alderstilpasset veiledning og spillifiserte leksjoner.",
+      "cta": "Prøv gratis",
+      "learnMore": "Lær mer",
+      "ages": "Alder 6–16",
+      "allLevels": "Alle nivåer velkomne",
+      "freeTrial": "7 dagers gratis prøve"
+    },
+    "features": {
+      "heading": "Hvorfor Barn Elsker Det",
+      "subtitle": "Designet for unge elever, elsket av foreldre",
+      "funGames": "Moro & Spill",
+      "funGamesDesc": "Lær sjakk gjennom interaktive spill, oppgaver og utfordringer designet for unge sinn.",
+      "groupClasses": "Gruppetimer",
+      "groupClassesDesc": "Ukentlige live timer med andre barn på samme nivå. Lær sammen, voks sammen.",
+      "achievements": "Prestasjoner",
+      "achievementsDesc": "Tjen merker, stjerner og belønninger når du går gjennom nivåer og mestrer ferdigheter.",
+      "kidFriendly": "Barnevennlige Trenere",
+      "kidFriendlyDesc": "Tålmodige, erfarne trenere som vet hvordan man gjør sjakk spennende for barn.",
+      "safeEnvironment": "Trygt Miljø",
+      "safeEnvironmentDesc": "Foreldrekontrollpanel, fremdriftsrapporter og fullt tilsyn i alle live økter.",
+      "provenMethod": "Dokumentert Metode",
+      "provenMethodDesc": "Læreplanen vår er designet av barneundervisningsspesialister og titulerte sjakktrenere."
+    },
+    "plans": {
+      "heading": "Barneplaner",
+      "subtitle": "Velg riktig plan for barnet ditt",
+      "standard": "Standard",
+      "standardPrice": "$79",
+      "standardPeriod": "/mnd",
+      "standardF1": "Ukentlig gruppetime",
+      "standardF2": "Tilgang til oppgaver",
+      "standardF3": "Fremdriftssporing",
+      "standardF4": "Foreldrekontrollpanel",
+      "standardF5": "Fellesskapstilgang",
+      "standardCta": "Kom i gang",
+      "premium": "Premium",
+      "premiumPrice": "$249",
+      "premiumPeriod": "/mnd",
+      "premiumF1": "Alt i Standard",
+      "premiumF2": "2x ukentlige timer",
+      "premiumF3": "Månedlig spillgjennomgang",
+      "premiumF4": "1-til-1-veiledningsøkt",
+      "premiumF5": "Prioritert støtte",
+      "premiumCta": "Velg Premium",
+      "mostPopular": "Mest Populær"
+    },
+    "cta": {
+      "heading": "Start ditt barns sjakkreise",
+      "subtitle": "Gi dem ferdighetene og selvtilliten som sjakk gir. Bli med i barneprogrammet vårt i dag.",
+      "cta": "Prøv Gratis i 7 Dager"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "badge": "Priser",
+      "heading": "Enkle, transparente priser",
+      "subtitle": "Start gratis. Oppgrader når du er klar."
+    },
+    "plans": {
+      "standard": "Standard",
+      "standardPrice": "$29",
+      "standardPeriod": "/mnd",
+      "standardDesc": "Perfekt for selv-motiverte elever",
+      "standardF1": "Full tilgang til kursbibliotek",
+      "standardF2": "Oppgavesystem med rating",
+      "standardF3": "Lesetilgang til fellesskap",
+      "standardF4": "Grunnleggende partianalyse",
+      "standardF5": "Fremdriftssporing",
+      "standardF6": "E-poststøtte",
+      "standardCta": "Start gratis prøveperiode",
+      "premium": "Premium",
+      "premiumPrice": "$49",
+      "premiumPeriod": "/mnd",
+      "premiumDesc": "Best for seriøse som vil forbedre seg",
+      "premiumF1": "Alt i Standard",
+      "premiumF2": "Ukentlige live gruppetimer",
+      "premiumF3": "Månedlig spillgjennomgangsøkt",
+      "premiumF4": "Avanserte analyseverktøy",
+      "premiumF5": "Deltakelse i fellesskap",
+      "premiumF6": "Prioritert e-poststøtte",
+      "premiumCta": "Velg Premium",
+      "vip": "VIP",
+      "vipPrice": "$199",
+      "vipPeriod": "/mnd",
+      "vipDesc": "For de som vil ha alt",
+      "vipF1": "Alt i Premium",
+      "vipF2": "Ukentlig 1-til-1-veiledning",
+      "vipF3": "Ukentlig spillgjennomgang med Dina",
+      "vipF4": "Prioritert booking og støtte",
+      "vipF5": "Personlig studieplan",
+      "vipF6": "Direkte meldinger til trener",
+      "vipCta": "Velg VIP",
+      "mostPopular": "Mest Populær",
+      "finePrint": "Alle planer inkluderer en 7-dagers gratis prøveperiode. Ingen kredittkort kreves. Avslutt når som helst."
+    },
+    "compare": {
+      "heading": "Sammenlign planer",
+      "subtitle": "Finn den perfekte planen for ditt nivå",
+      "feature": "Funksjon",
+      "free": "Gratis",
+      "standard": "Standard",
+      "premium": "Premium",
+      "vip": "VIP",
+      "basicLessons": "Grunnleggende leksjoner (Nivå 1)",
+      "allCourses": "Alle kurs",
+      "puzzleAccess": "Tilgang til oppgaver",
+      "communityAccess": "Fellesskapstilgang",
+      "gameAnalysis": "Partianalyse",
+      "groupClasses": "Gruppetimer",
+      "gameReviews": "Spillgjennomganger",
+      "oneOnOne": "1-til-1-veiledning",
+      "check": "✓",
+      "cross": "✗",
+      "limited": "Begrenset",
+      "readOnly": "Bare lesing",
+      "basic": "Grunnleggende",
+      "advanced": "Avansert",
+      "weekly": "Ukentlig",
+      "monthly": "Månedlig",
+      "weekly4x": "Ukentlig (4x/mnd)"
+    },
+    "cta": {
+      "heading": "Ikke sikker på hvilken plan som passer?",
+      "subtitle": "Start med vår 7-dagers gratis prøveperiode. Ingen forpliktelse, ingen kredittkort nødvendig.",
+      "cta": "Prøv Gratis i 7 Dager"
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "Velkommen tilbake",
+      "description": "Logg inn for å fortsette sjakkferden din",
+      "email": "E-post",
+      "emailPlaceholder": "du@eksempel.no",
+      "password": "Passord",
+      "passwordPlaceholder": "Skriv inn passordet ditt",
+      "submit": "Logg inn",
+      "invalidCredentials": "Ugyldige legitimasjonsdetaljer",
+      "divider": "Eller fortsett med",
+      "google": "Google",
+      "github": "GitHub",
+      "noAccount": "Har du ikke en konto?",
+      "signUp": "Registrer deg"
+    },
+    "register": {
+      "title": "Opprett kontoen din",
+      "description": "Start din strukturerte sjakkreise",
+      "name": "Navn",
+      "namePlaceholder": "Ditt navn",
+      "email": "E-post",
+      "emailPlaceholder": "du@eksempel.no",
+      "password": "Passord",
+      "passwordPlaceholder": "Min. 8 tegn",
+      "submit": "Opprett konto",
+      "submitting": "Oppretter konto...",
+      "nameError": "Navnet er for kort",
+      "emailError": "Skriv inn en gyldig e-postadresse",
+      "passwordError": "Passordet må være minst 8 tegn",
+      "registrationFailed": "Registrering mislyktes",
+      "unexpectedError": "En uventet feil oppstod",
+      "divider": "Eller fortsett med",
+      "google": "Google",
+      "github": "GitHub",
+      "hasAccount": "Har du allerede en konto?",
+      "signIn": "Logg inn"
+    },
+    "error": {
+      "title": "Autentiseringsfeil",
+      "description": "Noe gikk galt under innlogging",
+      "message": "Prøv igjen eller kontakt støtte hvis problemet vedvarer.",
+      "tryAgain": "Prøv igjen"
     }
   }
 }

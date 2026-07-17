@@ -1,35 +1,466 @@
 {
   "nav": {
     "home": "Home",
-    "about": "Chi siamo",
+    "about": "Chi Siamo",
     "kids": "Bambini",
     "faq": "FAQ",
     "blog": "Blog",
     "contact": "Contatti",
     "pricing": "Prezzi",
     "signIn": "Accedi",
-    "tryFree": "Prova gratis",
+    "tryFree": "Prova Gratis",
     "signOut": "Esci"
   },
   "footer": {
-    "description": "Padroneggia il gioco, pensa più a fondo. Formazione scacchistica strutturata per tutti i livelli con coach reali e una community di supporto.",
-    "quickLinks": "Link rapidi",
+    "brand": "Iranian Chess School",
+    "description": "Padroneggia il gioco, pensa più a fondo. Formazione scacchistica strutturata per tutti i livelli con istruttori reali e una community di supporto.",
+    "quickLinks": "Link Rapidi",
     "followUs": "Seguici",
     "contact": "Contatti",
-    "copyright": "© 2026 Iranian Chess School. Tutti i diritti riservati."
+    "email": "info@iranianchessschool.com",
+    "copyright": "© {year} Iranian Chess School. Tutti i diritti riservati."
   },
   "home": {
     "hero": {
-      "badge": "Padroneggia il gioco, pensa più a fondo",
-      "title": "Iranian Chess School",
-      "subtitle": "Smetti di saltare tra video YouTube casuali e partite blitz. Segui un programma strutturato con coach reali, revisioni delle partite e una community che ti aiuta davvero a migliorare.",
-      "cta": "Prova gratis",
-      "learnMore": "Scopri di più"
+      "badge": "Ora accettiamo studenti in tutto il mondo",
+      "title1": "Padroneggia il Gioco,",
+      "title2": "Pensa più a Fondo",
+      "subtitle": "Smetti di saltellare tra video YouTube casuali e partite di blitz. Segui un curriculum strutturato progettato da istruttori qualificati che sviluppa una vera comprensione degli scacchi.",
+      "cta": "Inizia la Prova Gratuita",
+      "learnMore": "Scopri Come Funziona",
+      "noCard": "Nessuna carta di credito",
+      "freeTrial": "Prova gratuita di 7 giorni",
+      "cancelAnytime": "Annulla quando vuoi"
     },
     "stats": {
-      "students": "studenti in miglioramento",
-      "hours": "ore di materiale",
-      "reach": "giocatori raggiunti"
+      "students": "Studenti in Miglioramento",
+      "hours": "Ore di Contenuti",
+      "reach": "Copertura Globale",
+      "satisfaction": "Tasso di Soddisfazione"
+    },
+    "features": {
+      "heading": "Più di un Semplice Corso",
+      "subtitle": "Tutto ciò che ti serve per passare da principiante a giocatore di club in un'unica piattaforma integrata",
+      "structuredLessons": "Lezioni Strutturate",
+      "structuredLessonsDesc": "Programma di formazione completo da 0–2000 Elo con curriculum passo dopo passo",
+      "liveClasses": "Lezioni di Gruppo dal Vivo",
+      "liveClassesDesc": "Sessioni interattive settimanali con istruttori qualificati in piccoli gruppi",
+      "gameReviews": "Revisioni delle Partite",
+      "gameReviewsDesc": "Analisi personalizzata approfondita delle tue partite con istruttori FM/WGM",
+      "progressAnalytics": "Analisi dei Progressi",
+      "progressAnalyticsDesc": "Monitora Elo, punteggio puzzle, completamento lezioni e analisi dei punti deboli",
+      "community": "Community Vivace",
+      "communityDesc": "Unisciti a oltre 1200 appassionati. Discuti, condividi e cresci insieme",
+      "aiTools": "Strumenti basati sull'IA",
+      "aiToolsDesc": "Analisi Stockfish, istruttore IA, esploratore di aperture e puzzle giornalieri"
+    },
+    "levels": {
+      "heading": "Livelli di Formazione",
+      "subtitle": "Dalla prima mossa al torneo — una tabella di marcia chiara",
+      "badge": "Percorso Strutturato",
+      "beginner": "Principiante",
+      "beginnerRange": "0–500",
+      "beginnerDesc": "Impara le regole e la tattica di base",
+      "improver": "Intermedio",
+      "improverRange": "500–800",
+      "improverDesc": "Costruisci le basi strategiche",
+      "intermediate": "Medio-Avanzato",
+      "intermediateRange": "800–1200",
+      "intermediateDesc": "Padroneggia gli schemi chiave",
+      "advanced": "Avanzato",
+      "advancedRange": "1200–1600",
+      "advancedDesc": "Gioco posizionale profondo",
+      "clubPlayer": "Giocatore di Club",
+      "clubPlayerRange": "1600–2000",
+      "clubPlayerDesc": "Preparazione al torneo"
+    },
+    "testimonials": {
+      "heading": "Perché gli Studenti Ci Scelgono",
+      "subtitle": "Risultati reali da studenti reali",
+      "student1Name": "Roman",
+      "student1Quote": "I miglioramenti marginali derivanti da un allenamento costante si accumulano davvero nel tempo.",
+      "student1Rating": "1200 → 2245",
+      "student1Gain": "+1045",
+      "student2Name": "Annabella",
+      "student2Quote": "Grazie a Dina e alla community ho guadagnato 400 Elo mentre ero qui.",
+      "student2Rating": "597 → 1604",
+      "student2Gain": "+1007",
+      "student3Name": "Grace",
+      "student3Quote": "Ho vinto il premio femminile nella mia sezione al Toronto Open.",
+      "student3Rating": "1400 → 2014",
+      "student3Gain": "+614",
+      "points": "punti"
+    },
+    "cta": {
+      "heading": "Pronto a Trasformare i Tuoi Scacchi?",
+      "subtitle": "Unisciti a oltre 1200 studenti che già migliorano con il nostro programma strutturato. Inizia oggi la tua prova gratuita di 7 giorni.",
+      "cta": "Inizia la Prova Gratuita",
+      "viewFaq": "Vedi le FAQ",
+      "finePrint": "Nessun impegno. Annulla quando vuoi. Gratuito per 7 giorni."
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "Chi Siamo",
+      "heading": "La Nostra Missione",
+      "subtitle": "Crediamo che ogni giocatore di scacchi meriti l'accesso a una formazione di livello mondiale. Iranian Chess School riunisce istruttori qualificati, un curriculum strutturato e una community di supporto per aiutarti a raggiungere il tuo pieno potenziale."
+    },
+    "values": {
+      "heading": "I Nostri Valori",
+      "subtitle": "Ciò che ci rende diversi",
+      "structuredLearning": "Apprendimento Strutturato",
+      "structuredLearningDesc": "Niente più video YouTube casuali. Segui un curriculum collaudato progettato da istruttori qualificati.",
+      "personalAttention": "Attenzione Personale",
+      "personalAttentionDesc": "Lezioni in piccoli gruppi e coaching 1-contro-1 garantiscono che ogni studente riceva l'aiuto di cui ha bisogno.",
+      "provenResults": "Risultati Comprovati",
+      "provenResultsDesc": "I nostri studenti hanno guadagnato 200–1000+ punti Elo grazie al nostro approccio sistematico.",
+      "lifetimeAccess": "Accesso a Vita",
+      "lifetimeAccessDesc": "Impara al tuo ritmo. Tutti i materiali del corso sono disponibili 24 ore su 24, 7 giorni su 7."
+    },
+    "coaches": {
+      "heading": "Conosci i Nostri Istruttori",
+      "subtitle": "Impara dai migliori del gioco",
+      "coach1Name": "Dina",
+      "coach1Title": "Istruttore Capo — MF",
+      "coach1Bio": "Maestro FIDE con oltre 15 anni di esperienza nell'insegnamento. Specializzato in gioco posizionale e finali.",
+      "coach2Name": "Alexandra",
+      "coach2Title": "Istruttrice — GMF",
+      "coach2Bio": "Grande Maestro Femminile con una passione per l'allenamento tattico. Allena studenti da livello intermedio ad avanzato.",
+      "fideProfile": "Profilo FIDE"
+    },
+    "cta": {
+      "heading": "Pronto a iniziare il tuo viaggio?",
+      "subtitle": "Unisciti a oltre 1200 studenti che già migliorano con il nostro programma strutturato.",
+      "cta": "Inizia Ora",
+      "contactUs": "Contattaci"
+    }
+  },
+  "faq": {
+    "hero": {
+      "badge": "FAQ",
+      "heading": "Domande Frequenti",
+      "subtitle": "Tutto ciò che devi sapere su Iranian Chess School"
+    },
+    "categories": {
+      "general": "Generale",
+      "pricing": "Prezzi e Piani",
+      "coaching": "Lezioni e Coaching",
+      "time": "Impegno di Tempo",
+      "technical": "Tecnico"
+    },
+    "questions": {
+      "whatIs": {
+        "q": "Cos'è Iranian Chess School?",
+        "a": "Iranian Chess School è una piattaforma completa di formazione scacchistica online con corsi strutturati, lezioni dal vivo, revisioni delle partite, puzzle e una community di supporto. Aiutiamo i giocatori dai principianti assoluti fino a 2000+ Elo a migliorare il loro gioco."
+      },
+      "whoAreCoaches": {
+        "q": "Chi sono gli istruttori?",
+        "a": "I nostri istruttori sono giocatori con titoli FIDE, inclusi Maestri FIDE e Grandi Maestri Femminili con anni di esperienza nell'insegnamento. Forniscono feedback personalizzati e guidano sessioni di gruppo dal vivo."
+      },
+      "needFarsi": {
+        "q": "Devo sapere il farsi?",
+        "a": "No, tutti i contenuti sono disponibili in inglese. Tuttavia, i nostri istruttori parlano correntemente sia inglese che farsi per servire la nostra comunità internazionale."
+      },
+      "howMuch": {
+        "q": "Quanto costa?",
+        "a": "Offriamo tre piani: Standard ($29/mese), Premium ($49/mese) e VIP ($199/mese). Abbiamo anche piani speciali per bambini. La fatturazione annuale ti dà 2 mesi gratuiti."
+      },
+      "freeTrial": {
+        "q": "C'è una prova gratuita?",
+        "a": "Sì! Offriamo una prova gratuita di 7 giorni su tutti i piani. Nessuna carta di credito richiesta. Puoi annullare in qualsiasi momento durante la prova senza costi."
+      },
+      "cancel": {
+        "q": "Posso annullare quando voglio?",
+        "a": "Assolutamente. Puoi annullare il tuo abbonamento in qualsiasi momento. Il tuo accesso continua fino alla fine del tuo periodo di fatturazione. Nessuna penale di cancellazione."
+      },
+      "liveClasses": {
+        "q": "Come funzionano le lezioni dal vivo?",
+        "a": "Le lezioni di gruppo dal vivo si tengono settimanalmente tramite videoconferenza. Ogni sessione si concentra su temi specifici e include domande e risposte. I membri Premium e VIP hanno accesso prioritario."
+      },
+      "gameReview": {
+        "q": "Cos'è una sessione di revisione della partita?",
+        "a": "Invii la tua partita (PGN o link Chess.com/Lichess) e un istruttore la analizza mossa per mossa, spiegando errori, alternative migliori e punti chiave di apprendimento."
+      },
+      "oneOnOne": {
+        "q": "Come prenoto una sessione di coaching 1-contro-1?",
+        "a": "I membri VIP possono prenotare sessioni 1-contro-1 direttamente tramite il nostro sistema di prenotazione. I membri Premium ricevono sessioni mensili. Le sessioni si svolgono tramite videochiamata."
+      },
+      "timeNeeded": {
+        "q": "Quanto tempo mi serve?",
+        "a": "Consigliamo 3–5 ore a settimana per un progresso ottimale. Questo include guardare le lezioni, risolvere puzzle, giocare partite e fare revisioni con gli istruttori."
+      },
+      "ownPace": {
+        "q": "Posso imparare al mio ritmo?",
+        "a": "Sì! Tutti i materiali del corso sono disponibili on-demand. Puoi guardare le lezioni, risolvere puzzle e studiare al ritmo che preferisci."
+      },
+      "improvement": {
+        "q": "Quanto tempo ci vuole per vedere miglioramenti?",
+        "a": "La maggior parte degli studenti nota miglioramenti evidenti entro 4–6 settimane di allenamento costante. Molti guadagnano 100–200 Elo nei primi 3 mesi."
+      },
+      "requirements": {
+        "q": "Cosa mi serve per iniziare?",
+        "a": "Un computer o tablet con accesso a Internet. Per le lezioni dal vivo, hai bisogno di una fotocamera e un microfono. La piattaforma funziona su tutti i browser moderni."
+      },
+      "importGames": {
+        "q": "Posso importare partite da Chess.com o Lichess?",
+        "a": "Sì! Puoi importare partite sia da Chess.com che da Lichess inserendo il tuo nome utente. Supportiamo anche il caricamento di file PGN."
+      },
+      "mobileApp": {
+        "q": "Avete un'app mobile?",
+        "a": "La piattaforma è completamente reattiva e funziona benissimo sui browser mobili. Un'app mobile nativa è in fase di sviluppo."
+      }
+    }
+  },
+  "blog": {
+    "hero": {
+      "badge": "Blog",
+      "heading": "Blog sul Miglioramento degli Scacchi",
+      "subtitle": "Consigli, strategie e approfondimenti dai nostri istruttori per aiutarti a migliorare."
+    },
+    "posts": {
+      "post1Title": "Perché l'Apprendimento Strutturato Batte i Video YouTube Casuali",
+      "post1Excerpt": "La maggior parte degli appassionati di scacchi spreca anni saltellando tra contenuti casuali. Ecco perché un approccio strutturato è la via più veloce per raggiungere 2000 Elo.",
+      "post1Date": "Jan 15, 2025",
+      "post1ReadTime": "5 min",
+      "post1Category": "Apprendimento",
+      "post2Title": "I 5 Errori Principali dei Principianti (E Come Risolverli)",
+      "post2Excerpt": "Evita queste trappole comuni che tengono i principianti bloccati sotto i 1000 Elo. Semplici correzioni che fanno un'enorme differenza.",
+      "post2Date": "Jan 10, 2025",
+      "post2ReadTime": "4 min",
+      "post2Category": "Principianti",
+      "post3Title": "Come Revisionare le Tue Partite Come un Grande Maestro",
+      "post3Excerpt": "L'analisi delle partite è il metodo più efficace per migliorare. Impara un approccio sistematico usato dai giocatori con titolo.",
+      "post3Date": "Jan 5, 2025",
+      "post3ReadTime": "7 min",
+      "post3Category": "Analisi",
+      "post4Title": "Principi di Apertura: Cosa Ogni Giocatore Dovrebbe Sapere",
+      "post4Excerpt": "Smetti di memorizzare linee di apertura e inizia a capire i principi. Questa guida copre tutto ciò che ti serve per un solido repertorio di aperture.",
+      "post4Date": "Dec 28, 2024",
+      "post4ReadTime": "6 min",
+      "post4Category": "Aperture",
+      "post5Title": "La Guida Definitiva all'Allenamento Tattico",
+      "post5Excerpt": "La tattica vince le partite. Ecco come strutturare il tuo allenamento con i puzzle per un miglioramento massimo, da principiante ad avanzato.",
+      "post5Date": "Dec 20, 2024",
+      "post5ReadTime": "8 min",
+      "post5Category": "Tattica",
+      "post6Title": "Fondamenti di Finale: 5 Posizioni Che Devi Conoscere",
+      "post6Excerpt": "Padroneggia queste posizioni essenziali di finale e guarda il tuo punteggio salire. Conoscenza pratica che vince le partite.",
+      "post6Date": "Dec 15, 2024",
+      "post6ReadTime": "6 min",
+      "post6Category": "Finali",
+      "readMore": "Leggi di più"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Contatti",
+      "heading": "Mettiti in Contatto",
+      "subtitle": "Hai una domanda? Ci piacerebbe sentirti."
+    },
+    "form": {
+      "heading": "Inviaci un messaggio",
+      "name": "Nome",
+      "namePlaceholder": "Il tuo nome",
+      "email": "Email",
+      "emailPlaceholder": "tuo@esempio.com",
+      "subject": "Oggetto",
+      "subjectPlaceholder": "Come possiamo aiutarti?",
+      "message": "Messaggio",
+      "messagePlaceholder": "Raccontaci di più...",
+      "submit": "Invia Messaggio",
+      "successTitle": "Messaggio inviato!",
+      "successText": "Ti risponderemo entro 24 ore."
+    },
+    "info": {
+      "heading": "Informazioni di Contatto",
+      "email": "Email",
+      "emailAddress": "info@iranianchessschool.com",
+      "whatsapp": "WhatsApp",
+      "phone": "+1 (234) 567-890",
+      "location": "Sede",
+      "locationText": "Online — In tutto il mondo",
+      "followUs": "Seguici",
+      "followUsText": "Rimani connesso sui social media per consigli, aggiornamenti ed eventi della community.",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "telegram": "Telegram"
+    }
+  },
+  "kids": {
+    "hero": {
+      "badge": "Programma Bambini",
+      "heading": "Lezioni di Scacchi",
+      "headingSpan": "Che i Bambini Amano",
+      "subtitle": "Regala a tuo figlio il dono degli scacchi. Il nostro programma per bambini rende l'apprendimento divertente, coinvolgente ed efficace con insegnamento adatto all'età e lezioni gamificate.",
+      "cta": "Prova Gratis",
+      "learnMore": "Scopri di Più",
+      "ages": "Età 6–16",
+      "allLevels": "Tutti i livelli benvenuti",
+      "freeTrial": "Prova gratuita di 7 giorni"
+    },
+    "features": {
+      "heading": "Perché i Bambini Lo Amano",
+      "subtitle": "Progettato per giovani studenti, amato dai genitori",
+      "funGames": "Divertimento e Giochi",
+      "funGamesDesc": "Impara gli scacchi attraverso giochi interattivi, puzzle e sfide progettati per le giovani menti.",
+      "groupClasses": "Lezioni di Gruppo",
+      "groupClassesDesc": "Lezioni dal vivo settimanali con altri bambini dello stesso livello. Impara insieme, cresci insieme.",
+      "achievements": "Riconoscimenti",
+      "achievementsDesc": "Guadagna badge, stelle e ricompense mentre progredisci attraverso i livelli e padroneggi le abilità.",
+      "kidFriendly": "Istruttori adatti ai Bambini",
+      "kidFriendlyDesc": "Istruttori pazienti ed esperti che sanno come rendere gli scacchi entusiasmanti per i bambini.",
+      "safeEnvironment": "Ambiente Sicuro",
+      "safeEnvironmentDesc": "Dashboard per genitori, rapporti sui progressi e supervisione completa in tutte le sessioni dal vivo.",
+      "provenMethod": "Metodo Comprovato",
+      "provenMethodDesc": "Il nostro curriculum è progettato da specialisti in educazione infantile e istruttori di scacchi con titolo."
+    },
+    "plans": {
+      "heading": "Piani per Bambini",
+      "subtitle": "Scegli il piano giusto per tuo figlio",
+      "standard": "Standard",
+      "standardPrice": "$79",
+      "standardPeriod": "/mese",
+      "standardF1": "Lezione di gruppo settimanale",
+      "standardF2": "Accesso ai puzzle",
+      "standardF3": "Monitoraggio dei progressi",
+      "standardF4": "Dashboard genitori",
+      "standardF5": "Accesso alla community",
+      "standardCta": "Inizia Ora",
+      "premium": "Premium",
+      "premiumPrice": "$249",
+      "premiumPeriod": "/mese",
+      "premiumF1": "Tutto incluso in Standard",
+      "premiumF2": "Lezioni 2x a settimana",
+      "premiumF3": "Revisione mensile della partita",
+      "premiumF4": "Sessione di coaching 1-contro-1",
+      "premiumF5": "Supporto prioritario",
+      "premiumCta": "Passa a Premium",
+      "mostPopular": "Più Popolare"
+    },
+    "cta": {
+      "heading": "Inizia il viaggio scacchistico di tuo figlio",
+      "subtitle": "Dai loro le abilità e la fiducia che gli scacchi offrono. Unisciti al nostro programma per bambini oggi.",
+      "cta": "Prova Gratis per 7 Giorni"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "badge": "Prezzi",
+      "heading": "Prezzi semplici e trasparenti",
+      "subtitle": "Inizia gratis. Passa a un piano superiore quando sei pronto."
+    },
+    "plans": {
+      "standard": "Standard",
+      "standardPrice": "$29",
+      "standardPeriod": "/mese",
+      "standardDesc": "Perfetto per studenti automotivati",
+      "standardF1": "Accesso completo alla libreria dei corsi",
+      "standardF2": "Sistema di puzzle con punteggio",
+      "standardF3": "Accesso in lettura alla community",
+      "standardF4": "Analisi base delle partite",
+      "standardF5": "Monitoraggio dei progressi",
+      "standardF6": "Supporto via email",
+      "standardCta": "Inizia la Prova Gratuita",
+      "premium": "Premium",
+      "premiumPrice": "$49",
+      "premiumPeriod": "/mese",
+      "premiumDesc": "Ideale per chi vuole migliorare seriamente",
+      "premiumF1": "Tutto incluso in Standard",
+      "premiumF2": "Lezioni di gruppo dal vivo settimanali",
+      "premiumF3": "Sessione mensile di revisione della partita",
+      "premiumF4": "Strumenti di analisi avanzati",
+      "premiumF5": "Partecipazione alla community",
+      "premiumF6": "Supporto email prioritario",
+      "premiumCta": "Passa a Premium",
+      "vip": "VIP",
+      "vipPrice": "$199",
+      "vipPeriod": "/mese",
+      "vipDesc": "Per chi vuole tutto",
+      "vipF1": "Tutto incluso in Premium",
+      "vipF2": "Coaching 1-contro-1 settimanale",
+      "vipF3": "Revisioni settimanali delle partite con Dina",
+      "vipF4": "Prenotazione e supporto prioritari",
+      "vipF5": "Piano di studio personalizzato",
+      "vipF6": "Messaggistica diretta con l'istruttore",
+      "vipCta": "Scegli VIP",
+      "mostPopular": "Più Popolare",
+      "finePrint": "Tutti i piani includono una prova gratuita di 7 giorni. Nessuna carta di credito richiesta. Annulla quando vuoi."
+    },
+    "compare": {
+      "heading": "Confronta i piani",
+      "subtitle": "Trova il piano perfetto per il tuo livello",
+      "feature": "Caratteristica",
+      "free": "Gratis",
+      "standard": "Standard",
+      "premium": "Premium",
+      "vip": "VIP",
+      "basicLessons": "Lezioni base (Livello 1)",
+      "allCourses": "Tutti i corsi",
+      "puzzleAccess": "Accesso ai puzzle",
+      "communityAccess": "Accesso alla community",
+      "gameAnalysis": "Analisi delle partite",
+      "groupClasses": "Lezioni di gruppo",
+      "gameReviews": "Revisioni delle partite",
+      "oneOnOne": "Coaching 1-contro-1",
+      "check": "✓",
+      "cross": "✗",
+      "limited": "Limitato",
+      "readOnly": "Sola lettura",
+      "basic": "Base",
+      "advanced": "Avanzato",
+      "weekly": "Settimanale",
+      "monthly": "Mensile",
+      "weekly4x": "Settimanale (4x/mese)"
+    },
+    "cta": {
+      "heading": "Non sei sicuro di quale piano sia giusto?",
+      "subtitle": "Inizia con la nostra prova gratuita di 7 giorni. Nessun impegno, nessuna carta di credito richiesta.",
+      "cta": "Prova Gratis per 7 Giorni"
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "Bentornato",
+      "description": "Accedi per continuare il tuo percorso scacchistico",
+      "email": "Email",
+      "emailPlaceholder": "tuo@esempio.com",
+      "password": "Password",
+      "passwordPlaceholder": "Inserisci la tua password",
+      "submit": "Accedi",
+      "invalidCredentials": "Credenziali non valide",
+      "divider": "Oppure continua con",
+      "google": "Google",
+      "github": "GitHub",
+      "noAccount": "Non hai un account?",
+      "signUp": "Registrati"
+    },
+    "register": {
+      "title": "Crea il tuo account",
+      "description": "Inizia il tuo percorso scacchistico strutturato",
+      "name": "Nome",
+      "namePlaceholder": "Il tuo nome",
+      "email": "Email",
+      "emailPlaceholder": "tuo@esempio.com",
+      "password": "Password",
+      "passwordPlaceholder": "Min. 8 caratteri",
+      "submit": "Crea account",
+      "submitting": "Creazione account in corso...",
+      "nameError": "Il nome è troppo corto",
+      "emailError": "Inserisci un'email valida",
+      "passwordError": "La password deve essere di almeno 8 caratteri",
+      "registrationFailed": "Registrazione fallita",
+      "unexpectedError": "Si è verificato un errore imprevisto",
+      "divider": "Oppure continua con",
+      "google": "Google",
+      "github": "GitHub",
+      "hasAccount": "Hai già un account?",
+      "signIn": "Accedi"
+    },
+    "error": {
+      "title": "Errore di Autenticazione",
+      "description": "Qualcosa è andato storto durante l'accesso",
+      "message": "Riprova o contatta il supporto se il problema persiste.",
+      "tryAgain": "Riprova"
     }
   }
 }

@@ -12,24 +12,455 @@
     "signOut": "Déconnexion"
   },
   "footer": {
-    "description": "Maîtrisez le jeu, pensez plus profondément. Formation aux échecs structurée pour tous les niveaux avec de vrais coachs et une communauté solidaire.",
+    "brand": "Iranian Chess School",
+    "description": "Maîtrisez le jeu, pensez plus loin. Un entraînement structuré aux échecs pour tous les niveaux avec de vrais coachs et une communauté solidaire.",
     "quickLinks": "Liens rapides",
     "followUs": "Suivez-nous",
     "contact": "Contact",
-    "copyright": "© 2026 Iranian Chess School. Tous droits réservés."
+    "email": "info@iranianchessschool.com",
+    "copyright": "© {year} Iranian Chess School. Tous droits réservés."
   },
   "home": {
     "hero": {
-      "badge": "Maîtrisez le jeu, pensez plus profondément",
-      "title": "Iranian Chess School",
-      "subtitle": "Arrêtez de sauter entre des vidéos YouTube aléatoires et des parties blitz. Suivez un programme structuré avec de vrais coachs, des analyses de parties et une communauté qui vous aide vraiment à progresser.",
+      "badge": "Nous acceptons désormais des élèves du monde entier",
+      "title1": "Maîtrisez le jeu,",
+      "title2": "Pensez plus loin",
+      "subtitle": "Arrêtez de sauter entre des vidéos YouTube aléatoires et des parties blitz. Suivez un programme structuré conçu par des coachs titrés qui construit une véritable compréhension des échecs.",
       "cta": "Essai gratuit",
-      "learnMore": "En savoir plus"
+      "learnMore": "Voir comment ça marche",
+      "noCard": "Sans carte bancaire",
+      "freeTrial": "Essai gratuit de 7 jours",
+      "cancelAnytime": "Annulation à tout moment"
     },
     "stats": {
-      "students": "étudiants en progrès",
-      "hours": "heures de contenu",
-      "reach": "joueurs d'échecs touchés"
+      "students": "Élèves en progrès",
+      "hours": "Heures de contenu",
+      "reach": "Portée mondiale",
+      "satisfaction": "Taux de satisfaction"
+    },
+    "features": {
+      "heading": "Bien plus qu'un cours",
+      "subtitle": "Tout ce dont vous avez besoin pour passer de débutant à joueur de club sur une plateforme intégrée",
+      "structuredLessons": "Leçons structurées",
+      "structuredLessonsDesc": "Programme d'entraînement complet de 0 à 2000 Elo avec un curriculum pas à pas",
+      "liveClasses": "Cours collectifs en direct",
+      "liveClassesDesc": "Sessions interactives hebdomadaires avec des coachs titrés en petits groupes",
+      "gameReviews": "Analyses de parties",
+      "gameReviewsDesc": "Analyse personnalisée approfondie de vos parties avec des coachs FM/WGM",
+      "progressAnalytics": "Suivi de progression",
+      "progressAnalyticsDesc": "Suivez votre Elo, votre classement aux puzzles, l'avancement des leçons et l'analyse des faiblesses",
+      "community": "Communauté dynamique",
+      "communityDesc": "Rejoignez 1200+ passionnés. Discutez, partagez et progressez ensemble",
+      "aiTools": "Outils pilotés par IA",
+      "aiToolsDesc": "Analyse Stockfish, coach IA, explorateur d'ouvertures et puzzles quotidiens"
+    },
+    "levels": {
+      "heading": "Niveaux d'entraînement",
+      "subtitle": "De votre premier coup au jeu en tournoi — une feuille de route claire",
+      "badge": "Parcours structuré",
+      "beginner": "Débutant",
+      "beginnerRange": "0–500",
+      "beginnerDesc": "Apprenez les règles et les tactiques de base",
+      "improver": "Perfectionnement",
+      "improverRange": "500–800",
+      "improverDesc": "Construisez des bases stratégiques",
+      "intermediate": "Intermédiaire",
+      "intermediateRange": "800–1200",
+      "intermediateDesc": "Maîtrisez les motifs clés",
+      "advanced": "Avancé",
+      "advancedRange": "1200–1600",
+      "advancedDesc": "Jeu positionnel approfondi",
+      "clubPlayer": "Joueur de club",
+      "clubPlayerRange": "1600–2000",
+      "clubPlayerDesc": "Préparation aux tournois"
+    },
+    "testimonials": {
+      "heading": "Pourquoi les élèves nous choisissent",
+      "subtitle": "Des résultats concrets d'élèves réels",
+      "student1Name": "Roman",
+      "student1Quote": "Les petits gains d'un entraînement régulier s'additionnent vraiment avec le temps.",
+      "student1Rating": "1200 → 2245",
+      "student1Gain": "+1045",
+      "student2Name": "Annabella",
+      "student2Quote": "Grâce à Dina et à la communauté, j'ai gagné 400 points Elo pendant mon séjour.",
+      "student2Rating": "597 → 1604",
+      "student2Gain": "+1007",
+      "student3Name": "Grace",
+      "student3Quote": "J'ai remporté le prix féminin dans ma section au Toronto Open.",
+      "student3Rating": "1400 → 2014",
+      "student3Gain": "+614",
+      "points": "points"
+    },
+    "cta": {
+      "heading": "Prêt à transformer votre jeu ?",
+      "subtitle": "Rejoignez 1200+ élèves qui progressent déjà avec notre programme structuré. Commencez votre essai gratuit de 7 jours dès aujourd'hui.",
+      "cta": "Essai gratuit",
+      "viewFaq": "Voir la FAQ",
+      "finePrint": "Sans engagement. Annulation à tout moment. Gratuit pendant 7 jours."
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "À propos de nous",
+      "heading": "Notre mission",
+      "subtitle": "Nous croyons que chaque joueur d'échecs mérite un accès à un coaching de classe mondiale. Iranian Chess School réunit des coachs titrés, un programme structuré et une communauté solidaire pour vous aider à atteindre votre plein potentiel."
+    },
+    "values": {
+      "heading": "Nos valeurs",
+      "subtitle": "Ce qui nous rend différents",
+      "structuredLearning": "Apprentissage structuré",
+      "structuredLearningDesc": "Fini les vidéos YouTube aléatoires. Suivez un programme éprouvé conçu par des coachs titrés.",
+      "personalAttention": "Attention personnalisée",
+      "personalAttentionDesc": "Des cours en petits groupes et un coaching individuel garantissent que chaque élève reçoit l'aide dont il a besoin.",
+      "provenResults": "Résultats prouvés",
+      "provenResultsDesc": "Nos élèves ont gagné 200 à 1000+ points Elo grâce à notre approche systématique.",
+      "lifetimeAccess": "Accès à vie",
+      "lifetimeAccessDesc": "Apprenez à votre rythme. Tout le matériel de cours est disponible 24h/24 et 7j/7."
+    },
+    "coaches": {
+      "heading": "Rencontrez nos coachs",
+      "subtitle": "Apprenez des meilleurs",
+      "coach1Name": "Dina",
+      "coach1Title": "Coach principal — MF",
+      "coach1Bio": "Maître FIDE avec plus de 15 ans d'expérience en coaching. Spécialiste du jeu positionnel et des finales.",
+      "coach2Name": "Alexandra",
+      "coach2Title": "Coach — GMF",
+      "coach2Bio": "Grand Maître Féminin passionnée par l'entraînement tactique. Coach des élèves de niveau intermédiaire à avancé.",
+      "fideProfile": "Profil FIDE"
+    },
+    "cta": {
+      "heading": "Prêt à commencer votre parcours ?",
+      "subtitle": "Rejoignez 1200+ élèves qui progressent déjà avec notre programme structuré.",
+      "cta": "Commencer",
+      "contactUs": "Contactez-nous"
+    }
+  },
+  "faq": {
+    "hero": {
+      "badge": "FAQ",
+      "heading": "Questions fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur Iranian Chess School"
+    },
+    "categories": {
+      "general": "Général",
+      "pricing": "Tarifs et forfaits",
+      "coaching": "Cours et coaching",
+      "time": "Engagement horaire",
+      "technical": "Technique"
+    },
+    "questions": {
+      "whatIs": {
+        "q": "Qu'est-ce que l'Iranian Chess School ?",
+        "a": "Iranian Chess School est une plateforme complète d'entraînement aux échecs en ligne proposant des cours structurés, des cours en direct, des analyses de parties, des puzzles et une communauté solidaire. Nous aidons les joueurs, du débutant absolu jusqu'à 2000+ Elo, à améliorer leur jeu."
+      },
+      "whoAreCoaches": {
+        "q": "Qui sont les coachs ?",
+        "a": "Nos coachs sont des joueurs titrés, notamment des Maîtres FIDE et des Grands Maîtres Féminins, avec des années d'expérience pédagogique. Ils fournissent des retours personnalisés et animent des sessions de groupe en direct."
+      },
+      "needFarsi": {
+        "q": "Dois-je connaître le farsi ?",
+        "a": "Non, tout le contenu est disponible en anglais. Cependant, nos coachs parlent couramment l'anglais et le farsi pour servir notre communauté internationale."
+      },
+      "howMuch": {
+        "q": "Combien ça coûte ?",
+        "a": "Nous proposons trois formules : Standard (29 $/mois), Premium (49 $/mois) et VIP (199 $/mois). Nous avons également des forfaits spécialisés pour les enfants. La facturation annuelle vous offre 2 mois gratuits."
+      },
+      "freeTrial": {
+        "q": "Y a-t-il un essai gratuit ?",
+        "a": "Oui ! Nous offrons un essai gratuit de 7 jours sur toutes les formules. Aucune carte bancaire requise. Vous pouvez annuler à tout moment pendant l'essai sans frais."
+      },
+      "cancel": {
+        "q": "Puis-je annuler à tout moment ?",
+        "a": "Absolument. Vous pouvez annuler votre abonnement à tout moment. Votre accès reste actif jusqu'à la fin de votre période de facturation. Sans frais d'annulation."
+      },
+      "liveClasses": {
+        "q": "Comment fonctionnent les cours en direct ?",
+        "a": "Les cours collectifs en direct ont lieu chaque semaine par visioconférence. Chaque session se concentre sur des thèmes spécifiques et comprend une séance de questions-réponses. Les membres Premium et VIP bénéficient d'un accès prioritaire."
+      },
+      "gameReview": {
+        "q": "Qu'est-ce qu'une séance d'analyse de partie ?",
+        "a": "Vous soumettez votre partie (PGN ou lien Chess.com/Lichess) et un coach l'analyse coup par coup, en expliquant les erreurs, les meilleures alternatives et les points d'apprentissage clés."
+      },
+      "oneOnOne": {
+        "q": "Comment réserver un coaching individuel ?",
+        "a": "Les membres VIP peuvent réserver des sessions individuelles directement via notre système de réservation. Les membres Premium bénéficient de sessions mensuelles. Les sessions se déroulent par appel vidéo."
+      },
+      "timeNeeded": {
+        "q": "Combien de temps dois-je consacrer ?",
+        "a": "Nous recommandons 3 à 5 heures par semaine pour des progrès optimaux. Cela inclut regarder les leçons, résoudre des puzzles, jouer des parties et faire des analyses avec les coachs."
+      },
+      "ownPace": {
+        "q": "Puis-je apprendre à mon rythme ?",
+        "a": "Oui ! Tout le matériel de cours est disponible à la demande. Vous pouvez regarder les leçons, résoudre des puzzles et étudier au rythme qui vous convient."
+      },
+      "improvement": {
+        "q": "Combien de temps avant de voir des progrès ?",
+        "a": "La plupart des élèves constatent une amélioration notable après 4 à 6 semaines d'entraînement régulier. Beaucoup gagnent 100 à 200 points Elo au cours de leurs 3 premiers mois."
+      },
+      "requirements": {
+        "q": "De quoi ai-je besoin pour commencer ?",
+        "a": "Un ordinateur ou une tablette avec accès à Internet. Pour les cours en direct, vous avez besoin d'une caméra et d'un microphone. La plateforme fonctionne sur tous les navigateurs modernes."
+      },
+      "importGames": {
+        "q": "Puis-je importer des parties depuis Chess.com ou Lichess ?",
+        "a": "Oui ! Vous pouvez importer des parties depuis Chess.com et Lichess en saisissant votre nom d'utilisateur. Nous prenons également en charge le téléchargement de fichiers PGN."
+      },
+      "mobileApp": {
+        "q": "Avez-vous une application mobile ?",
+        "a": "La plateforme est entièrement responsive et fonctionne parfaitement sur les navigateurs mobiles. Une application mobile native est en cours de développement."
+      }
+    }
+  },
+  "blog": {
+    "hero": {
+      "badge": "Blog",
+      "heading": "Blog d'amélioration aux échecs",
+      "subtitle": "Conseils, stratégies et astuces de nos coachs pour vous aider à progresser."
+    },
+    "posts": {
+      "post1Title": "Pourquoi l'apprentissage structuré bat les vidéos YouTube aléatoires",
+      "post1Excerpt": "La plupart des passionnés d'échecs perdent des années à sauter d'un contenu aléatoire à l'autre. Voici pourquoi une approche structurée est le chemin le plus rapide vers 2000 Elo.",
+      "post1Date": "15 janv. 2025",
+      "post1ReadTime": "5 min",
+      "post1Category": "Apprentissage",
+      "post2Title": "Top 5 des erreurs des débutants (et comment les corriger)",
+      "post2Excerpt": "Évitez ces pièges courants qui maintiennent les débutants sous la barre des 1000 Elo. Des correctifs simples qui font une énorme différence.",
+      "post2Date": "10 janv. 2025",
+      "post2ReadTime": "4 min",
+      "post2Category": "Débutants",
+      "post3Title": "Comment analyser vos parties comme un grand maître",
+      "post3Excerpt": "L'analyse de parties est le moyen le plus efficace de progresser. Apprenez une approche systématique utilisée par les joueurs titrés.",
+      "post3Date": "5 janv. 2025",
+      "post3ReadTime": "7 min",
+      "post3Category": "Analyse",
+      "post4Title": "Principes d'ouverture : ce que tout joueur devrait savoir",
+      "post4Excerpt": "Arrêtez de mémoriser des lignes d'ouverture et commencez à comprendre les principes. Ce guide couvre tout ce dont vous avez besoin pour un répertoire d'ouvertures solide.",
+      "post4Date": "28 déc. 2024",
+      "post4ReadTime": "6 min",
+      "post4Category": "Ouvertures",
+      "post5Title": "Guide ultime d'entraînement aux tactiques",
+      "post5Excerpt": "Les tactiques gagnent des parties. Voici comment structurer votre entraînement aux puzzles pour un maximum de progression, du débutant au niveau avancé.",
+      "post5Date": "20 déc. 2024",
+      "post5ReadTime": "8 min",
+      "post5Category": "Tactiques",
+      "post6Title": "Fondamentaux des finales : 5 positions à connaître",
+      "post6Excerpt": "Maîtrisez ces positions de finale essentielles et regardez votre classement grimper. Des connaissances pratiques qui font gagner des parties.",
+      "post6Date": "15 déc. 2024",
+      "post6ReadTime": "6 min",
+      "post6Category": "Finales",
+      "readMore": "Lire la suite"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Contact",
+      "heading": "Prenez contact",
+      "subtitle": "Une question ? Nous serions ravis de vous entendre."
+    },
+    "form": {
+      "heading": "Envoyez-nous un message",
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Comment pouvons-nous vous aider ?",
+      "message": "Message",
+      "messagePlaceholder": "Dites-nous en plus...",
+      "submit": "Envoyer le message",
+      "successTitle": "Message envoyé !",
+      "successText": "Nous vous répondrons sous 24 heures."
+    },
+    "info": {
+      "heading": "Coordonnées",
+      "email": "Email",
+      "emailAddress": "info@iranianchessschool.com",
+      "whatsapp": "WhatsApp",
+      "phone": "+1 (234) 567-890",
+      "location": "Localisation",
+      "locationText": "En ligne — Mondial",
+      "followUs": "Suivez-nous",
+      "followUsText": "Restez connecté sur les réseaux sociaux pour des conseils, des actualités et des événements communautaires.",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "telegram": "Telegram"
+    }
+  },
+  "kids": {
+    "hero": {
+      "badge": "Programme Enfants",
+      "heading": "Cours d'échecs",
+      "headingSpan": "que les enfants adorent",
+      "subtitle": "Offrez à votre enfant le cadeau des échecs. Notre programme enfants rend l'apprentissage amusant, engageant et efficace avec un coaching adapté à l'âge et des leçons ludiques.",
+      "cta": "Essai gratuit",
+      "learnMore": "En savoir plus",
+      "ages": "6–16 ans",
+      "allLevels": "Tous niveaux bienvenus",
+      "freeTrial": "Essai gratuit de 7 jours"
+    },
+    "features": {
+      "heading": "Pourquoi les enfants adorent",
+      "subtitle": "Conçu pour les jeunes apprenants, adoré des parents",
+      "funGames": "Jeux et divertissement",
+      "funGamesDesc": "Apprenez les échecs à travers des jeux interactifs, des puzzles et des défis conçus pour les jeunes esprits.",
+      "groupClasses": "Cours collectifs",
+      "groupClassesDesc": "Cours en direct hebdomadaires avec d'autres enfants du même niveau. Apprenez ensemble, grandissez ensemble.",
+      "achievements": "Récompenses",
+      "achievementsDesc": "Gagnez des badges, des étoiles et des récompenses en progressant à travers les niveaux et en maîtrisant les compétences.",
+      "kidFriendly": "Coachs adaptés aux enfants",
+      "kidFriendlyDesc": "Des coachs patients et expérimentés qui savent rendre les échecs passionnants pour les enfants.",
+      "safeEnvironment": "Environnement sécurisé",
+      "safeEnvironmentDesc": "Tableau de bord parental, rapports de progression et supervision complète dans toutes les sessions en direct.",
+      "provenMethod": "Méthode éprouvée",
+      "provenMethodDesc": "Notre programme est conçu par des spécialistes de l'éducation infantile et des coachs d'échecs titrés."
+    },
+    "plans": {
+      "heading": "Forfaits Enfants",
+      "subtitle": "Choisissez le forfait adapté à votre enfant",
+      "standard": "Standard",
+      "standardPrice": "$79",
+      "standardPeriod": "/mo",
+      "standardF1": "Cours collectif hebdomadaire",
+      "standardF2": "Accès aux puzzles",
+      "standardF3": "Suivi de progression",
+      "standardF4": "Tableau de bord parental",
+      "standardF5": "Accès à la communauté",
+      "standardCta": "Commencer",
+      "premium": "Premium",
+      "premiumPrice": "$249",
+      "premiumPeriod": "/mo",
+      "premiumF1": "Tout ce qui est inclus dans Standard",
+      "premiumF2": "2 cours par semaine",
+      "premiumF3": "Analyse de partie mensuelle",
+      "premiumF4": "Séance de coaching individuel",
+      "premiumF5": "Support prioritaire",
+      "premiumCta": "Passer à Premium",
+      "mostPopular": "Le plus populaire"
+    },
+    "cta": {
+      "heading": "Commencez le parcours échecs de votre enfant",
+      "subtitle": "Donnez-leur les compétences et la confiance que les échecs procurent. Rejoignez notre programme enfants dès aujourd'hui.",
+      "cta": "Essai gratuit de 7 jours"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "badge": "Tarifs",
+      "heading": "Des tarifs simples et transparents",
+      "subtitle": "Commencez gratuitement. Passez à un forfait quand vous êtes prêt."
+    },
+    "plans": {
+      "standard": "Standard",
+      "standardPrice": "$29",
+      "standardPeriod": "/mo",
+      "standardDesc": "Parfait pour les apprenants autonomes",
+      "standardF1": "Accès complet à la bibliothèque de cours",
+      "standardF2": "Système de puzzles avec classement",
+      "standardF3": "Accès en lecture à la communauté",
+      "standardF4": "Analyse de partie de base",
+      "standardF5": "Suivi de progression",
+      "standardF6": "Support par email",
+      "standardCta": "Essai gratuit",
+      "premium": "Premium",
+      "premiumPrice": "$49",
+      "premiumPeriod": "/mo",
+      "premiumDesc": "Idéal pour les passionnés sérieux",
+      "premiumF1": "Tout ce qui est inclus dans Standard",
+      "premiumF2": "Cours collectifs en direct hebdomadaires",
+      "premiumF3": "Séance d'analyse de partie mensuelle",
+      "premiumF4": "Outils d'analyse avancés",
+      "premiumF5": "Participation à la communauté",
+      "premiumF6": "Support prioritaire par email",
+      "premiumCta": "Passer à Premium",
+      "vip": "VIP",
+      "vipPrice": "$199",
+      "vipPeriod": "/mo",
+      "vipDesc": "Pour ceux qui veulent tout",
+      "vipF1": "Tout ce qui est inclus dans Premium",
+      "vipF2": "Coaching individuel hebdomadaire",
+      "vipF3": "Analyses de partie hebdomadaires avec Dina",
+      "vipF4": "Réservation et support prioritaires",
+      "vipF5": "Plan d'étude personnalisé",
+      "vipF6": "Messagerie directe avec le coach",
+      "vipCta": "Devenir VIP",
+      "mostPopular": "Le plus populaire",
+      "finePrint": "Tous les forfaits incluent un essai gratuit de 7 jours. Aucune carte bancaire requise. Annulation à tout moment."
+    },
+    "compare": {
+      "heading": "Comparer les forfaits",
+      "subtitle": "Trouvez le forfait parfait pour votre niveau",
+      "feature": "Fonctionnalité",
+      "free": "Gratuit",
+      "standard": "Standard",
+      "premium": "Premium",
+      "vip": "VIP",
+      "basicLessons": "Cours de base (Niveau 1)",
+      "allCourses": "Tous les cours",
+      "puzzleAccess": "Accès aux puzzles",
+      "communityAccess": "Accès à la communauté",
+      "gameAnalysis": "Analyse de partie",
+      "groupClasses": "Cours collectifs",
+      "gameReviews": "Analyses de parties",
+      "oneOnOne": "Coaching individuel",
+      "check": "✓",
+      "cross": "✗",
+      "limited": "Limité",
+      "readOnly": "Lecture seule",
+      "basic": "Basique",
+      "advanced": "Avancé",
+      "weekly": "Hebdomadaire",
+      "monthly": "Mensuel",
+      "weekly4x": "Hebdomadaire (4x/mois)"
+    },
+    "cta": {
+      "heading": "Vous ne savez pas quel forfait choisir ?",
+      "subtitle": "Commencez par notre essai gratuit de 7 jours. Sans engagement, sans carte bancaire.",
+      "cta": "Essai gratuit de 7 jours"
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "Bon retour",
+      "description": "Connectez-vous pour continuer votre parcours échecs",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "Saisissez votre mot de passe",
+      "submit": "Se connecter",
+      "invalidCredentials": "Identifiants invalides",
+      "divider": "Ou continuer avec",
+      "google": "Google",
+      "github": "GitHub",
+      "noAccount": "Pas encore de compte ?",
+      "signUp": "S'inscrire"
+    },
+    "register": {
+      "title": "Créez votre compte",
+      "description": "Commencez votre parcours échecs structuré",
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "Min. 8 caractères",
+      "submit": "Créer un compte",
+      "submitting": "Création du compte...",
+      "nameError": "Nom trop court",
+      "emailError": "Saisissez un email valide",
+      "passwordError": "Le mot de passe doit contenir au moins 8 caractères",
+      "registrationFailed": "Échec de l'inscription",
+      "unexpectedError": "Une erreur inattendue s'est produite",
+      "divider": "Ou continuer avec",
+      "google": "Google",
+      "github": "GitHub",
+      "hasAccount": "Déjà un compte ?",
+      "signIn": "Se connecter"
+    },
+    "error": {
+      "title": "Erreur d'authentification",
+      "description": "Une erreur s'est produite lors de la connexion",
+      "message": "Veuillez réessayer ou contacter le support si le problème persiste.",
+      "tryAgain": "Réessayer"
     }
   }
 }
