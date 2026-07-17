@@ -1542,10 +1542,17 @@ MCP gives the AI agent direct access to project tools (GitHub, Vercel, Turso, St
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-stripe"],
       "env": { "STRIPE_SECRET_KEY": "${STRIPE_SECRET_KEY}" }
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": ["-y", "@shadcn/mcp"],
+      "env": { "SHADCN_API_KEY": "${SHADCN_API_KEY}" }
     }
   }
 }
 ```
+
+**shadcn MCP** gives the AI agent direct access to add, update, and manage shadcn/ui components — no need to manually run `pnpm dlx shadcn add button`. The agent can discover available components, add them, and keep them updated automatically.
 
 ### Why This Matters
 
@@ -1553,7 +1560,7 @@ MCP gives the AI agent direct access to project tools (GitHub, Vercel, Turso, St
 |---|---|
 | `AGENTS.md` | Tells AI agents the project structure, commands, and conventions at a glance |
 | `.opencode/skills/*.md` | Domain-specific instructions so the AI knows exactly how to implement chess engine, auth, payments, etc. |
-| `.opencode/mcp.json` | Gives the AI agent direct tool access to GitHub, Vercel, Turso, Stripe |
+| `.opencode/mcp.json` | Gives the AI agent direct tool access to GitHub, Vercel, Turso, Stripe, shadcn |
 
 Without these files, the AI agent wastes time guessing. With them, it works at full speed with zero context-switching.
 This masterplan outlines a complete, production-ready chess platform that:
