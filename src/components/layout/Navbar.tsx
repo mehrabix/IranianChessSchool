@@ -36,13 +36,13 @@ import {
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 const navLinks = [
-  { href: '/', labelKey: 'nav.home', icon: Home },
-  { href: '/about', labelKey: 'nav.about', icon: Info },
-  { href: '/kids', labelKey: 'nav.kids', icon: Users },
-  { href: '/faq', labelKey: 'nav.faq', icon: HelpCircle },
-  { href: '/blog', labelKey: 'nav.blog', icon: FileText },
-  { href: '/contact', labelKey: 'nav.contact', icon: Mail },
-  { href: '/pricing', labelKey: 'nav.pricing', icon: CreditCard },
+  { href: '/', labelKey: 'home', icon: Home },
+  { href: '/about', labelKey: 'about', icon: Info },
+  { href: '/kids', labelKey: 'kids', icon: Users },
+  { href: '/faq', labelKey: 'faq', icon: HelpCircle },
+  { href: '/blog', labelKey: 'blog', icon: FileText },
+  { href: '/contact', labelKey: 'contact', icon: Mail },
+  { href: '/pricing', labelKey: 'pricing', icon: CreditCard },
 ];
 
 export function Navbar() {
@@ -100,17 +100,17 @@ export function Navbar() {
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={() => signOut()} className="text-destructive focus:text-destructive">
                   <LogOut className="h-4 w-4 mr-2" />
-                  {t('nav.signOut')}
+                  {t('signOut')}
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
             <>
               <Button variant="ghost" render={<Link href="/auth/signin" />}>
-                {t('nav.signIn')}
+                {t('signIn')}
               </Button>
               <Button render={<Link href="/pricing" />}>
-                {t('nav.tryFree')}
+                {t('tryFree')}
               </Button>
             </>
           )}
