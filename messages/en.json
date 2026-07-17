@@ -12,24 +12,455 @@
     "signOut": "Sign Out"
   },
   "footer": {
+    "brand": "Iranian Chess School",
     "description": "Master the game, think deeper. Structured chess training for all levels with real coaches and a supportive community.",
     "quickLinks": "Quick Links",
     "followUs": "Follow Us",
     "contact": "Contact",
-    "copyright": "© 2026 Iranian Chess School. All rights reserved."
+    "email": "info@iranianchessschool.com",
+    "copyright": "© {year} Iranian Chess School. All rights reserved."
   },
   "home": {
     "hero": {
-      "badge": "Master the game, think deeper",
-      "title": "Iranian Chess School",
-      "subtitle": "Stop jumping between random YouTube videos and blitz games. Follow a structured program with real coaches, game reviews, and a community that actually helps you improve.",
-      "cta": "Try for Free",
-      "learnMore": "Learn More"
+      "badge": "Now accepting students worldwide",
+      "title1": "Master the Game,",
+      "title2": "Think Deeper",
+      "subtitle": "Stop jumping between random YouTube videos and blitz games. Follow a structured curriculum designed by titled coaches that actually builds real chess understanding.",
+      "cta": "Start Free Trial",
+      "learnMore": "See How It Works",
+      "noCard": "No credit card",
+      "freeTrial": "7-day free trial",
+      "cancelAnytime": "Cancel anytime"
     },
     "stats": {
-      "students": "students improving",
-      "hours": "hours of material",
-      "reach": "chess players reached"
+      "students": "Students Improving",
+      "hours": "Hours of Content",
+      "reach": "Global Reach",
+      "satisfaction": "Satisfaction Rate"
+    },
+    "features": {
+      "heading": "More Than Just a Course",
+      "subtitle": "Everything you need to go from beginner to club player in one integrated platform",
+      "structuredLessons": "Structured Lessons",
+      "structuredLessonsDesc": "Complete training program from 0–2000 Elo with step-by-step curriculum",
+      "liveClasses": "Live Group Classes",
+      "liveClassesDesc": "Weekly interactive sessions with titled coaches in small groups",
+      "gameReviews": "Game Reviews",
+      "gameReviewsDesc": "Deep personalized analysis of your games with FM/WGM coaches",
+      "progressAnalytics": "Progress Analytics",
+      "progressAnalyticsDesc": "Track Elo, puzzle rating, lesson completion & weakness analysis",
+      "community": "Vibrant Community",
+      "communityDesc": "Join 1200+ improvers. Discuss, share, and grow together",
+      "aiTools": "AI-Powered Tools",
+      "aiToolsDesc": "Stockfish analysis, AI coach, opening explorer & daily puzzles"
+    },
+    "levels": {
+      "heading": "Training Levels",
+      "subtitle": "From your first move to tournament play — a clear roadmap",
+      "badge": "Structured Path",
+      "beginner": "Beginner",
+      "beginnerRange": "0–500",
+      "beginnerDesc": "Learn rules & basic tactics",
+      "improver": "Improver",
+      "improverRange": "500–800",
+      "improverDesc": "Build strategic foundation",
+      "intermediate": "Intermediate",
+      "intermediateRange": "800–1200",
+      "intermediateDesc": "Master key patterns",
+      "advanced": "Advanced",
+      "advancedRange": "1200–1600",
+      "advancedDesc": "Deep positional play",
+      "clubPlayer": "Club Player",
+      "clubPlayerRange": "1600–2000",
+      "clubPlayerDesc": "Tournament preparation"
+    },
+    "testimonials": {
+      "heading": "Why Students Choose Us",
+      "subtitle": "Real results from real students",
+      "student1Name": "Roman",
+      "student1Quote": "The marginal gains from consistent training really add up over time.",
+      "student1Rating": "1200 → 2245",
+      "student1Gain": "+1045",
+      "student2Name": "Annabella",
+      "student2Quote": "Thanks to Dina and the community I gained 400 Elo while I was here.",
+      "student2Rating": "597 → 1604",
+      "student2Gain": "+1007",
+      "student3Name": "Grace",
+      "student3Quote": "I won the women's prize in my section at the Toronto Open.",
+      "student3Rating": "1400 → 2014",
+      "student3Gain": "+614",
+      "points": "points"
+    },
+    "cta": {
+      "heading": "Ready to Transform Your Chess?",
+      "subtitle": "Join 1200+ students already improving with our structured program. Start your 7-day free trial today.",
+      "cta": "Start Free Trial",
+      "viewFaq": "View FAQ",
+      "finePrint": "No commitment. Cancel anytime. Free for 7 days."
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "About Us",
+      "heading": "Our Mission",
+      "subtitle": "We believe every chess player deserves access to world-class coaching. Iranian Chess School brings together titled coaches, structured curriculum, and a supportive community to help you reach your full potential."
+    },
+    "values": {
+      "heading": "Our Values",
+      "subtitle": "What makes us different",
+      "structuredLearning": "Structured Learning",
+      "structuredLearningDesc": "No more random YouTube videos. Follow a proven curriculum designed by titled coaches.",
+      "personalAttention": "Personal Attention",
+      "personalAttentionDesc": "Small group classes and 1-on-1 coaching ensure every student gets the help they need.",
+      "provenResults": "Proven Results",
+      "provenResultsDesc": "Our students have gained 200–1000+ Elo points through our systematic approach.",
+      "lifetimeAccess": "Lifetime Access",
+      "lifetimeAccessDesc": "Learn at your own pace. All course materials are available 24/7."
+    },
+    "coaches": {
+      "heading": "Meet Our Coaches",
+      "subtitle": "Learn from the best in the game",
+      "coach1Name": "Dina",
+      "coach1Title": "Head Coach — FM",
+      "coach1Bio": "FIDE Master with 15+ years of coaching experience. Specializes in positional play and endgames.",
+      "coach2Name": "Alexandra",
+      "coach2Title": "Coach — WGM",
+      "coach2Bio": "Women's Grandmaster with a passion for tactical training. Coaches intermediate to advanced students.",
+      "fideProfile": "FIDE Profile"
+    },
+    "cta": {
+      "heading": "Ready to start your journey?",
+      "subtitle": "Join 1200+ students who are already improving with our structured program.",
+      "cta": "Get Started",
+      "contactUs": "Contact Us"
+    }
+  },
+  "faq": {
+    "hero": {
+      "badge": "FAQ",
+      "heading": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about Iranian Chess School"
+    },
+    "categories": {
+      "general": "General",
+      "pricing": "Pricing & Plans",
+      "coaching": "Classes & Coaching",
+      "time": "Time Commitment",
+      "technical": "Technical"
+    },
+    "questions": {
+      "whatIs": {
+        "q": "What is Iranian Chess School?",
+        "a": "Iranian Chess School is a comprehensive online chess training platform with structured courses, live classes, game reviews, puzzles, and a supportive community. We help players from absolute beginners to 2000+ Elo improve their game."
+      },
+      "whoAreCoaches": {
+        "q": "Who are the coaches?",
+        "a": "Our coaches are titled players including FIDE Masters and Woman Grandmasters with years of teaching experience. They provide personalized feedback and lead live group sessions."
+      },
+      "needFarsi": {
+        "q": "Do I need to know Farsi?",
+        "a": "No, all content is available in English. However, our coaches are fluent in both English and Farsi to serve our international community."
+      },
+      "howMuch": {
+        "q": "How much does it cost?",
+        "a": "We offer three plans: Standard ($29/mo), Premium ($49/mo), and VIP ($199/mo). We also have specialized kids plans. Annual billing gives you 2 months free."
+      },
+      "freeTrial": {
+        "q": "Is there a free trial?",
+        "a": "Yes! We offer a 7-day free trial on all plans. No credit card required. You can cancel anytime during the trial at no cost."
+      },
+      "cancel": {
+        "q": "Can I cancel anytime?",
+        "a": "Absolutely. You can cancel your subscription at any time. Your access continues until the end of your billing period. No cancellation fees."
+      },
+      "liveClasses": {
+        "q": "How do live classes work?",
+        "a": "Live group classes are held weekly via video conferencing. Each session focuses on specific themes and includes Q&A. Premium and VIP members get priority access."
+      },
+      "gameReview": {
+        "q": "What is a game review session?",
+        "a": "You submit your game (PGN or Chess.com/Lichess link) and a coach analyzes it move-by-move, explaining mistakes, better alternatives, and key learning points."
+      },
+      "oneOnOne": {
+        "q": "How do I book 1-on-1 coaching?",
+        "a": "VIP members can book 1-on-1 sessions directly through our booking system. Premium members get monthly sessions. Sessions are conducted via video call."
+      },
+      "timeNeeded": {
+        "q": "How much time do I need?",
+        "a": "We recommend 3–5 hours per week for optimal progress. This includes watching lessons, solving puzzles, playing games, and reviewing with coaches."
+      },
+      "ownPace": {
+        "q": "Can I learn at my own pace?",
+        "a": "Yes! All course materials are available on-demand. You can watch lessons, solve puzzles, and study at whatever pace works for you."
+      },
+      "improvement": {
+        "q": "How long until I see improvement?",
+        "a": "Most students see noticeable improvement within 4–6 weeks of consistent training. Many gain 100–200 Elo in their first 3 months."
+      },
+      "requirements": {
+        "q": "What do I need to get started?",
+        "a": "A computer or tablet with internet access. For live classes, you need a camera and microphone. The platform works on all modern browsers."
+      },
+      "importGames": {
+        "q": "Can I import games from Chess.com or Lichess?",
+        "a": "Yes! You can import games from both Chess.com and Lichess by entering your username. We also support PGN file upload."
+      },
+      "mobileApp": {
+        "q": "Do you have a mobile app?",
+        "a": "The platform is fully responsive and works great on mobile browsers. A native mobile app is in development."
+      }
+    }
+  },
+  "blog": {
+    "hero": {
+      "badge": "Blog",
+      "heading": "Chess Improvement Blog",
+      "subtitle": "Tips, strategies, and insights from our coaches to help you improve."
+    },
+    "posts": {
+      "post1Title": "Why Structured Learning Beats Random YouTube Videos",
+      "post1Excerpt": "Most chess improvers waste years jumping between random content. Here's why a structured approach is the fastest path to 2000 Elo.",
+      "post1Date": "Jan 15, 2025",
+      "post1ReadTime": "5 min",
+      "post1Category": "Learning",
+      "post2Title": "Top 5 Mistakes Beginners Make (And How to Fix Them)",
+      "post2Excerpt": "Avoid these common pitfalls that keep beginners stuck below 1000 Elo. Simple fixes that make a huge difference.",
+      "post2Date": "Jan 10, 2025",
+      "post2ReadTime": "4 min",
+      "post2Category": "Beginners",
+      "post3Title": "How to Review Your Games Like a Grandmaster",
+      "post3Excerpt": "Game analysis is the single most effective way to improve. Learn a systematic approach used by titled players.",
+      "post3Date": "Jan 5, 2025",
+      "post3ReadTime": "7 min",
+      "post3Category": "Analysis",
+      "post4Title": "Opening Principles: What Every Player Should Know",
+      "post4Excerpt": "Stop memorizing opening lines and start understanding principles. This guide covers everything you need for a solid opening repertoire.",
+      "post4Date": "Dec 28, 2024",
+      "post4ReadTime": "6 min",
+      "post4Category": "Openings",
+      "post5Title": "The Ultimate Tactics Training Guide",
+      "post5Excerpt": "Tactics win games. Here's how to structure your puzzle training for maximum improvement, from beginner to advanced.",
+      "post5Date": "Dec 20, 2024",
+      "post5ReadTime": "8 min",
+      "post5Category": "Tactics",
+      "post6Title": "Endgame Fundamentals: 5 Positions You Must Know",
+      "post6Excerpt": "Master these essential endgame positions and watch your rating climb. Practical knowledge that wins games.",
+      "post6Date": "Dec 15, 2024",
+      "post6ReadTime": "6 min",
+      "post6Category": "Endgames",
+      "readMore": "Read more"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Contact",
+      "heading": "Get in Touch",
+      "subtitle": "Have a question? We'd love to hear from you."
+    },
+    "form": {
+      "heading": "Send us a message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us more...",
+      "submit": "Send Message",
+      "successTitle": "Message sent!",
+      "successText": "We'll get back to you within 24 hours."
+    },
+    "info": {
+      "heading": "Contact Information",
+      "email": "Email",
+      "emailAddress": "info@iranianchessschool.com",
+      "whatsapp": "WhatsApp",
+      "phone": "+1 (234) 567-890",
+      "location": "Location",
+      "locationText": "Online — Worldwide",
+      "followUs": "Follow us",
+      "followUsText": "Stay connected on social media for tips, updates, and community events.",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "telegram": "Telegram"
+    }
+  },
+  "kids": {
+    "hero": {
+      "badge": "Kids Program",
+      "heading": "Chess Lessons",
+      "headingSpan": "Kids Love",
+      "subtitle": "Give your child the gift of chess. Our kids program makes learning fun, engaging, and effective with age-appropriate coaching and gamified lessons.",
+      "cta": "Try Free",
+      "learnMore": "Learn More",
+      "ages": "Ages 6–16",
+      "allLevels": "All levels welcome",
+      "freeTrial": "7-day free trial"
+    },
+    "features": {
+      "heading": "Why Kids Love It",
+      "subtitle": "Designed for young learners, loved by parents",
+      "funGames": "Fun & Games",
+      "funGamesDesc": "Learn chess through interactive games, puzzles, and challenges designed for young minds.",
+      "groupClasses": "Group Classes",
+      "groupClassesDesc": "Weekly live classes with other kids at the same level. Learn together, grow together.",
+      "achievements": "Achievements",
+      "achievementsDesc": "Earn badges, stars, and rewards as you progress through levels and master skills.",
+      "kidFriendly": "Kid-Friendly Coaches",
+      "kidFriendlyDesc": "Patient, experienced coaches who know how to make chess exciting for children.",
+      "safeEnvironment": "Safe Environment",
+      "safeEnvironmentDesc": "Parent dashboard, progress reports, and full supervision in all live sessions.",
+      "provenMethod": "Proven Method",
+      "provenMethodDesc": "Our curriculum is designed by child education specialists and titled chess coaches."
+    },
+    "plans": {
+      "heading": "Kids Plans",
+      "subtitle": "Choose the right plan for your child",
+      "standard": "Standard",
+      "standardPrice": "$79",
+      "standardPeriod": "/mo",
+      "standardF1": "Weekly group class",
+      "standardF2": "Puzzle access",
+      "standardF3": "Progress tracking",
+      "standardF4": "Parent dashboard",
+      "standardF5": "Community access",
+      "standardCta": "Get Started",
+      "premium": "Premium",
+      "premiumPrice": "$249",
+      "premiumPeriod": "/mo",
+      "premiumF1": "Everything in Standard",
+      "premiumF2": "2x weekly classes",
+      "premiumF3": "Monthly game review",
+      "premiumF4": "1-on-1 coaching session",
+      "premiumF5": "Priority support",
+      "premiumCta": "Go Premium",
+      "mostPopular": "Most Popular"
+    },
+    "cta": {
+      "heading": "Start your child's chess journey",
+      "subtitle": "Give them the skills and confidence that chess provides. Join our kids program today.",
+      "cta": "Try Free for 7 Days"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "badge": "Pricing",
+      "heading": "Simple, transparent pricing",
+      "subtitle": "Start free. Upgrade when you're ready."
+    },
+    "plans": {
+      "standard": "Standard",
+      "standardPrice": "$29",
+      "standardPeriod": "/mo",
+      "standardDesc": "Perfect for self-motivated learners",
+      "standardF1": "Full course library access",
+      "standardF2": "Puzzle system with rating",
+      "standardF3": "Community read access",
+      "standardF4": "Basic game analysis",
+      "standardF5": "Progress tracking",
+      "standardF6": "Email support",
+      "standardCta": "Start Free Trial",
+      "premium": "Premium",
+      "premiumPrice": "$49",
+      "premiumPeriod": "/mo",
+      "premiumDesc": "Best for serious improvers",
+      "premiumF1": "Everything in Standard",
+      "premiumF2": "Weekly live group classes",
+      "premiumF3": "Monthly game review session",
+      "premiumF4": "Advanced analysis tools",
+      "premiumF5": "Community participation",
+      "premiumF6": "Priority email support",
+      "premiumCta": "Go Premium",
+      "vip": "VIP",
+      "vipPrice": "$199",
+      "vipPeriod": "/mo",
+      "vipDesc": "For those who want it all",
+      "vipF1": "Everything in Premium",
+      "vipF2": "Weekly 1-on-1 coaching",
+      "vipF3": "Weekly game reviews with Dina",
+      "vipF4": "Priority booking & support",
+      "vipF5": "Personal study plan",
+      "vipF6": "Direct coach messaging",
+      "vipCta": "Go VIP",
+      "mostPopular": "Most Popular",
+      "finePrint": "All plans include a 7-day free trial. No credit card required. Cancel anytime."
+    },
+    "compare": {
+      "heading": "Compare plans",
+      "subtitle": "Find the perfect plan for your level",
+      "feature": "Feature",
+      "free": "Free",
+      "standard": "Standard",
+      "premium": "Premium",
+      "vip": "VIP",
+      "basicLessons": "Basic lessons (Level 1)",
+      "allCourses": "All courses",
+      "puzzleAccess": "Puzzle access",
+      "communityAccess": "Community access",
+      "gameAnalysis": "Game analysis",
+      "groupClasses": "Group classes",
+      "gameReviews": "Game reviews",
+      "oneOnOne": "1-on-1 coaching",
+      "check": "✓",
+      "cross": "✗",
+      "limited": "Limited",
+      "readOnly": "Read-only",
+      "basic": "Basic",
+      "advanced": "Advanced",
+      "weekly": "Weekly",
+      "monthly": "Monthly",
+      "weekly4x": "Weekly (4x/mo)"
+    },
+    "cta": {
+      "heading": "Not sure which plan is right?",
+      "subtitle": "Start with our 7-day free trial. No commitment, no credit card needed.",
+      "cta": "Try Free for 7 Days"
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "Welcome back",
+      "description": "Sign in to continue your chess journey",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "submit": "Sign In",
+      "invalidCredentials": "Invalid credentials",
+      "divider": "Or continue with",
+      "google": "Google",
+      "github": "GitHub",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up"
+    },
+    "register": {
+      "title": "Create your account",
+      "description": "Start your structured chess journey",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "Min. 8 characters",
+      "submit": "Create account",
+      "submitting": "Creating account...",
+      "nameError": "Name is too short",
+      "emailError": "Enter a valid email",
+      "passwordError": "Password must be at least 8 characters",
+      "registrationFailed": "Registration failed",
+      "unexpectedError": "An unexpected error occurred",
+      "divider": "Or continue with",
+      "google": "Google",
+      "github": "GitHub",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "error": {
+      "title": "Authentication Error",
+      "description": "Something went wrong during sign in",
+      "message": "Please try again or contact support if the problem persists.",
+      "tryAgain": "Try Again"
     }
   }
 }

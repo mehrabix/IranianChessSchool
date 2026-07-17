@@ -14,6 +14,9 @@ export const localeNames: Record<Locale, string> = {
   no: 'Norsk',
 };
 
+export const rtlLocales: Locale[] = ['fa'];
+
+
 export const routing = defineRouting({
   locales,
   defaultLocale: 'en',
