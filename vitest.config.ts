@@ -13,6 +13,11 @@ export default defineConfig({
       reporter: ['text', 'html'],
       exclude: ['src/components/ui/**', 'src/types/**'],
     },
+    server: {
+      deps: {
+        inline: ['next-intl'],
+      },
+    },
   },
   resolve: {
     alias: {
