@@ -57,9 +57,11 @@ export function CourseSettingsCard({ course }: { course: Course }) {
           <Select value={level} onValueChange={(v) => v && setLevel(v)}>
             <SelectTrigger><SelectValue /></SelectTrigger>
             <SelectContent>
-              <SelectItem value="BEGINNER">Beginner</SelectItem>
-              <SelectItem value="INTERMEDIATE">Intermediate</SelectItem>
-              <SelectItem value="ADVANCED">Advanced</SelectItem>
+              <SelectItem value="BEGINNER">Beginner (0-500)</SelectItem>
+              <SelectItem value="IMPROVER">Improver (500-800)</SelectItem>
+              <SelectItem value="INTERMEDIATE">Intermediate (800-1200)</SelectItem>
+              <SelectItem value="ADVANCED">Advanced (1200-1600)</SelectItem>
+              <SelectItem value="CLUB">Club (1600-2000)</SelectItem>
             </SelectContent>
           </Select>
         </div>

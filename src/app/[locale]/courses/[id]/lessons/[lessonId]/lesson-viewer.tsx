@@ -2,7 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { CheckCircle } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { CheckCircle, BookOpen } from 'lucide-react';
+import { ChessBoard } from '@/components/chess/ChessBoard';
+import { useChessBoard } from '@/hooks/useChessBoard';
 
 interface Lesson {
   id: string;
@@ -15,6 +18,7 @@ interface Lesson {
 
 export function LessonViewer({ lesson, courseId }: { lesson: Lesson; courseId: string }) {
   const [completed, setCompleted] = useState(false);
+  const { game, fen, makeMove, reset, undo } = useChessBoard();
 
   useEffect(() => {
     fetch(`/api/progress?lessonId=${lesson.id}`)
@@ -45,11 +49,34 @@ export function LessonViewer({ lesson, courseId }: { lesson: Lesson; courseId: s
           />
         </div>
       )}
-      {lesson.content && (
-        <div className="prose prose-sm max-w-none mb-6" dangerouslySetInnerHTML={{ __html: lesson.content }} />
-      )}
-      <Button onClick={markComplete} className="gap-2">
-        <CheckCircle className="h-4 w-4" /> Mark as Complete
+      <div className="grid gap-6 lg:grid-cols-[1fr_400px] mb-6">
+        <div>
+          {lesson.content && (
+            <div className="prose prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: lesson.content }} />
+          )}
+        </div>
+        <div>
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-sm">
+                <BookOpen className="h-4 w-4" />
+                Practice Board
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ChessBoard
+                game={game}
+                onMove={makeMove}
+                onReset={reset}
+                onUndo={undo}
+                boardWidth={360}
+              />
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+      <Button onClick={markComplete} className="gap-2" disabled={completed}>
+        <CheckCircle className="h-4 w-4" /> {completed ? 'Completed' : 'Mark as Complete'}
       </Button>
     </div>
   );

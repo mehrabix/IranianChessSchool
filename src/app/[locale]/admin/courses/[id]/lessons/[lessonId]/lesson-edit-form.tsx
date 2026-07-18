@@ -24,10 +24,12 @@ interface Lesson {
 }
 
 export function LessonEditForm({ lesson, courseId }: { lesson: Lesson; courseId: string }) {
+  const router = useRouter();
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
-    await fetch('/api/admin/lessons', {
+    const res = await fetch('/api/admin/lessons', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -39,25 +41,26 @@ export function LessonEditForm({ lesson, courseId }: { lesson: Lesson; courseId:
         duration: Number(form.get('duration')),
       }),
     });
+    if (res.ok) router.push(`/admin/courses/${courseId}`);
   }
 
   async function handleDelete() {
     if (!confirm('Delete this lesson?')) return;
-    await fetch('/api/admin/lessons', {
+    const res = await fetch('/api/admin/lessons', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: lesson.id }),
     });
-    window.location.href = `/admin/courses/${courseId}`;
+    if (res.ok) router.push(`/admin/courses/${courseId}`);
   }
 
   return (
     <section className="relative py-16 bg-gradient-to-br from-background via-emerald-50/30 to-background">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
         <div className="mb-6">
-          <a href={`/admin/courses/${courseId}`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-            <ArrowLeft className="h-4 w-4" /> Back
-          </a>
+          <Button variant="ghost" size="sm" render={<Link href={`/admin/courses/${courseId}`} />}>
+            <ArrowLeft className="h-4 w-4 mr-1" /> Back
+          </Button>
         </div>
         <Card>
           <CardHeader>
