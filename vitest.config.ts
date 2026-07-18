@@ -13,6 +13,7 @@ export default defineConfig({
       reporter: ['text', 'html'],
       exclude: ['src/components/ui/**', 'src/types/**'],
     },
+    setupFiles: ['src/mocks/setup.ts'],
     server: {
       deps: {
         inline: ['next-intl'],
