@@ -8,6 +8,8 @@
     "contact": "Kontakt",
     "pricing": "Priser",
     "courses": "Kurs",
+    "dashboard": "Dashboard",
+    "admin": "Admin",
     "signIn": "Logg inn",
     "tryFree": "Prøv gratis",
     "signOut": "Logg ut"
@@ -462,6 +464,135 @@
       "description": "Noe gikk galt under innlogging",
       "message": "Prøv igjen eller kontakt støtte hvis problemet vedvarer.",
       "tryAgain": "Prøv igjen"
+    }
+  },
+  "courses": {
+    "hero": {
+      "heading": "Courses",
+      "subtitle": "Explore our chess courses designed for every skill level.",
+      "noCourses": "No courses available yet.",
+      "viewCourse": "View Course",
+      "allCourses": "All Courses",
+      "courseNotFound": "Course not found."
+    },
+    "detail": {
+      "backToCourses": "All Courses",
+      "lessons": "lessons",
+      "completed": "Completed",
+      "play": "Play"
+    },
+    "lesson": {
+      "backToCourse": "Back to Course",
+      "practiceBoard": "Practice Board",
+      "markComplete": "Mark as Complete",
+      "completed": "Completed"
+    },
+    "quiz": {
+      "loading": "Loading quiz...",
+      "questions": "questions",
+      "toPass": "to pass",
+      "maxAttempts": "Max {count} attempts",
+      "startQuiz": "Start Quiz",
+      "submitAnswers": "Submit Answers",
+      "passed": "Passed!",
+      "notPassed": "Not Passed",
+      "score": "Score",
+      "percentage": "Percentage",
+      "congratulations": "Congratulations! You passed the quiz.",
+      "tryAgain": "You need {percent}% more to pass. Try again.",
+      "correct": "Correct!",
+      "incorrect": "Incorrect."
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "welcomeName": "Welcome back, {name}",
+    "subtitle": "Continue your chess journey",
+    "stats": {
+      "completed": "Completed",
+      "courses": "Courses",
+      "attempts": "Attempts",
+      "streak": "Streak",
+      "xp": "XP",
+      "level": "Level {level}"
+    },
+    "myCourses": "My Courses",
+    "lessons": "lessons",
+    "continue": "Continue",
+    "noCourses": "No courses available. Browse the course catalog to get started!",
+    "thisWeek": "This Week",
+    "activitiesThisWeek": "{count} activities this week",
+    "recentActivity": "Recent Activity",
+    "noActivity": "No activity yet. Start a course to see your progress here!"
+  },
+  "admin": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "courses": "Courses",
+      "posts": "Posts",
+      "users": "Users",
+      "settings": "Settings"
+    },
+    "dashboard": {
+      "heading": "Admin Dashboard",
+      "subtitle": "Manage your chess school",
+      "courses": "Courses",
+      "users": "Users",
+      "quickActions": "Quick Actions",
+      "manageCourses": "Manage Courses",
+      "managePosts": "Manage Posts"
+    },
+    "accessDenied": "Access denied.",
+    "courses": {
+      "heading": "Manage Courses",
+      "subtitle": "Manage your course catalog",
+      "newCourse": "New Course",
+      "editCourse": "Edit Course",
+      "deleteCourse": "Delete Course",
+      "noCourses": "No courses yet. Create your first course!",
+      "createCourse": "Create Course",
+      "courseTitle": "Title",
+      "courseDescription": "Description",
+      "courseLevel": "Level",
+      "coursePublished": "Published",
+      "draft": "Draft",
+      "edit": "Edit",
+      "save": "Save",
+      "cancel": "Cancel",
+      "modules": "Modules",
+      "addModule": "Add Module",
+      "deleteModule": "Delete Module",
+      "moduleTitle": "Module Title",
+      "lessons": "Lessons",
+      "newLesson": "New Lesson",
+      "deleteLesson": "Delete Lesson",
+      "lessonTitle": "Lesson Title",
+      "lessonType": "Type",
+      "lessonContent": "Content",
+      "lessonVideoUrl": "Video URL",
+      "lessonDuration": "Duration (minutes)",
+      "noLessons": "No lessons yet.",
+      "imageUrl": "Image URL",
+      "courseInfo": "Course Info",
+      "status": "Status",
+      "createLesson": "Create Lesson"
+    },
+    "posts": {
+      "heading": "Manage Posts",
+      "subtitle": "Manage blog content",
+      "newPost": "New Post",
+      "editPost": "Edit Post",
+      "deletePost": "Delete Post",
+      "noPosts": "No posts yet.",
+      "createPost": "Create Post",
+      "postTitle": "Title",
+      "postContent": "Content",
+      "postImage": "Image URL",
+      "postCategory": "Category",
+      "edit": "Edit",
+      "save": "Save",
+      "publish": "Publish",
+      "cancel": "Cancel"
     }
   }
 }

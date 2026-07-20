@@ -8,7 +8,7 @@ import { Link } from '@/i18n/routing';
 import { BookOpen, Clock, ArrowRight } from 'lucide-react';
 
 export default async function CoursesPage() {
-  const t = await getTranslations('nav');
+  const tc = await getTranslations('courses');
   const all = await db
     .select()
     .from(courses)
@@ -20,9 +20,9 @@ export default async function CoursesPage() {
       <section className="relative py-20 bg-gradient-to-br from-background via-emerald-50/30 to-background">
         <Container size="lg">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold tracking-tight mb-4">Courses</h1>
+            <h1 className="text-4xl font-bold tracking-tight mb-4">{tc('hero.heading')}</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our chess courses designed for every skill level.
+              {tc('hero.subtitle')}
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -36,7 +36,7 @@ export default async function CoursesPage() {
                   <div className="flex items-center justify-between">
                     <Badge variant="secondary">{course.level}</Badge>
                     <Button variant="ghost" size="sm" render={<Link href={`/courses/${course.id}`} />}>
-                      View Course <ArrowRight className="h-3 w-3 ml-1" />
+                      {tc('hero.viewCourse')} <ArrowRight className="h-3 w-3 ml-1" />
                     </Button>
                   </div>
                 </CardContent>
@@ -44,7 +44,7 @@ export default async function CoursesPage() {
             ))}
             {all.length === 0 && (
               <div className="text-center py-12 text-muted-foreground">
-                No courses available yet.
+                {tc('hero.noCourses')}
               </div>
             )}
           </div>

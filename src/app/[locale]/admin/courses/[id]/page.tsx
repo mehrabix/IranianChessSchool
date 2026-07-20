@@ -15,8 +15,10 @@ import { ModuleManager } from './module-manager';
 export default async function AdminCourseDetailPage(props: { params: Promise<{ id: string }> }) {
   const { id } = await props.params;
   const session = await auth();
+  const t = await getTranslations('admin.courses');
+  const ta = await getTranslations('admin');
   if (session?.user?.role !== 'ADMIN') {
-    return <div className="min-h-screen flex items-center justify-center"><p className="text-muted-foreground">Access denied.</p></div>;
+    return <div className="min-h-screen flex items-center justify-center"><p className="text-muted-foreground">{ta('accessDenied')}</p></div>;
   }
 
   const course = await db.select().from(courses).where(eq(courses.id, id)).then(r => r[0]);
@@ -44,7 +46,7 @@ export default async function AdminCourseDetailPage(props: { params: Promise<{ i
       <Container size="lg">
         <div className="mb-6">
           <Button variant="ghost" size="sm" render={<Link href="/admin/courses" />}>
-            <ArrowLeft className="h-4 w-4 mr-1" /> Back
+            <ArrowLeft className="h-4 w-4 mr-1" /> {t('cancel')}
           </Button>
         </div>
         <div className="grid gap-6 lg:grid-cols-[1fr_400px]">

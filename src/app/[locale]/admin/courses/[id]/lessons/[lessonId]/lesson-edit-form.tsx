@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -24,6 +25,7 @@ interface Lesson {
 }
 
 export function LessonEditForm({ lesson, courseId }: { lesson: Lesson; courseId: string }) {
+  const t = useTranslations('admin.courses');
   const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -45,7 +47,7 @@ export function LessonEditForm({ lesson, courseId }: { lesson: Lesson; courseId:
   }
 
   async function handleDelete() {
-    if (!confirm('Delete this lesson?')) return;
+    if (!confirm(t('deleteLesson'))) return;
     const res = await fetch('/api/admin/lessons', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
@@ -59,21 +61,21 @@ export function LessonEditForm({ lesson, courseId }: { lesson: Lesson; courseId:
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
         <div className="mb-6">
           <Button variant="ghost" size="sm" render={<Link href={`/admin/courses/${courseId}`} />}>
-            <ArrowLeft className="h-4 w-4 mr-1" /> Back
+            <ArrowLeft className="h-4 w-4 mr-1" /> {t('cancel')}
           </Button>
         </div>
         <Card>
           <CardHeader>
-            <CardTitle>Edit Lesson</CardTitle>
+            <CardTitle>{t('editLesson')}</CardTitle>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="title">Title</Label>
+                <Label htmlFor="title">{t('lessonTitle')}</Label>
                 <Input id="title" name="title" defaultValue={lesson.title} required />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="type">Type</Label>
+                <Label htmlFor="type">{t('lessonType')}</Label>
                 <Select name="type" defaultValue={lesson.type}>
                   <SelectTrigger><SelectValue /></SelectTrigger>
                   <SelectContent>
@@ -84,23 +86,23 @@ export function LessonEditForm({ lesson, courseId }: { lesson: Lesson; courseId:
                 </Select>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="content">Content</Label>
+                <Label htmlFor="content">{t('lessonContent')}</Label>
                 <Textarea id="content" name="content" defaultValue={lesson.content ?? ''} className="min-h-[200px]" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="videoUrl">Video URL</Label>
+                <Label htmlFor="videoUrl">{t('lessonVideoUrl')}</Label>
                 <Input id="videoUrl" name="videoUrl" defaultValue={lesson.videoUrl ?? ''} placeholder="https://..." />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="duration">Duration (minutes)</Label>
+                <Label htmlFor="duration">{t('lessonDuration')}</Label>
                 <Input id="duration" name="duration" type="number" defaultValue={lesson.duration ?? ''} />
               </div>
               <div className="flex gap-2">
                 <Button type="submit" className="gap-2">
-                  <Save className="h-4 w-4" /> Save
+                  <Save className="h-4 w-4" /> {t('save')}
                 </Button>
                 <Button type="button" variant="destructive" className="gap-2" onClick={handleDelete}>
-                  <Trash2 className="h-4 w-4" /> Delete
+                  <Trash2 className="h-4 w-4" /> {t('deleteLesson')}
                 </Button>
               </div>
             </form>

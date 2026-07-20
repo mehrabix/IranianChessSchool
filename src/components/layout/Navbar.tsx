@@ -36,6 +36,7 @@ import {
   BookOpen,
 } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { ThemeToggle } from './ThemeToggle';
 
 const navLinks = [
   { href: '/', labelKey: 'home', icon: Home },
@@ -71,6 +72,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <LanguageSwitcher />
+          <ThemeToggle />
 
           {session ? (
             <DropdownMenu>

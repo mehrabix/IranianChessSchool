@@ -61,6 +61,7 @@ function getActivityMap(activities: { completedAt: Date | null }[]) {
 }
 
 export default async function DashboardPage() {
+  const t = await getTranslations('dashboard');
   const session = await auth();
   if (!session?.user) redirect('/auth/signin');
 
@@ -95,17 +96,17 @@ export default async function DashboardPage() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-3xl font-bold">Welcome back{user?.name ? `, ${user.name}` : ''}</h1>
-            <p className="text-muted-foreground mt-1">Continue your chess journey</p>
+            <h1 className="text-3xl font-bold">{user?.name ? t('welcomeName', { name: user.name }) : t('welcome')}</h1>
+            <p className="text-muted-foreground mt-1">{t('subtitle')}</p>
           </div>
           <div className="flex items-center gap-4 text-sm">
             <div className="flex items-center gap-1.5">
               <Zap className="h-4 w-4 text-amber-500" />
-              <span className="font-medium">{user?.xp ?? 0} XP</span>
+              <span className="font-medium">{user?.xp ?? 0} {t('stats.xp')}</span>
             </div>
             <div className="flex items-center gap-1.5">
               <Award className="h-4 w-4 text-purple-500" />
-              <span className="font-medium">Level {user?.level ?? 1}</span>
+              <span className="font-medium">{t('stats.level', { level: user?.level ?? 1 })}</span>
             </div>
           </div>
         </div>
@@ -115,7 +116,7 @@ export default async function DashboardPage() {
             <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
               <CheckCircle className="h-5 w-5 text-emerald-600 shrink-0" />
               <div>
-                <CardTitle className="text-xs font-medium text-muted-foreground">Completed</CardTitle>
+                <CardTitle className="text-xs font-medium text-muted-foreground">{t('stats.completed')}</CardTitle>
                 <p className="text-2xl font-bold">{completedCount}</p>
               </div>
             </CardHeader>
@@ -124,7 +125,7 @@ export default async function DashboardPage() {
             <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
               <BookOpen className="h-5 w-5 text-blue-600 shrink-0" />
               <div>
-                <CardTitle className="text-xs font-medium text-muted-foreground">Courses</CardTitle>
+                <CardTitle className="text-xs font-medium text-muted-foreground">{t('stats.courses')}</CardTitle>
                 <p className="text-2xl font-bold">{enrolledCourses.length}</p>
               </div>
             </CardHeader>
@@ -133,7 +134,7 @@ export default async function DashboardPage() {
             <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
               <TrendingUp className="h-5 w-5 text-orange-600 shrink-0" />
               <div>
-                <CardTitle className="text-xs font-medium text-muted-foreground">Attempts</CardTitle>
+                <CardTitle className="text-xs font-medium text-muted-foreground">{t('stats.attempts')}</CardTitle>
                 <p className="text-2xl font-bold">{totalAttempts}</p>
               </div>
             </CardHeader>
@@ -142,7 +143,7 @@ export default async function DashboardPage() {
             <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
               <Star className="h-5 w-5 text-yellow-500 shrink-0" />
               <div>
-                <CardTitle className="text-xs font-medium text-muted-foreground">Streak</CardTitle>
+                <CardTitle className="text-xs font-medium text-muted-foreground">{t('stats.streak')}</CardTitle>
                 <p className="text-2xl font-bold">{recentActivity.filter((_, i) => i < 7).length}d</p>
               </div>
             </CardHeader>
@@ -154,7 +155,7 @@ export default async function DashboardPage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <BookOpen className="h-4 w-4" />
-                My Courses
+                {t('myCourses')}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -164,18 +165,18 @@ export default async function DashboardPage() {
                     <div className="flex items-center justify-between mb-2">
                       <div>
                         <p className="font-medium">{course.title}</p>
-                        <p className="text-xs text-muted-foreground">{course.level} · {course.done}/{course.total} lessons</p>
+                        <p className="text-xs text-muted-foreground">{course.level} &middot; {course.done}/{course.total} {t('lessons')}</p>
                       </div>
                       <Button variant="ghost" size="sm" render={<Link href={`/courses/${course.id}`} />}>
-                        Continue <ArrowRight className="h-3 w-3 ml-1" />
+                        {t('continue')} <ArrowRight className="h-3 w-3 ml-1" />
                       </Button>
                     </div>
                     <Progress value={course.percent} className="h-2" />
                     <p className="text-xs text-right text-muted-foreground mt-1">{course.percent}%</p>
                   </div>
                 ))}
-                {courseProgressList.length === 0 && (
-                  <p className="text-sm text-muted-foreground">No courses available. Browse the course catalog to get started!</p>
+                  {courseProgressList.length === 0 && (
+                  <p className="text-sm text-muted-foreground">{t('noCourses')}</p>
                 )}
               </div>
             </CardContent>
@@ -185,7 +186,7 @@ export default async function DashboardPage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
-                This Week
+                {t('thisWeek')}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -204,7 +205,7 @@ export default async function DashboardPage() {
                 })}
               </div>
               <p className="text-xs text-muted-foreground text-center">
-                {Object.values(activityMap).reduce((a, b) => a + b, 0)} activities this week
+                {t('activitiesThisWeek', { count: Object.values(activityMap).reduce((a, b) => a + b, 0) })}
               </p>
             </CardContent>
           </Card>
@@ -212,10 +213,10 @@ export default async function DashboardPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <TrendingUp className="h-4 w-4" />
-              Recent Activity
-            </CardTitle>
+              <CardTitle className="flex items-center gap-2">
+                <TrendingUp className="h-4 w-4" />
+                {t('recentActivity')}
+              </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
@@ -238,7 +239,7 @@ export default async function DashboardPage() {
                 </div>
               ))}
               {recentActivity.length === 0 && (
-                <p className="text-sm text-muted-foreground">No activity yet. Start a course to see your progress here!</p>
+                <p className="text-sm text-muted-foreground">{t('noActivity')}</p>
               )}
             </div>
           </CardContent>

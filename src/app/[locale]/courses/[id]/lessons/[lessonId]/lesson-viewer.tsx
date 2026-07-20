@@ -1,11 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, BookOpen } from 'lucide-react';
 import { ChessBoard } from '@/components/chess/ChessBoard';
 import { useChessBoard } from '@/hooks/useChessBoard';
+import { QuizViewer } from '@/components/quiz/QuizViewer';
 
 interface Lesson {
   id: string;
@@ -17,6 +19,7 @@ interface Lesson {
 }
 
 export function LessonViewer({ lesson, courseId }: { lesson: Lesson; courseId: string }) {
+  const t = useTranslations('courses');
   const [completed, setCompleted] = useState(false);
   const { game, fen, makeMove, reset, undo } = useChessBoard();
 
@@ -60,7 +63,7 @@ export function LessonViewer({ lesson, courseId }: { lesson: Lesson; courseId: s
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-sm">
                 <BookOpen className="h-4 w-4" />
-                Practice Board
+                {t('lesson.practiceBoard')}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -75,8 +78,13 @@ export function LessonViewer({ lesson, courseId }: { lesson: Lesson; courseId: s
           </Card>
         </div>
       </div>
+      {lesson.type === 'QUIZ' && (
+        <div className="mt-6">
+          <QuizViewer lessonId={lesson.id} />
+        </div>
+      )}
       <Button onClick={markComplete} className="gap-2" disabled={completed}>
-        <CheckCircle className="h-4 w-4" /> {completed ? 'Completed' : 'Mark as Complete'}
+        <CheckCircle className="h-4 w-4" /> {completed ? t('lesson.completed') : t('lesson.markComplete')}
       </Button>
     </div>
   );

@@ -132,6 +132,52 @@ export const achievements = sqliteTable('achievements', {
   unlockedAt: integer('unlocked_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
 });
 
+export const quizzes = sqliteTable('quizzes', {
+  id: text('id').primaryKey(),
+  title: text('title').notNull(),
+  description: text('description'),
+  lessonId: text('lesson_id').references(() => lessons.id),
+  passingScore: integer('passing_score').default(70),
+  maxAttempts: integer('max_attempts').default(3),
+  timeLimit: integer('time_limit'), // seconds
+  order: integer('order').default(0),
+  createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});
+
+export const quizQuestions = sqliteTable('quiz_questions', {
+  id: text('id').primaryKey(),
+  quizId: text('quiz_id').references(() => quizzes.id),
+  questionText: text('question_text').notNull(),
+  options: text('options').notNull(), // JSON array of strings
+  correctIndices: text('correct_indices').notNull(), // JSON array of numbers
+  type: text('type', { enum: ['SINGLE', 'MULTIPLE', 'TRUE_FALSE', 'TEXT'] }).default('SINGLE'),
+  order: integer('order').default(0),
+  explanation: text('explanation'),
+  points: integer('points').default(10),
+});
+
+export const quizAttempts = sqliteTable('quiz_attempts', {
+  id: text('id').primaryKey(),
+  userId: text('user_id').references(() => users.id),
+  quizId: text('quiz_id').references(() => quizzes.id),
+  score: integer('score').default(0),
+  totalPoints: integer('total_points').default(0),
+  percentage: real('percentage').default(0),
+  passed: integer('passed', { mode: 'boolean' }).default(false),
+  startedAt: integer('started_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+  completedAt: integer('completed_at', { mode: 'timestamp' }),
+});
+
+export const quizAnswers = sqliteTable('quiz_answers', {
+  id: text('id').primaryKey(),
+  attemptId: text('attempt_id').references(() => quizAttempts.id),
+  questionId: text('question_id').references(() => quizQuestions.id),
+  selectedIndices: text('selected_indices'), // JSON array of selected option indices
+  textAnswer: text('text_answer'),
+  isCorrect: integer('is_correct', { mode: 'boolean' }).default(false),
+  pointsEarned: integer('points_earned').default(0),
+});
+
 export const bookings = sqliteTable('bookings', {
   id: text('id').primaryKey(),
   coachId: text('coach_id').references(() => users.id),

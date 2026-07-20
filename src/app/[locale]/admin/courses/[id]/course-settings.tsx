@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -21,6 +21,7 @@ interface Course {
 }
 
 export function CourseSettingsCard({ course }: { course: Course }) {
+  const t = useTranslations('admin.courses');
   const [title, setTitle] = useState(course.title);
   const [description, setDescription] = useState(course.description ?? '');
   const [level, setLevel] = useState(course.level);
@@ -41,19 +42,19 @@ export function CourseSettingsCard({ course }: { course: Course }) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Course Settings</CardTitle>
+        <CardTitle>{t('editCourse')}</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="space-y-2">
-          <Label htmlFor="title">Title</Label>
+          <Label htmlFor="title">{t('courseTitle')}</Label>
           <Input id="title" value={title} onChange={e => setTitle(e.target.value)} />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="description">Description</Label>
+          <Label htmlFor="description">{t('courseDescription')}</Label>
           <Textarea id="description" value={description} onChange={e => setDescription(e.target.value)} />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="level">Level</Label>
+          <Label htmlFor="level">{t('courseLevel')}</Label>
           <Select value={level} onValueChange={(v) => v && setLevel(v)}>
             <SelectTrigger><SelectValue /></SelectTrigger>
             <SelectContent>
@@ -66,15 +67,15 @@ export function CourseSettingsCard({ course }: { course: Course }) {
           </Select>
         </div>
         <div className="space-y-2">
-          <Label htmlFor="image">Image URL</Label>
+          <Label htmlFor="image">{t('imageUrl')}</Label>
           <Input id="image" value={image} onChange={e => setImage(e.target.value)} />
         </div>
         <div className="flex items-center gap-2">
           <Switch id="published" checked={published} onCheckedChange={setPublished} />
-          <Label htmlFor="published">Published</Label>
+          <Label htmlFor="published">{t('coursePublished')}</Label>
         </div>
         <Button onClick={handleSave} className="gap-2" disabled={saving}>
-          <Save className="h-4 w-4" /> Save
+          <Save className="h-4 w-4" /> {t('save')}
         </Button>
       </CardContent>
     </Card>

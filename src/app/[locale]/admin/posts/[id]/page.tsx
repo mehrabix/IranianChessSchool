@@ -1,14 +1,14 @@
 'use client';
 
-'use client';
-
 import { useState, useEffect, use } from 'react';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowLeft, Save, Trash2 } from 'lucide-react';
+import { Link } from '@/i18n/routing';
 
 export default function AdminPostEditPage(props: { params: Promise<{ id: string }> }) {
   const { id } = use(props.params);
@@ -16,6 +16,7 @@ export default function AdminPostEditPage(props: { params: Promise<{ id: string 
 }
 
 function PostEditForm({ postId }: { postId: string }) {
+  const t = useTranslations('admin.posts');
   const [content, setContent] = useState('');
   const [image, setImage] = useState('');
   const [pgn, setPgn] = useState('');
@@ -33,7 +34,7 @@ function PostEditForm({ postId }: { postId: string }) {
   }, [postId]);
 
   async function handleDelete() {
-    if (!confirm('Delete this post?')) return;
+    if (!confirm(t('deletePost'))) return;
     await fetch('/api/admin/posts', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
@@ -55,22 +56,22 @@ function PostEditForm({ postId }: { postId: string }) {
     <section className="relative py-16 bg-gradient-to-br from-background via-emerald-50/30 to-background">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
         <div className="mb-6">
-          <a href="/admin/posts" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-            <ArrowLeft className="h-4 w-4" /> Back
-          </a>
+          <Link href="/admin/posts" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+            <ArrowLeft className="h-4 w-4" /> {t('cancel')}
+          </Link>
         </div>
         <Card>
           <CardHeader>
-            <CardTitle>Edit Post</CardTitle>
+            <CardTitle>{t('editPost')}</CardTitle>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="content">Content</Label>
+                <Label htmlFor="content">{t('postContent')}</Label>
                 <Textarea id="content" value={content} onChange={e => setContent(e.target.value)} className="min-h-[200px]" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="image">Image URL</Label>
+                <Label htmlFor="image">{t('postImage')}</Label>
                 <Input id="image" value={image} onChange={e => setImage(e.target.value)} />
               </div>
               <div className="space-y-2">
@@ -79,10 +80,10 @@ function PostEditForm({ postId }: { postId: string }) {
               </div>
               <div className="flex gap-2">
                 <Button type="submit" className="gap-2">
-                  <Save className="h-4 w-4" /> Save
+                  <Save className="h-4 w-4" /> {t('save')}
                 </Button>
                 <Button type="button" variant="destructive" className="gap-2" onClick={handleDelete}>
-                  <Trash2 className="h-4 w-4" /> Delete
+                  <Trash2 className="h-4 w-4" /> {t('deletePost')}
                 </Button>
               </div>
             </form>

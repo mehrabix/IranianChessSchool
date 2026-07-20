@@ -10,13 +10,14 @@ import { Plus, BookOpen, ArrowRight, Sparkles } from 'lucide-react';
 
 export default async function AdminCoursesPage() {
   const session = await auth();
-  const t = await getTranslations('nav');
+  const t = await getTranslations('admin.courses');
+  const ta = await getTranslations('admin');
   const isAdmin = session?.user?.role === 'ADMIN';
 
   if (!isAdmin) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-muted-foreground">Access denied.</p>
+        <p className="text-muted-foreground">{ta('accessDenied')}</p>
       </div>
     );
   }
@@ -29,11 +30,11 @@ export default async function AdminCoursesPage() {
         <Container size="lg">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h1 className="text-3xl font-bold tracking-tight">Courses</h1>
-              <p className="text-muted-foreground mt-1">Manage your course catalog</p>
+              <h1 className="text-3xl font-bold tracking-tight">{t('heading')}</h1>
+              <p className="text-muted-foreground mt-1">{t('subtitle')}</p>
             </div>
             <Button className="gap-2" render={<Link href="/admin/courses/new" />}>
-              <Plus className="h-4 w-4" /> New Course
+              <Plus className="h-4 w-4" /> {t('newCourse')}
             </Button>
           </div>
           <div className="grid gap-4">
@@ -51,10 +52,10 @@ export default async function AdminCoursesPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Badge variant={course.published ? 'default' : 'secondary'}>
-                      {course.published ? 'Published' : 'Draft'}
+                      {course.published ? t('coursePublished') : t('draft')}
                     </Badge>
                     <Button variant="ghost" size="sm" render={<Link href={`/admin/courses/${course.id}`} />}>
-                      Edit <ArrowRight className="h-3 w-3 ml-1" />
+                      {t('edit')} <ArrowRight className="h-3 w-3 ml-1" />
                     </Button>
                   </div>
                 </CardHeader>
@@ -62,7 +63,7 @@ export default async function AdminCoursesPage() {
             ))}
             {all.length === 0 && (
               <div className="text-center py-12 text-muted-foreground">
-                No courses yet. Create your first course.
+                {t('noCourses')}
               </div>
             )}
           </div>

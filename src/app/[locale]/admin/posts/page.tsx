@@ -1,15 +1,18 @@
+import { getTranslations } from 'next-intl/server';
 import { auth } from '@/lib/auth';
-import { db, posts, eq, desc } from '@/lib/db';
+import { db, posts, desc } from '@/lib/db';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Container } from '@/components/ui/container';
 import { Link } from '@/i18n/routing';
-import { Plus, FileText, ArrowRight, Trash2 } from 'lucide-react';
+import { Plus, FileText, ArrowRight } from 'lucide-react';
 
 export default async function AdminPostsPage() {
   const session = await auth();
+  const t = await getTranslations('admin.posts');
+  const ta = await getTranslations('admin');
   if (session?.user?.role !== 'ADMIN') {
-    return <div className="min-h-screen flex items-center justify-center"><p className="text-muted-foreground">Access denied.</p></div>;
+    return <div className="min-h-screen flex items-center justify-center"><p className="text-muted-foreground">{ta('accessDenied')}</p></div>;
   }
 
   const all = await db.select().from(posts).orderBy(desc(posts.createdAt));
@@ -19,11 +22,11 @@ export default async function AdminPostsPage() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Blog Posts</h1>
-            <p className="text-muted-foreground mt-1">Manage blog content</p>
+            <h1 className="text-3xl font-bold tracking-tight">{t('heading')}</h1>
+            <p className="text-muted-foreground mt-1">{t('subtitle')}</p>
           </div>
           <Button render={<Link href="/admin/posts/new" />}>
-            <Plus className="h-4 w-4" /> New Post
+            <Plus className="h-4 w-4" /> {t('newPost')}
           </Button>
         </div>
         <div className="grid gap-4">
@@ -41,7 +44,7 @@ export default async function AdminPostsPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Button variant="ghost" size="sm" render={<Link href={`/admin/posts/${post.id}`} />}>
-                    Edit <ArrowRight className="h-3 w-3 ml-1" />
+                    {t('edit')} <ArrowRight className="h-3 w-3 ml-1" />
                   </Button>
                 </div>
               </CardHeader>

@@ -13,7 +13,8 @@ export default async function CourseDetailPage(props: { params: Promise<{ id: st
   const { id } = await props.params;
   const session = await auth();
   const course = await db.select().from(courses).where(eq(courses.id, id)).then(r => r[0]);
-  if (!course) return <div className="min-h-screen flex items-center justify-center"><p className="text-muted-foreground">Course not found.</p></div>;
+  const t = await getTranslations('courses');
+  if (!course) return <div className="min-h-screen flex items-center justify-center"><p className="text-muted-foreground">{t('hero.courseNotFound')}</p></div>;
 
   const mods = await db
     .select()
@@ -46,7 +47,7 @@ export default async function CourseDetailPage(props: { params: Promise<{ id: st
       <Container size="lg">
         <div className="mb-6">
           <Button variant="ghost" size="sm" render={<Link href="/courses" />}>
-            <ArrowLeft className="h-4 w-4 mr-1" /> All Courses
+            <ArrowLeft className="h-4 w-4 mr-1" /> {t('detail.backToCourses')}
           </Button>
         </div>
         <div className="grid gap-8 lg:grid-cols-[1fr_300px]">
@@ -76,6 +77,7 @@ export default async function CourseDetailPage(props: { params: Promise<{ id: st
                                   {lesson.title}
                                 </Link>
                                 <p className="text-xs text-muted-foreground">{lesson.type ?? 'TEXT'}</p>
+                                {lesson.duration && <p className="text-xs text-muted-foreground">{lesson.duration} min</p>}
                               </div>
                             </div>
                             <Button variant="ghost" size="sm" render={<Link href={`/courses/${course.id}/lessons/${lesson.id}`} />}>

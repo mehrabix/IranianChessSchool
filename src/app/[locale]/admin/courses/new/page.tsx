@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -14,6 +15,7 @@ import { Link } from '@/i18n/routing';
 
 export default function NewCoursePage() {
   const router = useRouter();
+  const t = useTranslations('admin.courses');
   const [loading, setLoading] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -41,25 +43,25 @@ export default function NewCoursePage() {
       <Container size="sm">
         <div className="mb-6">
           <Button variant="ghost" size="sm" render={<Link href="/admin/courses" />}>
-            <ArrowLeft className="h-4 w-4 mr-1" /> Back
+            <ArrowLeft className="h-4 w-4 mr-1" /> {t('cancel')}
           </Button>
         </div>
         <Card>
           <CardHeader>
-            <CardTitle>New Course</CardTitle>
+            <CardTitle>{t('newCourse')}</CardTitle>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="title">Title</Label>
+                <Label htmlFor="title">{t('courseTitle')}</Label>
                 <Input id="title" name="title" required />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="description">Description</Label>
+                <Label htmlFor="description">{t('courseDescription')}</Label>
                 <Textarea id="description" name="description" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="level">Level</Label>
+                <Label htmlFor="level">{t('courseLevel')}</Label>
                 <Select name="level" defaultValue="BEGINNER">
                   <SelectTrigger><SelectValue /></SelectTrigger>
                   <SelectContent>
@@ -72,11 +74,11 @@ export default function NewCoursePage() {
                 </Select>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="image">Image URL</Label>
+                <Label htmlFor="image">{t('imageUrl')}</Label>
                 <Input id="image" name="image" placeholder="https://..." />
               </div>
               <Button type="submit" className="gap-2" disabled={loading}>
-                <Sparkles className="h-4 w-4" /> Create Course
+                <Sparkles className="h-4 w-4" /> {t('createCourse')}
               </Button>
             </form>
           </CardContent>

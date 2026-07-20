@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -24,6 +25,7 @@ interface Module {
 }
 
 export function ModuleManager({ courseId, modules: initialModules }: { courseId: string; modules: Module[] }) {
+  const t = useTranslations('admin.courses');
   const [modules, setModules] = useState(initialModules);
   const [newModuleTitle, setNewModuleTitle] = useState('');
 
@@ -53,12 +55,12 @@ export function ModuleManager({ courseId, modules: initialModules }: { courseId:
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Modules & Lessons</CardTitle>
+        <CardTitle>{t('modules')}</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="flex gap-2">
           <Input
-            placeholder="New module title..."
+            placeholder={t('moduleTitle')}
             value={newModuleTitle}
             onChange={e => setNewModuleTitle(e.target.value)}
           />
@@ -75,6 +77,7 @@ export function ModuleManager({ courseId, modules: initialModules }: { courseId:
 }
 
 function ModuleCard({ mod, courseId, onDelete }: { mod: Module; courseId: string; onDelete: (id: string) => void }) {
+  const t = useTranslations('admin.courses');
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -105,16 +108,16 @@ function ModuleCard({ mod, courseId, onDelete }: { mod: Module; courseId: string
                 <div className="flex items-center gap-1">
                   <Badge variant="outline" className="text-xs">{lesson.type ?? 'TEXT'}</Badge>
                   <Button variant="ghost" size="sm" render={<Link href={`/admin/courses/${courseId}/lessons/${lesson.id}`} />}>
-                    Edit
+                    {t('edit')}
                   </Button>
                 </div>
               </div>
             ))}
             {mod.lessons.length === 0 && (
-              <p className="text-sm text-muted-foreground">No lessons yet.</p>
+              <p className="text-sm text-muted-foreground">{t('noLessons')}</p>
             )}
             <Button variant="outline" size="sm" className="gap-1" render={<Link href={`/admin/courses/${courseId}/lessons/new?moduleId=${mod.id}`} />}>
-              <Plus className="h-3 w-3" /> Add Lesson
+              <Plus className="h-3 w-3" /> {t('newLesson')}
             </Button>
           </div>
         </CardContent>

@@ -1,26 +1,26 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { Providers } from "@/components/layout/Providers";
 import { Toaster } from "@/components/ui/sonner";
-import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/routing";
-import { LayoutDashboard, BookOpen, FileText, ChevronLeft } from "lucide-react";
-
-const adminLinks = [
-  { href: '/admin', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/admin/courses', label: 'Courses', icon: BookOpen },
-  { href: '/admin/posts', label: 'Posts', icon: FileText },
-];
+import { LayoutDashboard, BookOpen, FileText } from "lucide-react";
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const messages = await getMessages();
+  const t = await getTranslations('admin.nav');
+
+  const adminLinks = [
+    { href: '/admin', label: t('dashboard'), icon: LayoutDashboard },
+    { href: '/admin/courses', label: t('courses'), icon: BookOpen },
+    { href: '/admin/posts', label: t('posts'), icon: FileText },
+  ];
+
   return (
     <NextIntlClientProvider messages={messages}>
       <Providers>
         <div className="flex min-h-screen">
           <aside className="w-56 shrink-0 border-r bg-muted/30 p-4 hidden md:flex flex-col gap-1">
             <Link href="/admin" className="flex items-center gap-2 font-bold text-lg mb-6 px-2">
-              <ChevronLeft className="h-4 w-4 text-muted-foreground" />
               Admin
             </Link>
             {adminLinks.map(link => (

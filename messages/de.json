@@ -8,6 +8,8 @@
     "contact": "Kontakt",
     "pricing": "Preise",
     "courses": "Kurse",
+    "dashboard": "Dashboard",
+    "admin": "Admin",
     "signIn": "Anmelden",
     "tryFree": "Kostenlos testen",
     "signOut": "Abmelden"
@@ -462,6 +464,135 @@
       "description": "Bei der Anmeldung ist ein Fehler aufgetreten",
       "message": "Bitte versuche es erneut oder kontaktiere den Support, falls das Problem weiterhin besteht.",
       "tryAgain": "Erneut versuchen"
+    }
+  },
+  "courses": {
+    "hero": {
+      "heading": "Kurse",
+      "subtitle": "Entdecke unsere Schachkurse für jedes Könnensniveau.",
+      "noCourses": "Noch keine Kurse verfügbar.",
+      "viewCourse": "Kurs anzeigen",
+      "allCourses": "Alle Kurse",
+      "courseNotFound": "Kurs nicht gefunden."
+    },
+    "detail": {
+      "backToCourses": "Alle Kurse",
+      "lessons": "Lektionen",
+      "completed": "Abgeschlossen",
+      "play": "Abspielen"
+    },
+    "lesson": {
+      "backToCourse": "Zurück zum Kurs",
+      "practiceBoard": "Übungsbrett",
+      "markComplete": "Als abgeschlossen markieren",
+      "completed": "Abgeschlossen"
+    },
+    "quiz": {
+      "loading": "Quiz wird geladen...",
+      "questions": "Fragen",
+      "toPass": "zum Bestehen",
+      "maxAttempts": "Max. {count} Versuche",
+      "startQuiz": "Quiz starten",
+      "submitAnswers": "Antworten einreichen",
+      "passed": "Bestanden!",
+      "notPassed": "Nicht bestanden",
+      "score": "Punktzahl",
+      "percentage": "Prozentsatz",
+      "congratulations": "Glückwunsch! Du hast das Quiz bestanden.",
+      "tryAgain": "Du brauchst {percent}% mehr zum Bestehen. Versuche es erneut.",
+      "correct": "Richtig!",
+      "incorrect": "Falsch."
+    }
+  },
+  "dashboard": {
+    "welcome": "Willkommen zurück",
+    "welcomeName": "Willkommen zurück, {name}",
+    "subtitle": "Setze deine Schachreise fort",
+    "stats": {
+      "completed": "Abgeschlossen",
+      "courses": "Kurse",
+      "attempts": "Versuche",
+      "streak": "Serie",
+      "xp": "EP",
+      "level": "Stufe {level}"
+    },
+    "myCourses": "Meine Kurse",
+    "lessons": "Lektionen",
+    "continue": "Weiter",
+    "noCourses": "Keine Kurse verfügbar. Durchstöbere den Kurskatalog, um loszulegen!",
+    "thisWeek": "Diese Woche",
+    "activitiesThisWeek": "{count} Aktivitäten diese Woche",
+    "recentActivity": "Letzte Aktivität",
+    "noActivity": "Noch keine Aktivität. Starte einen Kurs, um deinen Fortschritt hier zu sehen!"
+  },
+  "admin": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "courses": "Kurse",
+      "posts": "Beiträge",
+      "users": "Benutzer",
+      "settings": "Einstellungen"
+    },
+    "dashboard": {
+      "heading": "Admin-Dashboard",
+      "subtitle": "Verwalte deine Schachschule",
+      "courses": "Kurse",
+      "users": "Benutzer",
+      "quickActions": "Schnellaktionen",
+      "manageCourses": "Kurse verwalten",
+      "managePosts": "Beiträge verwalten"
+    },
+    "accessDenied": "Zugriff verweigert.",
+    "courses": {
+      "heading": "Kurse verwalten",
+      "subtitle": "Verwalte deinen Kurskatalog",
+      "newCourse": "Neuer Kurs",
+      "editCourse": "Kurs bearbeiten",
+      "deleteCourse": "Kurs löschen",
+      "noCourses": "Noch keine Kurse. Erstelle deinen ersten Kurs!",
+      "createCourse": "Kurs erstellen",
+      "courseTitle": "Titel",
+      "courseDescription": "Beschreibung",
+      "courseLevel": "Stufe",
+      "coursePublished": "Veröffentlicht",
+      "draft": "Entwurf",
+      "edit": "Bearbeiten",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "modules": "Module",
+      "addModule": "Modul hinzufügen",
+      "deleteModule": "Modul löschen",
+      "moduleTitle": "Modultitel",
+      "lessons": "Lektionen",
+      "newLesson": "Neue Lektion",
+      "deleteLesson": "Lektion löschen",
+      "lessonTitle": "Lektionstitel",
+      "lessonType": "Typ",
+      "lessonContent": "Inhalt",
+      "lessonVideoUrl": "Video-URL",
+      "lessonDuration": "Dauer (Minuten)",
+      "noLessons": "Noch keine Lektionen.",
+      "imageUrl": "Bild-URL",
+      "courseInfo": "Kursinfo",
+      "status": "Status",
+      "createLesson": "Lektion erstellen"
+    },
+    "posts": {
+      "heading": "Beiträge verwalten",
+      "subtitle": "Blog-Inhalte verwalten",
+      "newPost": "Neuer Beitrag",
+      "editPost": "Beitrag bearbeiten",
+      "deletePost": "Beitrag löschen",
+      "noPosts": "Noch keine Beiträge.",
+      "createPost": "Beitrag erstellen",
+      "postTitle": "Titel",
+      "postContent": "Inhalt",
+      "postImage": "Bild-URL",
+      "postCategory": "Kategorie",
+      "edit": "Bearbeiten",
+      "save": "Speichern",
+      "publish": "Veröffentlichen",
+      "cancel": "Abbrechen"
     }
   }
 }

@@ -2,6 +2,7 @@
 
 import { useState, use } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -18,6 +19,7 @@ export default function NewLessonPage(props: { params: Promise<{ id: string }> }
 }
 
 function LessonForm({ courseId }: { courseId: string }) {
+  const t = useTranslations('admin.courses');
   const searchParams = useSearchParams();
   const moduleId = searchParams.get('moduleId');
   const [loading, setLoading] = useState(false);
@@ -47,23 +49,23 @@ function LessonForm({ courseId }: { courseId: string }) {
       <Container size="sm">
         <div className="mb-6">
           <Button variant="ghost" size="sm" render={<Link href={`/admin/courses/${courseId}`} />}>
-            <ArrowLeft className="h-4 w-4 mr-1" /> Back
+            <ArrowLeft className="h-4 w-4 mr-1" /> {t('cancel')}
           </Button>
         </div>
         <Card>
           <CardHeader>
-            <CardTitle>New Lesson</CardTitle>
+            <CardTitle>{t('newLesson')}</CardTitle>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
               <input type="hidden" name="moduleId" value={moduleId ?? ''} />
               <input type="hidden" name="courseId" value={courseId} />
               <div className="space-y-2">
-                <Label htmlFor="title">Title</Label>
+                <Label htmlFor="title">{t('lessonTitle')}</Label>
                 <Input id="title" name="title" required />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="type">Type</Label>
+                <Label htmlFor="type">{t('lessonType')}</Label>
                 <Select name="type" defaultValue="TEXT">
                   <SelectTrigger><SelectValue /></SelectTrigger>
                   <SelectContent>
@@ -74,19 +76,19 @@ function LessonForm({ courseId }: { courseId: string }) {
                 </Select>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="content">Content</Label>
+                <Label htmlFor="content">{t('lessonContent')}</Label>
                 <Textarea id="content" name="content" className="min-h-[200px]" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="videoUrl">Video URL</Label>
+                <Label htmlFor="videoUrl">{t('lessonVideoUrl')}</Label>
                 <Input id="videoUrl" name="videoUrl" placeholder="https://..." />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="duration">Duration (minutes)</Label>
+                <Label htmlFor="duration">{t('lessonDuration')}</Label>
                 <Input id="duration" name="duration" type="number" />
               </div>
               <Button type="submit" className="gap-2" disabled={loading}>
-                <Sparkles className="h-4 w-4" /> Create Lesson
+                <Sparkles className="h-4 w-4" /> {t('createLesson')}
               </Button>
             </form>
           </CardContent>
