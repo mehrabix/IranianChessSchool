@@ -523,7 +523,16 @@
     "thisWeek": "This Week",
     "activitiesThisWeek": "{count} activities this week",
     "recentActivity": "Recent Activity",
-    "noActivity": "No activity yet. Start a course to see your progress here!"
+    "noActivity": "No activity yet. Start a course to see your progress here!",
+    "analysis": "Analysis Board",
+    "moves": "Moves",
+    "importExport": "Import / Export",
+    "importPgn": "Import PGN",
+    "import": "Import",
+    "exportPgn": "Export PGN",
+    "pgnCopied": "PGN copied to clipboard!",
+    "invalidPgn": "Invalid PGN",
+    "makeFirstMove": "Make a move to start"
   },
   "admin": {
     "nav": {

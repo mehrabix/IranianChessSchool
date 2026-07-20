@@ -523,7 +523,16 @@
     "thisWeek": "Diese Woche",
     "activitiesThisWeek": "{count} Aktivitäten diese Woche",
     "recentActivity": "Letzte Aktivität",
-    "noActivity": "Noch keine Aktivität. Starte einen Kurs, um deinen Fortschritt hier zu sehen!"
+    "noActivity": "Noch keine Aktivität. Starte einen Kurs, um deinen Fortschritt hier zu sehen!",
+    "analysis": "Analysebrett",
+    "moves": "Züge",
+    "importExport": "Import / Export",
+    "importPgn": "PGN importieren",
+    "import": "Importieren",
+    "exportPgn": "PGN exportieren",
+    "pgnCopied": "PGN in die Zwischenablage kopiert!",
+    "invalidPgn": "Ungültiges PGN",
+    "makeFirstMove": "Mache einen Zug, um zu beginnen"
   },
   "admin": {
     "nav": {
