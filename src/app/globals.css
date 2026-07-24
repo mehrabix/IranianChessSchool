@@ -128,4 +128,19 @@
 html.font-fa {
   @apply font-fa;
 }
+html.font-fa body,
+html.font-fa h1,
+html.font-fa h2,
+html.font-fa h3,
+html.font-fa h4,
+html.font-fa h5,
+html.font-fa h6,
+html.font-fa p,
+html.font-fa span,
+html.font-fa div,
+html.font-fa button,
+html.font-fa a,
+html.font-fa li {
+  font-family: var(--font-fa);
+}
 }

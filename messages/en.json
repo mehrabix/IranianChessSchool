@@ -12,7 +12,8 @@
     "tryFree": "Try Free",
     "signOut": "Sign Out",
     "dashboard": "Dashboard",
-    "admin": "Admin"
+    "admin": "Admin",
+    "loggedInAs": "Logged in as {name}"
   },
   "footer": {
     "brand": "Iranian Chess School",
@@ -603,5 +604,13 @@
       "publish": "Publish",
       "cancel": "Cancel"
     }
+  },
+  "puzzles": {
+    "reset": "Reset",
+    "hint": "Hint",
+    "skip": "Skip",
+    "nextPuzzle": "Next Puzzle",
+    "correct": "Correct!",
+    "wrong": "Wrong"
   }
 }

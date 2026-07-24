@@ -153,7 +153,7 @@ export function Navbar() {
               {session && (
                 <>
                   <div className="my-4 mx-3 h-px bg-border" />
-                  <div className="px-3 py-2 text-sm text-muted-foreground">Logged in as {session.user?.name}</div>
+                  <div className="px-3 py-2 text-sm text-muted-foreground">{t('loggedInAs', { name: String(session.user?.name ?? '') })}</div>
                   {session.user?.role === 'ADMIN' && (
                     <Link href="/admin"
                       className="flex items-center gap-3 px-3 py-2.5 text-base font-medium rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-all"
