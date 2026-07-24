@@ -11,12 +11,12 @@ import {
 } from 'lucide-react';
 
 const features = [
-  { icon: BookOpen, titleKey: 'structuredLessons', descKey: 'structuredLessonsDesc', color: 'from-emerald-500/20 to-emerald-500/5' },
-  { icon: Users, titleKey: 'liveClasses', descKey: 'liveClassesDesc', color: 'from-blue-500/20 to-blue-500/5' },
-  { icon: Trophy, titleKey: 'gameReviews', descKey: 'gameReviewsDesc', color: 'from-amber-500/20 to-amber-500/5' },
-  { icon: BarChart3, titleKey: 'progressAnalytics', descKey: 'progressAnalyticsDesc', color: 'from-violet-500/20 to-violet-500/5' },
-  { icon: MessageCircle, titleKey: 'community', descKey: 'communityDesc', color: 'from-rose-500/20 to-rose-500/5' },
-  { icon: ChessKnight, titleKey: 'aiTools', descKey: 'aiToolsDesc', color: 'from-cyan-500/20 to-cyan-500/5' },
+  { icon: BookOpen, titleKey: 'structuredLessons', descKey: 'structuredLessonsDesc' },
+  { icon: Users, titleKey: 'liveClasses', descKey: 'liveClassesDesc' },
+  { icon: Trophy, titleKey: 'gameReviews', descKey: 'gameReviewsDesc' },
+  { icon: BarChart3, titleKey: 'progressAnalytics', descKey: 'progressAnalyticsDesc' },
+  { icon: MessageCircle, titleKey: 'community', descKey: 'communityDesc' },
+  { icon: ChessKnight, titleKey: 'aiTools', descKey: 'aiToolsDesc' },
 ];
 
 const levels = [
@@ -119,15 +119,14 @@ export default async function HomePage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature) => (
-              <Card key={feature.titleKey} className="group border-0 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                <CardHeader className="relative">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+              <Card key={feature.titleKey} className="group hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-3">
                     <feature.icon className="h-6 w-6 text-emerald-600" />
                   </div>
-                  <CardTitle className="text-lg">{t(`features.${feature.titleKey}`)}</CardTitle>
+                  <CardTitle>{t(`features.${feature.titleKey}`)}</CardTitle>
                 </CardHeader>
-                <CardContent className="relative">
+                <CardContent>
                   <p className="text-muted-foreground leading-relaxed">{t(`features.${feature.descKey}`)}</p>
                 </CardContent>
               </Card>
@@ -149,15 +148,15 @@ export default async function HomePage() {
           </div>
           <div className="grid md:grid-cols-5 gap-4">
             {levels.map((level, i) => (
-              <div key={level.nameKey} className="relative group">
+              <div key={level.nameKey} className="relative group flex">
                 <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative p-6 rounded-2xl border bg-card hover:shadow-lg transition-all duration-300 text-center space-y-3">
-                  <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center mx-auto text-sm font-bold text-emerald-700">
+                <div className="relative p-6 rounded-2xl border bg-card hover:shadow-lg transition-all duration-300 text-center space-y-3 flex-1 flex flex-col">
+                  <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center mx-auto text-sm font-bold text-emerald-700 shrink-0">
                     {i + 1}
                   </div>
                   <h3 className="font-semibold text-lg">{t(`levels.${level.nameKey}`)}</h3>
                   <p className="text-2xl font-bold text-emerald-600">{t(`levels.${level.rangeKey}`)}</p>
-                  <p className="text-sm text-muted-foreground">{t(`levels.${level.descKey}`)}</p>
+                  <p className="text-sm text-muted-foreground mt-auto">{t(`levels.${level.descKey}`)}</p>
                 </div>
               </div>
             ))}
@@ -178,7 +177,7 @@ export default async function HomePage() {
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {students.map((student) => (
-                <Card key={student.nameKey} className="border-0 bg-gradient-to-b from-emerald-50/50 to-background shadow-sm hover:shadow-md transition-shadow">
+                <Card key={student.nameKey} className="hover:shadow-md transition-shadow">
                   <CardContent className="pt-6 space-y-4">
                     <div className="flex items-center gap-1">
                       {Array.from({ length: 5 }).map((_, i) => (
