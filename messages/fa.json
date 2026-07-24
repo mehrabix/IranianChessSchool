@@ -469,40 +469,40 @@
   },
   "courses": {
     "hero": {
-      "heading": "Courses",
-      "subtitle": "Explore our chess courses designed for every skill level.",
-      "noCourses": "No courses available yet.",
-      "viewCourse": "View Course",
-      "allCourses": "All Courses",
-      "courseNotFound": "Course not found."
+      "heading": "دوره‌ها",
+      "subtitle": "دوره‌های شطرنج ما را که برای هر سطح مهارتی طراحی شده‌اند کاوش کنید.",
+      "noCourses": "هنوز دوره‌ای موجود نیست.",
+      "viewCourse": "مشاهده دوره",
+      "allCourses": "همه دوره‌ها",
+      "courseNotFound": "دوره پیدا نشد."
     },
     "detail": {
-      "backToCourses": "All Courses",
-      "lessons": "lessons",
-      "completed": "Completed",
-      "play": "Play"
+      "backToCourses": "همه دوره‌ها",
+      "lessons": "درس",
+      "completed": "تکمیل شده",
+      "play": "شروع"
     },
     "lesson": {
-      "backToCourse": "Back to Course",
-      "practiceBoard": "Practice Board",
-      "markComplete": "Mark as Complete",
-      "completed": "Completed"
+      "backToCourse": "بازگشت به دوره",
+      "practiceBoard": "تخته تمرین",
+      "markComplete": "علامت به عنوان تکمیل شده",
+      "completed": "تکمیل شده"
     },
     "quiz": {
-      "loading": "Loading quiz...",
-      "questions": "questions",
-      "toPass": "to pass",
-      "maxAttempts": "Max {count} attempts",
-      "startQuiz": "Start Quiz",
-      "submitAnswers": "Submit Answers",
-      "passed": "Passed!",
-      "notPassed": "Not Passed",
-      "score": "Score",
-      "percentage": "Percentage",
-      "congratulations": "Congratulations! You passed the quiz.",
-      "tryAgain": "You need {percent}% more to pass. Try again.",
-      "correct": "Correct!",
-      "incorrect": "Incorrect."
+      "loading": "در حال بارگذاری آزمون...",
+      "questions": "سوال",
+      "toPass": "برای قبولی",
+      "maxAttempts": "حداکثر {count} تلاش",
+      "startQuiz": "شروع آزمون",
+      "submitAnswers": "ارسال پاسخ‌ها",
+      "passed": "قبول شدی!",
+      "notPassed": "قبول نشدی",
+      "score": "نمره",
+      "percentage": "درصد",
+      "congratulations": "تبریک! شما در آزمون قبول شدید.",
+      "tryAgain": "برای قبولی به {percent}% بیشتر نیاز دارید. دوباره تلاش کنید.",
+      "correct": "صحیح!",
+      "incorrect": "نادرست."
     }
   },
   "dashboard": {
@@ -537,29 +537,29 @@
   },
   "admin": {
     "nav": {
-      "dashboard": "Dashboard",
-      "courses": "Courses",
-      "posts": "Posts",
-      "users": "Users",
-      "settings": "Settings"
+      "dashboard": "داشبورد",
+      "courses": "دوره‌ها",
+      "posts": "نوشته‌ها",
+      "users": "کاربران",
+      "settings": "تنظیمات"
     },
     "dashboard": {
-      "heading": "Admin Dashboard",
-      "subtitle": "Manage your chess school",
-      "courses": "Courses",
-      "users": "Users",
-      "quickActions": "Quick Actions",
-      "manageCourses": "Manage Courses",
-      "managePosts": "Manage Posts"
+      "heading": "داشبورد مدیریت",
+      "subtitle": "مدرسه شطرنج خود را مدیریت کنید",
+      "courses": "دوره‌ها",
+      "users": "کاربران",
+      "quickActions": "اقدامات سریع",
+      "manageCourses": "مدیریت دوره‌ها",
+      "managePosts": "مدیریت نوشته‌ها"
     },
-    "accessDenied": "دسترسی غیرمجاز.",
+    "accessDenied": "دسترسی رد شد.",
     "courses": {
       "heading": "مدیریت دوره‌ها",
-      "subtitle": "مدیریت کاتالوگ دوره‌ها",
+      "subtitle": "کاتالوگ دوره‌های خود را مدیریت کنید",
       "newCourse": "دوره جدید",
       "editCourse": "ویرایش دوره",
       "deleteCourse": "حذف دوره",
-      "noCourses": "هنوز دوره‌ای وجود ندارد. اولین دوره را ایجاد کنید!",
+      "noCourses": "هنوز دوره‌ای وجود ندارد. اولین دوره خود را ایجاد کنید!",
       "createCourse": "ایجاد دوره",
       "courseTitle": "عنوان",
       "courseDescription": "توضیحات",
@@ -579,38 +579,30 @@
       "lessonTitle": "عنوان درس",
       "lessonType": "نوع",
       "lessonContent": "محتوا",
-      "lessonVideoUrl": "URL ویدئو",
+      "lessonVideoUrl": "آدرس ویدیو",
       "lessonDuration": "مدت (دقیقه)",
       "noLessons": "هنوز درسی وجود ندارد.",
-      "imageUrl": "URL تصویر",
+      "imageUrl": "آدرس تصویر",
       "courseInfo": "اطلاعات دوره",
       "status": "وضعیت",
       "createLesson": "ایجاد درس"
     },
     "posts": {
-      "heading": "مدیریت پست‌ها",
+      "heading": "مدیریت نوشته‌ها",
       "subtitle": "مدیریت محتوای وبلاگ",
-      "newPost": "پست جدید",
-      "editPost": "ویرایش پست",
-      "deletePost": "حذف پست",
-      "noPosts": "هنوز پستی وجود ندارد.",
-      "createPost": "ایجاد پست",
+      "newPost": "نوشته جدید",
+      "editPost": "ویرایش نوشته",
+      "deletePost": "حذف نوشته",
+      "noPosts": "هنوز نوشته‌ای وجود ندارد.",
+      "createPost": "ایجاد نوشته",
       "postTitle": "عنوان",
       "postContent": "محتوا",
-      "postImage": "URL تصویر",
+      "postImage": "آدرس تصویر",
       "postCategory": "دسته‌بندی",
       "edit": "ویرایش",
       "save": "ذخیره",
       "publish": "انتشار",
       "cancel": "لغو"
     }
-  },
-  "puzzles": {
-    "reset": "بازنشانی",
-    "hint": "راهنمایی",
-    "skip": "رد کردن",
-    "nextPuzzle": "پازل بعدی",
-    "correct": "درست!",
-    "wrong": "اشتباه"
   }
 }

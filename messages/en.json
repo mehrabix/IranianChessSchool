@@ -604,13 +604,5 @@
       "publish": "Publish",
       "cancel": "Cancel"
     }
-  },
-  "puzzles": {
-    "reset": "Reset",
-    "hint": "Hint",
-    "skip": "Skip",
-    "nextPuzzle": "Next Puzzle",
-    "correct": "Correct!",
-    "wrong": "Wrong"
   }
 }
