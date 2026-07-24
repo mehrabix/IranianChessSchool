@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, getLocale } from 'next-intl/server';
 import { auth } from '@/lib/auth';
 import { db, courses, modules, lessons, progress, users as usersTable, eq, and } from '@/lib/db';
 import { redirect } from 'next/navigation';

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Container } from '@/components/ui/container';
+import { AnimatedChessBoard } from '@/components/landing/AnimatedChessBoard';
 import {
   ChessKnight, BookOpen, Users, Trophy, BarChart3, MessageCircle,
   Sparkles, Star, CheckCircle2, ArrowRight, Globe
@@ -84,21 +85,7 @@ export default async function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-amber-400/20 rounded-3xl rotate-6" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-emerald-400/10 to-amber-400/10 rounded-3xl -rotate-3" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="grid grid-cols-8 gap-0.5 w-72 h-72">
-                    {Array.from({ length: 64 }).map((_, i) => {
-                      const row = Math.floor(i / 8);
-                      const col = i % 8;
-                      const isDark = (row + col) % 2 === 1;
-                      const isKnight = (row === 0 && col === 1) || (row === 7 && col === 6);
-                      return (
-                        <div key={i} className={`aspect-square flex items-center justify-center text-xs ${
-                          isDark ? 'bg-emerald-800/30' : 'bg-amber-50/40'
-                        } ${isKnight ? 'text-2xl' : ''}`}>
-                          {isKnight && (row === 0 ? '♞' : '♘')}
-                        </div>
-                      );
-                    })}
-                  </div>
+                  <AnimatedChessBoard />
                 </div>
               </div>
             </div>

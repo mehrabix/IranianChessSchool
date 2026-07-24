@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
+import { ChessPieceIcon } from '@/components/chess/ChessPieceIcon';
 import { Sparkles, Star, Gamepad2, Smile, Heart, Shield, Users, Trophy, BookOpen, ArrowRight, CheckCircle2 } from "lucide-react";
 
 const features = [
@@ -62,12 +63,22 @@ export default async function KidsPage() {
                       const row = Math.floor(i / 8);
                       const col = i % 8;
                       const isDark = (row + col) % 2 === 1;
-                      const isPiece = [0, 7].includes(row) && (col === 0 || col === 7);
+                      const pieces = [
+                        ['r','n','b','q','k','b','n','r'],
+                        ['p','p','p','p','p','p','p','p'],
+                        [null,null,null,null,null,null,null,null],
+                        [null,null,null,null,null,null,null,null],
+                        [null,null,null,null,null,null,null,null],
+                        [null,null,null,null,null,null,null,null],
+                        ['P','P','P','P','P','P','P','P'],
+                        ['R','N','B','Q','K','B','N','R'],
+                      ];
+                      const piece = pieces[row][col];
                       return (
-                        <div key={i} className={`aspect-square rounded-sm flex items-center justify-center text-lg ${
+                        <div key={i} className={`aspect-square rounded-sm flex items-center justify-center ${
                           isDark ? 'bg-emerald-600/20' : 'bg-amber-100/40'
-                        } ${isPiece ? 'text-xl' : ''}`}>
-                          {isPiece && (row === 0 ? '♜♞♝♛♚♝♞♜'[col] : '♖♘♗♕♔♗♘♖'[col])}
+                        }`}>
+                          {piece && <ChessPieceIcon piece={piece} size={16} />}
                         </div>
                       );
                     })}
