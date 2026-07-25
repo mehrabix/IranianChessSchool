@@ -5,6 +5,8 @@ import { useEngine } from './useEngine';
 
 const mockEvaluate = vi.fn();
 const mockGetTopLines = vi.fn();
+const mockAnalyzeGame = vi.fn();
+const mockFindBlunders = vi.fn();
 const mockInit = vi.fn();
 const mockDestroy = vi.fn();
 
@@ -14,6 +16,8 @@ vi.mock('@/lib/chess/engine', () => {
       init: mockInit,
       evaluate: mockEvaluate,
       getTopLines: mockGetTopLines,
+      analyzeGame: mockAnalyzeGame,
+      findBlunders: mockFindBlunders,
       destroy: mockDestroy,
       isReady: function () { return true; },
     };
@@ -57,5 +61,28 @@ describe('useEngine', () => {
     mockInit.mockRejectedValue(new Error('init failed'));
     const { result } = renderHook(() => useEngine());
     await vi.waitFor(() => expect(result.current.error).toBe('init failed'));
+  });
+
+  it('analyzeGame returns game analysis', async () => {
+    const mockResult = {
+      moves: [{ san: 'e4', eval: 0.2, depth: 18, bestMove: 'd4', isBlunder: false }],
+      totalAccuracy: 95.5,
+    };
+    mockAnalyzeGame.mockResolvedValue(mockResult);
+    const { result } = renderHook(() => useEngine());
+    await vi.waitFor(() => expect(result.current.isReady).toBe(true));
+    const analysis = await result.current.analyzeGame('1. e4');
+    expect(analysis).toEqual(mockResult);
+    expect(mockAnalyzeGame).toHaveBeenCalled();
+  });
+
+  it('findBlunders returns blunder list', async () => {
+    const mockResult = [{ move: 'e4', eval: -1.5, bestMove: 'd4', phase: 'opening' }];
+    mockFindBlunders.mockResolvedValue(mockResult);
+    const { result } = renderHook(() => useEngine());
+    await vi.waitFor(() => expect(result.current.isReady).toBe(true));
+    const blunders = await result.current.findBlunders('1. e4');
+    expect(blunders).toEqual(mockResult);
+    expect(mockFindBlunders).toHaveBeenCalled();
   });
 });

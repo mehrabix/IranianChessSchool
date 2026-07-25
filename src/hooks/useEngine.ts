@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { ChessEngine } from '@/lib/chess/engine';
-import type { EngineEval, EngineLine } from '@/types/chess';
+import type { EngineEval, EngineLine, GameAnalysis, Blunder } from '@/types/chess';
 
 export function useEngine() {
   const engineRef = useRef<ChessEngine | null>(null);
@@ -49,5 +49,27 @@ export function useEngine() {
     }
   }, []);
 
-  return { evaluate, getTopLines, isReady, isThinking, error };
+  const analyzeGame = useCallback(async (pgn: string, depth?: number): Promise<GameAnalysis> => {
+    const engine = engineRef.current;
+    if (!engine) throw new Error('Engine not initialized');
+    setIsThinking(true);
+    try {
+      return await engine.analyzeGame(pgn, depth);
+    } finally {
+      setIsThinking(false);
+    }
+  }, []);
+
+  const findBlunders = useCallback(async (pgn: string, depth?: number): Promise<Blunder[]> => {
+    const engine = engineRef.current;
+    if (!engine) throw new Error('Engine not initialized');
+    setIsThinking(true);
+    try {
+      return await engine.findBlunders(pgn, depth);
+    } finally {
+      setIsThinking(false);
+    }
+  }, []);
+
+  return { evaluate, getTopLines, analyzeGame, findBlunders, isReady, isThinking, error };
 }

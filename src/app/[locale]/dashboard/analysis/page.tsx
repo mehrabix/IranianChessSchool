@@ -4,6 +4,7 @@ import { useState, useCallback, useRef } from 'react';
 import { Chess } from 'chess.js';
 import { ChessBoard } from '@/components/chess/ChessBoard';
 import { EngineEval } from '@/components/chess/EngineEval';
+import { GameAnalysisPanel } from '@/components/chess/GameAnalysisPanel';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Container } from '@/components/ui/container';
@@ -158,6 +159,8 @@ export default function AnalysisPage() {
 
           <div className="space-y-4">
             <EngineEval fen={fen} />
+
+            <GameAnalysisPanel pgn={game.pgn()} onMoveClick={goToMove} />
 
             <Card>
               <CardHeader>

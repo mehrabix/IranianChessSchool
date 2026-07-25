@@ -1,4 +1,5 @@
-import type { EngineEval, EngineLine } from '@/types/chess';
+import type { EngineEval, EngineLine, GameAnalysis, Blunder } from '@/types/chess';
+import { Chess } from 'chess.js';
 
 type MessageHandler = (msg: string) => void;
 
@@ -134,6 +135,78 @@ export class ChessEngine {
     });
   }
 
+  async analyzeGame(pgn: string, depth: number = 18): Promise<GameAnalysis> {
+    const chess = new Chess();
+    chess.loadPgn(pgn);
+    const history = chess.history({ verbose: true });
+
+    if (history.length === 0) {
+      return { moves: [], totalAccuracy: 0 };
+    }
+
+    const moves: GameAnalysis['moves'] = [];
+    const tempGame = new Chess();
+    let prevScore = 0;
+    let totalLoss = 0;
+
+    for (let i = 0; i < history.length; i++) {
+      const move = history[i];
+      const beforeFen = tempGame.fen();
+      const evalBefore = await this.evaluate(beforeFen, depth);
+      const side = tempGame.turn();
+
+      tempGame.move(move.san);
+      const afterFen = tempGame.fen();
+      const evalAfter = await this.evaluate(afterFen, depth);
+
+      const scoreAtMove = side === 'w' ? evalBefore.score : -evalBefore.score;
+      const scoreAfter = side === 'w' ? evalAfter.score : -evalAfter.score;
+      const evalDelta = scoreAfter - scoreAtMove;
+
+      const isBlunder = evalDelta < -0.8;
+      const loss = Math.min(Math.abs(evalDelta), 5);
+      totalLoss += loss;
+
+      moves.push({
+        san: move.san,
+        eval: evalAfter.score,
+        depth: Math.min(evalBefore.depth, evalAfter.depth),
+        bestMove: evalBefore.bestMove || '',
+        isBlunder,
+      });
+
+      prevScore = evalAfter.score;
+    }
+
+    const avgLossPerMove = totalLoss / Math.max(moves.length, 1);
+    const accuracy = normalizeAccuracy(avgLossPerMove);
+
+    return { moves, totalAccuracy: Math.round(accuracy * 100) / 100 };
+  }
+
+  async findBlunders(pgn: string, depth: number = 18): Promise<Blunder[]> {
+    const analysis = await this.analyzeGame(pgn, depth);
+    const chess = new Chess();
+    chess.loadPgn(pgn);
+    const history = chess.history({ verbose: true });
+    const blunders: Blunder[] = [];
+
+    for (let i = 0; i < analysis.moves.length; i++) {
+      const m = analysis.moves[i];
+      if (m.isBlunder) {
+        const phase = classifyPhase(history[i].san, i, history.length);
+        blunders.push({
+          move: m.san,
+          eval: m.eval,
+          bestMove: m.bestMove,
+          phase,
+        });
+      }
+    }
+
+    return blunders;
+  }
+
   isReady(): boolean {
     return this.ready;
   }
@@ -143,4 +216,14 @@ export class ChessEngine {
     this.worker = null;
     this.ready = false;
   }
+}
+
+function normalizeAccuracy(avgCentipawnLoss: number): number {
+  return 100 * Math.exp(-0.003 * avgCentipawnLoss * 100);
+}
+
+function classifyPhase(san: string, moveIndex: number, totalMoves: number): string {
+  if (moveIndex < 10) return 'opening';
+  if (moveIndex < totalMoves * 0.6) return 'middlegame';
+  return 'endgame';
 }
