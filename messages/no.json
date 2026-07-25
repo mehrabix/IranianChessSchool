@@ -14,7 +14,9 @@
     "tryFree": "Prøv gratis",
     "signOut": "Logg ut",
     "loggedInAs": "Logget inn som {name}",
-    "myProgress": "Min fremgang"
+    "myProgress": "Min fremgang",
+    "brand": "Iranian Chess School",
+    "brandShort": "ICS"
   },
   "footer": {
     "brand": "Iranian Chess School",

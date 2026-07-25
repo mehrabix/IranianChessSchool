@@ -14,7 +14,9 @@
     "tryFree": "Попробовать бесплатно",
     "signOut": "Выйти",
     "loggedInAs": "Вошли как {name}",
-    "myProgress": "Мой прогресс"
+    "myProgress": "Мой прогресс",
+    "brand": "Иранская шахматная школа",
+    "brandShort": "ИШШ"
   },
   "footer": {
     "brand": "Iranian Chess School",

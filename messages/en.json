@@ -14,7 +14,9 @@
     "dashboard": "Dashboard",
     "admin": "Admin",
     "loggedInAs": "Logged in as {name}",
-    "myProgress": "My Progress"
+    "myProgress": "My Progress",
+    "brand": "Iranian Chess School",
+    "brandShort": "ICS"
   },
   "footer": {
     "brand": "Iranian Chess School",

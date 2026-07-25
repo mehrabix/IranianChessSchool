@@ -14,7 +14,9 @@
     "tryFree": "رایگان امتحان کن",
     "signOut": "خروج",
     "loggedInAs": "ورود به عنوان {name}",
-    "myProgress": "پیشرفت من"
+    "myProgress": "پیشرفت من",
+    "brand": "مدرسه شطرنج ایران",
+    "brandShort": "م.ش"
   },
   "footer": {
     "brand": "آموزشگاه شطرنج ایران",
