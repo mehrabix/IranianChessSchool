@@ -13,9 +13,8 @@ export class ChessEngine {
     return new Promise((resolve, reject) => {
       try {
         const isWasm = typeof WebAssembly === 'object';
-        this.worker = new Worker(
-          isWasm ? new URL('stockfish.js/stockfish.wasm.js', import.meta.url) : new URL('stockfish.js/stockfish.js', import.meta.url)
-        );
+        const workerUrl = isWasm ? '/stockfish/stockfish.wasm.js' : '/stockfish/stockfish.js';
+        this.worker = new Worker(workerUrl);
 
         this.worker.onmessage = (e: MessageEvent) => {
           const msg = e.data as string;
