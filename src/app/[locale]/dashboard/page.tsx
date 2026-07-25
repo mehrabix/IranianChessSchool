@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Link } from '@/i18n/routing';
-import { BookOpen, CheckCircle, TrendingUp, ArrowRight, Zap, Star, Clock, Award } from 'lucide-react';
+import { BookOpen, CheckCircle, TrendingUp, ArrowRight, Zap, Star, Clock, Award, Brain, Target } from 'lucide-react';
 
 async function getUserProgress(userId: string) {
   return db
@@ -147,6 +147,53 @@ export default async function DashboardPage() {
                 <p className="text-2xl font-bold">{recentActivity.filter((_, i) => i < 7).length}d</p>
               </div>
             </CardHeader>
+          </Card>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-4 mb-8">
+          <Card className="cursor-pointer hover:shadow-md transition-shadow">
+            <Link href="/dashboard/analysis" className="block">
+              <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
+                <Brain className="h-5 w-5 text-blue-600 shrink-0" />
+                <div>
+                  <CardTitle className="text-xs font-medium text-muted-foreground">{t('analysis')}</CardTitle>
+                  <p className="text-sm font-medium">{t('importExport')}</p>
+                </div>
+              </CardHeader>
+            </Link>
+          </Card>
+          <Card className="cursor-pointer hover:shadow-md transition-shadow">
+            <Link href="/dashboard/puzzles" className="block">
+              <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
+                <Target className="h-5 w-5 text-purple-600 shrink-0" />
+                <div>
+                  <CardTitle className="text-xs font-medium text-muted-foreground">{t('dailyPuzzle') || 'Daily Puzzle'}</CardTitle>
+                  <p className="text-sm font-medium">{t('puzzleRush') || 'Puzzle Rush'}</p>
+                </div>
+              </CardHeader>
+            </Link>
+          </Card>
+          <Card className="cursor-pointer hover:shadow-md transition-shadow">
+            <Link href="/courses" className="block">
+              <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
+                <BookOpen className="h-5 w-5 text-emerald-600 shrink-0" />
+                <div>
+                  <CardTitle className="text-xs font-medium text-muted-foreground">{t('myCourses')}</CardTitle>
+                  <p className="text-sm font-medium">{t('continue')}</p>
+                </div>
+              </CardHeader>
+            </Link>
+          </Card>
+          <Card className="cursor-pointer hover:shadow-md transition-shadow">
+            <Link href="/pricing" className="block">
+              <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
+                <Zap className="h-5 w-5 text-amber-600 shrink-0" />
+                <div>
+                  <CardTitle className="text-xs font-medium text-muted-foreground">{t('stats.level', { level: user?.level ?? 1 })}</CardTitle>
+                  <p className="text-sm font-medium">{user?.xp ?? 0} {t('stats.xp')}</p>
+                </div>
+              </CardHeader>
+            </Link>
           </Card>
         </div>
 

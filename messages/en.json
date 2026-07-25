@@ -542,7 +542,9 @@
     "blundersFound": "Blunders",
     "bestMove": "Best",
     "noBlunders": "No blunders found! Solid game.",
-    "moveByMove": "Move by Move"
+    "moveByMove": "Move by Move",
+    "dailyPuzzle": "Daily Puzzle",
+    "puzzleRush": "Puzzle Rush"
   },
   "puzzles": {
     "title": "Puzzles",
