@@ -13,7 +13,8 @@
     "signIn": "Anmelden",
     "tryFree": "Kostenlos testen",
     "signOut": "Abmelden",
-    "loggedInAs": "Angemeldet als {name}"
+    "loggedInAs": "Angemeldet als {name}",
+    "myProgress": "Mein Fortschritt"
   },
   "footer": {
     "brand": "Iranian Chess School",

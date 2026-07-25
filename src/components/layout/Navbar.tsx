@@ -96,18 +96,18 @@ export function Navbar() {
                 <DropdownMenuSeparator />
                 <DropdownMenuItem render={<Link href="/dashboard" />}>
                   <LayoutDashboard className="h-4 w-4" />
-                  Dashboard
+                  {t('dashboard')}
                 </DropdownMenuItem>
                 <DropdownMenuItem render={<Link href="/dashboard/progress" />}>
                   <ChevronRight className="h-4 w-4" />
-                  My Progress
+                  {t('myProgress')}
                 </DropdownMenuItem>
                 {session.user?.role === 'ADMIN' && (
                   <>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem render={<Link href="/admin" />}>
                       <Shield className="h-4 w-4" />
-                      Admin
+                      {t('admin')}
                     </DropdownMenuItem>
                   </>
                 )}

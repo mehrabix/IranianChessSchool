@@ -13,7 +13,8 @@
     "signIn": "ورود",
     "tryFree": "رایگان امتحان کن",
     "signOut": "خروج",
-    "loggedInAs": "ورود به عنوان {name}"
+    "loggedInAs": "ورود به عنوان {name}",
+    "myProgress": "پیشرفت من"
   },
   "footer": {
     "brand": "آموزشگاه شطرنج ایران",

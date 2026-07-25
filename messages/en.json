@@ -13,7 +13,8 @@
     "signOut": "Sign Out",
     "dashboard": "Dashboard",
     "admin": "Admin",
-    "loggedInAs": "Logged in as {name}"
+    "loggedInAs": "Logged in as {name}",
+    "myProgress": "My Progress"
   },
   "footer": {
     "brand": "Iranian Chess School",
