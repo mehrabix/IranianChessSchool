@@ -12,7 +12,8 @@
     "admin": "Admin",
     "signIn": "Войти",
     "tryFree": "Попробовать бесплатно",
-    "signOut": "Выйти"
+    "signOut": "Выйти",
+    "loggedInAs": "Вошли как {name}"
   },
   "footer": {
     "brand": "Iranian Chess School",
@@ -532,7 +533,18 @@
     "exportPgn": "Export PGN",
     "pgnCopied": "PGN copied to clipboard!",
     "invalidPgn": "Invalid PGN",
-    "makeFirstMove": "Make a move to start"
+    "makeFirstMove": "Make a move to start",
+    "gameAnalysis": "Анализ партии",
+    "analyzeGame": "Анализировать партию",
+    "analyzing": "Анализ...",
+    "engineError": "Ошибка движка",
+    "accuracy": "Точность",
+    "blundersFound": "Ошибки",
+    "bestMove": "Лучший ход",
+    "noBlunders": "Ошибок не найдено! Солидная партия.",
+    "moveByMove": "Ход за ходом",
+    "dailyPuzzle": "Задача дня",
+    "puzzleRush": "Пазл-раш"
   },
   "admin": {
     "nav": {
@@ -603,5 +615,27 @@
       "publish": "Publish",
       "cancel": "Cancel"
     }
+  },
+  "puzzles": {
+    "title": "Задачи",
+    "subtitle": "Отточите свою тактику",
+    "dailyPuzzle": "Задача дня",
+    "puzzleRush": "Пазл-раш",
+    "streak": "Серия",
+    "streakCount": "{count} решено подряд",
+    "timeRemaining": "Время",
+    "score": "Счёт",
+    "correct": "Правильно!",
+    "wrong": "Неправильно",
+    "reset": "Сбросить",
+    "hint": "Подсказка",
+    "skip": "Пропустить",
+    "nextPuzzle": "Следующая задача",
+    "startRush": "Начать раш",
+    "rushTime": "5:00",
+    "rushOver": "Время вышло!",
+    "finalScore": "Итоговый счёт",
+    "puzzlesSolved": "Задач решено",
+    "noPuzzles": "Задачи недоступны."
   }
 }

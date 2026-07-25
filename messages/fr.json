@@ -12,7 +12,8 @@
     "admin": "Admin",
     "signIn": "Connexion",
     "tryFree": "Essai gratuit",
-    "signOut": "Déconnexion"
+    "signOut": "Déconnexion",
+    "loggedInAs": "Connecté en tant que {name}"
   },
   "footer": {
     "brand": "Iranian Chess School",
@@ -532,7 +533,18 @@
     "exportPgn": "Export PGN",
     "pgnCopied": "PGN copied to clipboard!",
     "invalidPgn": "Invalid PGN",
-    "makeFirstMove": "Make a move to start"
+    "makeFirstMove": "Make a move to start",
+    "gameAnalysis": "Analyse de partie",
+    "analyzeGame": "Analyser la partie",
+    "analyzing": "Analyse en cours...",
+    "engineError": "Erreur du moteur",
+    "accuracy": "Précision",
+    "blundersFound": "Erreurs",
+    "bestMove": "Meilleur coup",
+    "noBlunders": "Aucune erreur trouvée ! Partie solide.",
+    "moveByMove": "Coup par coup",
+    "dailyPuzzle": "Puzzle du jour",
+    "puzzleRush": "Puzzle Rush"
   },
   "admin": {
     "nav": {
@@ -603,5 +615,27 @@
       "publish": "Publish",
       "cancel": "Cancel"
     }
+  },
+  "puzzles": {
+    "title": "Puzzles",
+    "subtitle": "Aiguisez votre tactique",
+    "dailyPuzzle": "Puzzle du jour",
+    "puzzleRush": "Puzzle Rush",
+    "streak": "Série",
+    "streakCount": "{count} résolus d'affilée",
+    "timeRemaining": "Temps",
+    "score": "Score",
+    "correct": "Correct !",
+    "wrong": "Incorrect",
+    "reset": "Réinitialiser",
+    "hint": "Indice",
+    "skip": "Passer",
+    "nextPuzzle": "Puzzle suivant",
+    "startRush": "Démarrer le Rush",
+    "rushTime": "5:00",
+    "rushOver": "Temps écoulé !",
+    "finalScore": "Score final",
+    "puzzlesSolved": "Puzzles résolus",
+    "noPuzzles": "Aucun puzzle disponible."
   }
 }

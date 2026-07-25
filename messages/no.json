@@ -12,7 +12,8 @@
     "admin": "Admin",
     "signIn": "Logg inn",
     "tryFree": "Prøv gratis",
-    "signOut": "Logg ut"
+    "signOut": "Logg ut",
+    "loggedInAs": "Logget inn som {name}"
   },
   "footer": {
     "brand": "Iranian Chess School",
@@ -532,7 +533,18 @@
     "exportPgn": "Export PGN",
     "pgnCopied": "PGN copied to clipboard!",
     "invalidPgn": "Invalid PGN",
-    "makeFirstMove": "Make a move to start"
+    "makeFirstMove": "Make a move to start",
+    "gameAnalysis": "Partianalyse",
+    "analyzeGame": "Analyser parti",
+    "analyzing": "Analyserer...",
+    "engineError": "Motorfeil",
+    "accuracy": "Nøyaktighet",
+    "blundersFound": "Feil",
+    "bestMove": "Beste trekk",
+    "noBlunders": "Ingen feil funnet! Solid parti.",
+    "moveByMove": "Trekk for trekk",
+    "dailyPuzzle": "Dagens oppgave",
+    "puzzleRush": "Puzzle Rush"
   },
   "admin": {
     "nav": {
@@ -603,5 +615,27 @@
       "publish": "Publish",
       "cancel": "Cancel"
     }
+  },
+  "puzzles": {
+    "title": "Oppgaver",
+    "subtitle": "Skjerper taktikken din",
+    "dailyPuzzle": "Dagens oppgave",
+    "puzzleRush": "Puzzle Rush",
+    "streak": "Rekke",
+    "streakCount": "{count} løst på rad",
+    "timeRemaining": "Tid",
+    "score": "Poeng",
+    "correct": "Riktig!",
+    "wrong": "Feil",
+    "reset": "Tilbakestill",
+    "hint": "Hint",
+    "skip": "Hopp over",
+    "nextPuzzle": "Neste oppgave",
+    "startRush": "Start Rush",
+    "rushTime": "5:00",
+    "rushOver": "Tiden er ute!",
+    "finalScore": "Sluttpoeng",
+    "puzzlesSolved": "Oppgaver løst",
+    "noPuzzles": "Ingen oppgaver tilgjengelig."
   }
 }
