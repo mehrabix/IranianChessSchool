@@ -547,7 +547,13 @@
     "noBlunders": "Aucune erreur trouvée ! Partie solide.",
     "moveByMove": "Coup par coup",
     "dailyPuzzle": "Puzzle du jour",
-    "puzzleRush": "Puzzle Rush"
+    "puzzleRush": "Puzzle Rush",
+    "importGames": "Importer des parties",
+    "username": "Nom d'utilisateur",
+    "importing": "Importation...",
+    "noGamesFound": "Aucune partie trouvee.",
+    "uploadPgnFile": "Telecharger un fichier PGN",
+    "chooseFile": "Choisir un fichier .pgn"
   },
   "admin": {
     "nav": {

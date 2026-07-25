@@ -5,6 +5,8 @@ import { Chess } from 'chess.js';
 import { ChessBoard } from '@/components/chess/ChessBoard';
 import { EngineEval } from '@/components/chess/EngineEval';
 import { GameAnalysisPanel } from '@/components/chess/GameAnalysisPanel';
+import { GameImportPanel } from '@/components/chess/GameImportPanel';
+import { OpeningExplorer } from '@/components/chess/OpeningExplorer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Container } from '@/components/ui/container';
@@ -14,7 +16,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useTranslations } from 'next-intl';
 import {
   ChevronLeft, ChevronRight, SkipBack, SkipForward,
-  Upload, Download, FlipHorizontal,
+  Upload, Download, FlipHorizontal, FileUp,
 } from 'lucide-react';
 
 export default function AnalysisPage() {
@@ -84,6 +86,45 @@ export default function AnalysisPage() {
       setNotify(t('invalidPgn') || 'Invalid PGN');
       setTimeout(() => setNotify(null), 2000);
     }
+  }
+
+  function handleGameImport(pgn: string) {
+    try {
+      const g = new Chess();
+      g.loadPgn(pgn);
+      setGame(g);
+      setFen(g.fen());
+      setHistory(g.history());
+      setCurrentMove(g.history().length - 1);
+      setNotify(null);
+    } catch {
+      setNotify(t('invalidPgn') || 'Invalid PGN');
+      setTimeout(() => setNotify(null), 2000);
+    }
+  }
+
+  function handleFileUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const text = event.target?.result as string;
+      if (text) {
+        try {
+          const g = new Chess();
+          g.loadPgn(text);
+          setGame(g);
+          setFen(g.fen());
+          setHistory(g.history());
+          setCurrentMove(g.history().length - 1);
+        } catch {
+          setNotify(t('invalidPgn') || 'Invalid PGN file');
+          setTimeout(() => setNotify(null), 2000);
+        }
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = '';
   }
 
   return (
@@ -180,11 +221,33 @@ export default function AnalysisPage() {
                     <Upload className="h-3 w-3" /> {t('import')}
                   </Button>
                 </div>
+                <div className="space-y-2">
+                  <Label>{t('uploadPgnFile') || 'Upload PGN File'}</Label>
+                  <label className="flex items-center justify-center gap-2 w-full h-9 rounded-md border border-dashed text-xs text-muted-foreground cursor-pointer hover:bg-accent transition-colors">
+                    <FileUp className="h-3 w-3" />
+                    {t('chooseFile') || 'Choose .pgn file'}
+                    <input type="file" accept=".pgn" className="hidden" onChange={handleFileUpload} />
+                  </label>
+                </div>
                 <Button size="sm" variant="outline" className="gap-2 w-full" onClick={exportPgn}>
                   <Download className="h-3 w-3" /> {t('exportPgn')}
                 </Button>
               </CardContent>
             </Card>
+
+            <GameImportPanel onGameImport={handleGameImport} />
+
+            <OpeningExplorer fen={fen} onMoveClick={(move) => {
+              const g = new Chess(game.fen());
+              const result = g.move(move);
+              if (result) {
+                setGame(g);
+                setFen(g.fen());
+                const newHistory = g.history();
+                setHistory(newHistory);
+                setCurrentMove(newHistory.length - 1);
+              }
+            }} />
 
             <Card>
               <CardHeader>

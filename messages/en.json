@@ -547,7 +547,13 @@
     "noBlunders": "No blunders found! Solid game.",
     "moveByMove": "Move by Move",
     "dailyPuzzle": "Daily Puzzle",
-    "puzzleRush": "Puzzle Rush"
+    "puzzleRush": "Puzzle Rush",
+    "importGames": "Import Games",
+    "username": "Username",
+    "importing": "Importing...",
+    "noGamesFound": "No games found.",
+    "uploadPgnFile": "Upload PGN File",
+    "chooseFile": "Choose .pgn file"
   },
   "puzzles": {
     "title": "Puzzles",

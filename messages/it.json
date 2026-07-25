@@ -547,7 +547,13 @@
     "noBlunders": "Nessun errore trovato! Partita solida.",
     "moveByMove": "Mossa per mossa",
     "dailyPuzzle": "Puzzle giornaliero",
-    "puzzleRush": "Puzzle Rush"
+    "puzzleRush": "Puzzle Rush",
+    "importGames": "Importa partite",
+    "username": "Nome utente",
+    "importing": "Importazione...",
+    "noGamesFound": "Nessuna partita trovata.",
+    "uploadPgnFile": "Carica file PGN",
+    "chooseFile": "Scegli file .pgn"
   },
   "admin": {
     "nav": {

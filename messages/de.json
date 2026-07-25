@@ -547,7 +547,13 @@
     "noBlunders": "Keine Fehler gefunden! Solide Partie.",
     "moveByMove": "Zug für Zug",
     "dailyPuzzle": "Tägliches Rätsel",
-    "puzzleRush": "Puzzle-Rush"
+    "puzzleRush": "Puzzle-Rush",
+    "importGames": "Spiele importieren",
+    "username": "Benutzername",
+    "importing": "Importiere...",
+    "noGamesFound": "Keine Spiele gefunden.",
+    "uploadPgnFile": "PGN-Datei hochladen",
+    "chooseFile": ".pgn-Datei waehlen"
   },
   "admin": {
     "nav": {

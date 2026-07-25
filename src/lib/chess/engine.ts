@@ -13,28 +13,47 @@ export class ChessEngine {
     return new Promise((resolve, reject) => {
       try {
         const isWasm = typeof WebAssembly === 'object';
-        const workerUrl = isWasm ? '/stockfish/stockfish.wasm.js' : '/stockfish/stockfish.js';
-        this.worker = new Worker(workerUrl);
+        const hasThreading = typeof SharedArrayBuffer === 'function' && typeof Atomics === 'object';
+        const workerUrl = isWasm && hasThreading ? '/stockfish/stockfish.wasm.js' : '/stockfish/stockfish.js';
 
-        this.worker.onmessage = (e: MessageEvent) => {
-          const msg = e.data as string;
-          if (msg === 'uciok') {
-            this.ready = true;
-            this.flushQueue();
-            resolve();
+        this.worker = new Worker(workerUrl);
+        this.worker.onerror = () => {
+          if (workerUrl.includes('wasm')) {
+            this.worker?.terminate();
+            this.worker = new Worker('/stockfish/stockfish.js');
+            this.setupWorker(resolve, reject);
           } else {
-            this.messageHandlers.forEach((handlers, key) => {
-              if (msg.startsWith(key)) handlers.forEach(h => h(msg));
-            });
+            reject(new Error('Failed to load Stockfish engine'));
           }
         };
-
-        this.worker.onerror = (err) => reject(err);
-        this.worker.postMessage('uci');
+        this.setupWorker(resolve, reject);
       } catch (err) {
         reject(err);
       }
     });
+  }
+
+  private setupWorker(resolve: () => void, reject: (err: Error) => void) {
+    if (!this.worker) {
+      reject(new Error('Worker not initialized'));
+      return;
+    }
+
+    this.worker.onmessage = (e: MessageEvent) => {
+      const msg = e.data as string;
+      if (msg === 'uciok') {
+        this.ready = true;
+        this.flushQueue();
+        resolve();
+      } else {
+        this.messageHandlers.forEach((handlers, key) => {
+          if (msg.startsWith(key)) handlers.forEach(h => h(msg));
+        });
+      }
+    };
+
+    this.worker.onerror = () => reject(new Error('Stockfish worker error'));
+    this.worker.postMessage('uci');
   }
 
   private post(msg: string) {

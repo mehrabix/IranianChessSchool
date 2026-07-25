@@ -547,7 +547,13 @@
     "noBlunders": "Ошибок не найдено! Солидная партия.",
     "moveByMove": "Ход за ходом",
     "dailyPuzzle": "Задача дня",
-    "puzzleRush": "Пазл-раш"
+    "puzzleRush": "Пазл-раш",
+    "importGames": "Import partiy",
+    "username": "Имя пользователя",
+    "importing": "Import...",
+    "noGamesFound": "Partii ne naydeny.",
+    "uploadPgnFile": "Загрузить PGN файл",
+    "chooseFile": "Выбрать .pgn файл"
   },
   "admin": {
     "nav": {

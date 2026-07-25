@@ -547,7 +547,13 @@
     "noBlunders": "اشتباهی پیدا نشد! بازی خوبی بود.",
     "moveByMove": "حرکت به حرکت",
     "dailyPuzzle": "معمای روز",
-    "puzzleRush": "مسابقه معما"
+    "puzzleRush": "مسابقه معما",
+    "importGames": "وارد کردن بازی‌ها",
+    "username": "نام کاربری",
+    "importing": "در حال وارد کردن...",
+    "noGamesFound": "بازی‌ای پیدا نشد.",
+    "uploadPgnFile": "بارگذاری فایل PGN",
+    "chooseFile": "انتخاب فایل .pgn"
   },
   "puzzles": {
     "title": "معماها",

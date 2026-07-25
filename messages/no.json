@@ -547,7 +547,13 @@
     "noBlunders": "Ingen feil funnet! Solid parti.",
     "moveByMove": "Trekk for trekk",
     "dailyPuzzle": "Dagens oppgave",
-    "puzzleRush": "Puzzle Rush"
+    "puzzleRush": "Puzzle Rush",
+    "importGames": "Importer partier",
+    "username": "Brukernavn",
+    "importing": "Importerer...",
+    "noGamesFound": "Ingen partier funnet.",
+    "uploadPgnFile": "Last opp PGN-fil",
+    "chooseFile": "Velg .pgn-fil"
   },
   "admin": {
     "nav": {
