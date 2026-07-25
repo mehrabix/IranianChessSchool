@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { ChessPieceIcon } from '@/components/chess/ChessPieceIcon';
+import { auth } from '@/lib/auth';
 import { Sparkles, Star, Gamepad2, Smile, Heart, Shield, Users, Trophy, BookOpen, ArrowRight, CheckCircle2 } from "lucide-react";
 
 const features = [
@@ -23,6 +24,8 @@ const plans = [
 
 export default async function KidsPage() {
   const t = await getTranslations('kids');
+  const session = await auth();
+  const ctaHref = session?.user ? '/dashboard' : '/pricing';
   return (
     <>
       <section className="relative py-24 overflow-hidden bg-gradient-to-br from-amber-50/50 via-background to-emerald-50/30">
@@ -41,7 +44,7 @@ export default async function KidsPage() {
                 {t('hero.subtitle')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="h-12 px-8 gap-2 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 shadow-lg shadow-emerald-500/20" render={<Link href="/pricing" />}>
+                <Button size="lg" className="h-12 px-8 gap-2 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 shadow-lg shadow-emerald-500/20" render={<Link href={ctaHref} />}>
                   {t('hero.cta')} <ArrowRight className="h-4 w-4" />
                 </Button>
                 <Button size="lg" variant="outline" className="h-12 px-8" render={<Link href="/faq" />}>
@@ -144,7 +147,7 @@ export default async function KidsPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full h-11" variant={plan.popular ? "default" : "outline"} render={<Link href="/pricing" />}>
+                  <Button className="w-full h-11" variant={plan.popular ? "default" : "outline"} render={<Link href={ctaHref} />}>
                     {t(`plans.${plan.ctaKey}`)}
                   </Button>
                 </CardContent>
@@ -158,7 +161,7 @@ export default async function KidsPage() {
         <Container size="lg" className="text-center space-y-8 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t('cta.heading')}</h2>
           <p className="text-lg text-emerald-100/80">{t('cta.subtitle')}</p>
-          <Button size="lg" variant="secondary" className="bg-white text-emerald-900 hover:bg-white/90 h-12 px-8 gap-2" render={<Link href="/pricing" />}>
+          <Button size="lg" variant="secondary" className="bg-white text-emerald-900 hover:bg-white/90 h-12 px-8 gap-2" render={<Link href={ctaHref} />}>
             {t('cta.cta')} <ArrowRight className="h-4 w-4" />
           </Button>
         </Container>

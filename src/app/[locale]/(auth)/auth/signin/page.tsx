@@ -1,7 +1,7 @@
 'use client';
 
-import { signIn } from 'next-auth/react';
-import { useState } from 'react';
+import { signIn, useSession } from 'next-auth/react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
@@ -12,11 +12,18 @@ import { ChessKnight, ArrowRight, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 
 export default function SignInPage() {
   const router = useRouter();
+  const { data: session, status } = useSession();
   const t = useTranslations('auth.signin');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+
+  useEffect(() => {
+    if (status === 'authenticated') {
+      router.replace('/dashboard');
+    }
+  }, [status, router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,8 +32,17 @@ export default function SignInPage() {
       setError(t('invalidCredentials'));
     } else {
       router.push('/dashboard');
+      router.refresh();
     }
   };
+
+  if (status === 'loading') {
+    return <div className="min-h-screen flex items-center justify-center"><div className="animate-spin h-8 w-8 border-4 border-emerald-500 border-t-transparent rounded-full" /></div>;
+  }
+
+  if (status === 'authenticated') {
+    return null;
+  }
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-emerald-50/30 to-background p-4">

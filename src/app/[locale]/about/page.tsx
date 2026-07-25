@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Container } from '@/components/ui/container';
+import { auth } from '@/lib/auth';
 import { ChessKnight, Target, Users, Award, BookOpen, ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
 
 const coaches = [
@@ -20,6 +21,8 @@ const values = [
 
 export default async function AboutPage() {
   const t = await getTranslations('about');
+  const session = await auth();
+  const ctaHref = session?.user ? '/dashboard' : '/pricing';
   return (
     <>
       <section className="relative py-24 overflow-hidden bg-gradient-to-br from-background via-emerald-50/30 to-background">
@@ -92,7 +95,7 @@ export default async function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t('cta.heading')}</h2>
           <p className="text-lg text-emerald-100/80">{t('cta.subtitle')}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" variant="secondary" className="bg-white text-emerald-900 hover:bg-white/90 h-12 px-8 gap-2" render={<Link href="/pricing" />}>
+            <Button size="lg" variant="secondary" className="bg-white text-emerald-900 hover:bg-white/90 h-12 px-8 gap-2" render={<Link href={ctaHref} />}>
               {t('cta.cta')} <ArrowRight className="h-4 w-4" />
             </Button>
             <Button size="lg" variant="ghost" className="text-white/80 hover:text-white hover:bg-white/10 h-12 px-8" render={<Link href="/contact" />}>

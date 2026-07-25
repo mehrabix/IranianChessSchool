@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Container } from '@/components/ui/container';
 import { AnimatedChessBoard } from '@/components/landing/AnimatedChessBoard';
+import { auth } from '@/lib/auth';
 import {
   ChessKnight, BookOpen, Users, Trophy, BarChart3, MessageCircle,
   Sparkles, Star, CheckCircle2, ArrowRight, Globe
@@ -42,6 +43,8 @@ const students = [
 
 export default async function HomePage() {
   const t = await getTranslations('home');
+  const session = await auth();
+  const ctaHref = session?.user ? '/dashboard' : '/pricing';
   return (
     <>
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-background via-emerald-50/30 to-background">
@@ -63,7 +66,7 @@ export default async function HomePage() {
                 {t('hero.subtitle')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/pricing">
+                <Link href={ctaHref}>
                   <Button size="lg" className="w-full sm:w-auto gap-2 text-base h-12 px-8">
                     {t('hero.cta')} <ArrowRight className="h-4 w-4" />
                   </Button>
@@ -214,7 +217,7 @@ export default async function HomePage() {
             {t('cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/pricing">
+            <Link href={ctaHref}>
               <Button size="lg" variant="secondary" className="w-full sm:w-auto h-12 px-8 text-base gap-2 bg-white text-emerald-900 hover:bg-white/90">
                 {t('cta.cta')} <ArrowRight className="h-4 w-4" />
               </Button>

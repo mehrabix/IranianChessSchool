@@ -1,10 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
-import { signIn } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -13,6 +13,7 @@ import { ChessKnight, Mail, Lock, User, ArrowRight, Eye, EyeOff } from 'lucide-r
 
 export default function RegisterPage() {
   const router = useRouter();
+  const { data: session, status } = useSession();
   const t = useTranslations('auth.register');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -21,6 +22,12 @@ export default function RegisterPage() {
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (status === 'authenticated') {
+      router.replace('/dashboard');
+    }
+  }, [status, router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,6 +59,14 @@ export default function RegisterPage() {
       setLoading(false);
     }
   };
+
+  if (status === 'loading') {
+    return <div className="min-h-screen flex items-center justify-center"><div className="animate-spin h-8 w-8 border-4 border-emerald-500 border-t-transparent rounded-full" /></div>;
+  }
+
+  if (status === 'authenticated') {
+    return null;
+  }
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-emerald-50/30 to-background p-4">

@@ -1,7 +1,7 @@
 import { getTranslations, getLocale } from 'next-intl/server';
 import { auth } from '@/lib/auth';
 import { db, courses, modules, lessons, progress, users as usersTable, eq, and } from '@/lib/db';
-import { redirect } from 'next/navigation';
+import { redirect } from '@/i18n/routing';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
@@ -62,11 +62,15 @@ function getActivityMap(activities: { completedAt: Date | null }[]) {
 
 export default async function DashboardPage() {
   const t = await getTranslations('dashboard');
+  const locale = await getLocale();
   const session = await auth();
-  if (!session?.user) redirect('/auth/signin');
+  if (!session?.user) {
+    redirect({ href: '/auth/signin', locale });
+    return null;
+  }
 
-  const userP = await getUserProgress(session.user.id);
-  const user = await getUser(session.user.id);
+  const userP = await getUserProgress(session.user!.id);
+  const user = await getUser(session.user!.id);
 
   const completedCount = userP.filter(p => p.completed).length;
   const totalAttempts = userP.reduce((sum, p) => sum + (p.attempts || 0), 0);
@@ -78,7 +82,7 @@ export default async function DashboardPage() {
 
   const courseProgressList = await Promise.all(
     enrolledCourses.map(async (course) => {
-      const cp = await getCourseProgress(course.id, session.user.id);
+      const cp = await getCourseProgress(course.id, session.user!.id);
       return { ...course, ...cp };
     })
   );

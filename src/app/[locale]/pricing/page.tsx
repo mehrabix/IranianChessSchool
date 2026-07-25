@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { Sparkles, CheckCircle2, ArrowRight, Star, Zap, Crown } from "lucide-react";
+import { auth } from "@/lib/auth";
 
 const plans = [
   {
@@ -52,6 +53,8 @@ const compareRows = [
 
 export default async function PricingPage() {
   const t = await getTranslations('pricing');
+  const session = await auth();
+  const ctaHref = session?.user ? '/dashboard' : '/auth/register';
   return (
     <>
       <section className="relative py-24 overflow-hidden bg-gradient-to-br from-background via-emerald-50/30 to-background">
@@ -93,7 +96,7 @@ export default async function PricingPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full h-11 gap-2" variant={plan.popular ? "default" : "outline"} render={<Link href="/auth/register" />}>
+                  <Button className="w-full h-11 gap-2" variant={plan.popular ? "default" : "outline"} render={<Link href={ctaHref} />}>
                     {t(`plans.${plan.ctaKey}`)} <ArrowRight className="h-4 w-4" />
                   </Button>
                 </CardContent>
@@ -145,7 +148,7 @@ export default async function PricingPage() {
         <Container size="lg" className="text-center space-y-8 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t('cta.heading')}</h2>
           <p className="text-lg text-emerald-100/80">{t('cta.subtitle')}</p>
-          <Button size="lg" variant="secondary" className="bg-white text-emerald-900 hover:bg-white/90 h-12 px-8 gap-2" render={<Link href="/auth/register" />}>
+          <Button size="lg" variant="secondary" className="bg-white text-emerald-900 hover:bg-white/90 h-12 px-8 gap-2" render={<Link href={ctaHref} />}>
             {t('cta.cta')} <ArrowRight className="h-4 w-4" />
           </Button>
         </Container>
