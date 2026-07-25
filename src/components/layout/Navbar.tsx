@@ -120,10 +120,10 @@ export function Navbar() {
             </DropdownMenu>
           ) : (
             <>
-              <Button variant="ghost" render={<Link href="/auth/signin" />}>
+              <Button variant="ghost" nativeButton={false} render={<Link href="/auth/signin" />}>
                 {t('signIn')}
               </Button>
-              <Button render={<Link href="/pricing" />}>
+              <Button nativeButton={false} render={<Link href="/pricing" />}>
                 {t('tryFree')}
               </Button>
             </>
