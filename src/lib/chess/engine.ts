@@ -10,7 +10,8 @@ export class ChessEngine {
   private queue: string[] = [];
 
   async init(): Promise<void> {
-    const ENGINE_URL = '/stockfish/stockfish.js';
+    const base = typeof location !== 'undefined' ? location.origin : '';
+    const ENGINE_URL = `${base}/stockfish/stockfish.js`;
 
     try {
       const res = await fetch(ENGINE_URL);
