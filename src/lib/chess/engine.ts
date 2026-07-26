@@ -12,10 +12,10 @@ export class ChessEngine {
   async init(): Promise<void> {
     const base = typeof location !== 'undefined' ? location.origin : '';
     const hasThreading = typeof SharedArrayBuffer === 'function' && typeof Atomics === 'object';
-    const filename = hasThreading ? 'stockfish.js' : 'stockfish-single.js';
-    const ENGINE_URL = `${base}/stockfish/${filename}`;
+    const multiUrl = `${base}/stockfish/stockfish-18-lite.js`;
+    const singleUrl = `${base}/stockfish/stockfish-18-lite-single.js`;
 
-    const tryInit = (url: string): Promise<void> => {
+    const tryInit = (url: string, isMulti: boolean): Promise<void> => {
       return new Promise((resolve, reject) => {
         try {
           this.worker = new Worker(url);
@@ -33,14 +33,14 @@ export class ChessEngine {
             }
           };
 
-          this.worker.onerror = (e: ErrorEvent) => {
-            if (url.includes('stockfish-single')) {
-              reject(new Error(`Engine error: ${e.message || 'Unknown'}`));
-            } else {
-              this.worker?.terminate();
-              this.worker = null;
+          this.worker.onerror = () => {
+            this.worker?.terminate();
+            this.worker = null;
+            if (isMulti) {
               console.warn('Multi-thread engine failed, falling back to single-thread');
-              tryInit(`${base}/stockfish/stockfish-single.js`).then(resolve).catch(reject);
+              tryInit(singleUrl, false).then(resolve).catch(reject);
+            } else {
+              reject(new Error('Failed to initialize engine'));
             }
           };
 
@@ -51,7 +51,7 @@ export class ChessEngine {
       });
     };
 
-    return tryInit(ENGINE_URL);
+    return tryInit(hasThreading ? multiUrl : singleUrl, hasThreading);
   }
 
   private post(msg: string) {
