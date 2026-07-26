@@ -171,7 +171,9 @@ export class ChessEngine {
       const evalBefore = await this.evaluate(beforeFen, depth);
       const side = tempGame.turn();
 
-      tempGame.move({ from: move.from, to: move.to, promotion: move.promotion || 'q' });
+      const isPromotion = move.promotion && move.piece === 'p' &&
+        ((move.color === 'w' && move.to.endsWith('8')) || (move.color === 'b' && move.to.endsWith('1')));
+      tempGame.move({ from: move.from, to: move.to, ...(isPromotion ? { promotion: move.promotion } : {}) });
       const afterFen = tempGame.fen();
       const evalAfter = await this.evaluate(afterFen, depth);
 
