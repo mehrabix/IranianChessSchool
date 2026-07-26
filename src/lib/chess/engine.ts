@@ -11,7 +11,9 @@ export class ChessEngine {
 
   async init(): Promise<void> {
     const base = typeof location !== 'undefined' ? location.origin : '';
-    const ENGINE_URL = `${base}/stockfish/stockfish.js`;
+    const hasThreading = typeof SharedArrayBuffer === 'function' && typeof Atomics === 'object';
+    const filename = hasThreading ? 'stockfish.js' : 'stockfish-single.js';
+    const ENGINE_URL = `${base}/stockfish/${filename}`;
 
     return new Promise((resolve, reject) => {
       try {
