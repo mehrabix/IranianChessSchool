@@ -171,7 +171,7 @@ export class ChessEngine {
       const evalBefore = await this.evaluate(beforeFen, depth);
       const side = tempGame.turn();
 
-      tempGame.move(move.san);
+      tempGame.move({ from: move.from, to: move.to, promotion: move.promotion || 'q' });
       const afterFen = tempGame.fen();
       const evalAfter = await this.evaluate(afterFen, depth);
 
