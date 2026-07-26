@@ -1,6 +1,7 @@
 'use client';
 
 import { usePuzzle, type Puzzle } from '@/hooks/usePuzzle';
+import { useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -24,6 +25,18 @@ export function PuzzleViewer({ puzzle, onNext, showRush = false }: PuzzleViewerP
     makeMove, resetPuzzle, skipPuzzle, setShowHint, startRush, stopRush,
     formatTime, isGameOver,
   } = usePuzzle(puzzle);
+
+  const prevStatus = useRef(status);
+  useEffect(() => {
+    if (status === 'correct' && prevStatus.current === 'playing') {
+      fetch('/api/xp/award', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'SOLVE_PUZZLE' }),
+      }).catch(() => {});
+    }
+    prevStatus.current = status;
+  }, [status]);
 
   const isTimeUp = isRush && timeRemaining === 0;
 
