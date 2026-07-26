@@ -553,7 +553,29 @@
     "importing": "Importation...",
     "noGamesFound": "Aucune partie trouvee.",
     "uploadPgnFile": "Telecharger un fichier PGN",
-    "chooseFile": "Choisir un fichier .pgn"
+    "chooseFile": "Choisir un fichier .pgn",
+    "pgnPlaceholder": "Coller le PGN ici...",
+    "fen": "FEN",
+    "openingExplorer": "Explorateur d'ouvertures",
+    "loading": "Chargement...",
+    "loadStats": "Charger les stats",
+    "openingLoadError": "Échec du chargement des statistiques d'ouverture",
+    "openingMoveColumn": "Coup",
+    "openingWhiteColumn": "Blancs",
+    "openingBlackColumn": "Noirs",
+    "openingDrawColumn": "Nulle",
+    "openingTotalColumn": "Total",
+    "openingInstructions": "Cliquez sur \"Charger les stats\" pour voir les statistiques d'ouverture de cette position.",
+    "platformChesscom": "Chess.com",
+    "platformLichess": "Lichess",
+    "usernamePlaceholder": "Entrer le nom d'utilisateur",
+    "gamesFoundTitle": "{count} parties trouvées",
+    "importFailed": "Échec de l'importation",
+    "myProgress": "Ma progression",
+    "totalLessons": "Total des leçons",
+    "timeSpent": "Temps passé",
+    "avgScore": "Score moyen",
+    "courseProgress": "Progression du cours"
   },
   "admin": {
     "nav": {
@@ -645,6 +667,7 @@
     "rushOver": "Temps écoulé !",
     "finalScore": "Score final",
     "puzzlesSolved": "Puzzles résolus",
-    "noPuzzles": "Aucun puzzle disponible."
+    "noPuzzles": "Aucun puzzle disponible.",
+    "dailyLoadError": "Échec du chargement du puzzle du jour"
   }
 }

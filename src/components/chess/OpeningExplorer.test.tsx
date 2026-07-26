@@ -3,6 +3,24 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { OpeningExplorer } from './OpeningExplorer';
 
+vi.mock('next-intl', () => ({
+  useTranslations: () => (key: string) => {
+    const map: Record<string, string> = {
+      openingExplorer: 'Opening Explorer',
+      loading: 'Loading...',
+      loadStats: 'Load Stats',
+      openingLoadError: 'Failed to load opening stats',
+      openingMoveColumn: 'Move',
+      openingWhiteColumn: 'White',
+      openingBlackColumn: 'Black',
+      openingDrawColumn: 'Draw',
+      openingTotalColumn: 'Total',
+      openingInstructions: 'Click to see opening statistics.',
+    };
+    return map[key] || key;
+  },
+}));
+
 const mockFetch = vi.fn();
 global.fetch = mockFetch;
 

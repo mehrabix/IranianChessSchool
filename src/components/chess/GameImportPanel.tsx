@@ -37,13 +37,13 @@ export function GameImportPanel({ onGameImport }: GameImportPanelProps) {
       });
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.error || 'Import failed');
+        throw new Error(data.error || t('importFailed'));
       }
       const data = await res.json();
       setGames(data.games || []);
       setShowGames(true);
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Import failed');
+      setError(e instanceof Error ? e.message : t('importFailed'));
     } finally {
       setLoading(false);
     }
@@ -70,7 +70,7 @@ export function GameImportPanel({ onGameImport }: GameImportPanelProps) {
             onClick={() => setPlatform('chesscom')}
             className="flex-1"
           >
-            Chess.com
+            {t('platformChesscom')}
           </Button>
           <Button
             variant={platform === 'lichess' ? 'default' : 'outline'}
@@ -78,15 +78,15 @@ export function GameImportPanel({ onGameImport }: GameImportPanelProps) {
             onClick={() => setPlatform('lichess')}
             className="flex-1"
           >
-            Lichess
+            {t('platformLichess')}
           </Button>
         </div>
         <div className="space-y-2">
-          <Label>{t('username') || 'Username'}</Label>
+          <Label>{t('username')}</Label>
           <Input
             value={username}
             onChange={e => setUsername(e.target.value)}
-            placeholder={platform === 'chesscom' ? 'Chess.com username' : 'Lichess username'}
+            placeholder={t('usernamePlaceholder')}
             onKeyDown={e => e.key === 'Enter' && handleImport()}
           />
         </div>
@@ -97,7 +97,7 @@ export function GameImportPanel({ onGameImport }: GameImportPanelProps) {
           disabled={loading || !username.trim()}
         >
           {loading ? <Loader2 className="h-3 w-3 animate-spin" /> : <Download className="h-3 w-3" />}
-          {loading ? (t('importing') || 'Importing...') : (t('importGames') || 'Import Games')}
+          {loading ? (t('importing')) : (t('importGames'))}
         </Button>
 
         {error && (
@@ -106,7 +106,7 @@ export function GameImportPanel({ onGameImport }: GameImportPanelProps) {
 
         {showGames && games.length > 0 && (
           <div className="space-y-1 max-h-[200px] overflow-y-auto">
-            <p className="text-xs text-muted-foreground">{games.length} game{games.length !== 1 ? 's' : ''} found</p>
+            <p className="text-xs text-muted-foreground">{t('gamesFoundTitle', { count: games.length })}</p>
             {games.map((game, i) => (
               <button
                 key={i}

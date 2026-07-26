@@ -553,7 +553,29 @@
     "importing": "Importerer...",
     "noGamesFound": "Ingen partier funnet.",
     "uploadPgnFile": "Last opp PGN-fil",
-    "chooseFile": "Velg .pgn-fil"
+    "chooseFile": "Velg .pgn-fil",
+    "pgnPlaceholder": "Lim inn PGN her...",
+    "fen": "FEN",
+    "openingExplorer": "Åpningsutforsker",
+    "loading": "Laster...",
+    "loadStats": "Last statistikk",
+    "openingLoadError": "Kunne ikke laste åpningsstatistikk",
+    "openingMoveColumn": "Trekk",
+    "openingWhiteColumn": "Hvit",
+    "openingBlackColumn": "Svart",
+    "openingDrawColumn": "Remis",
+    "openingTotalColumn": "Totalt",
+    "openingInstructions": "Klikk \"Last statistikk\" for å se åpningsstatistikk for denne stillingen.",
+    "platformChesscom": "Chess.com",
+    "platformLichess": "Lichess",
+    "usernamePlaceholder": "Skriv inn brukernavn",
+    "gamesFoundTitle": "{count} partier funnet",
+    "importFailed": "Import mislyktes",
+    "myProgress": "Min fremgang",
+    "totalLessons": "Totalt leksjoner",
+    "timeSpent": "Tid brukt",
+    "avgScore": "Gj.snitt poeng",
+    "courseProgress": "Kursfremgang"
   },
   "admin": {
     "nav": {
@@ -645,6 +667,7 @@
     "rushOver": "Tiden er ute!",
     "finalScore": "Sluttpoeng",
     "puzzlesSolved": "Oppgaver løst",
-    "noPuzzles": "Ingen oppgaver tilgjengelig."
+    "noPuzzles": "Ingen oppgaver tilgjengelig.",
+    "dailyLoadError": "Kunne ikke laste dagens oppgave"
   }
 }

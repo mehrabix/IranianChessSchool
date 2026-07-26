@@ -553,7 +553,29 @@
     "importing": "Importiere...",
     "noGamesFound": "Keine Spiele gefunden.",
     "uploadPgnFile": "PGN-Datei hochladen",
-    "chooseFile": ".pgn-Datei waehlen"
+    "chooseFile": ".pgn-Datei waehlen",
+    "pgnPlaceholder": "PGN hier einfügen...",
+    "fen": "FEN",
+    "openingExplorer": "Eröffnungsexplorer",
+    "loading": "Lade...",
+    "loadStats": "Statistiken laden",
+    "openingLoadError": "Fehler beim Laden der Eröffnungsstatistiken",
+    "openingMoveColumn": "Zug",
+    "openingWhiteColumn": "Weiß",
+    "openingBlackColumn": "Schwarz",
+    "openingDrawColumn": "Remis",
+    "openingTotalColumn": "Gesamt",
+    "openingInstructions": "Klicken Sie auf \"Statistiken laden\", um Eröffnungsstatistiken für diese Stellung zu sehen.",
+    "platformChesscom": "Chess.com",
+    "platformLichess": "Lichess",
+    "usernamePlaceholder": "Benutzernamen eingeben",
+    "gamesFoundTitle": "{count} Partien gefunden",
+    "importFailed": "Import fehlgeschlagen",
+    "myProgress": "Mein Fortschritt",
+    "totalLessons": "Gesamtlektionen",
+    "timeSpent": "Verbrachte Zeit",
+    "avgScore": "Durchschn. Punkte",
+    "courseProgress": "Kursfortschritt"
   },
   "admin": {
     "nav": {
@@ -645,6 +667,7 @@
     "rushOver": "Zeit abgelaufen!",
     "finalScore": "Endpunktzahl",
     "puzzlesSolved": "Gelöste Rätsel",
-    "noPuzzles": "Keine Rätsel verfügbar."
+    "noPuzzles": "Keine Rätsel verfügbar.",
+    "dailyLoadError": "Fehler beim Laden des täglichen Rätsels"
   }
 }

@@ -40,7 +40,7 @@ export default async function ProgressPage() {
   return (
     <section className="py-8">
       <Container size="lg">
-        <h1 className="text-3xl font-bold mb-2">{t('recentActivity') || 'My Progress'}</h1>
+        <h1 className="text-3xl font-bold mb-2">{t('myProgress')}</h1>
         <p className="text-muted-foreground mb-8">{t('subtitle')}</p>
 
         <div className="grid gap-6 md:grid-cols-4 mb-8">
@@ -57,7 +57,7 @@ export default async function ProgressPage() {
             <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
               <BookOpen className="h-5 w-5 text-blue-500 shrink-0" />
               <div>
-                <CardTitle className="text-xs font-medium text-muted-foreground">{t('courses') || 'Total Lessons'}</CardTitle>
+                <CardTitle className="text-xs font-medium text-muted-foreground">{t('totalLessons')}</CardTitle>
                 <p className="text-2xl font-bold">{totalLessons}</p>
               </div>
             </CardHeader>
@@ -66,7 +66,7 @@ export default async function ProgressPage() {
             <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
               <Clock className="h-5 w-5 text-amber-500 shrink-0" />
               <div>
-                <CardTitle className="text-xs font-medium text-muted-foreground">{t('attempts') || 'Time Spent'}</CardTitle>
+                <CardTitle className="text-xs font-medium text-muted-foreground">{t('timeSpent')}</CardTitle>
                 <p className="text-2xl font-bold">{Math.round(totalTimeSpent / 60)}m</p>
               </div>
             </CardHeader>
@@ -75,7 +75,7 @@ export default async function ProgressPage() {
             <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
               <Target className="h-5 w-5 text-purple-500 shrink-0" />
               <div>
-                <CardTitle className="text-xs font-medium text-muted-foreground">Avg Score</CardTitle>
+                <CardTitle className="text-xs font-medium text-muted-foreground">{t('avgScore')}</CardTitle>
                 <p className="text-2xl font-bold">{avgScore}%</p>
               </div>
             </CardHeader>
@@ -86,7 +86,7 @@ export default async function ProgressPage() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-4 w-4" />
-              Course Progress
+              {t('courseProgress')}
             </CardTitle>
           </CardHeader>
           <CardContent>

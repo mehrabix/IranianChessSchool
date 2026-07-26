@@ -553,7 +553,29 @@
     "importing": "در حال وارد کردن...",
     "noGamesFound": "بازی‌ای پیدا نشد.",
     "uploadPgnFile": "بارگذاری فایل PGN",
-    "chooseFile": "انتخاب فایل .pgn"
+    "chooseFile": "انتخاب فایل .pgn",
+    "pgnPlaceholder": "PGN را اینجا بچسبانید...",
+    "fen": "FEN",
+    "openingExplorer": "کاوشگر شروع بازی",
+    "loading": "در حال بارگذاری...",
+    "loadStats": "بارگذاری آمار",
+    "openingLoadError": "بارگذاری آمار شروع بازی ناموفق بود",
+    "openingMoveColumn": "حرکت",
+    "openingWhiteColumn": "سفید",
+    "openingBlackColumn": "سیاه",
+    "openingDrawColumn": "تساوی",
+    "openingTotalColumn": "مجموع",
+    "openingInstructions": "برای دیدن آمار شروع بازی این موقعیت، روی \"بارگذاری آمار\" کلیک کنید.",
+    "platformChesscom": "Chess.com",
+    "platformLichess": "Lichess",
+    "usernamePlaceholder": "نام کاربری را وارد کنید",
+    "gamesFoundTitle": "{count} بازی پیدا شد",
+    "importFailed": "وارد کردن ناموفق بود",
+    "myProgress": "پیشرفت من",
+    "totalLessons": "کل درس‌ها",
+    "timeSpent": "زمان صرف شده",
+    "avgScore": "میانگین امتیاز",
+    "courseProgress": "پیشرفت دوره"
   },
   "puzzles": {
     "title": "معماها",
@@ -575,7 +597,8 @@
     "rushOver": "زمان تمام شد!",
     "finalScore": "امتیاز نهایی",
     "puzzlesSolved": "معماهای حل شده",
-    "noPuzzles": "معمایی موجود نیست."
+    "noPuzzles": "معمایی موجود نیست.",
+    "dailyLoadError": "بارگذاری معمای روز ناموفق بود"
   },
   "admin": {
     "nav": {

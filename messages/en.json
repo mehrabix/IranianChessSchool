@@ -553,7 +553,29 @@
     "importing": "Importing...",
     "noGamesFound": "No games found.",
     "uploadPgnFile": "Upload PGN File",
-    "chooseFile": "Choose .pgn file"
+    "chooseFile": "Choose .pgn file",
+    "pgnPlaceholder": "Paste PGN here...",
+    "fen": "FEN",
+    "openingExplorer": "Opening Explorer",
+    "loading": "Loading...",
+    "loadStats": "Load Stats",
+    "openingLoadError": "Failed to load opening stats",
+    "openingMoveColumn": "Move",
+    "openingWhiteColumn": "White",
+    "openingBlackColumn": "Black",
+    "openingDrawColumn": "Draw",
+    "openingTotalColumn": "Total",
+    "openingInstructions": "Click \"Load Stats\" to see opening statistics for this position.",
+    "platformChesscom": "Chess.com",
+    "platformLichess": "Lichess",
+    "usernamePlaceholder": "Enter username",
+    "gamesFoundTitle": "{count} game(s) found",
+    "importFailed": "Import failed",
+    "myProgress": "My Progress",
+    "totalLessons": "Total Lessons",
+    "timeSpent": "Time Spent",
+    "avgScore": "Avg Score",
+    "courseProgress": "Course Progress"
   },
   "puzzles": {
     "title": "Puzzles",
@@ -575,7 +597,8 @@
     "rushOver": "Time's up!",
     "finalScore": "Final Score",
     "puzzlesSolved": "Puzzles solved",
-    "noPuzzles": "No puzzles available."
+    "noPuzzles": "No puzzles available.",
+    "dailyLoadError": "Failed to load daily puzzle"
   },
   "admin": {
     "nav": {

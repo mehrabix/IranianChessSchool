@@ -214,7 +214,7 @@ export default function AnalysisPage() {
                     ref={textareaRef}
                     value={pgnInput}
                     onChange={e => setPgnInput(e.target.value)}
-                    placeholder="Paste PGN here..."
+                    placeholder={t('pgnPlaceholder') || 'Paste PGN here...'}
                     className="min-h-[80px] text-xs font-mono"
                   />
                   <Button size="sm" className="gap-2 w-full" onClick={importPgn}>
@@ -251,7 +251,7 @@ export default function AnalysisPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-sm">FEN</CardTitle>
+                <CardTitle className="text-sm">{t('fen')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-xs font-mono break-all text-muted-foreground select-all">{fen}</p>

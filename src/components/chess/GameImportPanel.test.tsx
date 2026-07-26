@@ -5,14 +5,21 @@ import userEvent from '@testing-library/user-event';
 import { GameImportPanel } from './GameImportPanel';
 
 vi.mock('next-intl', () => ({
-  useTranslations: () => (key: string) => {
+  useTranslations: () => (key: string, params?: any) => {
     const map: Record<string, string> = {
       importGames: 'Import Games',
       username: 'Username',
       importing: 'Importing...',
+      importFailed: 'Import failed',
       noGamesFound: 'No games found.',
+      platformChesscom: 'Chess.com',
+      platformLichess: 'Lichess',
+      usernamePlaceholder: 'Enter username',
+      gamesFoundTitle: '{count} game(s) found',
     };
-    return map[key] || key;
+    const val = map[key] || key;
+    if (params && key === 'gamesFoundTitle') return `${params.count} game(s) found`;
+    return val;
   },
 }));
 
@@ -42,7 +49,7 @@ describe('GameImportPanel', () => {
   it('enables import button when username is entered', async () => {
     const user = userEvent.setup();
     render(<GameImportPanel onGameImport={vi.fn()} />);
-    const input = screen.getByPlaceholderText('Chess.com username');
+    const input = screen.getByPlaceholderText('Enter username');
     await user.type(input, 'testuser');
     const buttons = screen.getAllByText('Import Games');
     const button = buttons[buttons.length - 1].closest('button');
@@ -59,7 +66,7 @@ describe('GameImportPanel', () => {
     const onImport = vi.fn();
     const user = userEvent.setup();
     render(<GameImportPanel onGameImport={onImport} />);
-    const input = screen.getByPlaceholderText('Chess.com username');
+    const input = screen.getByPlaceholderText('Enter username');
     await user.type(input, 'testuser');
     const buttons = screen.getAllByText('Import Games');
     const button = buttons[buttons.length - 1].closest('button');
@@ -74,6 +81,6 @@ describe('GameImportPanel', () => {
     const user = userEvent.setup();
     render(<GameImportPanel onGameImport={vi.fn()} />);
     await user.click(screen.getByText('Lichess'));
-    expect(screen.getByPlaceholderText('Lichess username')).toBeTruthy();
+    expect(screen.getByPlaceholderText('Enter username')).toBeTruthy();
   });
 });

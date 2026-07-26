@@ -553,7 +553,29 @@
     "importing": "Importazione...",
     "noGamesFound": "Nessuna partita trovata.",
     "uploadPgnFile": "Carica file PGN",
-    "chooseFile": "Scegli file .pgn"
+    "chooseFile": "Scegli file .pgn",
+    "pgnPlaceholder": "Incolla PGN qui...",
+    "fen": "FEN",
+    "openingExplorer": "Esplora aperture",
+    "loading": "Caricamento...",
+    "loadStats": "Carica statistiche",
+    "openingLoadError": "Caricamento statistiche di apertura fallito",
+    "openingMoveColumn": "Mossa",
+    "openingWhiteColumn": "Bianco",
+    "openingBlackColumn": "Nero",
+    "openingDrawColumn": "Patta",
+    "openingTotalColumn": "Totale",
+    "openingInstructions": "Clicca \"Carica statistiche\" per vedere le statistiche di apertura per questa posizione.",
+    "platformChesscom": "Chess.com",
+    "platformLichess": "Lichess",
+    "usernamePlaceholder": "Inserisci nome utente",
+    "gamesFoundTitle": "{count} partite trovate",
+    "importFailed": "Importazione fallita",
+    "myProgress": "I miei progressi",
+    "totalLessons": "Totale lezioni",
+    "timeSpent": "Tempo trascorso",
+    "avgScore": "Punteggio medio",
+    "courseProgress": "Progresso del corso"
   },
   "admin": {
     "nav": {
@@ -645,6 +667,7 @@
     "rushOver": "Tempo scaduto!",
     "finalScore": "Punteggio finale",
     "puzzlesSolved": "Puzzle risolti",
-    "noPuzzles": "Nessun puzzle disponibile."
+    "noPuzzles": "Nessun puzzle disponibile.",
+    "dailyLoadError": "Caricamento del puzzle giornaliero fallito"
   }
 }

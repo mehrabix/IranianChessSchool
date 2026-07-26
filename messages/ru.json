@@ -553,7 +553,29 @@
     "importing": "Import...",
     "noGamesFound": "Partii ne naydeny.",
     "uploadPgnFile": "Загрузить PGN файл",
-    "chooseFile": "Выбрать .pgn файл"
+    "chooseFile": "Выбрать .pgn файл",
+    "pgnPlaceholder": "Вставьте PGN сюда...",
+    "fen": "FEN",
+    "openingExplorer": "Дебютный справочник",
+    "loading": "Загрузка...",
+    "loadStats": "Загрузить статистику",
+    "openingLoadError": "Не удалось загрузить дебютную статистику",
+    "openingMoveColumn": "Ход",
+    "openingWhiteColumn": "Белые",
+    "openingBlackColumn": "Чёрные",
+    "openingDrawColumn": "Ничья",
+    "openingTotalColumn": "Всего",
+    "openingInstructions": "Нажмите \"Загрузить статистику\" для просмотра дебютной статистики позиции.",
+    "platformChesscom": "Chess.com",
+    "platformLichess": "Lichess",
+    "usernamePlaceholder": "Введите имя пользователя",
+    "gamesFoundTitle": "Найдено {count} партий",
+    "importFailed": "Ошибка импорта",
+    "myProgress": "Мой прогресс",
+    "totalLessons": "Всего уроков",
+    "timeSpent": "Затраченное время",
+    "avgScore": "Средний балл",
+    "courseProgress": "Прогресс курса"
   },
   "admin": {
     "nav": {
@@ -645,6 +667,7 @@
     "rushOver": "Время вышло!",
     "finalScore": "Итоговый счёт",
     "puzzlesSolved": "Задач решено",
-    "noPuzzles": "Задачи недоступны."
+    "noPuzzles": "Задачи недоступны.",
+    "dailyLoadError": "Не удалось загрузить задачу дня"
   }
 }
