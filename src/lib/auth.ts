@@ -16,8 +16,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     verificationTokensTable: schema.verificationTokens,
   }),
   providers: [
-    Google,
-    GitHub,
+    ...(process.env.AUTH_GOOGLE_ID ? [Google] : []),
+    ...(process.env.AUTH_GITHUB_ID ? [GitHub] : []),
     Credentials({
       credentials: {
         email: { label: 'Email', type: 'email' },
