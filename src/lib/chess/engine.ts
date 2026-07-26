@@ -10,43 +10,52 @@ export class ChessEngine {
   private queue: string[] = [];
 
   async init(): Promise<void> {
+    const ENGINE_URL = '/stockfish/stockfish.js';
+
+    try {
+      const res = await fetch(ENGINE_URL);
+      if (!res.ok) throw new Error(`Failed to load engine script: ${res.status}`);
+
+      const script = await res.text();
+      const blob = new Blob([script], { type: 'application/javascript' });
+      const workerUrl = URL.createObjectURL(blob);
+
+      this.worker = new Worker(workerUrl);
+      URL.revokeObjectURL(workerUrl);
+    } catch (err) {
+      throw new Error(`Failed to initialize engine: ${err instanceof Error ? err.message : 'Unknown error'}`);
+    }
+
     return new Promise((resolve, reject) => {
-      try {
-        this.worker = new Worker('/stockfish/stockfish-18-asm.js');
+      if (!this.worker) return reject(new Error('Worker not created'));
 
-        this.worker.onmessage = (e: MessageEvent) => {
-          const msg = (typeof e.data === 'string' ? e.data : String(e.data || ''));
-          if (msg.startsWith('Stockfish') || msg.startsWith('id ') || msg === 'uciok' || msg === 'readyok') {
-            if (msg === 'uciok') {
-              this.ready = true;
-              this.flushQueue();
-              resolve();
-            }
-          } else {
-            this.messageHandlers.forEach((handlers, key) => {
-              if (msg.startsWith(key)) handlers.forEach(h => h(msg));
-            });
+      this.worker.onmessage = (e: MessageEvent) => {
+        const msg = (typeof e.data === 'string' ? e.data : String(e.data || ''));
+        if (msg === 'uciok' || msg === 'readyok') {
+          if (msg === 'uciok') {
+            this.ready = true;
+            this.flushQueue();
+            resolve();
           }
-        };
-
-        this.worker.onmessageerror = (e) => {
-          console.error('Worker message error:', e);
-        };
-
-        this.worker.onerror = (e: ErrorEvent) => {
-          console.error('Worker error:', {
-            message: e.message,
-            filename: e.filename,
-            lineno: e.lineno,
-            colno: e.colno,
-            error: e.error,
+        } else {
+          this.messageHandlers.forEach((handlers, key) => {
+            if (msg.startsWith(key)) handlers.forEach(h => h(msg));
           });
-          reject(new Error(`Engine error: ${e.message || 'Unknown'}`));
-        };
-        this.worker.postMessage('uci');
-      } catch (err) {
-        reject(err);
-      }
+        }
+      };
+
+      this.worker.onerror = (e: ErrorEvent) => {
+        console.error('Worker error:', {
+          message: e.message,
+          filename: e.filename,
+          lineno: e.lineno,
+          colno: e.colno,
+          error: e.error,
+        });
+        reject(new Error(`Engine error: ${e.message || 'Unknown'}`));
+      };
+
+      this.worker.postMessage('uci');
     });
   }
 

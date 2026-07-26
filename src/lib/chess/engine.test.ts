@@ -47,6 +47,15 @@ describe('ChessEngine', () => {
     evalCount = 0;
     vi.stubGlobal('Worker', vi.fn(function () { return createMockWorker(); }));
     vi.stubGlobal('WebAssembly', { validate: function () { return true; } });
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
+      ok: true,
+      text: () => Promise.resolve('self.onmessage = function(e) {};'),
+    }));
+    vi.stubGlobal('URL', {
+      ...URL,
+      createObjectURL: vi.fn().mockReturnValue('blob:mocked'),
+      revokeObjectURL: vi.fn(),
+    });
   });
 
   it('initializes successfully', async () => {
