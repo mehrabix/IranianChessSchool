@@ -189,3 +189,25 @@ export const bookings = sqliteTable('bookings', {
   notes: text('notes'),
   price: integer('price'),
 });
+
+export const comments = sqliteTable('comments', {
+  id: text('id').primaryKey(),
+  postId: text('post_id').references(() => posts.id, { onDelete: 'cascade' }),
+  userId: text('user_id').references(() => users.id),
+  content: text('content').notNull(),
+  createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});
+
+export const likes = sqliteTable('likes', {
+  id: text('id').primaryKey(),
+  postId: text('post_id').references(() => posts.id, { onDelete: 'cascade' }),
+  userId: text('user_id').references(() => users.id),
+  createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});
+
+export const follows = sqliteTable('follows', {
+  id: text('id').primaryKey(),
+  followerId: text('follower_id').references(() => users.id, { onDelete: 'cascade' }),
+  followingId: text('following_id').references(() => users.id, { onDelete: 'cascade' }),
+  createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});
