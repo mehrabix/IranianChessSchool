@@ -12,11 +12,11 @@ export class ChessEngine {
   async init(): Promise<void> {
     return new Promise((resolve, reject) => {
       try {
-        this.worker = new Worker('/stockfish/stockfish.js');
+        this.worker = new Worker('/stockfish/stockfish-18-lite-single.js');
 
         this.worker.onmessage = (e: MessageEvent) => {
-          const msg = e.data as string;
-          if (msg === 'uciok') {
+          const msg = (typeof e.data === 'string' ? e.data : String(e.data || ''));
+          if (msg === 'uciok' || msg.includes('uciok')) {
             this.ready = true;
             this.flushQueue();
             resolve();
@@ -27,7 +27,10 @@ export class ChessEngine {
           }
         };
 
-        this.worker.onerror = () => reject(new Error('Stockfish worker error'));
+        this.worker.onerror = (e) => {
+          console.error('Stockfish worker error:', e);
+          reject(new Error('Failed to initialize engine'));
+        };
         this.worker.postMessage('uci');
       } catch (err) {
         reject(err);
