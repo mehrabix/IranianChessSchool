@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Link } from '@/i18n/routing';
-import { BookOpen, CheckCircle, TrendingUp, ArrowRight, Zap, Star, Clock, Award, Brain, Target } from 'lucide-react';
+import { BookOpen, CheckCircle, TrendingUp, ArrowRight, Zap, Star, Clock, Award, Brain, Target, MessageCircle } from 'lucide-react';
 
 async function getUserProgress(userId: string) {
   return db
@@ -184,6 +184,17 @@ export default async function DashboardPage() {
                 <div>
                   <CardTitle className="text-xs font-medium text-muted-foreground">{t('myCourses')}</CardTitle>
                   <p className="text-sm font-medium">{t('continue')}</p>
+                </div>
+              </CardHeader>
+            </Link>
+          </Card>
+          <Card className="cursor-pointer hover:shadow-md transition-shadow">
+            <Link href="/dashboard/social" className="block">
+              <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
+                <MessageCircle className="h-5 w-5 text-pink-600 shrink-0" />
+                <div>
+                  <CardTitle className="text-xs font-medium text-muted-foreground">Social</CardTitle>
+                  <p className="text-sm font-medium">Feed & Community</p>
                 </div>
               </CardHeader>
             </Link>
