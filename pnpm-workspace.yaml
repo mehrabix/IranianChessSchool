@@ -4,6 +4,7 @@ allowBuilds:
   esbuild: true
   msw: true
   sharp: true
+  stockfish: true
   unrs-resolver: true
 ignoredBuiltDependencies:
   - sharp
