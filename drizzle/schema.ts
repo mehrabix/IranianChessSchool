@@ -213,3 +213,42 @@ export const follows = sqliteTable('follows', {
   followingId: text('following_id').references(() => users.id, { onDelete: 'cascade' }),
   createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
 });
+
+export const groups = sqliteTable('groups', {
+  id: text('id').primaryKey(),
+  name: text('name').notNull(),
+  description: text('description'),
+  category: text('category', { enum: ['OPENINGS', 'ENDGAMES', 'TACTICS', 'STRATEGY', 'GENERAL'] }).default('GENERAL'),
+  createdBy: text('created_by').references(() => users.id),
+  memberCount: integer('member_count').default(1),
+  createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});
+
+export const groupMembers = sqliteTable('group_members', {
+  id: text('id').primaryKey(),
+  groupId: text('group_id').references(() => groups.id, { onDelete: 'cascade' }),
+  userId: text('user_id').references(() => users.id, { onDelete: 'cascade' }),
+  role: text('role', { enum: ['ADMIN', 'MEMBER'] }).default('MEMBER'),
+  joinedAt: integer('joined_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});
+
+export const tournaments = sqliteTable('tournaments', {
+  id: text('id').primaryKey(),
+  name: text('name').notNull(),
+  description: text('description'),
+  type: text('type', { enum: ['SWISS', 'ROUND_ROBIN', 'KNOCKOUT'] }).default('SWISS'),
+  status: text('status', { enum: ['UPCOMING', 'ACTIVE', 'COMPLETED'] }).default('UPCOMING'),
+  maxPlayers: integer('max_players').default(16),
+  createdBy: text('created_by').references(() => users.id),
+  winnerId: text('winner_id').references(() => users.id),
+  startDate: integer('start_date', { mode: 'timestamp' }),
+  createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});
+
+export const tournamentPlayers = sqliteTable('tournament_players', {
+  id: text('id').primaryKey(),
+  tournamentId: text('tournament_id').references(() => tournaments.id, { onDelete: 'cascade' }),
+  userId: text('user_id').references(() => users.id, { onDelete: 'cascade' }),
+  score: integer('score').default(0),
+  joinedAt: integer('joined_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});
