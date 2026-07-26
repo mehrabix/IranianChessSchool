@@ -12,14 +12,16 @@ export class ChessEngine {
   async init(): Promise<void> {
     return new Promise((resolve, reject) => {
       try {
-        this.worker = new Worker('/stockfish/stockfish-18-lite-single.js');
+        this.worker = new Worker('/stockfish/stockfish-18-asm.js');
 
         this.worker.onmessage = (e: MessageEvent) => {
           const msg = (typeof e.data === 'string' ? e.data : String(e.data || ''));
-          if (msg === 'uciok' || msg.includes('uciok')) {
-            this.ready = true;
-            this.flushQueue();
-            resolve();
+          if (msg.startsWith('Stockfish') || msg.startsWith('id ') || msg === 'uciok' || msg === 'readyok') {
+            if (msg === 'uciok') {
+              this.ready = true;
+              this.flushQueue();
+              resolve();
+            }
           } else {
             this.messageHandlers.forEach((handlers, key) => {
               if (msg.startsWith(key)) handlers.forEach(h => h(msg));
@@ -27,9 +29,19 @@ export class ChessEngine {
           }
         };
 
-        this.worker.onerror = (e) => {
-          console.error('Stockfish worker error:', e);
-          reject(new Error('Failed to initialize engine'));
+        this.worker.onmessageerror = (e) => {
+          console.error('Worker message error:', e);
+        };
+
+        this.worker.onerror = (e: ErrorEvent) => {
+          console.error('Worker error:', {
+            message: e.message,
+            filename: e.filename,
+            lineno: e.lineno,
+            colno: e.colno,
+            error: e.error,
+          });
+          reject(new Error(`Engine error: ${e.message || 'Unknown'}`));
         };
         this.worker.postMessage('uci');
       } catch (err) {
