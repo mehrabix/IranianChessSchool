@@ -7,6 +7,7 @@ import { EngineEval } from '@/components/chess/EngineEval';
 import { GameAnalysisPanel } from '@/components/chess/GameAnalysisPanel';
 import { GameImportPanel } from '@/components/chess/GameImportPanel';
 import { OpeningExplorer } from '@/components/chess/OpeningExplorer';
+import { AICoachPanel } from '@/components/chess/AICoachPanel';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Container } from '@/components/ui/container';
@@ -248,6 +249,8 @@ export default function AnalysisPage() {
                 setCurrentMove(newHistory.length - 1);
               }
             }} />
+
+            <AICoachPanel fen={fen} pgn={game.pgn()} />
 
             <Card>
               <CardHeader>
