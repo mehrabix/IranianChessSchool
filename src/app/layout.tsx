@@ -16,6 +16,12 @@ const vazirmatn = Vazirmatn({
 export const metadata: Metadata = {
   title: "Iranian Chess School — Master the Game, Think Deeper",
   description: "Structured chess training for all levels. Courses, puzzles, analysis, and community.",
+  openGraph: {
+    title: "Iranian Chess School",
+    description: "Structured chess training for all levels. Courses, puzzles, analysis, and community.",
+    siteName: "Iranian Chess School",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -26,6 +32,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${vazirmatn.variable} h-full antialiased`} suppressHydrationWarning>
       <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#059669" />
         <script
           dangerouslySetInnerHTML={{
             __html: [

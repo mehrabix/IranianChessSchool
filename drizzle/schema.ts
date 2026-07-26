@@ -13,6 +13,8 @@ export const users = sqliteTable('users', {
   rating: integer('rating').default(0),
   xp: integer('xp').default(0),
   level: integer('level').default(1),
+  streak: integer('streak').default(0),
+  lastActive: integer('last_active', { mode: 'timestamp' }),
   stripeCustomerId: text('stripe_customer_id'),
   subscriptionId: text('subscription_id'),
   subscriptionStatus: text('subscription_status'),
