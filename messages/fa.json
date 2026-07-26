@@ -16,7 +16,8 @@
     "loggedInAs": "ورود به عنوان {name}",
     "myProgress": "پیشرفت من",
     "brand": "مدرسه شطرنج ایران",
-    "brandShort": "م.ش"
+    "brandShort": "م.ش",
+    "social": "انجمن"
   },
   "footer": {
     "brand": "آموزشگاه شطرنج ایران",

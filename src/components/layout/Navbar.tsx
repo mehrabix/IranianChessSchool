@@ -34,6 +34,7 @@ import {
   ChessKnight,
   Shield,
   BookOpen,
+  MessageCircle,
 } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { ThemeToggle } from './ThemeToggle';
@@ -97,6 +98,10 @@ export function Navbar() {
                 <DropdownMenuItem render={<Link href="/dashboard" />}>
                   <LayoutDashboard className="h-4 w-4" />
                   {t('dashboard')}
+                </DropdownMenuItem>
+                <DropdownMenuItem render={<Link href="/dashboard/social" />}>
+                  <MessageCircle className="h-4 w-4" />
+                  {t('social')}
                 </DropdownMenuItem>
                 <DropdownMenuItem render={<Link href="/dashboard/progress" />}>
                   <ChevronRight className="h-4 w-4" />

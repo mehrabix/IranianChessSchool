@@ -16,7 +16,8 @@
     "loggedInAs": "Logget inn som {name}",
     "myProgress": "Min fremgang",
     "brand": "Iranian Chess School",
-    "brandShort": "ICS"
+    "brandShort": "ICS",
+    "social": "Sosial"
   },
   "footer": {
     "brand": "Iranian Chess School",

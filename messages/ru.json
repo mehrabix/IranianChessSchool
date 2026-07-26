@@ -16,7 +16,8 @@
     "loggedInAs": "Вошли как {name}",
     "myProgress": "Мой прогресс",
     "brand": "Иранская шахматная школа",
-    "brandShort": "ИШШ"
+    "brandShort": "ИШШ",
+    "social": "Сообщество"
   },
   "footer": {
     "brand": "Iranian Chess School",
