@@ -15,38 +15,43 @@ export class ChessEngine {
     const filename = hasThreading ? 'stockfish.js' : 'stockfish-single.js';
     const ENGINE_URL = `${base}/stockfish/${filename}`;
 
-    return new Promise((resolve, reject) => {
-      try {
-        this.worker = new Worker(ENGINE_URL);
+    const tryInit = (url: string): Promise<void> => {
+      return new Promise((resolve, reject) => {
+        try {
+          this.worker = new Worker(url);
 
-        this.worker.onmessage = (e: MessageEvent) => {
-          const msg = (typeof e.data === 'string' ? e.data : String(e.data || ''));
-          if (msg === 'uciok') {
-            this.ready = true;
-            this.flushQueue();
-            resolve();
-          } else {
-            this.messageHandlers.forEach((handlers, key) => {
-              if (msg.startsWith(key)) handlers.forEach(h => h(msg));
-            });
-          }
-        };
+          this.worker.onmessage = (e: MessageEvent) => {
+            const msg = (typeof e.data === 'string' ? e.data : String(e.data || ''));
+            if (msg === 'uciok') {
+              this.ready = true;
+              this.flushQueue();
+              resolve();
+            } else {
+              this.messageHandlers.forEach((handlers, key) => {
+                if (msg.startsWith(key)) handlers.forEach(h => h(msg));
+              });
+            }
+          };
 
-        this.worker.onerror = (e: ErrorEvent) => {
-          console.error('Worker error:', {
-            message: e.message,
-            filename: e.filename,
-            lineno: e.lineno,
-            colno: e.colno,
-          });
-          reject(new Error(`Engine error: ${e.message || 'Unknown'}`));
-        };
+          this.worker.onerror = (e: ErrorEvent) => {
+            if (url.includes('stockfish-single')) {
+              reject(new Error(`Engine error: ${e.message || 'Unknown'}`));
+            } else {
+              this.worker?.terminate();
+              this.worker = null;
+              console.warn('Multi-thread engine failed, falling back to single-thread');
+              tryInit(`${base}/stockfish/stockfish-single.js`).then(resolve).catch(reject);
+            }
+          };
 
-        this.worker.postMessage('uci');
-      } catch (err) {
-        reject(err);
-      }
-    });
+          this.worker.postMessage('uci');
+        } catch (err) {
+          reject(err);
+        }
+      });
+    };
+
+    return tryInit(ENGINE_URL);
   }
 
   private post(msg: string) {
