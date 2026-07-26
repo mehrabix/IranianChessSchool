@@ -40,9 +40,7 @@ export class ChessEngine {
           reject(new Error(`Engine error: ${e.message || 'Unknown'}`));
         };
 
-        setTimeout(() => {
-          if (this.worker) this.worker.postMessage('uci');
-        }, 500);
+        this.worker.postMessage('uci');
       } catch (err) {
         reject(err);
       }
