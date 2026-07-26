@@ -1,17 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getStripe } from '@/lib/stripe';
-import { db, users, eq, sql } from '@/lib/db';
+
+export const dynamic = 'force-dynamic';
 
 export async function POST(req: NextRequest) {
   const sig = req.headers.get('stripe-signature')!;
   const body = await req.text();
 
   try {
-    const event = getStripe().webhooks.constructEvent(
+    const { getStripe } = await import('@/lib/stripe');
+    const stripe = getStripe();
+    const event = stripe.webhooks.constructEvent(
       body,
       sig,
       process.env.STRIPE_WEBHOOK_SECRET || ''
     );
+
+    const { db, users, eq } = await import('@/lib/db');
 
     switch (event.type) {
       case 'checkout.session.completed': {

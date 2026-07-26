@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getStripe, PLANS } from '@/lib/stripe';
-import { auth } from '@/lib/auth';
+
+export const dynamic = 'force-dynamic';
 
 export async function POST(req: NextRequest) {
+  const { auth } = await import('@/lib/auth');
   const session = await auth();
   if (!session?.user?.id || !session?.user?.email) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -10,12 +11,14 @@ export async function POST(req: NextRequest) {
 
   try {
     const { plan } = await req.json();
+    const { getStripe, PLANS } = await import('@/lib/stripe');
+    const stripe = getStripe();
     const planConfig = PLANS[plan as keyof typeof PLANS];
     if (!planConfig) {
       return NextResponse.json({ error: 'Invalid plan' }, { status: 400 });
     }
 
-    const checkoutSession = await getStripe().checkout.sessions.create({
+    const checkoutSession = await stripe.checkout.sessions.create({
       mode: 'subscription',
       customer_email: session.user.email,
       line_items: [{
