@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { WikiChessPiece } from '@/components/chess/ChessPieceIcon';
+import { ChessPieceIcon } from '@/components/chess/ChessPieceIcon';
 
 interface Piece {
   type: string;
@@ -58,7 +58,7 @@ export function AnimatedChessBoard() {
 
   return (
     <motion.div
-      className="grid grid-cols-8 gap-0 w-72 h-72 rounded-xl overflow-hidden"
+      className="grid grid-cols-8 w-72 h-72 rounded-xl overflow-hidden shadow-xl shadow-emerald-900/10"
       initial={{ opacity: 0, scale: 0.9, rotateX: 5 }}
       animate={{ opacity: 1, scale: 1, rotateX: 0 }}
       transition={{ duration: 0.8, ease: [0.34, 1.56, 0.64, 1] }}
@@ -69,38 +69,47 @@ export function AnimatedChessBoard() {
         const isDark = (row + col) % 2 === 1;
         const piece = pieces.find(p => p.row === row && p.col === col);
         const isOrigin = piece && piece.row === currentMove.fromRow && piece.col === currentMove.fromCol;
-        const isTarget = currentMove.toRow === row && currentMove.toCol === col;
 
         return (
           <motion.div
             key={i}
             className={`aspect-square flex items-center justify-center relative ${
-              isDark ? 'bg-emerald-700/30' : 'bg-amber-50/60'
+              isDark ? 'bg-emerald-700/25' : 'bg-amber-50/60'
             }`}
-            whileHover={{ scale: 1.08 }}
+            whileHover={{ scale: 1.06 }}
             transition={{ type: 'spring', stiffness: 400, damping: 15 }}
           >
             <AnimatePresence mode="popLayout">
               {piece && (
                 <motion.div
                   key={`${piece.type}-${row}-${col}-${moveKey}`}
-                  layoutId={isOrigin ? `${piece.type}-${currentMove.fromRow}-${currentMove.fromCol}` : undefined}
-                  initial={isOrigin ? { zIndex: 10 } : { scale: 0, rotate: -15 }}
+                  initial={
+                    isOrigin
+                      ? { zIndex: 10 }
+                      : { scale: 0, rotate: -10, opacity: 0 }
+                  }
                   animate={
                     isOrigin
-                      ? { x: (currentMove.toCol - currentMove.fromCol) * 36, y: (currentMove.toRow - currentMove.fromRow) * 36, zIndex: 10 }
-                      : { scale: 1, rotate: 0 }
+                      ? {
+                          x: (currentMove.toCol - currentMove.fromCol) * 36,
+                          y: (currentMove.toRow - currentMove.fromRow) * 36,
+                          zIndex: 10,
+                        }
+                      : { scale: 1, rotate: 0, opacity: 1 }
                   }
                   exit={{ scale: 0, opacity: 0 }}
                   transition={
                     isOrigin
-                      ? { type: 'spring', stiffness: 120, damping: 12, duration: 0.7 }
-                      : { type: 'spring', stiffness: 300, damping: 20, delay: i * 0.01 }
+                      ? { type: 'spring', stiffness: 100, damping: 12 }
+                      : { type: 'spring', stiffness: 300, damping: 22, delay: i * 0.008 }
                   }
-                  whileHover={{ scale: 1.15, filter: 'brightness(1.1) drop-shadow(0 4px 8px rgba(0,0,0,0.2))' }}
-                  style={{ cursor: 'pointer' }}
+                  whileHover={{
+                    scale: 1.2,
+                    filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.25))',
+                    transition: { type: 'spring', stiffness: 400, damping: 10 },
+                  }}
                 >
-                  <WikiChessPiece piece={piece.type} size={24} />
+                  <ChessPieceIcon piece={piece.type} size={28} />
                 </motion.div>
               )}
             </AnimatePresence>
