@@ -25,8 +25,8 @@ export async function GET(request: Request) {
 
     return NextResponse.json({
       success: true,
-      deletedTokens: deletedTokens.changes ?? 0,
-      deletedSessions: deletedSessions.changes ?? 0,
+      deletedTokens: (deletedTokens as any).rowsAffected ?? 0,
+      deletedSessions: (deletedSessions as any).rowsAffected ?? 0,
     });
   } catch {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });

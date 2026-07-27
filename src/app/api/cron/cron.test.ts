@@ -12,8 +12,8 @@ const mockDb = vi.hoisted(() => {
   return {
     select: vi.fn(() => ({ from: vi.fn(() => createQuery([])) })),
     insert: vi.fn(() => createQuery([{ id: 'p1' }])),
-    update: vi.fn(() => createQuery({ changes: 0 })),
-    delete: vi.fn(() => createQuery({ changes: 0 })),
+    update: vi.fn(() => createQuery({ rowsAffected: 0 })),
+    delete: vi.fn(() => createQuery({ rowsAffected: 0 })),
     createQuery,
   };
 });
@@ -140,7 +140,7 @@ describe('GET /api/cron/streak-reset', () => {
   });
 
   it('resets streaks for inactive users', async () => {
-    const updateChain = mockDb.createQuery({ changes: 3 });
+    const updateChain = mockDb.createQuery({ rowsAffected: 3 });
     mockDb.update = vi.fn(() => updateChain);
 
     const res = await streakResetGET(new Request('http://localhost/api/cron/streak-reset?secret=test-secret'));
@@ -153,7 +153,7 @@ describe('GET /api/cron/streak-reset', () => {
   });
 
   it('handles errors with 500', async () => {
-    const throwingChain = mockDb.createQuery({ changes: 0 });
+    const throwingChain = mockDb.createQuery({ rowsAffected: 0 });
     throwingChain.set = vi.fn(() => throwingChain);
     throwingChain.where = vi.fn(() => { throw new Error('DB error'); });
     mockDb.update = vi.fn(() => throwingChain);
@@ -186,8 +186,8 @@ describe('GET /api/cron/cleanup', () => {
   });
 
   it('deletes expired tokens and sessions', async () => {
-    const tokenChain = mockDb.createQuery({ changes: 5 });
-    const sessionChain = mockDb.createQuery({ changes: 3 });
+    const tokenChain = mockDb.createQuery({ rowsAffected: 5 });
+    const sessionChain = mockDb.createQuery({ rowsAffected: 3 });
 
     mockDb.delete
       .mockReturnValueOnce(tokenChain)
@@ -202,7 +202,7 @@ describe('GET /api/cron/cleanup', () => {
   });
 
   it('handles errors with 500', async () => {
-    const badChain = mockDb.createQuery({ changes: 0 });
+    const badChain = mockDb.createQuery({ rowsAffected: 0 });
     badChain.where = vi.fn(() => { throw new Error('DB error'); });
     mockDb.delete.mockReturnValueOnce(badChain);
 

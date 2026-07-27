@@ -20,7 +20,7 @@ export async function GET(request: Request) {
       .set({ streak: 0 })
       .where(lt(users.lastActive, new Date(yesterday)));
 
-    return NextResponse.json({ success: true, reset: result.changes ?? 0 });
+    return NextResponse.json({ success: true, reset: (result as any).rowsAffected ?? 0 });
   } catch {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
