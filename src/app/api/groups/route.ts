@@ -1,9 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { db, groups, groupMembers, eq, desc, sql } from '@/lib/db';
+import { db, groups, groupMembers, users as usersTable, eq, desc, sql } from '@/lib/db';
 import { auth } from '@/lib/auth';
 
-export async function GET() {
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const id = searchParams.get('id');
+
   try {
+    if (id) {
+      const result = await db.select().from(groups).where(eq(groups.id, id)).limit(1);
+      if (result.length === 0) return NextResponse.json({ error: 'Not found' }, { status: 404 });
+      const group = result[0];
+      const members = await db
+        .select({
+          id: groupMembers.id,
+          userId: groupMembers.userId,
+          role: groupMembers.role,
+          joinedAt: groupMembers.joinedAt,
+          userName: usersTable.name,
+          userImage: usersTable.image,
+        })
+        .from(groupMembers)
+        .leftJoin(usersTable, eq(groupMembers.userId, usersTable.id))
+        .where(eq(groupMembers.groupId, id));
+      return NextResponse.json({ group: { ...group, members } });
+    }
+
     const all = await db.select().from(groups).orderBy(desc(groups.memberCount));
     return NextResponse.json({ groups: all });
   } catch {

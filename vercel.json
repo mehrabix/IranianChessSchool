@@ -1,3 +1,8 @@
 {
-  "buildCommand": "pnpm db:push && pnpm build"
+  "buildCommand": "pnpm db:push && pnpm build",
+  "crons": [
+    { "path": "/api/cron/daily-puzzle?secret=CHANGE_ME", "schedule": "0 0 * * *" },
+    { "path": "/api/cron/streak-reset?secret=CHANGE_ME", "schedule": "0 1 * * *" },
+    { "path": "/api/cron/cleanup?secret=CHANGE_ME", "schedule": "0 2 * * 0" }
+  ]
 }

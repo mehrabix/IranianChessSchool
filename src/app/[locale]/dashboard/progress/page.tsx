@@ -6,7 +6,23 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Container } from '@/components/ui/container';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
-import { CheckCircle2, Clock, BookOpen, TrendingUp, Target } from 'lucide-react';
+import { CheckCircle2, Clock, BookOpen, TrendingUp, Target, Zap } from 'lucide-react';
+
+function getWeekDays() {
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const today = new Date();
+  const result: { label: string; date: Date }[] = [];
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    result.push({ label: days[d.getDay()], date: d });
+  }
+  return result;
+}
+
+function dayKey(date: Date) {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+}
 
 export default async function ProgressPage() {
   const t = await getTranslations('dashboard');
@@ -37,12 +53,34 @@ export default async function ProgressPage() {
     return { ...course, completed, total: courseLessons.length, percent: courseLessons.length > 0 ? Math.round((completed / courseLessons.length) * 100) : 0 };
   });
 
+  // Weekly activity heatmap data
+  const now = new Date();
+  const weekStart = new Date(now);
+  weekStart.setDate(now.getDate() - now.getDay());
+  weekStart.setHours(0, 0, 0, 0);
+  const weekDays = getWeekDays();
+  const activityByDay = new Map<string, number>();
+  for (const p of userProgress) {
+    if (!p.completedAt) continue;
+    const d = new Date(p.completedAt);
+    if (d >= weekStart) {
+      const key = dayKey(d);
+      activityByDay.set(key, (activityByDay.get(key) || 0) + 1);
+    }
+  }
+  const maxActivity = Math.max(1, ...activityByDay.values());
+  const thisWeekCount = [...activityByDay.values()].reduce((s, v) => s + v, 0);
+
+  // XP this week (estimating 10 XP per completed lesson)
+  const thisWeekXp = thisWeekCount * 10;
+
   return (
     <section className="py-8">
       <Container size="lg">
         <h1 className="text-3xl font-bold mb-2">{t('myProgress')}</h1>
         <p className="text-muted-foreground mb-8">{t('subtitle')}</p>
 
+        {/* Stats row */}
         <div className="grid gap-6 md:grid-cols-4 mb-8">
           <Card>
             <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
@@ -79,6 +117,79 @@ export default async function ProgressPage() {
                 <p className="text-2xl font-bold">{avgScore}%</p>
               </div>
             </CardHeader>
+          </Card>
+        </div>
+
+        {/* Weekly stats row */}
+        <div className="mb-8 p-4 rounded-lg border bg-muted/30 flex items-center gap-3">
+          <Zap className="h-5 w-5 text-amber-500 shrink-0" />
+          <p className="text-sm font-medium">
+            This Week: <span className="text-emerald-600 font-bold">{thisWeekCount} lessons</span>, <span className="text-blue-600 font-bold">{thisWeekXp} XP</span> earned
+          </p>
+        </div>
+
+        {/* Charts row */}
+        <div className="grid gap-6 md:grid-cols-2 mb-8">
+          {/* Completion pie chart */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-sm font-medium">Completion Rate</CardTitle>
+            </CardHeader>
+            <CardContent className="flex items-center gap-6">
+              <div
+                aria-label={`Completion rate: ${completionRate}%`}
+                data-testid="completion-pie"
+                className="w-28 h-28 rounded-full shrink-0"
+                style={{ background: `conic-gradient(#10b981 ${completionRate * 3.6}deg, #e5e7eb 0)` }}
+              >
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-full bg-background flex items-center justify-center">
+                    <span className="text-xl font-bold">{completionRate}%</span>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-sm bg-emerald-500 inline-block" />
+                  <span>Completed ({completedLessons.length})</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-sm bg-gray-200 inline-block" />
+                  <span>Remaining ({totalLessons - completedLessons.length})</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Weekly activity heatmap */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-sm font-medium">Weekly Activity</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex gap-1.5 justify-between" data-testid="activity-heatmap">
+                {weekDays.map(({ label, date }) => {
+                  const key = dayKey(date);
+                  const count = activityByDay.get(key) || 0;
+                  const intensity = count / maxActivity;
+                  const bg =
+                    count === 0
+                      ? 'bg-gray-100 dark:bg-gray-800'
+                      : intensity <= 0.33
+                        ? 'bg-emerald-200 dark:bg-emerald-900'
+                        : intensity <= 0.66
+                          ? 'bg-emerald-400 dark:bg-emerald-600'
+                          : 'bg-emerald-600 dark:bg-emerald-400';
+                  return (
+                    <div key={key} className="flex flex-col items-center gap-1">
+                      <div className={`w-10 h-10 rounded-md ${bg}`} title={`${count} lessons`} />
+                      <span className="text-xs text-muted-foreground">{label}</span>
+                      <span className="text-xs font-medium">{count}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </CardContent>
           </Card>
         </div>
 

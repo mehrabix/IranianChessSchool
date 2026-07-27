@@ -77,6 +77,67 @@ export const handlers = [
       totalAccuracy: 95.0,
     });
   }),
+
+  http.get('http://localhost:3000/api/groups', () => {
+    return HttpResponse.json({
+      groups: [{ id: 'g1', name: 'Beginners', memberCount: 5, category: 'GENERAL' }],
+    });
+  }),
+
+  http.get('http://localhost:3000/api/tournaments', () => {
+    return HttpResponse.json({
+      tournaments: [{ id: 't1', name: 'Blitz Cup', type: 'SWISS', status: 'UPCOMING', maxPlayers: 16, playerCount: 3 }],
+    });
+  }),
+
+  http.get('http://localhost:3000/api/leaderboard', () => {
+    return HttpResponse.json({
+      users: [{ id: 'u1', name: 'Player 1', xp: 500, level: 5, rating: 1200 }],
+    });
+  }),
+
+  http.get('http://localhost:3000/api/posts', () => {
+    return HttpResponse.json({
+      posts: [{ id: 'p1', content: 'Hello', userId: 'u1', userName: 'Alice', likes: 3, comments: 1 }],
+    });
+  }),
+
+  http.get('http://localhost:3000/api/progress', () => {
+    return HttpResponse.json({
+      progress: [{ id: 'r1', lessonId: 'l1', completed: true, score: 80 }],
+    });
+  }),
+
+  http.get('http://localhost:3000/api/lessons', ({ request }) => {
+    const url = new URL(request.url);
+    const id = url.searchParams.get('id');
+    if (id === 'nonexistent') {
+      return HttpResponse.json({ error: 'Lesson not found' }, { status: 404 });
+    }
+    return HttpResponse.json({
+      lesson: { id: id || 'l1', title: 'Forks', type: 'TEXT', content: '...' },
+      module: { title: 'Tactics' },
+      course: { id: 'c1', title: 'Beginner' },
+    });
+  }),
+
+  http.get('http://localhost:3000/api/quizzes', ({ request }) => {
+    const url = new URL(request.url);
+    const lessonId = url.searchParams.get('lessonId');
+    if (lessonId === 'nonexistent') {
+      return HttpResponse.json({ error: 'Quizzes not found' }, { status: 404 });
+    }
+    return HttpResponse.json({
+      quizzes: [{ id: 'q1', title: 'Piece Movement' }],
+    });
+  }),
+
+  http.get('http://localhost:3000/api/notifications', () => {
+    return HttpResponse.json({
+      notifications: [{ id: 'n1', type: 'LIKE', title: 'Someone liked your post' }],
+      unread: 1,
+    });
+  }),
 ];
 
 export const errorHandler = http.all('*', () => {

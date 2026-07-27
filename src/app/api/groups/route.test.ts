@@ -9,6 +9,7 @@ const mockDb = vi.hoisted(() => {
     limit: () => createQuery(rows),
     offset: () => createQuery(rows),
     all: () => Promise.resolve(rows),
+    leftJoin: () => createQuery(rows),
   });
   return {
     select: vi.fn(() => ({ from: vi.fn(() => createQuery([])) })),
@@ -37,6 +38,7 @@ vi.mock('@/lib/db', () => ({
   groupMembers: {},
   tournaments: {},
   tournamentPlayers: {},
+  users: { name: 'name', image: 'image', id: 'id' },
 }));
 
 vi.mock('@/lib/auth', () => ({
@@ -60,7 +62,7 @@ describe('GET /api/groups', () => {
     ];
     mockDb.select.mockReturnValue({ from: vi.fn(() => createQuery(groupsData)) });
 
-    const res = await GET();
+    const res = await GET(new Request('http://localhost/api/groups'));
     const body = await res.json();
 
     expect(res.status).toBe(200);
@@ -72,7 +74,7 @@ describe('GET /api/groups', () => {
   it('handles errors with 500', async () => {
     mockDb.select.mockReturnValue({ from: vi.fn(() => { throw new Error('DB error'); }) });
 
-    const res = await GET();
+    const res = await GET(new Request('http://localhost/api/groups'));
     const body = await res.json();
 
     expect(res.status).toBe(500);
