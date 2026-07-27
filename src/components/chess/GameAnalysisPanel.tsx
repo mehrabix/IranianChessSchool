@@ -16,7 +16,7 @@ interface GameAnalysisPanelProps {
 
 export function GameAnalysisPanel({ pgn, onMoveClick }: GameAnalysisPanelProps) {
   const t = useTranslations('dashboard');
-  const { analyzeGame, findBlunders, isReady, isThinking, error } = useEngine();
+  const { analyzeGame, isReady, isThinking, error } = useEngine();
   const [analysis, setAnalysis] = useState<GameAnalysis | null>(null);
   const [blunders, setBlunders] = useState<Blunder[]>([]);
   const [showBlunders, setShowBlunders] = useState(true);
@@ -24,16 +24,22 @@ export function GameAnalysisPanel({ pgn, onMoveClick }: GameAnalysisPanelProps) 
   const handleAnalyze = useCallback(async () => {
     if (!pgn.trim()) return;
     try {
-      const [result, blunderList] = await Promise.all([
-        analyzeGame(pgn),
-        findBlunders(pgn),
-      ]);
+      const result = await analyzeGame(pgn);
       setAnalysis(result);
-      setBlunders(blunderList);
+      const blunderMoves = result.moves
+        .map((m, i) => ({ ...m, index: i }))
+        .filter(m => m.isBlunder)
+        .map(m => ({
+          move: m.san,
+          eval: m.eval,
+          bestMove: m.bestMove || '',
+          phase: m.index < 10 ? 'opening' : m.index < result.moves.length * 0.6 ? 'middlegame' : 'endgame',
+        }));
+      setBlunders(blunderMoves);
     } catch (err) {
       console.error(err);
     }
-  }, [pgn, analyzeGame, findBlunders]);
+  }, [pgn, analyzeGame]);
 
   const accuracyColor = (acc: number) => {
     if (acc >= 90) return 'text-emerald-600';

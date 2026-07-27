@@ -34,7 +34,7 @@ export default function AnalysisPage() {
   function makeMove(from: string, to: string): boolean {
     try {
       const g = new Chess(game.fen());
-      g.move({ from, to, promotion: 'q' });
+      g.move({ from, to });
       setGame(g);
       setFen(g.fen());
       const newHistory = g.history();
