@@ -38,6 +38,11 @@ export function LessonViewer({ lesson, courseId }: { lesson: Lesson; courseId: s
       body: JSON.stringify({ lessonId: lesson.id, completed: true }),
     });
     setCompleted(true);
+    fetch('/api/xp/award', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'COMPLETE_LESSON' }),
+    }).catch(() => {});
   }
 
   return (

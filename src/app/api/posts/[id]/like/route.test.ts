@@ -24,8 +24,10 @@ vi.mock('@/lib/db', () => ({
   and: vi.fn(),
   desc: vi.fn(),
   sql: vi.fn((literals: TemplateStringsArray, ...exprs: any[]) => ({ raw: literals.join('?'), params: exprs })),
-  posts: { id: 'id', likes: 'likes' },
+  posts: { id: 'id', likes: 'likes', userId: 'userId' },
   likes: { id: 'id', postId: 'postId', userId: 'userId' },
+  notifications: { id: 'id', userId: 'userId', type: 'type', title: 'title', body: 'body', link: 'link', read: 'read', createdAt: 'createdAt' },
+  users: { id: 'id', name: 'name' },
 }));
 
 vi.mock('@/lib/auth', () => ({

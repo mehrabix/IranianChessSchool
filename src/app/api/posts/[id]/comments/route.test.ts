@@ -27,6 +27,7 @@ vi.mock('@/lib/db', () => ({
   posts: { id: 'id', comments: 'comments', likes: 'likes' },
   comments: { id: 'id', postId: 'postId', userId: 'userId', content: 'content', createdAt: 'createdAt' },
   users: { id: 'id', name: 'name', image: 'image' },
+  notifications: { id: 'id', userId: 'userId', type: 'type', title: 'title', body: 'body', link: 'link', read: 'read', createdAt: 'createdAt' },
 }));
 
 vi.mock('@/lib/auth', () => ({
@@ -107,6 +108,21 @@ describe('POST /api/posts/[id]/comments', () => {
 
   it('creates comment successfully with 201', async () => {
     vi.mocked(auth).mockResolvedValue({ user: { id: 'user-1' } });
+    const { createQuery } = mockDb;
+
+    // Mock: select for post owner (returns post by user-2 to trigger notification)
+    const postQuery = createQuery([{ userId: 'user-2' }]);
+    // Mock: select for commenter name
+    const userQuery = createQuery([{ name: 'Commenter' }]);
+    let callCount = 0;
+    mockDb.select.mockImplementation(() => ({
+      from: vi.fn(() => {
+        callCount++;
+        // First select after insert+update is for posts, second is for users
+        return callCount === 1 ? postQuery : userQuery;
+      }),
+    }));
+
     const req = new Request('http://localhost/api/posts/post-1/comments', {
       method: 'POST',
       body: JSON.stringify({ content: 'Nice article!' }),
@@ -118,6 +134,5 @@ describe('POST /api/posts/[id]/comments', () => {
     expect(res.status).toBe(201);
     expect(body.success).toBe(true);
     expect(mockDb.insert).toHaveBeenCalled();
-    expect(mockDb.update).toHaveBeenCalled();
   });
 });

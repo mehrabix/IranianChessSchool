@@ -12,6 +12,14 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Loader2, Send, Heart, MessageCircle, Globe, RefreshCw } from 'lucide-react';
 
+function awardXp(action: string) {
+  fetch('/api/xp/award', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ action }),
+  }).catch(() => {});
+}
+
 interface Post {
   id: string;
   content: string;
@@ -70,6 +78,7 @@ export default function SocialPage() {
       if (res.ok) {
         setNewPost('');
         await fetchPosts();
+        awardXp('CREATE_POST');
       }
     } finally {
       setPosting(false);
@@ -86,6 +95,7 @@ export default function SocialPage() {
         return next;
       });
       setPosts(prev => prev.map(p => p.id === postId ? { ...p, likes: p.likes + (data.liked ? 1 : -1) } : p));
+      if (data.liked) awardXp('RECEIVE_LIKE');
     } catch {}
   }
 
@@ -102,6 +112,7 @@ export default function SocialPage() {
         setCommentInput(prev => ({ ...prev, [postId]: '' }));
         await fetchComments(postId);
         setPosts(prev => prev.map(p => p.id === postId ? { ...p, comments: p.comments + 1 } : p));
+        awardXp('ADD_COMMENT');
       }
     } catch {}
   }

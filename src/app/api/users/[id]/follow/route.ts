@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { db, follows, eq, and } from '@/lib/db';
+import { db, follows, notifications, users as usersTable, eq, and } from '@/lib/db';
 import { auth } from '@/lib/auth';
 
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
@@ -26,6 +26,12 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
       return NextResponse.json({ following: false });
     } else {
       await db.insert(follows).values({ id: crypto.randomUUID(), followerId, followingId });
+      const [follower] = await db.select({ name: usersTable.name }).from(usersTable).where(eq(usersTable.id, followerId)).limit(1);
+      await db.insert(notifications).values({
+        id: crypto.randomUUID(), userId: followingId, type: 'FOLLOW',
+        title: `${follower?.name || 'Someone'} started following you`,
+        link: `/users/${followerId}`,
+      });
       return NextResponse.json({ following: true });
     }
   } catch {

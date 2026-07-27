@@ -39,6 +39,7 @@ import {
 } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { ThemeToggle } from './ThemeToggle';
+import { NotificationBell } from './NotificationBell';
 
 const navLinks = [
   { href: '/', labelKey: 'home', icon: Home },
@@ -75,6 +76,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <LanguageSwitcher />
           <ThemeToggle />
+          {session && <NotificationBell />}
 
           {session ? (
             <DropdownMenu>

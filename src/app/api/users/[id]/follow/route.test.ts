@@ -25,6 +25,8 @@ vi.mock('@/lib/db', () => ({
   desc: vi.fn(),
   sql: vi.fn(),
   follows: { id: 'id', followerId: 'followerId', followingId: 'followingId' },
+  notifications: { id: 'id', userId: 'userId', type: 'type', title: 'title', body: 'body', link: 'link', read: 'read', createdAt: 'createdAt' },
+  users: { id: 'id', name: 'name' },
 }));
 
 vi.mock('@/lib/auth', () => ({

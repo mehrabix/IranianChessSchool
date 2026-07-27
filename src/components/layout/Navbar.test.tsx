@@ -24,6 +24,11 @@ vi.mock('@/i18n/routing', () => ({
   localeNames: { en: 'English', fa: 'فارسی' },
 }));
 
+vi.mock('framer-motion', () => ({
+  motion: { div: 'div', span: 'span' } as any,
+  AnimatePresence: ({ children }: any) => children,
+}));
+
 describe('Navbar', () => {
   it('renders header element', async () => {
     const { Navbar } = await import('./Navbar');

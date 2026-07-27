@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { Sparkles, CheckCircle2, ArrowRight, Star, Zap, Crown } from "lucide-react";
+import { CheckoutButton } from "@/components/shared/CheckoutButton";
 import { auth } from "@/lib/auth";
 
 const plans = [
@@ -96,9 +97,9 @@ export default async function PricingPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full h-11 gap-2" variant={plan.popular ? "default" : "outline"} render={<Link href={ctaHref} />}>
+                  <CheckoutButton plan={plan.nameKey.toUpperCase()} variant={plan.popular ? "default" : "outline"}>
                     {t(`plans.${plan.ctaKey}`)} <ArrowRight className="h-4 w-4" />
-                  </Button>
+                  </CheckoutButton>
                 </CardContent>
               </Card>
             ))}

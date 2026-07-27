@@ -15,6 +15,13 @@
       "when": 1785143070776,
       "tag": "0001_majestic_mephisto",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1785153812444,
+      "tag": "0002_abnormal_mikhail_rasputin",
+      "breakpoints": true
     }
   ]
 }

@@ -252,3 +252,14 @@ export const tournamentPlayers = sqliteTable('tournament_players', {
   score: integer('score').default(0),
   joinedAt: integer('joined_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
 });
+
+export const notifications = sqliteTable('notifications', {
+  id: text('id').primaryKey(),
+  userId: text('user_id').references(() => users.id, { onDelete: 'cascade' }),
+  type: text('type', { enum: ['LIKE', 'COMMENT', 'FOLLOW', 'ACHIEVEMENT', 'SYSTEM'] }).notNull(),
+  title: text('title').notNull(),
+  body: text('body'),
+  link: text('link'),
+  read: integer('read', { mode: 'boolean' }).default(false),
+  createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});

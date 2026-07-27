@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { db, posts, comments, users as usersTable, eq, desc, sql } from '@/lib/db';
+import { db, posts, comments, notifications, users as usersTable, eq, desc, sql } from '@/lib/db';
 import { auth } from '@/lib/auth';
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
@@ -41,6 +41,16 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
 
     await db.insert(comments).values({ id: crypto.randomUUID(), postId, userId: session.user.id, content: content.trim() });
     await db.update(posts).set({ comments: sql`${posts.comments} + 1` }).where(eq(posts.id, postId));
+    const [post] = await db.select({ userId: posts.userId }).from(posts).where(eq(posts.id, postId)).limit(1);
+    if (post && post.userId !== session.user.id) {
+      const [commenter] = await db.select({ name: usersTable.name }).from(usersTable).where(eq(usersTable.id, session.user.id)).limit(1);
+      await db.insert(notifications).values({
+        id: crypto.randomUUID(), userId: post.userId, type: 'COMMENT',
+        title: `${commenter?.name || 'Someone'} commented on your post`,
+        body: content.trim().slice(0, 100),
+        link: `/dashboard/social`,
+      });
+    }
 
     return NextResponse.json({ success: true }, { status: 201 });
   } catch {

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { db, posts, likes, eq, and, sql } from '@/lib/db';
+import { db, posts, likes, notifications, users as usersTable, eq, and, sql } from '@/lib/db';
 import { auth } from '@/lib/auth';
 
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
@@ -24,6 +24,15 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     } else {
       await db.insert(likes).values({ id: crypto.randomUUID(), postId, userId: session.user.id });
       await db.update(posts).set({ likes: sql`${posts.likes} + 1` }).where(eq(posts.id, postId));
+      const [post] = await db.select({ userId: posts.userId }).from(posts).where(eq(posts.id, postId)).limit(1);
+      if (post && post.userId !== session.user.id) {
+        const [liker] = await db.select({ name: usersTable.name }).from(usersTable).where(eq(usersTable.id, session.user.id)).limit(1);
+        await db.insert(notifications).values({
+          id: crypto.randomUUID(), userId: post.userId, type: 'LIKE',
+          title: `${liker?.name || 'Someone'} liked your post`,
+          link: `/dashboard/social`,
+        });
+      }
       return NextResponse.json({ liked: true });
     }
   } catch (e) {
