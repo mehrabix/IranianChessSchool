@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "vercel-build": "drizzle-kit push --config=drizzle/config.ts && next build",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
@@ -12,9 +13,9 @@
     "test:unit:watch": "vitest",
     "test:e2e": "playwright test",
     "test:all": "vitest run && playwright test",
-    "db:generate": "drizzle-kit generate",
-    "db:push": "drizzle-kit push",
-    "db:studio": "drizzle-kit studio"
+    "db:generate": "drizzle-kit generate --config=drizzle/config.ts",
+    "db:push": "drizzle-kit push --config=drizzle/config.ts",
+    "db:studio": "drizzle-kit studio --config=drizzle/config.ts"
   },
   "dependencies": {
     "@auth/core": "^0.34.3",
