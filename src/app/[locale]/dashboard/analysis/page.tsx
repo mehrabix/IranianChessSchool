@@ -31,15 +31,20 @@ export default function AnalysisPage() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [notify, setNotify] = useState<string | null>(null);
 
+  function cloneGame(): Chess {
+    const g = new Chess();
+    g.loadPgn(game.pgn());
+    return g;
+  }
+
   function makeMove(from: string, to: string): boolean {
     try {
-      const g = new Chess(game.fen());
+      const g = cloneGame();
       g.move({ from, to });
       setGame(g);
       setFen(g.fen());
-      const newHistory = g.history();
-      setHistory(newHistory);
-      setCurrentMove(newHistory.length - 1);
+      setHistory(g.history());
+      setCurrentMove(g.history().length - 1);
       return true;
     } catch {
       return false;
@@ -239,14 +244,13 @@ export default function AnalysisPage() {
             <GameImportPanel onGameImport={handleGameImport} />
 
             <OpeningExplorer fen={fen} onMoveClick={(move) => {
-              const g = new Chess(game.fen());
+              const g = cloneGame();
               const result = g.move(move);
               if (result) {
                 setGame(g);
                 setFen(g.fen());
-                const newHistory = g.history();
-                setHistory(newHistory);
-                setCurrentMove(newHistory.length - 1);
+                setHistory(g.history());
+                setCurrentMove(g.history().length - 1);
               }
             }} />
 
