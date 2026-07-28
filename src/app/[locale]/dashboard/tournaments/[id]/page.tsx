@@ -11,10 +11,10 @@ import { ArrowLeft, Users, Trophy, LogIn, LogOut } from 'lucide-react';
 const BASE = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
 
 async function getTournament(id: string) {
-  const res = await fetch(`${BASE}/api/tournaments`, { cache: 'no-store' });
+  const res = await fetch(`${BASE}/api/tournaments?id=${encodeURIComponent(id)}`, { cache: 'no-store' });
   if (!res.ok) return null;
   const data = await res.json();
-  return data.tournaments?.find((t: { id: string }) => t.id === id) || null;
+  return data.tournament || null;
 }
 
 export default async function TournamentDetailPage({ params }: { params: Promise<{ id: string; locale: string }> }) {
@@ -91,13 +91,14 @@ export default async function TournamentDetailPage({ params }: { params: Promise
                   <p className="text-sm text-muted-foreground">No players yet.</p>
                 ) : (
                   <div className="space-y-3">
-                    {players.map((player: { id: string; userId: string; score: number; joinedAt: string | null }) => (
+                    {players.map((player: { id: string; userId: string; userName?: string | null; userImage?: string | null; score: number; joinedAt: string | null }) => (
                       <div key={player.id} className="flex items-center gap-3">
                         <Avatar className="h-8 w-8">
-                          <AvatarFallback>{(player.userId || '?')[0].toUpperCase()}</AvatarFallback>
+                          <AvatarImage src={player.userImage || ''} alt={player.userName || player.userId} />
+                          <AvatarFallback>{(player.userName || player.userId || '?')[0].toUpperCase()}</AvatarFallback>
                         </Avatar>
                         <div className="flex-1">
-                          <p className="text-sm font-medium">{player.userId}</p>
+                          <p className="text-sm font-medium">{player.userName || player.userId}</p>
                           <p className="text-xs text-muted-foreground">
                             Score: {player.score} · Joined {player.joinedAt ? new Date(player.joinedAt).toLocaleDateString() : ''}
                           </p>

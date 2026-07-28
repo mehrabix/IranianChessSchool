@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "vercel-build": "drizzle-kit push --config=drizzle/config.ts && next build",
+    "vercel-build": "drizzle-kit push --config=drizzle/config.ts && tsx drizzle/seed.ts && next build",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
@@ -15,7 +15,8 @@
     "test:all": "vitest run && playwright test",
     "db:generate": "drizzle-kit generate --config=drizzle/config.ts",
     "db:push": "drizzle-kit push --config=drizzle/config.ts",
-    "db:studio": "drizzle-kit studio --config=drizzle/config.ts"
+    "db:studio": "drizzle-kit studio --config=drizzle/config.ts",
+    "db:seed": "tsx drizzle/seed.ts"
   },
   "dependencies": {
     "@auth/core": "^0.34.3",

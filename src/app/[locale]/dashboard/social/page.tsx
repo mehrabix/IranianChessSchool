@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useSession } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
@@ -10,7 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
-import { Loader2, Send, Heart, MessageCircle, Globe, RefreshCw } from 'lucide-react';
+import { Loader2, Send, Heart, MessageCircle, Globe, RefreshCw, Pencil, Trash2, Image as ImageIcon, X } from 'lucide-react';
 
 function awardXp(action: string) {
   fetch('/api/xp/award', {
@@ -52,6 +52,13 @@ export default function SocialPage() {
   const [commentInput, setCommentInput] = useState<Record<string, string>>({});
   const [showComments, setShowComments] = useState<Record<string, boolean>>({});
   const [likedPosts, setLikedPosts] = useState<Set<string>>(new Set());
+  const [editingPost, setEditingPost] = useState<string | null>(null);
+  const [editContent, setEditContent] = useState('');
+  const [saving, setSaving] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const fetchPosts = useCallback(async () => {
     setLoading(true);
@@ -70,13 +77,26 @@ export default function SocialPage() {
     if (!newPost.trim()) return;
     setPosting(true);
     try {
+      let imageUrl = null;
+      if (imageFile) {
+        const formData = new FormData();
+        formData.append('file', imageFile);
+        const uploadRes = await fetch('/api/upload', { method: 'POST', body: formData });
+        if (uploadRes.ok) {
+          const uploadData = await uploadRes.json();
+          imageUrl = uploadData.url;
+        }
+      }
+
       const res = await fetch('/api/posts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ content: newPost.trim() }),
+        body: JSON.stringify({ content: newPost.trim(), image: imageUrl }),
       });
       if (res.ok) {
         setNewPost('');
+        setImageFile(null);
+        setImagePreview(null);
         await fetchPosts();
         awardXp('CREATE_POST');
       }
@@ -134,6 +154,63 @@ export default function SocialPage() {
     }
   }
 
+  function startEditing(post: Post) {
+    setEditingPost(post.id);
+    setEditContent(post.content);
+  }
+
+  function cancelEditing() {
+    setEditingPost(null);
+    setEditContent('');
+  }
+
+  async function handleSaveEdit(postId: string) {
+    if (!editContent.trim()) return;
+    setSaving(true);
+    try {
+      const res = await fetch(`/api/posts/${postId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content: editContent.trim() }),
+      });
+      if (res.ok) {
+        setEditingPost(null);
+        setEditContent('');
+        await fetchPosts();
+      }
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function handleDelete(postId: string) {
+    if (!confirm('Delete this post?')) return;
+    setDeleting(true);
+    try {
+      const res = await fetch(`/api/posts/${postId}`, { method: 'DELETE' });
+      if (res.ok) {
+        setPosts(prev => prev.filter(p => p.id !== postId));
+      }
+    } finally {
+      setDeleting(false);
+    }
+  }
+
+  function handleImageSelect(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setImageFile(file);
+    const reader = new FileReader();
+    reader.onloadend = () => setImagePreview(reader.result as string);
+    reader.readAsDataURL(file);
+  }
+
+  function clearImage() {
+    setImageFile(null);
+    setImagePreview(null);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  }
+
   if (loading) {
     return (
       <section className="py-8">
@@ -171,10 +248,42 @@ export default function SocialPage() {
                     placeholder="Share your thoughts..."
                     className="min-h-[60px] resize-none"
                   />
-                  <Button size="sm" onClick={handleCreatePost} disabled={posting || !newPost.trim()} className="gap-1.5">
-                    {posting ? <Loader2 className="h-3 w-3 animate-spin" /> : <Send className="h-3 w-3" />}
-                    Post
-                  </Button>
+                  {imagePreview && (
+                    <div className="relative inline-block">
+                      <img src={imagePreview} alt="Preview" className="max-h-[200px] rounded border" />
+                      <button
+                        onClick={clearImage}
+                        className="absolute -top-2 -right-2 rounded-full bg-destructive text-destructive-foreground p-0.5"
+                        aria-label="Remove image"
+                      >
+                        <X className="h-3.5 w-3.5" />
+                      </button>
+                    </div>
+                  )}
+                  <div className="flex items-center gap-2">
+                    <Button size="sm" onClick={handleCreatePost} disabled={posting || !newPost.trim()} className="gap-1.5">
+                      {posting ? <Loader2 className="h-3 w-3 animate-spin" /> : <Send className="h-3 w-3" />}
+                      Post
+                    </Button>
+                    <input
+                      ref={fileInputRef}
+                      type="file"
+                      accept="image/*"
+                      onChange={handleImageSelect}
+                      className="hidden"
+                      id="image-upload"
+                    />
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => fileInputRef.current?.click()}
+                      className="gap-1.5"
+                    >
+                      <ImageIcon className="h-4 w-4" />
+                      Photo
+                    </Button>
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -197,12 +306,38 @@ export default function SocialPage() {
                         {new Date(post.createdAt * 1000).toLocaleDateString()}
                       </span>
                     </div>
-                    <p className="text-sm whitespace-pre-wrap">{post.content}</p>
-                    {post.pgn && (
-                      <div className="mt-2 p-2 rounded bg-muted text-xs font-mono text-muted-foreground max-h-[120px] overflow-y-auto">
-                        {post.pgn}
+
+                    {editingPost === post.id ? (
+                      <div className="space-y-2">
+                        <Textarea
+                          value={editContent}
+                          onChange={e => setEditContent(e.target.value)}
+                          className="min-h-[60px] resize-none"
+                        />
+                        <div className="flex gap-2">
+                          <Button size="sm" onClick={() => handleSaveEdit(post.id)} disabled={saving || !editContent.trim()} className="gap-1.5">
+                            {saving ? <Loader2 className="h-3 w-3 animate-spin" /> : null}
+                            Save
+                          </Button>
+                          <Button size="sm" variant="outline" onClick={cancelEditing}>
+                            Cancel
+                          </Button>
+                        </div>
                       </div>
+                    ) : (
+                      <>
+                        <p className="text-sm whitespace-pre-wrap">{post.content}</p>
+                        {post.image && (
+                          <img src={post.image} alt="Post" className="mt-2 max-h-[300px] rounded border" />
+                        )}
+                        {post.pgn && (
+                          <div className="mt-2 p-2 rounded bg-muted text-xs font-mono text-muted-foreground max-h-[120px] overflow-y-auto">
+                            {post.pgn}
+                          </div>
+                        )}
+                      </>
                     )}
+
                     <div className="flex items-center gap-4 mt-3">
                       <button
                         onClick={() => handleLike(post.id)}
@@ -215,6 +350,28 @@ export default function SocialPage() {
                         <MessageCircle className="h-3.5 w-3.5" />
                         {post.comments}
                       </button>
+
+                      {session?.user?.id === post.userId && editingPost !== post.id && (
+                        <div className="flex items-center gap-1 ml-auto">
+                          <button
+                            onClick={() => startEditing(post)}
+                            className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
+                            aria-label="Edit post"
+                          >
+                            <Pencil className="h-3.5 w-3.5" />
+                            Edit
+                          </button>
+                          <button
+                            onClick={() => handleDelete(post.id)}
+                            disabled={deleting}
+                            className="flex items-center gap-1 text-xs text-muted-foreground hover:text-destructive transition-colors"
+                            aria-label="Delete post"
+                          >
+                            <Trash2 className="h-3.5 w-3.5" />
+                            Delete
+                          </button>
+                        </div>
+                      )}
                     </div>
 
                     {showComments[post.id] && (

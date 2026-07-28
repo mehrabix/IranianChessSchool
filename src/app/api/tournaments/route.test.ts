@@ -66,7 +66,7 @@ describe('GET /api/tournaments', () => {
       .mockReturnValueOnce({ from: vi.fn(() => createQuery(tournamentsData)) })
       .mockReturnValue({ from: vi.fn(() => createQuery(playersData)) });
 
-    const res = await GET();
+    const res = await GET(new Request('http://localhost/api/tournaments'));
     const body = await res.json();
 
     expect(res.status).toBe(200);
@@ -80,7 +80,7 @@ describe('GET /api/tournaments', () => {
   it('returns 500 on DB error', async () => {
     mockDb.select.mockReturnValue({ from: vi.fn(() => { throw new Error('DB error'); }) });
 
-    const res = await GET();
+    const res = await GET(new Request('http://localhost/api/tournaments'));
     const body = await res.json();
 
     expect(res.status).toBe(500);

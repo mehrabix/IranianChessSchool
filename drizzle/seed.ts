@@ -3,10 +3,9 @@ import { createClient } from '@libsql/client';
 import { courses, modules, lessons } from './schema';
 import { randomUUID } from 'crypto';
 
-const client = createClient({
-  url: process.env.TURSO_DATABASE_URL!,
-  authToken: process.env.TURSO_AUTH_TOKEN,
-});
+const tursoUrl = process.env.TURSO_DATABASE_URL;
+const isValidUrl = tursoUrl && tursoUrl.startsWith('libsql://');
+const client = createClient(isValidUrl ? { url: tursoUrl, authToken: process.env.TURSO_AUTH_TOKEN } : { url: 'file:local.db' });
 
 const db = drizzle(client);
 

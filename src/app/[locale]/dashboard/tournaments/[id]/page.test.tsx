@@ -45,8 +45,8 @@ const mockTournament = {
   ],
 };
 
-const createFetchMock = (tournaments: any[], ok = true) =>
-  vi.fn(() => Promise.resolve({ ok, json: () => Promise.resolve({ tournaments }) }));
+const createFetchMock = (tournament: any, ok = true) =>
+  vi.fn(() => Promise.resolve({ ok, json: () => Promise.resolve({ tournament }) }));
 
 const originalFetch = globalThis.fetch;
 
@@ -60,7 +60,7 @@ describe('TournamentDetailPage', () => {
   });
 
   it('renders tournament name and description', async () => {
-    globalThis.fetch = createFetchMock([mockTournament]) as any;
+    globalThis.fetch = createFetchMock(mockTournament) as any;
     const jsx = await TournamentDetailPage({ params: Promise.resolve({ id: 't1', locale: 'en' }) });
     const { container } = render(jsx);
     expect(container.textContent).toContain('King\'s Gambit Showdown');
@@ -68,7 +68,7 @@ describe('TournamentDetailPage', () => {
   });
 
   it('renders tournament type and status', async () => {
-    globalThis.fetch = createFetchMock([mockTournament]) as any;
+    globalThis.fetch = createFetchMock(mockTournament) as any;
     const jsx = await TournamentDetailPage({ params: Promise.resolve({ id: 't1', locale: 'en' }) });
     const { container } = render(jsx);
     expect(container.textContent).toContain('SWISS');
@@ -76,14 +76,14 @@ describe('TournamentDetailPage', () => {
   });
 
   it('renders player count', async () => {
-    globalThis.fetch = createFetchMock([mockTournament]) as any;
+    globalThis.fetch = createFetchMock(mockTournament) as any;
     const jsx = await TournamentDetailPage({ params: Promise.resolve({ id: 't1', locale: 'en' }) });
     const { container } = render(jsx);
     expect(container.textContent).toContain('2 / 16');
   });
 
   it('renders players list with scores', async () => {
-    globalThis.fetch = createFetchMock([mockTournament]) as any;
+    globalThis.fetch = createFetchMock(mockTournament) as any;
     const jsx = await TournamentDetailPage({ params: Promise.resolve({ id: 't1', locale: 'en' }) });
     const { container } = render(jsx);
     expect(container.textContent).toContain('u1');
@@ -91,7 +91,7 @@ describe('TournamentDetailPage', () => {
   });
 
   it('renders join button', async () => {
-    globalThis.fetch = createFetchMock([mockTournament]) as any;
+    globalThis.fetch = createFetchMock(mockTournament) as any;
     const jsx = await TournamentDetailPage({ params: Promise.resolve({ id: 't1', locale: 'en' }) });
     const { container } = render(jsx);
     expect(container.textContent).toContain('Join Tournament');
