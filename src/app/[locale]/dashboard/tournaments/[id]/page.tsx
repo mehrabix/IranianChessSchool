@@ -55,7 +55,7 @@ export default async function TournamentDetailPage({ params }: { params: Promise
               </div>
               <div className="flex items-center gap-1 text-sm text-muted-foreground">
                 <Users className="h-4 w-4" />
-                <span>{tournament.playerCount} / {tournament.maxPlayers} players</span>
+                <span>{tournament.playerCount} / {tournament.maxPlayers} {t('players')}</span>
               </div>
             </div>
 
@@ -66,12 +66,12 @@ export default async function TournamentDetailPage({ params }: { params: Promise
                   {isMember ? (
                     <>
                       <LogOut className="h-4 w-4 mr-2" />
-                      Leave Tournament
+                      {t('leaveTournament')}
                     </>
                   ) : (
                     <>
                       <LogIn className="h-4 w-4 mr-2" />
-                      Join Tournament
+                      {t('joinTournament')}
                     </>
                   )}
                 </Button>
@@ -83,12 +83,12 @@ export default async function TournamentDetailPage({ params }: { params: Promise
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-lg">
                   <Trophy className="h-4 w-4" />
-                  Players ({players.length})
+                  {t('players')} ({players.length})
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 {players.length === 0 ? (
-                  <p className="text-sm text-muted-foreground">No players yet.</p>
+                  <p className="text-sm text-muted-foreground">{t('noPlayers')}</p>
                 ) : (
                   <div className="space-y-3">
                     {players.map((player: { id: string; userId: string; userName?: string | null; userImage?: string | null; score: number; joinedAt: string | null }) => (

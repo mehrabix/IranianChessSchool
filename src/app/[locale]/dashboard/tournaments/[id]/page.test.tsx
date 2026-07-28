@@ -4,7 +4,14 @@ import { render } from '@testing-library/react';
 import TournamentDetailPage from './page';
 
 vi.mock('next-intl/server', () => ({
-  getTranslations: () => async () => (key: string) => key,
+  getTranslations: () => async () => (key: string) => {
+    const map: Record<string, string> = {
+      players: 'Players', noPlayers: 'No players yet.',
+      joinTournament: 'Join Tournament', leaveTournament: 'Leave Tournament',
+      backToDashboard: 'Back to Dashboard',
+    };
+    return map[key] || key;
+  },
   getLocale: () => async () => 'en',
 }));
 

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Bell } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Notification {
@@ -15,6 +16,7 @@ interface Notification {
 }
 
 export function NotificationBell() {
+  const t = useTranslations('dashboard');
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [open, setOpen] = useState(false);
   const [unread, setUnread] = useState(0);
@@ -65,17 +67,17 @@ export function NotificationBell() {
             className="absolute right-0 mt-2 w-80 bg-card border rounded-xl shadow-xl z-50 overflow-hidden"
           >
             <div className="flex items-center justify-between px-4 py-3 border-b">
-              <span className="font-semibold text-sm">Notifications</span>
+              <span className="font-semibold text-sm">{t('notifications')}</span>
               {unread > 0 && (
                 <button onClick={markAllRead} className="text-xs text-primary hover:underline">
-                  Mark all read
+                  {t('markAllRead')}
                 </button>
               )}
             </div>
             <div className="max-h-[360px] overflow-y-auto">
               {notifications.length === 0 ? (
                 <div className="py-8 text-center text-sm text-muted-foreground">
-                  No notifications yet
+                  {t('noNotifications')}
                 </div>
               ) : (
                 notifications.map(n => (

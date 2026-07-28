@@ -50,23 +50,23 @@ export default async function GroupDetailPage({ params }: { params: Promise<{ id
               <Badge variant="secondary">{group.category}</Badge>
               <div className="flex items-center gap-1 text-sm text-muted-foreground">
                 <Users className="h-4 w-4" />
-                <span>{group.memberCount} members</span>
+                <span>{group.memberCount} {t('members')}</span>
               </div>
             </div>
 
             {/* Join/Leave toggle */}
             <div>
-              <JoinLeaveButton groupId={id} isMember={isMember} />
+              <JoinLeaveButton groupId={id} isMember={isMember} joinLabel={t('joinGroup')} leaveLabel={t('leaveGroup')} />
             </div>
 
             {/* Members list */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">Members ({members.length})</CardTitle>
+                <CardTitle className="text-lg">{t('members')} ({members.length})</CardTitle>
               </CardHeader>
               <CardContent>
                 {members.length === 0 ? (
-                  <p className="text-sm text-muted-foreground">No members yet.</p>
+                  <p className="text-sm text-muted-foreground">{t('noMembers')}</p>
                 ) : (
                   <div className="space-y-3">
                     {members.map((member: { id: string; userId: string; role: string; userName: string | null; userImage: string | null; joinedAt: string | null }) => (
@@ -94,19 +94,19 @@ export default async function GroupDetailPage({ params }: { params: Promise<{ id
   );
 }
 
-function JoinLeaveButton({ groupId, isMember }: { groupId: string; isMember: boolean }) {
+function JoinLeaveButton({ groupId, isMember, joinLabel, leaveLabel }: { groupId: string; isMember: boolean; joinLabel: string; leaveLabel: string }) {
   return (
     <form action={`/api/groups/${groupId}/join`} method="POST">
       <Button type="submit" variant={isMember ? 'outline' : 'default'}>
         {isMember ? (
           <>
             <LogOut className="h-4 w-4 mr-2" />
-            Leave Group
+            {leaveLabel}
           </>
         ) : (
           <>
             <LogIn className="h-4 w-4 mr-2" />
-            Join Group
+            {joinLabel}
           </>
         )}
       </Button>

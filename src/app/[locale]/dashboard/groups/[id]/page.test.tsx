@@ -4,7 +4,14 @@ import { render } from '@testing-library/react';
 import GroupDetailPage from './page';
 
 vi.mock('next-intl/server', () => ({
-  getTranslations: () => async () => (key: string) => key,
+  getTranslations: () => async () => (key: string) => {
+    const map: Record<string, string> = {
+      members: 'Members', noMembers: 'No members yet.',
+      joinGroup: 'Join Group', leaveGroup: 'Leave Group',
+      backToDashboard: 'Back to Dashboard',
+    };
+    return map[key] || key;
+  },
   getLocale: () => async () => 'en',
 }));
 

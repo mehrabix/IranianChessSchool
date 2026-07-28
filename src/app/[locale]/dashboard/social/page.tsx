@@ -43,6 +43,7 @@ interface CommentData {
 }
 
 export default function SocialPage() {
+  const t = useTranslations('dashboard');
   const { data: session } = useSession();
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
@@ -184,7 +185,7 @@ export default function SocialPage() {
   }
 
   async function handleDelete(postId: string) {
-    if (!confirm('Delete this post?')) return;
+    if (!confirm(t('confirmDelete'))) return;
     setDeleting(true);
     try {
       const res = await fetch(`/api/posts/${postId}`, { method: 'DELETE' });
@@ -227,9 +228,9 @@ export default function SocialPage() {
     <section className="py-8">
       <Container size="sm">
         <div className="flex items-center justify-between mb-6">
-          <h1 className="text-3xl font-bold">Social Feed</h1>
+          <h1 className="text-3xl font-bold">{t('socialFeed')}</h1>
           <Button variant="outline" size="sm" onClick={fetchPosts} className="gap-1.5">
-            <RefreshCw className="h-3.5 w-3.5" /> Refresh
+            <RefreshCw className="h-3.5 w-3.5" /> {t('refresh')}
           </Button>
         </div>
 
@@ -245,7 +246,7 @@ export default function SocialPage() {
                   <Textarea
                     value={newPost}
                     onChange={e => setNewPost(e.target.value)}
-                    placeholder="Share your thoughts..."
+                    placeholder={t('shareThoughts')}
                     className="min-h-[60px] resize-none"
                   />
                   {imagePreview && (
@@ -263,7 +264,7 @@ export default function SocialPage() {
                   <div className="flex items-center gap-2">
                     <Button size="sm" onClick={handleCreatePost} disabled={posting || !newPost.trim()} className="gap-1.5">
                       {posting ? <Loader2 className="h-3 w-3 animate-spin" /> : <Send className="h-3 w-3" />}
-                      Post
+                      {t('post')}
                     </Button>
                     <input
                       ref={fileInputRef}
@@ -281,7 +282,7 @@ export default function SocialPage() {
                       className="gap-1.5"
                     >
                       <ImageIcon className="h-4 w-4" />
-                      Photo
+                      {t('photo')}
                     </Button>
                   </div>
                 </div>
@@ -317,10 +318,10 @@ export default function SocialPage() {
                         <div className="flex gap-2">
                           <Button size="sm" onClick={() => handleSaveEdit(post.id)} disabled={saving || !editContent.trim()} className="gap-1.5">
                             {saving ? <Loader2 className="h-3 w-3 animate-spin" /> : null}
-                            Save
+                            {t('save')}
                           </Button>
                           <Button size="sm" variant="outline" onClick={cancelEditing}>
-                            Cancel
+                            {t('cancel')}
                           </Button>
                         </div>
                       </div>
@@ -356,19 +357,19 @@ export default function SocialPage() {
                           <button
                             onClick={() => startEditing(post)}
                             className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
-                            aria-label="Edit post"
+                            aria-label={t('edit')}
                           >
                             <Pencil className="h-3.5 w-3.5" />
-                            Edit
+                            {t('edit')}
                           </button>
                           <button
                             onClick={() => handleDelete(post.id)}
                             disabled={deleting}
                             className="flex items-center gap-1 text-xs text-muted-foreground hover:text-destructive transition-colors"
-                            aria-label="Delete post"
+                            aria-label={t('delete')}
                           >
                             <Trash2 className="h-3.5 w-3.5" />
-                            Delete
+                            {t('delete')}
                           </button>
                         </div>
                       )}
@@ -393,7 +394,7 @@ export default function SocialPage() {
                             <Input
                               value={commentInput[post.id] || ''}
                               onChange={e => setCommentInput(prev => ({ ...prev, [post.id]: e.target.value }))}
-                              placeholder="Write a comment..."
+                              placeholder={t('writeComment')}
                               className="h-8 text-xs"
                               onKeyDown={e => e.key === 'Enter' && handleComment(post.id)}
                             />
@@ -410,7 +411,7 @@ export default function SocialPage() {
             </Card>
           ))}
           {posts.length === 0 && (
-            <p className="text-center text-muted-foreground py-12">No posts yet. Be the first to share!</p>
+            <p className="text-center text-muted-foreground py-12">{t('noPosts')}</p>
           )}
         </div>
       </Container>

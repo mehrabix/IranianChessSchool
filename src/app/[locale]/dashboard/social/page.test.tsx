@@ -8,7 +8,15 @@ vi.mock('next-auth/react', () => ({
 }));
 
 vi.mock('next-intl', () => ({
-  useTranslations: () => (key: string) => key,
+  useTranslations: () => (key: string) => {
+    const map: Record<string, string> = {
+      socialFeed: 'Social Feed', post: 'Post', refresh: 'Refresh',
+      shareThoughts: 'Share your thoughts...', writeComment: 'Write a comment...',
+      noPosts: 'No posts yet. Be the first to share!', edit: 'Edit', delete: 'Delete',
+      save: 'Save', cancel: 'Cancel', photo: 'Photo', confirmDelete: 'Delete this post?',
+    };
+    return map[key] || key;
+  },
   useLocale: () => 'en',
 }));
 
