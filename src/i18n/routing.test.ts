@@ -2,8 +2,8 @@ import { describe, it, expect } from 'vitest';
 import { locales, localeNames, rtlLocales, routing } from '@/i18n/routing';
 
 describe('i18n routing config', () => {
-  it('has all 7 locales', () => {
-    expect(locales).toEqual(['en', 'fa', 'ru', 'it', 'de', 'fr', 'no']);
+  it('has all 8 locales', () => {
+    expect(locales).toEqual(['en', 'fa', 'ru', 'it', 'de', 'fr', 'no', 'es']);
   });
 
   it('has locale names for all locales', () => {
@@ -14,6 +14,7 @@ describe('i18n routing config', () => {
     expect(localeNames.de).toBe('Deutsch');
     expect(localeNames.fr).toBe('Français');
     expect(localeNames.no).toBe('Norsk');
+    expect(localeNames.es).toBe('Español');
   });
 
   it('has correct RTL locales', () => {

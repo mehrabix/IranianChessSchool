@@ -1,0 +1,1015 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre nosotros",
+    "kids": "Infantil",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "pricing": "Precios",
+    "courses": "Cursos",
+    "signIn": "Iniciar sesión",
+    "tryFree": "Probar gratis",
+    "signOut": "Cerrar sesión",
+    "dashboard": "Panel",
+    "admin": "Admin",
+    "loggedInAs": "Conectado como {name}",
+    "myProgress": "Mi progreso",
+    "brand": "Iranian Chess School",
+    "brandShort": "ICS",
+    "social": "Social",
+    "leaderboard": "Clasificación"
+  },
+  "footer": {
+    "brand": "Iranian Chess School",
+    "description": "Domina el juego, piensa con más profundidad. Entrenamiento de ajedrez estructurado para todos los niveles con entrenadores reales y una comunidad de apoyo.",
+    "quickLinks": "Enlaces rápidos",
+    "followUs": "Síguenos",
+    "contact": "Contacto",
+    "email": "info@iranianchessschool.com",
+    "copyright": "© {year} Iranian Chess School. Todos los derechos reservados.",
+    "social": {
+      "youtube": "YouTube",
+      "instagram": "Instagram",
+      "discord": "Discord",
+      "telegram": "Telegram"
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "Aceptamos estudiantes de todo el mundo",
+      "title1": "Domina el juego,",
+      "title2": "Piensa con más profundidad",
+      "subtitle": "Deja de saltar entre vídeos aleatorios de YouTube y partidas rápidas. Sigue un plan de estudios estructurado diseñado por entrenadores titulados que realmente desarrolla tu comprensión del ajedrez.",
+      "cta": "Empieza tu prueba gratuita",
+      "learnMore": "Ver cómo funciona",
+      "noCard": "Sin tarjeta",
+      "freeTrial": "Prueba gratuita de 7 días",
+      "cancelAnytime": "Cancela cuando quieras"
+    },
+    "stats": {
+      "students": "Estudiantes mejorando",
+      "hours": "Horas de contenido",
+      "reach": "Alcance global",
+      "satisfaction": "Tasa de satisfacción"
+    },
+    "features": {
+      "heading": "Mucho más que un curso",
+      "subtitle": "Todo lo que necesitas para pasar de principiante a jugador de club en una plataforma integrada",
+      "structuredLessons": "Lecciones estructuradas",
+      "structuredLessonsDesc": "Programa de entrenamiento completo de 0–2000 Elo con plan de estudios paso a paso",
+      "liveClasses": "Clases en grupo en directo",
+      "liveClassesDesc": "Sesiones interactivas semanales con entrenadores titulados en grupos reducidos",
+      "gameReviews": "Análisis de partidas",
+      "gameReviewsDesc": "Análisis profundo y personalizado de tus partidas con entrenadores FM/WGM",
+      "progressAnalytics": "Análisis de progreso",
+      "progressAnalyticsDesc": "Sigue tu Elo, puntuación en problemas, lecciones completadas y análisis de debilidades",
+      "community": "Comunidad dinámica",
+      "communityDesc": "Únete a más de 1200 jugadores en mejora. Debate, comparte y progresa en equipo",
+      "aiTools": "Herramientas con IA",
+      "aiToolsDesc": "Análisis con Stockfish, entrenador IA, explorador de aperturas y problemas diarios"
+    },
+    "levels": {
+      "heading": "Niveles de entrenamiento",
+      "subtitle": "Desde tu primer movimiento hasta torneos: una hoja de ruta clara",
+      "badge": "Camino estructurado",
+      "beginner": "Principiante",
+      "beginnerRange": "0–500",
+      "beginnerDesc": "Aprende las reglas y táctica básica",
+      "improver": "Intermedio",
+      "improverRange": "500–800",
+      "improverDesc": "Construye una base estratégica",
+      "intermediate": "Intermedio-Avanzado",
+      "intermediateRange": "800–1200",
+      "intermediateDesc": "Domina los patrones clave",
+      "advanced": "Avanzado",
+      "advancedRange": "1200–1600",
+      "advancedDesc": "Juego posicional profundo",
+      "clubPlayer": "Club",
+      "clubPlayerRange": "1600–2000",
+      "clubPlayerDesc": "Preparación para torneos"
+    },
+    "testimonials": {
+      "heading": "Por qué los estudiantes nos eligen",
+      "subtitle": "Resultados reales de estudiantes reales",
+      "student1Name": "Roman",
+      "student1Quote": "Las ganancias marginales del entrenamiento constante realmente se acumulan con el tiempo.",
+      "student1Rating": "1200 → 2245",
+      "student1Gain": "+1045",
+      "student2Name": "Annabella",
+      "student2Quote": "Gracias a Dina y a la comunidad gané 400 Elo mientras estuve aquí.",
+      "student2Rating": "597 → 1604",
+      "student2Gain": "+1007",
+      "student3Name": "Grace",
+      "student3Quote": "Gané el premio femenino en mi sección del Abierto de Toronto.",
+      "student3Rating": "1400 → 2014",
+      "student3Gain": "+614",
+      "points": "puntos"
+    },
+    "cta": {
+      "heading": "¿Listo para transformar tu ajedrez?",
+      "subtitle": "Únete a más de 1200 estudiantes que ya están mejorando con nuestro programa estructurado. Empieza tu prueba gratuita de 7 días hoy.",
+      "cta": "Empieza tu prueba gratuita",
+      "viewFaq": "Ver FAQ",
+      "finePrint": "Sin compromiso. Cancela cuando quieras. 7 días gratis."
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "Sobre nosotros",
+      "heading": "Nuestra misión",
+      "subtitle": "Creemos que todo jugador de ajedrez merece acceso a entrenamiento de clase mundial. Iranian Chess School reúne entrenadores titulados, un plan de estudios estructurado y una comunidad de apoyo para ayudarte a alcanzar tu máximo potencial."
+    },
+    "values": {
+      "heading": "Nuestros valores",
+      "subtitle": "Qué nos hace diferentes",
+      "structuredLearning": "Aprendizaje estructurado",
+      "structuredLearningDesc": "Se acabaron los vídeos aleatorios de YouTube. Sigue un plan de estudios probado diseñado por entrenadores titulados.",
+      "personalAttention": "Atención personalizada",
+      "personalAttentionDesc": "Clases en grupos reducidos y entrenamiento individual garantizan que cada estudiante reciba la ayuda que necesita.",
+      "provenResults": "Resultados probados",
+      "provenResultsDesc": "Nuestros estudiantes han ganado entre 200 y más de 1000 puntos Elo gracias a nuestro enfoque sistemático.",
+      "lifetimeAccess": "Acceso de por vida",
+      "lifetimeAccessDesc": "Aprende a tu ritmo. Todo el material del curso está disponible 24/7."
+    },
+    "coaches": {
+      "heading": "Conoce a nuestros entrenadores",
+      "subtitle": "Aprende de los mejores del juego",
+      "coach1Name": "Dina",
+      "coach1Title": "Entrenadora jefe — MF",
+      "coach1Bio": "Maestra FIDE con más de 15 años de experiencia como entrenadora. Especialista en juego posicional y finales.",
+      "coach2Name": "Alexandra",
+      "coach2Title": "Entrenadora — WGM",
+      "coach2Bio": "Gran Maestra Femenina apasionada por el entrenamiento táctico. Entrena a estudiantes de nivel intermedio a avanzado.",
+      "fideProfile": "Perfil FIDE"
+    },
+    "cta": {
+      "heading": "¿Listo para empezar tu viaje?",
+      "subtitle": "Únete a más de 1200 estudiantes que ya están mejorando con nuestro programa estructurado.",
+      "cta": "Empezar",
+      "contactUs": "Contacta con nosotros"
+    }
+  },
+  "faq": {
+    "hero": {
+      "badge": "FAQ",
+      "heading": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre Iranian Chess School"
+    },
+    "categories": {
+      "general": "General",
+      "pricing": "Precios y planes",
+      "coaching": "Clases y entrenamiento",
+      "time": "Dedicación de tiempo",
+      "technical": "Técnico"
+    },
+    "questions": {
+      "whatIs": {
+        "q": "¿Qué es Iranian Chess School?",
+        "a": "Iranian Chess School es una plataforma integral de entrenamiento de ajedrez en línea con cursos estructurados, clases en directo, análisis de partidas, problemas y una comunidad de apoyo. Ayudamos a jugadores desde principiantes absolutos hasta más de 2000 Elo a mejorar su juego."
+      },
+      "whoAreCoaches": {
+        "q": "¿Quiénes son los entrenadores?",
+        "a": "Nuestros entrenadores son jugadores titulados, incluyendo Maestros FIDE y Grandes Maestras Femeninas con años de experiencia docente. Ofrecen retroalimentación personalizada y dirigen sesiones de grupo en directo."
+      },
+      "needFarsi": {
+        "q": "¿Necesito saber farsi?",
+        "a": "No, todo el contenido está disponible en inglés. Sin embargo, nuestros entrenadores dominan tanto el inglés como el farsi para atender a nuestra comunidad internacional."
+      },
+      "howMuch": {
+        "q": "¿Cuánto cuesta?",
+        "a": "Ofrecemos tres planes: Estándar ($29/mes), Premium ($49/mes) y VIP ($199/mes). También tenemos planes especializados para niños. La facturación anual te da 2 meses gratis."
+      },
+      "freeTrial": {
+        "q": "¿Hay una prueba gratuita?",
+        "a": "¡Sí! Ofrecemos una prueba gratuita de 7 días en todos los planes. No se requiere tarjeta de crédito. Puedes cancelar en cualquier momento durante la prueba sin coste alguno."
+      },
+      "cancel": {
+        "q": "¿Puedo cancelar en cualquier momento?",
+        "a": "Por supuesto. Puedes cancelar tu suscripción en cualquier momento. Tu acceso continúa hasta el final de tu período de facturación. Sin comisiones por cancelación."
+      },
+      "liveClasses": {
+        "q": "¿Cómo funcionan las clases en directo?",
+        "a": "Las clases en grupo en directo se imparten semanalmente por videoconferencia. Cada sesión se centra en temas específicos e incluye preguntas y respuestas. Los miembros Premium y VIP tienen acceso prioritario."
+      },
+      "gameReview": {
+        "q": "¿Qué es una sesión de análisis de partida?",
+        "a": "Envías tu partida (PGN o enlace de Chess.com/Lichess) y un entrenador la analiza jugada a jugada, explicando errores, mejores alternativas y puntos clave de aprendizaje."
+      },
+      "oneOnOne": {
+        "q": "¿Cómo reservo entrenamiento individual?",
+        "a": "Los miembros VIP pueden reservar sesiones individuales directamente a través de nuestro sistema de reservas. Los miembros Premium reciben sesiones mensuales. Las sesiones se realizan por videollamada."
+      },
+      "timeNeeded": {
+        "q": "¿Cuánto tiempo necesito?",
+        "a": "Recomendamos de 3 a 5 horas por semana para un progreso óptimo. Esto incluye ver lecciones, resolver problemas, jugar partidas y repasar con los entrenadores."
+      },
+      "ownPace": {
+        "q": "¿Puedo aprender a mi propio ritmo?",
+        "a": "¡Sí! Todo el material del curso está disponible bajo demanda. Puedes ver las lecciones, resolver problemas y estudiar al ritmo que mejor te vaya."
+      },
+      "improvement": {
+        "q": "¿Cuánto tardo en ver mejoría?",
+        "a": "La mayoría de los estudiantes notan una mejora significativa en 4–6 semanas de entrenamiento constante. Muchos ganan entre 100 y 200 Elo en sus primeros 3 meses."
+      },
+      "requirements": {
+        "q": "¿Qué necesito para empezar?",
+        "a": "Un ordenador o tableta con acceso a internet. Para las clases en directo, necesitas cámara y micrófono. La plataforma funciona en todos los navegadores modernos."
+      },
+      "importGames": {
+        "q": "¿Puedo importar partidas de Chess.com o Lichess?",
+        "a": "¡Sí! Puedes importar partidas tanto de Chess.com como de Lichess introduciendo tu nombre de usuario. También admitimos la subida de archivos PGN."
+      },
+      "mobileApp": {
+        "q": "¿Tenéis aplicación móvil?",
+        "a": "La plataforma es totalmente adaptable y funciona perfectamente en navegadores móviles. Una aplicación móvil nativa está en desarrollo."
+      }
+    }
+  },
+  "blog": {
+    "hero": {
+      "badge": "Blog",
+      "heading": "Blog de mejora en ajedrez",
+      "subtitle": "Consejos, estrategias y perspectivas de nuestros entrenadores para ayudarte a mejorar."
+    },
+    "posts": {
+      "post1Title": "Por qué el aprendizaje estructurado supera a los vídeos aleatorios de YouTube",
+      "post1Excerpt": "La mayoría de los jugadores en mejora pierden años saltando entre contenido aleatorio. He aquí por qué un enfoque estructurado es el camino más rápido hacia los 2000 Elo.",
+      "post1Date": "15 ene 2025",
+      "post1ReadTime": "5 min",
+      "post1Category": "Aprendizaje",
+      "post2Title": "Los 5 errores principales de los principiantes (y cómo corregirlos)",
+      "post2Excerpt": "Evita estas trampas comunes que mantienen a los principiantes estancados por debajo de 1000 Elo. Soluciones sencillas que marcan una gran diferencia.",
+      "post2Date": "10 ene 2025",
+      "post2ReadTime": "4 min",
+      "post2Category": "Principiantes",
+      "post3Title": "Cómo analizar tus partidas como un Gran Maestro",
+      "post3Excerpt": "El análisis de partidas es la forma más efectiva de mejorar. Aprende un enfoque sistemático usado por jugadores titulados.",
+      "post3Date": "5 ene 2025",
+      "post3ReadTime": "7 min",
+      "post3Category": "Análisis",
+      "post4Title": "Principios de apertura: lo que todo jugador debería saber",
+      "post4Excerpt": "Deja de memorizar líneas de apertura y empieza a entender los principios. Esta guía cubre todo lo que necesitas para un repertorio de aperturas sólido.",
+      "post4Date": "28 dic 2024",
+      "post4ReadTime": "6 min",
+      "post4Category": "Aperturas",
+      "post5Title": "La guía definitiva de entrenamiento táctico",
+      "post5Excerpt": "La táctica gana partidas. Aquí te mostramos cómo estructurar tu entrenamiento de problemas para una mejora máxima, de principiante a avanzado.",
+      "post5Date": "20 dic 2024",
+      "post5ReadTime": "8 min",
+      "post5Category": "Táctica",
+      "post6Title": "Fundamentos del final: 5 posiciones que debes conocer",
+      "post6Excerpt": "Domina estas posiciones esenciales de finales y mira cómo sube tu puntuación. Conocimiento práctico que gana partidas.",
+      "post6Date": "15 dic 2024",
+      "post6ReadTime": "6 min",
+      "post6Category": "Finales",
+      "readMore": "Leer más"
+    },
+    "previewPlaceholder": "Esta es una vista previa de esta entrada del blog. El artículo completo estará disponible próximamente. Mientras tanto, echa un vistazo a nuestros cursos y problemas para mejorar tus habilidades de ajedrez."
+  },
+  "contact": {
+    "hero": {
+      "badge": "Contacto",
+      "heading": "Ponte en contacto",
+      "subtitle": "¿Tienes alguna pregunta? Nos encantaría saber de ti."
+    },
+    "form": {
+      "heading": "Envíanos un mensaje",
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿En qué podemos ayudarte?",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos más...",
+      "submit": "Enviar mensaje",
+      "successTitle": "¡Mensaje enviado!",
+      "successText": "Te responderemos en un plazo de 24 horas."
+    },
+    "info": {
+      "heading": "Información de contacto",
+      "email": "Correo electrónico",
+      "emailAddress": "info@iranianchessschool.com",
+      "whatsapp": "WhatsApp",
+      "phone": "+1 (234) 567-890",
+      "location": "Ubicación",
+      "locationText": "En línea — Mundial",
+      "followUs": "Síguenos",
+      "followUsText": "Mantente conectado en redes sociales para consejos, novedades y eventos de la comunidad.",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "telegram": "Telegram"
+    },
+    "validation": {
+      "fieldsRequired": "Nombre, correo electrónico y mensaje son obligatorios"
+    },
+    "success": {
+      "messageReceived": "Mensaje recibido. Te responderemos pronto."
+    }
+  },
+  "kids": {
+    "hero": {
+      "badge": "Programa infantil",
+      "heading": "Clases de ajedrez que",
+      "headingSpan": "encantan a los niños",
+      "subtitle": "Regala a tu hijo el don del ajedrez. Nuestro programa infantil hace que aprender sea divertido, atractivo y eficaz con entrenamiento adaptado a la edad y lecciones gamificadas.",
+      "cta": "Probar gratis",
+      "learnMore": "Más información",
+      "ages": "De 6 a 16 años",
+      "allLevels": "Todos los niveles bienvenidos",
+      "freeTrial": "Prueba gratuita de 7 días"
+    },
+    "features": {
+      "heading": "Por qué a los niños les encanta",
+      "subtitle": "Diseñado para jóvenes estudiantes, apreciado por los padres",
+      "funGames": "Diversión y juegos",
+      "funGamesDesc": "Aprende ajedrez mediante juegos interactivos, problemas y desafíos diseñados para mentes jóvenes.",
+      "groupClasses": "Clases en grupo",
+      "groupClassesDesc": "Clases semanales en directo con otros niños del mismo nivel. Aprender juntos, crecer juntos.",
+      "achievements": "Logros",
+      "achievementsDesc": "Gana insignias, estrellas y recompensas a medida que avanzas por los niveles y dominas habilidades.",
+      "kidFriendly": "Entrenadores cercanos a los niños",
+      "kidFriendlyDesc": "Entrenadores pacientes y experimentados que saben cómo hacer que el ajedrez sea emocionante para los niños.",
+      "safeEnvironment": "Entorno seguro",
+      "safeEnvironmentDesc": "Panel para padres, informes de progreso y supervisión completa en todas las sesiones en directo.",
+      "provenMethod": "Método probado",
+      "provenMethodDesc": "Nuestro plan de estudios está diseñado por especialistas en educación infantil y entrenadores de ajedrez titulados."
+    },
+    "plans": {
+      "heading": "Planes infantiles",
+      "subtitle": "Elige el plan adecuado para tu hijo",
+      "standard": "Estándar",
+      "standardPrice": "$79",
+      "standardPeriod": "/mes",
+      "standardF1": "Clase grupal semanal",
+      "standardF2": "Acceso a problemas",
+      "standardF3": "Seguimiento de progreso",
+      "standardF4": "Panel para padres",
+      "standardF5": "Acceso a la comunidad",
+      "standardCta": "Empezar",
+      "premium": "Premium",
+      "premiumPrice": "$249",
+      "premiumPeriod": "/mes",
+      "premiumF1": "Todo lo de Estándar",
+      "premiumF2": "2 clases semanales",
+      "premiumF3": "Análisis de partida mensual",
+      "premiumF4": "Sesión de entrenamiento individual",
+      "premiumF5": "Soporte prioritario",
+      "premiumCta": "Ir a Premium",
+      "mostPopular": "Más popular"
+    },
+    "cta": {
+      "heading": "Empieza el viaje ajedrecístico de tu hijo",
+      "subtitle": "Dales las habilidades y la confianza que el ajedrez proporciona. Únete a nuestro programa infantil hoy.",
+      "cta": "Prueba gratis 7 días"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "badge": "Precios",
+      "heading": "Precios simples y transparentes",
+      "subtitle": "Empieza gratis. Mejora cuando estés listo."
+    },
+    "plans": {
+      "standard": "Estándar",
+      "standardPrice": "$29",
+      "standardPeriod": "/mes",
+      "standardDesc": "Perfecto para estudiantes autodidactas",
+      "standardF1": "Acceso completo a la biblioteca de cursos",
+      "standardF2": "Sistema de problemas con puntuación",
+      "standardF3": "Acceso de lectura a la comunidad",
+      "standardF4": "Análisis básico de partidas",
+      "standardF5": "Seguimiento de progreso",
+      "standardF6": "Soporte por correo electrónico",
+      "standardCta": "Empezar prueba gratuita",
+      "premium": "Premium",
+      "premiumPrice": "$49",
+      "premiumPeriod": "/mes",
+      "premiumDesc": "Lo mejor para jugadores serios",
+      "premiumF1": "Todo lo de Estándar",
+      "premiumF2": "Clases grupales semanales en directo",
+      "premiumF3": "Sesión mensual de análisis de partidas",
+      "premiumF4": "Herramientas de análisis avanzadas",
+      "premiumF5": "Participación en la comunidad",
+      "premiumF6": "Soporte prioritario por correo electrónico",
+      "premiumCta": "Ir a Premium",
+      "vip": "VIP",
+      "vipPrice": "$199",
+      "vipPeriod": "/mes",
+      "vipDesc": "Para los que lo quieren todo",
+      "vipF1": "Todo lo de Premium",
+      "vipF2": "Entrenamiento individual semanal",
+      "vipF3": "Análisis de partidas semanal con Dina",
+      "vipF4": "Reserva y soporte prioritarios",
+      "vipF5": "Plan de estudio personalizado",
+      "vipF6": "Mensajería directa con el entrenador",
+      "vipCta": "Ir a VIP",
+      "mostPopular": "Más popular",
+      "finePrint": "Todos los planes incluyen una prueba gratuita de 7 días. No se requiere tarjeta de crédito. Cancela cuando quieras."
+    },
+    "compare": {
+      "heading": "Comparar planes",
+      "subtitle": "Encuentra el plan perfecto para tu nivel",
+      "feature": "Característica",
+      "free": "Gratis",
+      "standard": "Estándar",
+      "premium": "Premium",
+      "vip": "VIP",
+      "basicLessons": "Lecciones básicas (Nivel 1)",
+      "allCourses": "Todos los cursos",
+      "puzzleAccess": "Acceso a problemas",
+      "communityAccess": "Acceso a la comunidad",
+      "gameAnalysis": "Análisis de partidas",
+      "groupClasses": "Clases en grupo",
+      "gameReviews": "Análisis de partidas",
+      "oneOnOne": "Entrenamiento individual",
+      "check": "✓",
+      "cross": "✗",
+      "limited": "Limitado",
+      "readOnly": "Solo lectura",
+      "basic": "Básico",
+      "advanced": "Avanzado",
+      "weekly": "Semanal",
+      "monthly": "Mensual",
+      "weekly4x": "Semanal (4x/mes)"
+    },
+    "cta": {
+      "heading": "¿No estás seguro de qué plan te conviene?",
+      "subtitle": "Empieza con nuestra prueba gratuita de 7 días. Sin compromiso, sin necesidad de tarjeta.",
+      "cta": "Prueba gratis 7 días"
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "Bienvenido de nuevo",
+      "description": "Inicia sesión para continuar tu viaje ajedrecístico",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "password": "Contraseña",
+      "passwordPlaceholder": "Introduce tu contraseña",
+      "submit": "Iniciar sesión",
+      "invalidCredentials": "Credenciales no válidas",
+      "divider": "O continúa con",
+      "google": "Google",
+      "github": "GitHub",
+      "noAccount": "¿No tienes cuenta?",
+      "signUp": "Registrarse"
+    },
+    "register": {
+      "title": "Crea tu cuenta",
+      "description": "Empieza tu viaje estructurado de ajedrez",
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "password": "Contraseña",
+      "passwordPlaceholder": "Mín. 8 caracteres",
+      "submit": "Crear cuenta",
+      "submitting": "Creando cuenta...",
+      "nameError": "El nombre es demasiado corto",
+      "emailError": "Introduce un correo electrónico válido",
+      "passwordError": "La contraseña debe tener al menos 8 caracteres",
+      "registrationFailed": "Error al registrarse",
+      "unexpectedError": "Se produjo un error inesperado",
+      "divider": "O continúa con",
+      "google": "Google",
+      "github": "GitHub",
+      "hasAccount": "¿Ya tienes cuenta?",
+      "signIn": "Iniciar sesión",
+      "emailExists": "Ya existe una cuenta con este correo electrónico"
+    },
+    "error": {
+      "title": "Error de autenticación",
+      "description": "Algo salió mal durante el inicio de sesión",
+      "message": "Inténtalo de nuevo o contacta con soporte si el problema persiste.",
+      "tryAgain": "Intentar de nuevo",
+      "registrationFailed": "Error al registrarse"
+    },
+    "validation": {
+      "nameTooShort": "El nombre es demasiado corto",
+      "invalidEmail": "Introduce un correo electrónico válido",
+      "passwordTooShort": "La contraseña debe tener al menos 8 caracteres",
+      "emailExists": "Ya existe una cuenta con este correo electrónico"
+    }
+  },
+  "courses": {
+    "hero": {
+      "heading": "Cursos",
+      "subtitle": "Explora nuestros cursos de ajedrez diseñados para cada nivel.",
+      "noCourses": "Aún no hay cursos disponibles.",
+      "viewCourse": "Ver curso",
+      "allCourses": "Todos los cursos",
+      "courseNotFound": "Curso no encontrado."
+    },
+    "detail": {
+      "backToCourses": "Todos los cursos",
+      "lessons": "lecciones",
+      "completed": "Completado",
+      "play": "Reproducir"
+    },
+    "lesson": {
+      "backToCourse": "Volver al curso",
+      "practiceBoard": "Tablero de práctica",
+      "markComplete": "Marcar como completada",
+      "completed": "Completado"
+    },
+    "quiz": {
+      "loading": "Cargando cuestionario...",
+      "questions": "preguntas",
+      "toPass": "para aprobar",
+      "maxAttempts": "Máx. {count} intentos",
+      "startQuiz": "Empezar cuestionario",
+      "submitAnswers": "Enviar respuestas",
+      "passed": "¡Aprobado!",
+      "notPassed": "No aprobado",
+      "score": "Puntuación",
+      "percentage": "Porcentaje",
+      "congratulations": "¡Enhorabuena! Has aprobado el cuestionario.",
+      "tryAgain": "Necesitas un {percent}% más para aprobar. Inténtalo de nuevo.",
+      "correct": "¡Correcto!",
+      "incorrect": "Incorrecto."
+    },
+    "lessonNotFound": "Lección no encontrada.",
+    "backToCourse": "Volver al curso",
+    "minutes": "min",
+    "error": {
+      "notFound": "Curso no encontrado"
+    }
+  },
+  "dashboard": {
+    "welcome": "Bienvenido de nuevo",
+    "welcomeName": "Bienvenido de nuevo, {name}",
+    "subtitle": "Continúa tu viaje ajedrecístico",
+    "stats": {
+      "completed": "Completado",
+      "courses": "Cursos",
+      "attempts": "Intentos",
+      "streak": "Racha",
+      "xp": "XP",
+      "level": "Nivel {level}"
+    },
+    "myCourses": "Mis cursos",
+    "lessons": "lecciones",
+    "continue": "Continuar",
+    "noCourses": "No hay cursos disponibles. ¡Explora el catálogo de cursos para empezar!",
+    "thisWeek": "Esta semana",
+    "activitiesThisWeek": "{count} actividades esta semana",
+    "recentActivity": "Actividad reciente",
+    "noActivity": "Aún no hay actividad. ¡Empieza un curso para ver tu progreso aquí!",
+    "analysis": "Tablero de análisis",
+    "moves": "Jugadas",
+    "importExport": "Importar / Exportar",
+    "importPgn": "Importar PGN",
+    "import": "Importar",
+    "exportPgn": "Exportar PGN",
+    "pgnCopied": "¡PGN copiado al portapapeles!",
+    "invalidPgn": "PGN no válido",
+    "makeFirstMove": "Haz una jugada para empezar",
+    "gameAnalysis": "Análisis de partida",
+    "analyzeGame": "Analizar partida",
+    "analyzing": "Analizando...",
+    "engineError": "Error del motor",
+    "accuracy": "Precisión",
+    "blundersFound": "Errores graves",
+    "bestMove": "Mejor",
+    "noBlunders": "¡No se encontraron errores graves! Partida sólida.",
+    "moveByMove": "Jugada a jugada",
+    "dailyPuzzle": "Problema diario",
+    "puzzleRush": "Puzzle Rush",
+    "importGames": "Importar partidas",
+    "username": "Nombre de usuario",
+    "importing": "Importando...",
+    "noGamesFound": "No se encontraron partidas.",
+    "uploadPgnFile": "Subir archivo PGN",
+    "chooseFile": "Elegir archivo .pgn",
+    "pgnPlaceholder": "Pega el PGN aquí...",
+    "fen": "FEN",
+    "openingExplorer": "Explorador de aperturas",
+    "loading": "Cargando...",
+    "loadStats": "Cargar estadísticas",
+    "openingLoadError": "Error al cargar las estadísticas de apertura",
+    "openingMoveColumn": "Jugada",
+    "openingWhiteColumn": "Blancas",
+    "openingBlackColumn": "Negras",
+    "openingDrawColumn": "Tablas",
+    "openingTotalColumn": "Total",
+    "openingInstructions": "Haz clic en \"Cargar estadísticas\" para ver las estadísticas de apertura de esta posición.",
+    "platformChesscom": "Chess.com",
+    "platformLichess": "Lichess",
+    "usernamePlaceholder": "Introduce nombre de usuario",
+    "gamesFoundTitle": "{count} partida(s) encontrada(s)",
+    "importFailed": "Error al importar",
+    "myProgress": "Mi progreso",
+    "totalLessons": "Total de lecciones",
+    "timeSpent": "Tiempo dedicado",
+    "avgScore": "Puntuación media",
+    "courseProgress": "Progreso del curso",
+    "notifications": "Notificaciones",
+    "markAllRead": "Marcar todo leído",
+    "noNotifications": "Aún no hay notificaciones",
+    "socialFeed": "Feed social",
+    "post": "Publicar",
+    "refresh": "Actualizar",
+    "shareThoughts": "Comparte tus ideas...",
+    "writeComment": "Escribe un comentario...",
+    "noPosts": "Aún no hay publicaciones. ¡Sé el primero en compartir!",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "photo": "Foto",
+    "confirmDelete": "¿Eliminar esta publicación?",
+    "backToDashboard": "Volver al panel",
+    "joinGroup": "Unirse al grupo",
+    "leaveGroup": "Salir del grupo",
+    "members": "Miembros",
+    "noMembers": "Aún no hay miembros.",
+    "joinTournament": "Unirse al torneo",
+    "leaveTournament": "Salir del torneo",
+    "players": "Jugadores",
+    "noPlayers": "Aún no hay jugadores.",
+    "image": "Imagen",
+    "social": "Social",
+    "feedAndCommunity": "Feed y comunidad",
+    "leaderboard": "Clasificación",
+    "topPlayers": "Mejores jugadores",
+    "unknownLesson": "desconocida",
+    "anonymous": "Anónimo",
+    "score": "Puntuación",
+    "joined": "Unido",
+    "completionRate": "Tasa de finalización",
+    "completedWithCount": "Completado ({count})",
+    "remainingWithCount": "Restante ({count})",
+    "weeklyActivity": "Actividad semanal",
+    "lessonsCount": "{count} lecciones",
+    "thisWeekSummary": "Esta semana: {lessons} lecciones, {xp} XP conseguidos",
+    "tournaments": "Torneos",
+    "tournamentNamePlaceholder": "Nombre del torneo",
+    "create": "Crear",
+    "playersCount": "jugadores",
+    "join": "Unirse",
+    "noTournaments": "Aún no hay torneos.",
+    "groups": "Grupos",
+    "groupNamePlaceholder": "Nombre del grupo",
+    "descriptionOptionalPlaceholder": "Descripción (opcional)",
+    "createGroup": "Crear grupo",
+    "membersCount": "miembros",
+    "noGroups": "Aún no hay grupos.",
+    "imagePreview": "Vista previa",
+    "removeImage": "Quitar imagen",
+    "postImage": "Publicar",
+    "unknownMember": "Desconocido",
+    "joinedDate": "Se unió",
+    "topPlayersByXp": "Mejores jugadores por XP",
+    "level": "Nivel",
+    "rating": "Puntuación",
+    "xpShort": "XP",
+    "noPlayersYet": "¡Aún no hay jugadores!",
+    "roleStudent": "ESTUDIANTE",
+    "followers": "seguidores",
+    "following": "siguiendo",
+    "likes": "me gusta",
+    "comments": "comentarios",
+    "recentPosts": "Publicaciones recientes",
+    "noPostsYet": "Aún no hay publicaciones.",
+    "achievements": "Logros",
+    "noAchievements": "Aún no hay logros.",
+    "invalidPgnFile": "Archivo PGN no válido"
+  },
+  "groups": {
+    "title": "Grupos",
+    "createGroup": "Crear grupo",
+    "groupName": "Nombre del grupo",
+    "description": "Descripción",
+    "join": "Unirse",
+    "leave": "Salir",
+    "validation": {
+      "nameRequired": "Nombre obligatorio"
+    }
+  },
+  "tournaments": {
+    "title": "Torneos",
+    "createTournament": "Crear torneo",
+    "tournamentName": "Nombre del torneo",
+    "type": "Tipo",
+    "maxPlayers": "Máx. jugadores",
+    "join": "Unirse",
+    "leave": "Salir",
+    "validation": {
+      "nameRequired": "Nombre obligatorio"
+    },
+    "error": {
+      "full": "Torneo completo"
+    }
+  },
+  "puzzles": {
+    "title": "Problemas",
+    "subtitle": "Agudiza tu táctica",
+    "dailyPuzzle": "Problema diario",
+    "puzzleRush": "Puzzle Rush",
+    "streak": "Racha",
+    "streakCount": "{count} resueltos seguidos",
+    "timeRemaining": "Tiempo",
+    "score": "Puntuación",
+    "correct": "¡Correcto!",
+    "wrong": "Incorrecto",
+    "reset": "Reiniciar",
+    "hint": "Pista",
+    "skip": "Saltar",
+    "nextPuzzle": "Siguiente problema",
+    "startRush": "Empezar Rush",
+    "rushTime": "5:00",
+    "rushOver": "¡Se acabó el tiempo!",
+    "finalScore": "Puntuación final",
+    "puzzlesSolved": "Problemas resueltos",
+    "noPuzzles": "No hay problemas disponibles.",
+    "dailyLoadError": "Error al cargar el problema diario",
+    "validation": {
+      "fieldsRequired": "puzzleId y solved son obligatorios"
+    },
+    "error": {
+      "notFound": "Problema no encontrado",
+      "noneAvailable": "No hay problemas disponibles",
+      "recordFailed": "Error al registrar el intento"
+    }
+  },
+  "admin": {
+    "nav": {
+      "dashboard": "Panel",
+      "courses": "Cursos",
+      "posts": "Publicaciones",
+      "users": "Usuarios",
+      "settings": "Ajustes",
+      "brand": "Admin"
+    },
+    "dashboard": {
+      "heading": "Panel de administración",
+      "subtitle": "Gestiona tu escuela de ajedrez",
+      "courses": "Cursos",
+      "users": "Usuarios",
+      "quickActions": "Acciones rápidas",
+      "manageCourses": "Gestionar cursos",
+      "managePosts": "Gestionar publicaciones"
+    },
+    "accessDenied": "Acceso denegado.",
+    "courses": {
+      "heading": "Gestionar cursos",
+      "subtitle": "Administra tu catálogo de cursos",
+      "newCourse": "Nuevo curso",
+      "editCourse": "Editar curso",
+      "deleteCourse": "Eliminar curso",
+      "noCourses": "Aún no hay cursos. ¡Crea tu primer curso!",
+      "createCourse": "Crear curso",
+      "courseTitle": "Título",
+      "courseDescription": "Descripción",
+      "courseLevel": "Nivel",
+      "coursePublished": "Publicado",
+      "draft": "Borrador",
+      "edit": "Editar",
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "modules": "Módulos",
+      "addModule": "Añadir módulo",
+      "deleteModule": "Eliminar módulo",
+      "moduleTitle": "Título del módulo",
+      "lessons": "Lecciones",
+      "newLesson": "Nueva lección",
+      "deleteLesson": "Eliminar lección",
+      "lessonTitle": "Título de la lección",
+      "lessonType": {
+        "text": "Texto",
+        "video": "Vídeo",
+        "quiz": "Cuestionario"
+      },
+      "lessonContent": "Contenido",
+      "lessonVideoUrl": "URL del vídeo",
+      "lessonDuration": "Duración (minutos)",
+      "noLessons": "Aún no hay lecciones.",
+      "imageUrl": "URL de la imagen",
+      "courseInfo": "Información del curso",
+      "status": "Estado",
+      "createLesson": "Crear lección",
+      "level": {
+        "beginner": "Principiante (0-500)",
+        "improver": "Intermedio (500-800)",
+        "intermediate": "Intermedio-Avanzado (800-1200)",
+        "advanced": "Avanzado (1200-1600)",
+        "club": "Club (1600-2000)"
+      },
+      "imageUrlPlaceholder": "https://...",
+      "courseId": "ID",
+      "videoUrlPlaceholder": "https://..."
+    },
+    "posts": {
+      "heading": "Gestionar publicaciones",
+      "subtitle": "Administra el contenido del blog",
+      "newPost": "Nueva publicación",
+      "editPost": "Editar publicación",
+      "deletePost": "Eliminar publicación",
+      "noPosts": "Aún no hay publicaciones.",
+      "createPost": "Crear publicación",
+      "postTitle": "Título",
+      "postContent": "Contenido",
+      "postImage": "URL de la imagen",
+      "postCategory": "Categoría",
+      "edit": "Editar",
+      "save": "Guardar",
+      "publish": "Publicar",
+      "cancel": "Cancelar",
+      "pgn": "PGN"
+    },
+    "brand": "Admin",
+    "validation": {
+      "courseIdRequired": "courseId es obligatorio",
+      "titleAndCourseIdRequired": "Título y courseId son obligatorios",
+      "idAndTitleRequired": "ID y título son obligatorios",
+      "moduleIdRequired": "moduleId es obligatorio",
+      "titleModuleIdCourseIdRequired": "Título, moduleId y courseId son obligatorios",
+      "titleRequired": "El título es obligatorio",
+      "idAndContentRequired": "ID y contenido son obligatorios"
+    }
+  },
+  "common": {
+    "error": {
+      "unauthorized": "No autorizado",
+      "forbidden": "Prohibido",
+      "notFound": "No encontrado",
+      "failed": "Fallido",
+      "internalServerError": "Error interno del servidor",
+      "notAuthenticated": "No autenticado"
+    },
+    "validation": {
+      "idRequired": "ID es obligatorio",
+      "contentRequired": "El contenido es obligatorio"
+    }
+  },
+  "chess": {
+    "undo": "Deshacer",
+    "reset": "Reiniciar",
+    "engineAnalysis": "Análisis del motor",
+    "evaluate": "Evaluar",
+    "topLines": "Mejores líneas",
+    "score": "Puntuación",
+    "depth": "Profundidad",
+    "best": "Mejor",
+    "notAvailable": "N/D",
+    "principalVariation": "PV",
+    "engineError": "Error del motor",
+    "aiCoach": "Entrenador IA",
+    "analyzing": "Analizando...",
+    "explainPosition": "Explicar posición",
+    "aiCoachUnavailable": "Entrenador IA no disponible. Añade una API key para activarlo.",
+    "engine": {
+      "initFailed": "Error al inicializar el motor",
+      "evalTimedOut": "La evaluación del motor agotó el tiempo",
+      "notInitialized": "Motor no inicializado"
+    },
+    "validation": {
+      "pgnRequired": "PGN es obligatorio",
+      "invalidPgn": "PGN no válido",
+      "noMoves": "No hay jugadas en el PGN",
+      "usernameRequired": "Nombre de usuario obligatorio"
+    },
+    "error": {
+      "analysisFailed": "Error en el análisis",
+      "importFailed": "Error al importar partidas",
+      "lichessUserNotFound": "Usuario de Lichess no encontrado",
+      "ratingHistoryNotFound": "Historial de puntuación no encontrado",
+      "lichessGamesNotFound": "Partidas no encontradas en Lichess",
+      "dailyPuzzleFailed": "Error al obtener el problema diario",
+      "openingExplorerFailed": "Error al obtener el explorador de aperturas",
+      "chesscomProfileNotFound": "Perfil de Chess.com no encontrado",
+      "chesscomStatsNotFound": "Estadísticas de Chess.com no encontradas",
+      "chesscomGamesNotFound": "Partidas no encontradas en Chess.com"
+    }
+  },
+  "achievements": {
+    "title": {
+      "firstPuzzle": "Primer problema resuelto",
+      "tenPuzzles": "Aprendiz de problemas",
+      "hundredPuzzles": "Maestro de problemas",
+      "firstLesson": "Primeros pasos",
+      "firstCourse": "Graduado del curso",
+      "streak7": "Guerrero semanal",
+      "streak30": "Maestro mensual",
+      "firstPost": "Principiante social",
+      "firstComment": "Conversador"
+    },
+    "desc": {
+      "firstPuzzle": "Resolviste tu primer problema",
+      "tenPuzzles": "Resolviste 10 problemas",
+      "hundredPuzzles": "Resolviste 100 problemas",
+      "firstLesson": "Completaste tu primera lección",
+      "firstCourse": "Completaste tu primer curso",
+      "streak7": "Racha de 7 días",
+      "streak30": "Racha de 30 días",
+      "firstPost": "Creaste tu primera publicación",
+      "firstComment": "Escribiste tu primer comentario"
+    }
+  },
+  "levels": {
+    "bronze": "Bronce",
+    "silver": "Plata",
+    "gold": "Oro",
+    "platinum": "Platino",
+    "diamond": "Diamante",
+    "master": "Maestro",
+    "grandmaster": "Gran Maestro"
+  },
+  "plans": {
+    "standard": "Estándar",
+    "premium": "Premium",
+    "vip": "VIP"
+  },
+  "notifications": {
+    "likedYourPost": "A {name} le gustó tu publicación",
+    "commentedOnYourPost": "{name} comentó en tu publicación",
+    "followedYou": "{name} empezó a seguirte"
+  },
+  "theme": {
+    "toggleTheme": "Cambiar tema"
+  },
+  "leaderboard": {
+    "error": {
+      "fetchFailed": "Error al obtener la clasificación"
+    }
+  },
+  "progress": {
+    "validation": {
+      "lessonIdRequired": "lessonId es obligatorio"
+    }
+  },
+  "lessons": {
+    "error": {
+      "notFound": "Lección no encontrada"
+    },
+    "validation": {
+      "queryRequired": "id, moduleId o courseId es obligatorio"
+    }
+  },
+  "comments": {
+    "error": {
+      "fetchFailed": "Error al obtener los comentarios",
+      "addFailed": "Error al añadir el comentario"
+    }
+  },
+  "users": {
+    "error": {
+      "cannotFollowSelf": "No puedes seguirte a ti mismo",
+      "toggleFollowFailed": "Error al cambiar el estado de seguimiento"
+    }
+  },
+  "upload": {
+    "error": {
+      "noFile": "No se proporcionó ningún archivo",
+      "failed": "Error al subir el archivo"
+    }
+  },
+  "payments": {
+    "error": {
+      "invalidPlan": "Plan no válido",
+      "checkoutFailed": "Error al crear la sesión de pago",
+      "noCustomer": "No se encontró cliente de Stripe",
+      "portalFailed": "Error al crear el portal",
+      "webhookError": "Error del webhook"
+    }
+  },
+  "xp": {
+    "error": {
+      "invalidAction": "Acción no válida"
+    }
+  },
+  "ai": {
+    "error": {
+      "fenRequired": "FEN obligatorio",
+      "unavailable": "IA no disponible",
+      "allProvidersFailed": "Todos los proveedores de IA fallaron"
+    }
+  },
+  "cron": {
+    "error": {
+      "fetchPuzzleFromLichess": "Error al obtener el problema de Lichess"
+    }
+  },
+  "posts": {
+    "error": {
+      "fetchFailed": "Error al obtener las publicaciones",
+      "createFailed": "Error al crear la publicación",
+      "updateFailed": "Error al actualizar la publicación",
+      "deleteFailed": "Error al eliminar la publicación",
+      "toggleLikeFailed": "Error al cambiar el me gusta"
+    },
+    "validation": {
+      "idAndContentRequired": "ID y contenido son obligatorios"
+    }
+  },
+  "quizzes": {
+    "error": {
+      "notFound": "Cuestionario no encontrado",
+      "maxAttempts": "Máximo de intentos alcanzado",
+      "attemptNotFound": "Intento no encontrado",
+      "alreadySubmitted": "Ya enviado"
+    }
+  }
+}
