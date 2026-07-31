@@ -13,9 +13,10 @@ import { LessonViewer } from './lesson-viewer';
 export default async function LessonPage(props: { params: Promise<{ id: string; lessonId: string }> }) {
   const { id: courseId, lessonId } = await props.params;
   const session = await auth();
+  const t = await getTranslations('courses');
 
   const lesson = await db.select().from(lessons).where(eq(lessons.id, lessonId)).then(r => r[0]);
-  if (!lesson) return <div className="min-h-screen flex items-center justify-center"><p className="text-muted-foreground">Lesson not found.</p></div>;
+  if (!lesson) return <div className="min-h-screen flex items-center justify-center"><p className="text-muted-foreground">{t('lessonNotFound')}</p></div>;
 
   const mod = lesson.moduleId ? await db.select().from(modules).where(eq(modules.id, lesson.moduleId)).then(r => r[0]) : null;
   const course = await db.select().from(courses).where(eq(courses.id, courseId)).then(r => r[0]);
@@ -35,7 +36,7 @@ export default async function LessonPage(props: { params: Promise<{ id: string; 
       <Container size="lg">
         <div className="mb-6">
           <Button variant="ghost" size="sm" render={<Link href={`/courses/${courseId}`} />}>
-            <ArrowLeft className="h-4 w-4 mr-1" /> Back to Course
+            <ArrowLeft className="h-4 w-4 mr-1" /> {t('backToCourse')}
           </Button>
         </div>
         <div className="grid gap-8 lg:grid-cols-[1fr_300px]">

@@ -65,17 +65,17 @@ export default function NewCoursePage() {
                 <Select name="level" defaultValue="BEGINNER">
                   <SelectTrigger><SelectValue /></SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="BEGINNER">Beginner (0-500)</SelectItem>
-                    <SelectItem value="IMPROVER">Improver (500-800)</SelectItem>
-                    <SelectItem value="INTERMEDIATE">Intermediate (800-1200)</SelectItem>
-                    <SelectItem value="ADVANCED">Advanced (1200-1600)</SelectItem>
-                    <SelectItem value="CLUB">Club (1600-2000)</SelectItem>
+                    <SelectItem value="BEGINNER">{t('level.beginner')}</SelectItem>
+                    <SelectItem value="IMPROVER">{t('level.improver')}</SelectItem>
+                    <SelectItem value="INTERMEDIATE">{t('level.intermediate')}</SelectItem>
+                    <SelectItem value="ADVANCED">{t('level.advanced')}</SelectItem>
+                    <SelectItem value="CLUB">{t('level.club')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="image">{t('imageUrl')}</Label>
-                <Input id="image" name="image" placeholder="https://..." />
+                <Input id="image" name="image" placeholder={t('imageUrlPlaceholder')} />
               </div>
               <Button type="submit" className="gap-2" disabled={loading}>
                 <Sparkles className="h-4 w-4" /> {t('createCourse')}

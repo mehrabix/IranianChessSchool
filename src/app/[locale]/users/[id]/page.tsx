@@ -48,7 +48,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ id: st
     <section className="py-8">
       <Container size="md">
         <Link href="/dashboard" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground mb-6">
-          <ArrowLeft className="h-3.5 w-3.5" /> Back to Dashboard
+          <ArrowLeft className="h-3.5 w-3.5" /> {t('backToDashboard')}
         </Link>
 
         <Card className="mb-6">
@@ -59,19 +59,19 @@ export default async function ProfilePage({ params }: { params: Promise<{ id: st
                 <AvatarFallback className="text-2xl">{user.name?.[0] || 'U'}</AvatarFallback>
               </Avatar>
               <div className="flex-1">
-                <h1 className="text-2xl font-bold">{user.name || 'Anonymous'}</h1>
+                <h1 className="text-2xl font-bold">{user.name || t('anonymous')}</h1>
                 <p className="text-sm text-muted-foreground">{user.email}</p>
                 <div className="flex items-center gap-4 mt-3">
                   <Badge variant="outline" className="gap-1">
                     <Star className="h-3 w-3" /> {user.xp || 0} XP
                   </Badge>
                   <Badge variant="outline">Level {user.level || 1}</Badge>
-                  <Badge variant="secondary">{user.role || 'STUDENT'}</Badge>
+                  <Badge variant="secondary">{user.role || t('roleStudent')}</Badge>
                 </div>
                 <div className="flex items-center gap-4 mt-3 text-sm text-muted-foreground">
-                  <span>{followerCount[0]?.count || 0} followers</span>
-                  <span>{followingCount[0]?.count || 0} following</span>
-                  <span>{completedProgress[0]?.count || 0} lessons</span>
+                  <span>{followerCount[0]?.count || 0} {t('followers')}</span>
+                  <span>{followingCount[0]?.count || 0} {t('following')}</span>
+                  <span>{completedProgress[0]?.count || 0} {t('lessons')}</span>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ id: st
           <Card>
             <CardHeader>
               <CardTitle className="text-sm flex items-center gap-2">
-                <Zap className="h-4 w-4" /> Recent Posts
+                <Zap className="h-4 w-4" /> {t('recentPosts')}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -91,14 +91,14 @@ export default async function ProfilePage({ params }: { params: Promise<{ id: st
                   <div key={post.id} className="text-sm border-b pb-2 last:border-0">
                     <p>{post.content}</p>
                     <div className="flex items-center gap-3 mt-1 text-xs text-muted-foreground">
-                      <span>{post.likes ?? 0} likes</span>
-                      <span>{post.comments ?? 0} comments</span>
+                      <span>{post.likes ?? 0} {t('likes')}</span>
+                      <span>{post.comments ?? 0} {t('comments')}</span>
                       <span>{post.createdAt ? new Date(Number(post.createdAt) * 1000).toLocaleDateString() : ''}</span>
                     </div>
                   </div>
                 ))}
                 {userPosts.length === 0 && (
-                  <p className="text-sm text-muted-foreground">No posts yet.</p>
+                  <p className="text-sm text-muted-foreground">{t('noPostsYet')}</p>
                 )}
               </div>
             </CardContent>
@@ -107,7 +107,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ id: st
           <Card>
             <CardHeader>
               <CardTitle className="text-sm flex items-center gap-2">
-                <Trophy className="h-4 w-4" /> Achievements
+                <Trophy className="h-4 w-4" /> {t('achievements')}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -122,7 +122,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ id: st
                   </div>
                 ))}
                 {userAchievements.length === 0 && (
-                  <p className="text-sm text-muted-foreground">No achievements yet.</p>
+                  <p className="text-sm text-muted-foreground">{t('noAchievements')}</p>
                 )}
               </div>
             </CardContent>

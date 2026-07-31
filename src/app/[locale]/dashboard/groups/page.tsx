@@ -8,8 +8,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Loader2, Users, Plus, LogIn } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function GroupsPage() {
+  const t = useTranslations('dashboard');
   const { data: session } = useSession();
   const [groups, setGroups] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -49,14 +51,14 @@ export default function GroupsPage() {
   return (
     <section className="py-8">
       <Container size="sm">
-        <h1 className="text-3xl font-bold mb-6">Groups</h1>
+        <h1 className="text-3xl font-bold mb-6">{t('groups')}</h1>
         {session && (
           <Card className="mb-6">
             <CardContent className="pt-6 space-y-3">
-              <Input value={name} onChange={e => setName(e.target.value)} placeholder="Group name" />
-              <Input value={desc} onChange={e => setDesc(e.target.value)} placeholder="Description (optional)" />
+              <Input value={name} onChange={e => setName(e.target.value)} placeholder={t('groupNamePlaceholder')} />
+              <Input value={desc} onChange={e => setDesc(e.target.value)} placeholder={t('descriptionOptionalPlaceholder')} />
               <Button onClick={handleCreate} disabled={creating || !name.trim()} className="gap-2">
-                <Plus className="h-4 w-4" /> Create Group
+                <Plus className="h-4 w-4" /> {t('createGroup')}
               </Button>
             </CardContent>
           </Card>
@@ -70,18 +72,18 @@ export default function GroupsPage() {
                   {g.description && <p className="text-xs text-muted-foreground">{g.description}</p>}
                   <div className="flex items-center gap-2 mt-1">
                     <Badge variant="secondary" className="text-xs">{g.category}</Badge>
-                    <span className="text-xs text-muted-foreground">{g.memberCount || 0} members</span>
+                    <span className="text-xs text-muted-foreground">{g.memberCount || 0} {t('membersCount')}</span>
                   </div>
                 </div>
                 {session && (
                   <Button size="sm" variant={joined.has(g.id) ? 'default' : 'outline'} onClick={() => toggleJoin(g.id)}>
-                    {joined.has(g.id) ? 'Leave' : 'Join'}
+                    {joined.has(g.id) ? t('leave') : t('join')}
                   </Button>
                 )}
               </CardContent>
             </Card>
           ))}
-          {groups.length === 0 && <p className="text-center text-muted-foreground py-12">No groups yet.</p>}
+          {groups.length === 0 && <p className="text-center text-muted-foreground py-12">{t('noGroups')}</p>}
         </div>
       </Container>
     </section>

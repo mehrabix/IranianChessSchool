@@ -27,7 +27,8 @@
     "followUs": "Suivez-nous",
     "contact": "Contact",
     "email": "info@iranianchessschool.com",
-    "copyright": "© {year} Iranian Chess School. Tous droits réservés."
+    "copyright": "© {year} Iranian Chess School. Tous droits réservés.",
+    "social": "Social"
   },
   "home": {
     "hero": {
@@ -258,7 +259,8 @@
       "post6ReadTime": "6 min",
       "post6Category": "Finales",
       "readMore": "Lire la suite"
-    }
+    },
+    "previewPlaceholder": "Aperçu"
   },
   "contact": {
     "hero": {
@@ -293,7 +295,9 @@
       "instagram": "Instagram",
       "youtube": "YouTube",
       "telegram": "Telegram"
-    }
+    },
+    "validation": "Validation",
+    "success": "Succès"
   },
   "kids": {
     "hero": {
@@ -463,14 +467,17 @@
       "google": "Google",
       "github": "GitHub",
       "hasAccount": "Déjà un compte ?",
-      "signIn": "Se connecter"
+      "signIn": "Se connecter",
+      "emailExists": "Cet email est déjà utilisé"
     },
     "error": {
       "title": "Erreur d'authentification",
       "description": "Une erreur s'est produite lors de la connexion",
       "message": "Veuillez réessayer ou contacter le support si le problème persiste.",
-      "tryAgain": "Réessayer"
-    }
+      "tryAgain": "Réessayer",
+      "registrationFailed": "Échec de l'inscription"
+    },
+    "validation": "Validation"
   },
   "courses": {
     "hero": {
@@ -508,7 +515,11 @@
       "tryAgain": "Il vous manque {percent}% pour réussir. Réessayez.",
       "correct": "Correct !",
       "incorrect": "Incorrect."
-    }
+    },
+    "lessonNotFound": "Leçon introuvable",
+    "backToCourse": "Retour au cours",
+    "minutes": "minutes",
+    "error": "Erreur"
   },
   "dashboard": {
     "welcome": "Bon retour",
@@ -602,7 +613,53 @@
     "leaveTournament": "Quitter",
     "players": "Joueurs",
     "noPlayers": "Aucun joueur.",
-    "image": "Image"
+    "image": "Image",
+    "social": "Social",
+    "feedAndCommunity": "Fil et communauté",
+    "leaderboard": "Classement",
+    "topPlayers": "Meilleurs joueurs",
+    "unknownLesson": "Leçon inconnue",
+    "anonymous": "Anonyme",
+    "score": "Score",
+    "joined": "Inscrit",
+    "completionRate": "Taux de complétion",
+    "completedWithCount": "{count} terminé(s)",
+    "remainingWithCount": "{count} restant(s)",
+    "weeklyActivity": "Activité hebdomadaire",
+    "lessonsCount": "{count} leçons",
+    "thisWeekSummary": "Cette semaine: {lessons} leçons, {xp} XP gagnés",
+    "tournaments": "Tournois",
+    "tournamentNamePlaceholder": "Nom du tournoi",
+    "create": "Créer",
+    "playersCount": "{count} joueurs",
+    "join": "Rejoindre",
+    "noTournaments": "Aucun tournoi",
+    "groups": "Groupes",
+    "groupNamePlaceholder": "Nom du groupe",
+    "descriptionOptionalPlaceholder": "Description (optionnelle)",
+    "createGroup": "Créer un groupe",
+    "membersCount": "{count} membres",
+    "noGroups": "Aucun groupe",
+    "imagePreview": "Aperçu de l'image",
+    "removeImage": "Supprimer l'image",
+    "postImage": "Publier une image",
+    "unknownMember": "Membre inconnu",
+    "joinedDate": "Date d'inscription",
+    "topPlayersByXp": "Meilleurs joueurs par XP",
+    "level": "Niveau",
+    "rating": "Classement",
+    "xpShort": "XP",
+    "noPlayersYet": "Aucun joueur",
+    "roleStudent": "Élève",
+    "followers": "Abonnés",
+    "following": "Abonnements",
+    "likes": "J'aime",
+    "comments": "Commentaires",
+    "recentPosts": "Publications récentes",
+    "noPostsYet": "Aucune publication",
+    "achievements": "Réalisations",
+    "noAchievements": "Aucune réalisation",
+    "invalidPgnFile": "Fichier PGN invalide"
   },
   "groups": {
     "title": "Groupes",
@@ -610,7 +667,8 @@
     "groupName": "Nom du groupe",
     "description": "Description",
     "join": "Rejoindre",
-    "leave": "Quitter"
+    "leave": "Quitter",
+    "validation": "Validation"
   },
   "tournaments": {
     "title": "Tournois",
@@ -619,7 +677,9 @@
     "type": "Type",
     "maxPlayers": "Max Joueurs",
     "join": "Participer",
-    "leave": "Quitter"
+    "leave": "Quitter",
+    "validation": "Validation",
+    "error": "Erreur"
   },
   "admin": {
     "nav": {
@@ -627,7 +687,8 @@
       "courses": "Cours",
       "posts": "Articles",
       "users": "Utilisateurs",
-      "settings": "Paramètres"
+      "settings": "Paramètres",
+      "brand": "Admin"
     },
     "dashboard": {
       "heading": "Panneau d'administration",
@@ -663,7 +724,11 @@
       "newLesson": "Nouvelle leçon",
       "deleteLesson": "Supprimer la leçon",
       "lessonTitle": "Titre de la leçon",
-      "lessonType": "Type",
+      "lessonType": {
+        "text": "Texte",
+        "video": "Vidéo",
+        "quiz": "Quiz"
+      },
       "lessonContent": "Contenu",
       "lessonVideoUrl": "URL de la vidéo",
       "lessonDuration": "Durée (minutes)",
@@ -671,7 +736,17 @@
       "imageUrl": "URL de l'image",
       "courseInfo": "Infos du cours",
       "status": "Statut",
-      "createLesson": "Créer une leçon"
+      "createLesson": "Créer une leçon",
+      "level": {
+        "beginner": "Débutant (0-500)",
+        "improver": "En progression (500-800)",
+        "intermediate": "Intermédiaire (800-1200)",
+        "advanced": "Avancé (1200-1600)",
+        "club": "Club (1600-2000)"
+      },
+      "imageUrlPlaceholder": "URL de l'image",
+      "courseId": "ID du cours",
+      "videoUrlPlaceholder": "URL de la vidéo"
     },
     "posts": {
       "heading": "Gérer les articles",
@@ -688,8 +763,11 @@
       "edit": "Modifier",
       "save": "Enregistrer",
       "publish": "Publier",
-      "cancel": "Annuler"
-    }
+      "cancel": "Annuler",
+      "pgn": "PGN"
+    },
+    "brand": "Marque",
+    "validation": "Validation"
   },
   "puzzles": {
     "title": "Puzzles",
@@ -712,6 +790,27 @@
     "finalScore": "Score final",
     "puzzlesSolved": "Puzzles résolus",
     "noPuzzles": "Aucun puzzle disponible.",
-    "dailyLoadError": "Échec du chargement du puzzle du jour"
-  }
+    "dailyLoadError": "Échec du chargement du puzzle du jour",
+    "validation": "Validation",
+    "error": "Erreur"
+  },
+  "common": "Commun",
+  "chess": "Échecs",
+  "achievements": "Réalisations",
+  "levels": "Niveaux",
+  "plans": "Forfaits",
+  "notifications": "Notifications",
+  "theme": "Thème",
+  "leaderboard": "Classement",
+  "progress": "Progression",
+  "lessons": "Leçons",
+  "comments": "Commentaires",
+  "users": "Utilisateurs",
+  "upload": "Téléverser",
+  "payments": "Paiements",
+  "xp": "XP",
+  "ai": "IA",
+  "cron": "Planification",
+  "posts": "Publications",
+  "quizzes": "Quiz"
 }

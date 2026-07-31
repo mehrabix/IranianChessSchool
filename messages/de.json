@@ -27,7 +27,8 @@
     "followUs": "Folge uns",
     "contact": "Kontakt",
     "email": "info@iranianchessschool.com",
-    "copyright": "© {year} Iranian Chess School. Alle Rechte vorbehalten."
+    "copyright": "© {year} Iranian Chess School. Alle Rechte vorbehalten.",
+    "social": "Community"
   },
   "home": {
     "hero": {
@@ -258,7 +259,8 @@
       "post6ReadTime": "6 Min",
       "post6Category": "Endspiele",
       "readMore": "Weiterlesen"
-    }
+    },
+    "previewPlaceholder": "Vorschau"
   },
   "contact": {
     "hero": {
@@ -293,7 +295,9 @@
       "instagram": "Instagram",
       "youtube": "YouTube",
       "telegram": "Telegram"
-    }
+    },
+    "validation": "Validierung",
+    "success": "Erfolgreich gesendet"
   },
   "kids": {
     "hero": {
@@ -463,14 +467,17 @@
       "google": "Google",
       "github": "GitHub",
       "hasAccount": "Bereits ein Konto?",
-      "signIn": "Anmelden"
+      "signIn": "Anmelden",
+      "emailExists": "Diese E-Mail-Adresse existiert bereits"
     },
     "error": {
       "title": "Authentifizierungsfehler",
       "description": "Bei der Anmeldung ist ein Fehler aufgetreten",
       "message": "Bitte versuche es erneut oder kontaktiere den Support, falls das Problem weiterhin besteht.",
-      "tryAgain": "Erneut versuchen"
-    }
+      "tryAgain": "Erneut versuchen",
+      "registrationFailed": "Registrierung fehlgeschlagen"
+    },
+    "validation": "Validierung"
   },
   "courses": {
     "hero": {
@@ -508,7 +515,11 @@
       "tryAgain": "Du brauchst {percent}% mehr zum Bestehen. Versuche es erneut.",
       "correct": "Richtig!",
       "incorrect": "Falsch."
-    }
+    },
+    "lessonNotFound": "Lektion nicht gefunden",
+    "backToCourse": "Zurück zum Kurs",
+    "minutes": "Minuten",
+    "error": "Fehler"
   },
   "dashboard": {
     "welcome": "Willkommen zurück",
@@ -602,7 +613,53 @@
     "leaveTournament": "Verlassen",
     "players": "Spieler",
     "noPlayers": "Noch keine Spieler.",
-    "image": "Bild"
+    "image": "Bild",
+    "social": "Community",
+    "feedAndCommunity": "Feed & Community",
+    "leaderboard": "Rangliste",
+    "topPlayers": "Beste Spieler",
+    "unknownLesson": "Unbekannte Lektion",
+    "anonymous": "Anonym",
+    "score": "Punktzahl",
+    "joined": "Beigetreten",
+    "completionRate": "Abschlussrate",
+    "completedWithCount": "{count} abgeschlossen",
+    "remainingWithCount": "{count} verbleibend",
+    "weeklyActivity": "Wöchentliche Aktivität",
+    "lessonsCount": "{count} Lektionen",
+    "thisWeekSummary": "Diese Woche: {lessons} Lektionen, {xp} XP verdient",
+    "tournaments": "Turniere",
+    "tournamentNamePlaceholder": "Turniername",
+    "create": "Erstellen",
+    "playersCount": "{count} Spieler",
+    "join": "Beitreten",
+    "noTournaments": "Keine Turniere",
+    "groups": "Gruppen",
+    "groupNamePlaceholder": "Gruppenname",
+    "descriptionOptionalPlaceholder": "Beschreibung (optional)",
+    "createGroup": "Gruppe erstellen",
+    "membersCount": "{count} Mitglieder",
+    "noGroups": "Keine Gruppen",
+    "imagePreview": "Bildvorschau",
+    "removeImage": "Bild entfernen",
+    "postImage": "Bild posten",
+    "unknownMember": "Unbekanntes Mitglied",
+    "joinedDate": "Beitrittsdatum",
+    "topPlayersByXp": "Beste nach EP",
+    "level": "Stufe",
+    "rating": "Wertung",
+    "xpShort": "EP",
+    "noPlayersYet": "Noch keine Spieler",
+    "roleStudent": "Schüler",
+    "followers": "Follower",
+    "following": "Folgt",
+    "likes": "Gefällt mir",
+    "comments": "Kommentare",
+    "recentPosts": "Aktuelle Beiträge",
+    "noPostsYet": "Noch keine Beiträge",
+    "achievements": "Erfolge",
+    "noAchievements": "Keine Erfolge",
+    "invalidPgnFile": "Ungültige PGN-Datei"
   },
   "groups": {
     "title": "Gruppen",
@@ -610,7 +667,8 @@
     "groupName": "Gruppenname",
     "description": "Beschreibung",
     "join": "Beitreten",
-    "leave": "Verlassen"
+    "leave": "Verlassen",
+    "validation": "Validierung"
   },
   "tournaments": {
     "title": "Turniere",
@@ -619,7 +677,9 @@
     "type": "Typ",
     "maxPlayers": "Max. Spieler",
     "join": "Teilnehmen",
-    "leave": "Verlassen"
+    "leave": "Verlassen",
+    "validation": "Validierung",
+    "error": "Fehler"
   },
   "admin": {
     "nav": {
@@ -627,7 +687,8 @@
       "courses": "Kurse",
       "posts": "Beiträge",
       "users": "Benutzer",
-      "settings": "Einstellungen"
+      "settings": "Einstellungen",
+      "brand": "Admin"
     },
     "dashboard": {
       "heading": "Admin-Dashboard",
@@ -663,7 +724,11 @@
       "newLesson": "Neue Lektion",
       "deleteLesson": "Lektion löschen",
       "lessonTitle": "Lektionstitel",
-      "lessonType": "Typ",
+      "lessonType": {
+        "text": "Text",
+        "video": "Video",
+        "quiz": "Quiz"
+      },
       "lessonContent": "Inhalt",
       "lessonVideoUrl": "Video-URL",
       "lessonDuration": "Dauer (Minuten)",
@@ -671,7 +736,17 @@
       "imageUrl": "Bild-URL",
       "courseInfo": "Kursinfo",
       "status": "Status",
-      "createLesson": "Lektion erstellen"
+      "createLesson": "Lektion erstellen",
+      "level": {
+        "beginner": "Anfänger (0-500)",
+        "improver": "Fortgeschritten (500-800)",
+        "intermediate": "Mittelstufe (800-1200)",
+        "advanced": "Fortgeschritten (1200-1600)",
+        "club": "Vereinsspieler (1600-2000)"
+      },
+      "imageUrlPlaceholder": "Bild-URL",
+      "courseId": "Kurs-ID",
+      "videoUrlPlaceholder": "Video-URL"
     },
     "posts": {
       "heading": "Beiträge verwalten",
@@ -688,8 +763,11 @@
       "edit": "Bearbeiten",
       "save": "Speichern",
       "publish": "Veröffentlichen",
-      "cancel": "Abbrechen"
-    }
+      "cancel": "Abbrechen",
+      "pgn": "PGN"
+    },
+    "brand": "Marke",
+    "validation": "Validierung"
   },
   "puzzles": {
     "title": "Rätsel",
@@ -712,6 +790,27 @@
     "finalScore": "Endpunktzahl",
     "puzzlesSolved": "Gelöste Rätsel",
     "noPuzzles": "Keine Rätsel verfügbar.",
-    "dailyLoadError": "Fehler beim Laden des täglichen Rätsels"
-  }
+    "dailyLoadError": "Fehler beim Laden des täglichen Rätsels",
+    "validation": "Validierung",
+    "error": "Fehler"
+  },
+  "common": "Allgemein",
+  "chess": "Schach",
+  "achievements": "Erfolge",
+  "levels": "Stufen",
+  "plans": "Pläne",
+  "notifications": "Benachrichtigungen",
+  "theme": "Design",
+  "leaderboard": "Rangliste",
+  "progress": "Fortschritt",
+  "lessons": "Lektionen",
+  "comments": "Kommentare",
+  "users": "Benutzer",
+  "upload": "Hochladen",
+  "payments": "Zahlungen",
+  "xp": "EP",
+  "ai": "KI",
+  "cron": "Cron",
+  "posts": "Beiträge",
+  "quizzes": "Quiz"
 }

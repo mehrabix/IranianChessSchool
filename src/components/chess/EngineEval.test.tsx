@@ -7,6 +7,10 @@ const mockEvaluate = vi.fn();
 const mockGetTopLines = vi.fn();
 let mockError: string | null = null;
 
+vi.mock('next-intl', () => ({
+  useTranslations: () => (key: string) => key,
+}));
+
 vi.mock('@/hooks/useEngine', () => ({
   useEngine: () => ({
     evaluate: mockEvaluate,

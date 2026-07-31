@@ -55,7 +55,7 @@ export default function NewPostPage() {
                 <Input id="image" name="image" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="pgn">PGN</Label>
+                <Label htmlFor="pgn">{t('pgn')}</Label>
                 <Textarea id="pgn" name="pgn" className="min-h-[100px] font-mono" />
               </div>
               <Button type="submit" className="gap-2">

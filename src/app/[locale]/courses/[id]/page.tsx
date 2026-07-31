@@ -77,7 +77,7 @@ export default async function CourseDetailPage(props: { params: Promise<{ id: st
                                   {lesson.title}
                                 </Link>
                                 <p className="text-xs text-muted-foreground">{lesson.type ?? 'TEXT'}</p>
-                                {lesson.duration && <p className="text-xs text-muted-foreground">{lesson.duration} min</p>}
+                                {lesson.duration && <p className="text-xs text-muted-foreground">{lesson.duration} {t('minutes')}</p>}
                               </div>
                             </div>
                             <Button variant="ghost" size="sm" render={<Link href={`/courses/${course.id}/lessons/${lesson.id}`} />}>

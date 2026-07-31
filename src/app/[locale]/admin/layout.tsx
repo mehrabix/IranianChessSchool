@@ -21,7 +21,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         <div className="flex min-h-screen">
           <aside className="w-56 shrink-0 border-r bg-muted/30 p-4 hidden md:flex flex-col gap-1">
             <Link href="/admin" className="flex items-center gap-2 font-bold text-lg mb-6 px-2">
-              Admin
+              {t('brand')}
             </Link>
             {adminLinks.map(link => (
               <Link

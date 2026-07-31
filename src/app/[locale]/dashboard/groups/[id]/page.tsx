@@ -36,7 +36,7 @@ export default async function GroupDetailPage({ params }: { params: Promise<{ id
       <Container size="lg">
         <Link href="/dashboard" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-6">
           <ArrowLeft className="h-4 w-4" />
-          Back to Dashboard
+          {t('backToDashboard')}
         </Link>
 
         <div className="grid gap-6 lg:grid-cols-3">
@@ -76,9 +76,9 @@ export default async function GroupDetailPage({ params }: { params: Promise<{ id
                           <AvatarFallback>{(member.userName || '?')[0].toUpperCase()}</AvatarFallback>
                         </Avatar>
                         <div className="flex-1">
-                          <p className="text-sm font-medium">{member.userName || 'Unknown'}</p>
+                          <p className="text-sm font-medium">{member.userName || t('unknownMember')}</p>
                           <p className="text-xs text-muted-foreground">
-                            {member.role} · Joined {member.joinedAt ? new Date(member.joinedAt).toLocaleDateString() : ''}
+                            {member.role} · {t('joinedDate')} {member.joinedAt ? new Date(member.joinedAt).toLocaleDateString() : ''}
                           </p>
                         </div>
                       </div>

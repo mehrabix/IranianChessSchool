@@ -27,7 +27,8 @@
     "followUs": "Følg oss",
     "contact": "Kontakt",
     "email": "info@iranianchessschool.com",
-    "copyright": "© {year} Iranian Chess School. Alle rettigheter forbeholdt."
+    "copyright": "© {year} Iranian Chess School. Alle rettigheter forbeholdt.",
+    "social": "Sosial"
   },
   "home": {
     "hero": {
@@ -258,7 +259,8 @@
       "post6ReadTime": "6 min",
       "post6Category": "Sluttspill",
       "readMore": "Les mer"
-    }
+    },
+    "previewPlaceholder": "Forhåndsvisning"
   },
   "contact": {
     "hero": {
@@ -293,7 +295,9 @@
       "instagram": "Instagram",
       "youtube": "YouTube",
       "telegram": "Telegram"
-    }
+    },
+    "validation": "Validering",
+    "success": "Suksess"
   },
   "kids": {
     "hero": {
@@ -463,14 +467,17 @@
       "google": "Google",
       "github": "GitHub",
       "hasAccount": "Har du allerede en konto?",
-      "signIn": "Logg inn"
+      "signIn": "Logg inn",
+      "emailExists": "E-posten er allerede i bruk"
     },
     "error": {
       "title": "Autentiseringsfeil",
       "description": "Noe gikk galt under innlogging",
       "message": "Prøv igjen eller kontakt støtte hvis problemet vedvarer.",
-      "tryAgain": "Prøv igjen"
-    }
+      "tryAgain": "Prøv igjen",
+      "registrationFailed": "Registrering mislyktes"
+    },
+    "validation": "Validering"
   },
   "courses": {
     "hero": {
@@ -508,7 +515,11 @@
       "tryAgain": "Du trenger {percent}% mer for å bestå. Prøv igjen.",
       "correct": "Riktig!",
       "incorrect": "Feil."
-    }
+    },
+    "lessonNotFound": "Leksjon ikke funnet",
+    "backToCourse": "Tilbake til kurs",
+    "minutes": "minutter",
+    "error": "Feil"
   },
   "dashboard": {
     "welcome": "Velkommen tilbake",
@@ -602,7 +613,53 @@
     "leaveTournament": "Forlat",
     "players": "Spillere",
     "noPlayers": "Ingen spillere ennå.",
-    "image": "Bilde"
+    "image": "Bilde",
+    "social": "Sosial",
+    "feedAndCommunity": "Feed og fellesskap",
+    "leaderboard": "Ledertavle",
+    "topPlayers": "Toppspillere",
+    "unknownLesson": "Ukjent leksjon",
+    "anonymous": "Anonym",
+    "score": "Poengsum",
+    "joined": "Ble med",
+    "completionRate": "Fullføringsgrad",
+    "completedWithCount": "{count} fullført",
+    "remainingWithCount": "{count} gjenstår",
+    "weeklyActivity": "Ukentlig aktivitet",
+    "lessonsCount": "{count} leksjoner",
+    "thisWeekSummary": "Denne uken: {lessons} leksjoner, {xp} XP opptjent",
+    "tournaments": "Turneringer",
+    "tournamentNamePlaceholder": "Turneringsnavn",
+    "create": "Opprett",
+    "playersCount": "{count} spillere",
+    "join": "Bli med",
+    "noTournaments": "Ingen turneringer",
+    "groups": "Grupper",
+    "groupNamePlaceholder": "Gruppenavn",
+    "descriptionOptionalPlaceholder": "Beskrivelse (valgfritt)",
+    "createGroup": "Opprett gruppe",
+    "membersCount": "{count} medlemmer",
+    "noGroups": "Ingen grupper",
+    "imagePreview": "Bildeforhåndsvisning",
+    "removeImage": "Fjern bilde",
+    "postImage": "Publiser bilde",
+    "unknownMember": "Ukjent medlem",
+    "joinedDate": "Dato for innmelding",
+    "topPlayersByXp": "Toppspillere etter EP",
+    "level": "Nivå",
+    "rating": "Rating",
+    "xpShort": "EP",
+    "noPlayersYet": "Ingen spillere ennå",
+    "roleStudent": "Elev",
+    "followers": "Følgere",
+    "following": "Følger",
+    "likes": "Liker",
+    "comments": "Kommentarer",
+    "recentPosts": "Nylige innlegg",
+    "noPostsYet": "Ingen innlegg ennå",
+    "achievements": "Prestasjoner",
+    "noAchievements": "Ingen prestasjoner",
+    "invalidPgnFile": "Ugyldig PGN-fil"
   },
   "groups": {
     "title": "Grupper",
@@ -610,7 +667,8 @@
     "groupName": "Gruppenavn",
     "description": "Beskrivelse",
     "join": "Bli med",
-    "leave": "Forlat"
+    "leave": "Forlat",
+    "validation": "Validering"
   },
   "tournaments": {
     "title": "Turneringer",
@@ -619,7 +677,9 @@
     "type": "Type",
     "maxPlayers": "Maks Spillere",
     "join": "Delta",
-    "leave": "Forlat"
+    "leave": "Forlat",
+    "validation": "Validering",
+    "error": "Feil"
   },
   "admin": {
     "nav": {
@@ -627,7 +687,8 @@
       "courses": "Kurs",
       "posts": "Innlegg",
       "users": "Brukere",
-      "settings": "Innstillinger"
+      "settings": "Innstillinger",
+      "brand": "Admin"
     },
     "dashboard": {
       "heading": "Admin-panel",
@@ -663,7 +724,11 @@
       "newLesson": "Ny leksjon",
       "deleteLesson": "Slett leksjon",
       "lessonTitle": "Leksjonstittel",
-      "lessonType": "Type",
+      "lessonType": {
+        "text": "Tekst",
+        "video": "Video",
+        "quiz": "Quiz"
+      },
       "lessonContent": "Innhold",
       "lessonVideoUrl": "Video-URL",
       "lessonDuration": "Varighet (minutter)",
@@ -671,7 +736,17 @@
       "imageUrl": "Bilde-URL",
       "courseInfo": "Kursinfo",
       "status": "Status",
-      "createLesson": "Opprett leksjon"
+      "createLesson": "Opprett leksjon",
+      "level": {
+        "beginner": "Nybegynner (0-500)",
+        "improver": "Forbedring (500-800)",
+        "intermediate": "Videregående (800-1200)",
+        "advanced": "Avansert (1200-1600)",
+        "club": "Klubb (1600-2000)"
+      },
+      "imageUrlPlaceholder": "Bilde-URL",
+      "courseId": "Kurs-ID",
+      "videoUrlPlaceholder": "Video-URL"
     },
     "posts": {
       "heading": "Administrer innlegg",
@@ -688,8 +763,11 @@
       "edit": "Rediger",
       "save": "Lagre",
       "publish": "Publiser",
-      "cancel": "Avbryt"
-    }
+      "cancel": "Avbryt",
+      "pgn": "PGN"
+    },
+    "brand": "Merkevare",
+    "validation": "Validering"
   },
   "puzzles": {
     "title": "Oppgaver",
@@ -712,6 +790,27 @@
     "finalScore": "Sluttpoeng",
     "puzzlesSolved": "Oppgaver løst",
     "noPuzzles": "Ingen oppgaver tilgjengelig.",
-    "dailyLoadError": "Kunne ikke laste dagens oppgave"
-  }
+    "dailyLoadError": "Kunne ikke laste dagens oppgave",
+    "validation": "Validering",
+    "error": "Feil"
+  },
+  "common": "Felles",
+  "chess": "Sjakk",
+  "achievements": "Prestasjoner",
+  "levels": "Nivåer",
+  "plans": "Planer",
+  "notifications": "Varsler",
+  "theme": "Tema",
+  "leaderboard": "Ledertavle",
+  "progress": "Fremgang",
+  "lessons": "Leksjoner",
+  "comments": "Kommentarer",
+  "users": "Brukere",
+  "upload": "Last opp",
+  "payments": "Betalinger",
+  "xp": "EP",
+  "ai": "KI",
+  "cron": "Tidsplan",
+  "posts": "Innlegg",
+  "quizzes": "Quizzer"
 }

@@ -251,11 +251,11 @@ export default function SocialPage() {
                   />
                   {imagePreview && (
                     <div className="relative inline-block">
-                      <img src={imagePreview} alt="Preview" className="max-h-[200px] rounded border" />
+                      <img src={imagePreview} alt={t('imagePreview')} className="max-h-[200px] rounded border" />
                       <button
                         onClick={clearImage}
                         className="absolute -top-2 -right-2 rounded-full bg-destructive text-destructive-foreground p-0.5"
-                        aria-label="Remove image"
+                        aria-label={t('removeImage')}
                       >
                         <X className="h-3.5 w-3.5" />
                       </button>
@@ -302,7 +302,7 @@ export default function SocialPage() {
                   </Avatar>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="font-medium text-sm">{post.userName || 'Anonymous'}</span>
+                      <span className="font-medium text-sm">{post.userName || t('anonymous')}</span>
                       <span className="text-xs text-muted-foreground">
                         {new Date(post.createdAt * 1000).toLocaleDateString()}
                       </span>
@@ -329,7 +329,7 @@ export default function SocialPage() {
                       <>
                         <p className="text-sm whitespace-pre-wrap">{post.content}</p>
                         {post.image && (
-                          <img src={post.image} alt="Post" className="mt-2 max-h-[300px] rounded border" />
+                          <img src={post.image} alt={t('postImage')} className="mt-2 max-h-[300px] rounded border" />
                         )}
                         {post.pgn && (
                           <div className="mt-2 p-2 rounded bg-muted text-xs font-mono text-muted-foreground max-h-[120px] overflow-y-auto">
@@ -384,7 +384,7 @@ export default function SocialPage() {
                               <AvatarFallback className="text-[10px]">{comment.userName?.[0] || 'U'}</AvatarFallback>
                             </Avatar>
                             <div>
-                              <span className="text-xs font-medium">{comment.userName || 'Anonymous'}</span>
+                              <span className="text-xs font-medium">{comment.userName || t('anonymous')}</span>
                               <p className="text-xs">{comment.content}</p>
                             </div>
                           </div>

@@ -23,6 +23,13 @@ vi.mock('next-intl/server', () => ({
       avgScore: 'Avg Score',
       courseProgress: 'Course Progress',
       noActivity: 'No activity yet.',
+      xp: 'XP',
+      thisWeekSummary: 'This Week: {lessons} lessons, {xp} XP earned',
+      completionRate: 'Completion Rate',
+      completedWithCount: 'Completed',
+      remainingWithCount: 'Remaining',
+      weeklyActivity: 'Weekly Activity',
+      lessonsCount: 'lessons',
     };
     return map[key] || key;
   },

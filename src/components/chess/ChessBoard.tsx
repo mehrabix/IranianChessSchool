@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import type { Chess } from 'chess.js';
 import { Button } from '@/components/ui/button';
 import { RotateCcw, Undo2 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const Chessboard = dynamic(() => import('react-chessboard').then(m => m.Chessboard), { ssr: false });
 const ChessboardProvider = dynamic(() => import('react-chessboard').then(m => m.ChessboardProvider), { ssr: false });
@@ -18,6 +19,7 @@ interface ChessBoardProps {
 }
 
 export function ChessBoard({ game, onMove, onReset, onUndo, showControls = true, boardWidth }: ChessBoardProps) {
+  const t = useTranslations('chess');
   return (
     <div className="flex flex-col items-center gap-4">
       <div className="relative" style={boardWidth ? { width: boardWidth } : undefined}>
@@ -44,13 +46,13 @@ export function ChessBoard({ game, onMove, onReset, onUndo, showControls = true,
           {onUndo && (
             <Button variant="outline" size="sm" onClick={onUndo} className="gap-1.5">
               <Undo2 className="h-4 w-4" />
-              Undo
+              {t('undo')}
             </Button>
           )}
           {onReset && (
             <Button variant="outline" size="sm" onClick={onReset} className="gap-1.5">
               <RotateCcw className="h-4 w-4" />
-              Reset
+              {t('reset')}
             </Button>
           )}
         </div>

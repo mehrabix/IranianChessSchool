@@ -27,7 +27,8 @@
     "followUs": "ما را دنبال کنید",
     "contact": "تماس",
     "email": "info@iranianchessschool.com",
-    "copyright": "© {year} آموزشگاه شطرنج ایران. تمامی حقوق محفوظ است."
+    "copyright": "© {year} آموزشگاه شطرنج ایران. تمامی حقوق محفوظ است.",
+    "social": "شبکه‌های اجتماعی"
   },
   "home": {
     "hero": {
@@ -258,7 +259,8 @@
       "post6ReadTime": "۶ دقیقه",
       "post6Category": "پایان‌بازی‌ها",
       "readMore": "بیشتر بخوانید"
-    }
+    },
+    "previewPlaceholder": "پیش‌نمایش"
   },
   "contact": {
     "hero": {
@@ -293,7 +295,9 @@
       "instagram": "اینستاگرام",
       "youtube": "یوتیوب",
       "telegram": "تلگرام"
-    }
+    },
+    "validation": "اعتبارسنجی",
+    "success": "موفقیت"
   },
   "kids": {
     "hero": {
@@ -463,14 +467,17 @@
       "google": "گوگل",
       "github": "گیت‌هاب",
       "hasAccount": "حساب دارید؟",
-      "signIn": "ورود"
+      "signIn": "ورود",
+      "emailExists": "این ایمیل قبلاً ثبت شده است"
     },
     "error": {
       "title": "خطای احراز هویت",
       "description": "مشکلی در ورود رخ داد",
       "message": "لطفاً دوباره تلاش کنید یا در صورت تداوم مشکل با پشتیبانی تماس بگیرید.",
-      "tryAgain": "تلاش مجدد"
-    }
+      "tryAgain": "تلاش مجدد",
+      "registrationFailed": "ثبت‌نام ناموفق بود"
+    },
+    "validation": "اعتبارسنجی"
   },
   "courses": {
     "hero": {
@@ -508,7 +515,11 @@
       "tryAgain": "برای قبولی به {percent}% بیشتر نیاز دارید. دوباره تلاش کنید.",
       "correct": "صحیح!",
       "incorrect": "نادرست."
-    }
+    },
+    "lessonNotFound": "درس پیدا نشد",
+    "backToCourse": "بازگشت به دوره",
+    "minutes": "دقیقه",
+    "error": "خطا"
   },
   "dashboard": {
     "welcome": "خوش برگشتی",
@@ -602,7 +613,53 @@
     "leaveTournament": "خروج از مسابقه",
     "players": "بازیکنان",
     "noPlayers": "هنوز بازیکنی نیست.",
-    "image": "تصویر"
+    "image": "تصویر",
+    "social": "شبکه‌های اجتماعی",
+    "feedAndCommunity": "فید و انجمن",
+    "leaderboard": "جدول امتیازات",
+    "topPlayers": "برترین بازیکنان",
+    "unknownLesson": "درس ناشناخته",
+    "anonymous": "ناشناس",
+    "score": "امتیاز",
+    "joined": "عضو شده",
+    "completionRate": "نرخ تکمیل",
+    "completedWithCount": "{count} تکمیل شده",
+    "remainingWithCount": "{count} باقی‌مانده",
+    "weeklyActivity": "فعالیت هفتگی",
+    "lessonsCount": "{count} درس",
+    "thisWeekSummary": "این هفته: {lessons} درس، {xp} امتیاز کسب شد",
+    "tournaments": "مسابقات",
+    "tournamentNamePlaceholder": "نام مسابقه را وارد کنید",
+    "create": "ایجاد",
+    "playersCount": "{count} بازیکن",
+    "join": "شرکت",
+    "noTournaments": "مسابقه‌ای وجود ندارد",
+    "groups": "گروه‌ها",
+    "groupNamePlaceholder": "نام گروه را وارد کنید",
+    "descriptionOptionalPlaceholder": "توضیحات (اختیاری)",
+    "createGroup": "ایجاد گروه",
+    "membersCount": "{count} عضو",
+    "noGroups": "گروهی وجود ندارد",
+    "imagePreview": "پیش‌نمایش تصویر",
+    "removeImage": "حذف تصویر",
+    "postImage": "تصویر پست",
+    "unknownMember": "عضو ناشناس",
+    "joinedDate": "تاریخ عضویت",
+    "topPlayersByXp": "برترین بازیکنان بر اساس امتیاز",
+    "level": "سطح",
+    "rating": "رده‌بندی",
+    "xpShort": "امتیاز",
+    "noPlayersYet": "هنوز بازیکنی نیست",
+    "roleStudent": "دانش‌آموز",
+    "followers": "دنبال‌کنندگان",
+    "following": "دنبال‌شونده‌ها",
+    "likes": "لایک‌ها",
+    "comments": "نظرات",
+    "recentPosts": "پست‌های اخیر",
+    "noPostsYet": "هنوز پستی وجود ندارد",
+    "achievements": "دستاوردها",
+    "noAchievements": "دستاوردی وجود ندارد",
+    "invalidPgnFile": "فایل PGN نامعتبر"
   },
   "groups": {
     "title": "گروه‌ها",
@@ -610,7 +667,8 @@
     "groupName": "نام گروه",
     "description": "توضیحات",
     "join": "عضویت",
-    "leave": "خروج"
+    "leave": "خروج",
+    "validation": "اعتبارسنجی"
   },
   "tournaments": {
     "title": "مسابقات",
@@ -619,7 +677,9 @@
     "type": "نوع",
     "maxPlayers": "حداکثر بازیکنان",
     "join": "شرکت",
-    "leave": "خروج"
+    "leave": "خروج",
+    "validation": "اعتبارسنجی",
+    "error": "خطا"
   },
   "puzzles": {
     "title": "معماها",
@@ -642,7 +702,9 @@
     "finalScore": "امتیاز نهایی",
     "puzzlesSolved": "معماهای حل شده",
     "noPuzzles": "معمایی موجود نیست.",
-    "dailyLoadError": "بارگذاری معمای روز ناموفق بود"
+    "dailyLoadError": "بارگذاری معمای روز ناموفق بود",
+    "validation": "اعتبارسنجی",
+    "error": "خطا"
   },
   "admin": {
     "nav": {
@@ -650,7 +712,8 @@
       "courses": "دوره‌ها",
       "posts": "نوشته‌ها",
       "users": "کاربران",
-      "settings": "تنظیمات"
+      "settings": "تنظیمات",
+      "brand": "مدیریت"
     },
     "dashboard": {
       "heading": "داشبورد مدیریت",
@@ -686,7 +749,11 @@
       "newLesson": "درس جدید",
       "deleteLesson": "حذف درس",
       "lessonTitle": "عنوان درس",
-      "lessonType": "نوع",
+      "lessonType": {
+        "text": "متن",
+        "video": "ویدیو",
+        "quiz": "آزمون"
+      },
       "lessonContent": "محتوا",
       "lessonVideoUrl": "آدرس ویدیو",
       "lessonDuration": "مدت (دقیقه)",
@@ -694,7 +761,17 @@
       "imageUrl": "آدرس تصویر",
       "courseInfo": "اطلاعات دوره",
       "status": "وضعیت",
-      "createLesson": "ایجاد درس"
+      "createLesson": "ایجاد درس",
+      "level": {
+        "beginner": "مبتدی (۵۰۰-۰)",
+        "improver": "پیشرفت‌کننده (۸۰۰-۵۰۰)",
+        "intermediate": "متوسط (۱۲۰۰-۸۰۰)",
+        "advanced": "پیشرفته (۱۶۰۰-۱۲۰۰)",
+        "club": "باشگاهی (۲۰۰۰-۱۶۰۰)"
+      },
+      "imageUrlPlaceholder": "آدرس تصویر را وارد کنید",
+      "courseId": "شناسه دوره",
+      "videoUrlPlaceholder": "آدرس ویدیو را وارد کنید"
     },
     "posts": {
       "heading": "مدیریت نوشته‌ها",
@@ -711,7 +788,29 @@
       "edit": "ویرایش",
       "save": "ذخیره",
       "publish": "انتشار",
-      "cancel": "لغو"
-    }
-  }
-}
+      "cancel": "لغو",
+      "pgn": "PGN"
+    },
+    "brand": "برند",
+    "validation": "اعتبارسنجی"
+  },
+  "common": "عمومی",
+  "chess": "شطرنج",
+  "achievements": "دستاوردها",
+  "levels": "سطوح",
+  "plans": "طرح‌ها",
+  "notifications": "اعلان‌ها",
+  "theme": "پوسته",
+  "leaderboard": "جدول امتیازات",
+  "progress": "پیشرفت",
+  "lessons": "درس‌ها",
+  "comments": "نظرات",
+  "users": "کاربران",
+  "upload": "بارگذاری",
+  "payments": "پرداخت‌ها",
+  "xp": "امتیاز",
+  "ai": "هوش مصنوعی",
+  "cron": "زمان‌بندی",
+  "posts": "پست‌ها",
+  "quizzes": "آزمون‌ها"
+}\n

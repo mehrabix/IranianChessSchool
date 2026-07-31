@@ -8,14 +8,13 @@ import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { CheckCircle2, Clock, BookOpen, TrendingUp, Target, Zap } from 'lucide-react';
 
-function getWeekDays() {
-  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+function getWeekDays(locale: string) {
   const today = new Date();
   const result: { label: string; date: Date }[] = [];
   for (let i = 6; i >= 0; i--) {
     const d = new Date(today);
     d.setDate(d.getDate() - i);
-    result.push({ label: days[d.getDay()], date: d });
+    result.push({ label: new Intl.DateTimeFormat(locale, { weekday: 'short' }).format(d), date: d });
   }
   return result;
 }
@@ -58,7 +57,7 @@ export default async function ProgressPage() {
   const weekStart = new Date(now);
   weekStart.setDate(now.getDate() - now.getDay());
   weekStart.setHours(0, 0, 0, 0);
-  const weekDays = getWeekDays();
+  const weekDays = getWeekDays(locale);
   const activityByDay = new Map<string, number>();
   for (const p of userProgress) {
     if (!p.completedAt) continue;
@@ -124,7 +123,7 @@ export default async function ProgressPage() {
         <div className="mb-8 p-4 rounded-lg border bg-muted/30 flex items-center gap-3">
           <Zap className="h-5 w-5 text-amber-500 shrink-0" />
           <p className="text-sm font-medium">
-            This Week: <span className="text-emerald-600 font-bold">{thisWeekCount} lessons</span>, <span className="text-blue-600 font-bold">{thisWeekXp} XP</span> earned
+            {t('thisWeekSummary', { lessons: thisWeekCount, xp: thisWeekXp })}
           </p>
         </div>
 
@@ -133,7 +132,7 @@ export default async function ProgressPage() {
           {/* Completion pie chart */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-sm font-medium">Completion Rate</CardTitle>
+              <CardTitle className="text-sm font-medium">{t('completionRate')}</CardTitle>
             </CardHeader>
             <CardContent className="flex items-center gap-6">
               <div
@@ -151,11 +150,11 @@ export default async function ProgressPage() {
               <div className="space-y-2 text-sm">
                 <div className="flex items-center gap-2">
                   <span className="w-3 h-3 rounded-sm bg-emerald-500 inline-block" />
-                  <span>Completed ({completedLessons.length})</span>
+                  <span>{t('completedWithCount', { count: completedLessons.length })}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-3 h-3 rounded-sm bg-gray-200 inline-block" />
-                  <span>Remaining ({totalLessons - completedLessons.length})</span>
+                  <span>{t('remainingWithCount', { count: totalLessons - completedLessons.length })}</span>
                 </div>
               </div>
             </CardContent>
@@ -164,7 +163,7 @@ export default async function ProgressPage() {
           {/* Weekly activity heatmap */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-sm font-medium">Weekly Activity</CardTitle>
+              <CardTitle className="text-sm font-medium">{t('weeklyActivity')}</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex gap-1.5 justify-between" data-testid="activity-heatmap">
@@ -182,7 +181,7 @@ export default async function ProgressPage() {
                           : 'bg-emerald-600 dark:bg-emerald-400';
                   return (
                     <div key={key} className="flex flex-col items-center gap-1">
-                      <div className={`w-10 h-10 rounded-md ${bg}`} title={`${count} lessons`} />
+                      <div className={`w-10 h-10 rounded-md ${bg}`} title={t('lessonsCount', { count })} />
                       <span className="text-xs text-muted-foreground">{label}</span>
                       <span className="text-xs font-medium">{count}</span>
                     </div>

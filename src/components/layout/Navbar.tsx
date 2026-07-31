@@ -149,7 +149,7 @@ export function Navbar() {
               <SheetHeader className="mb-6">
                 <SheetTitle className="flex items-center gap-2">
                   <ChessKnight className="h-5 w-5 text-primary" />
-                  Iranian Chess School
+                  {t('brand')}
                 </SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-1">
@@ -171,7 +171,7 @@ export function Navbar() {
                       className="flex items-center gap-3 px-3 py-2.5 text-base font-medium rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-all"
                     >
                       <Shield className="h-5 w-5 shrink-0" />
-                      Admin
+                      {t('admin')}
                     </Link>
                   )}
                 </>

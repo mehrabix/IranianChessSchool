@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Loader2, Trophy, Medal, Star, Flame } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface LeaderboardUser {
   id: string;
@@ -17,6 +18,7 @@ interface LeaderboardUser {
 }
 
 export default function LeaderboardPage() {
+  const t = useTranslations('dashboard');
   const [users, setUsers] = useState<LeaderboardUser[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -36,8 +38,8 @@ export default function LeaderboardPage() {
         <div className="flex items-center gap-3 mb-6">
           <Trophy className="h-8 w-8 text-amber-500" />
           <div>
-            <h1 className="text-3xl font-bold">Leaderboard</h1>
-            <p className="text-muted-foreground text-sm">Top players by XP</p>
+            <h1 className="text-3xl font-bold">{t('leaderboard')}</h1>
+            <p className="text-muted-foreground text-sm">{t('topPlayersByXp')}</p>
           </div>
         </div>
 
@@ -54,20 +56,20 @@ export default function LeaderboardPage() {
                   <AvatarFallback>{user.name?.[0] || '?'}</AvatarFallback>
                 </Avatar>
                 <div className="flex-1 min-w-0">
-                  <p className="font-medium text-sm truncate">{user.name || 'Anonymous'}</p>
+                  <p className="font-medium text-sm truncate">{user.name || t('anonymous')}</p>
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <Star className="h-3 w-3" /> Level {user.level}
-                    {user.rating > 0 && <span>Rating: {user.rating}</span>}
+                    <Star className="h-3 w-3" /> {t('level')} {user.level}
+                    {user.rating > 0 && <span>{t('rating')}: {user.rating}</span>}
                   </div>
                 </div>
                 <div className="text-right">
                   <p className="font-bold text-lg">{user.xp?.toLocaleString()}</p>
-                  <p className="text-xs text-muted-foreground">XP</p>
+                  <p className="text-xs text-muted-foreground">{t('xpShort')}</p>
                 </div>
               </CardContent>
             </Card>
           ))}
-          {users.length === 0 && <p className="text-center text-muted-foreground py-12">No players yet!</p>}
+          {users.length === 0 && <p className="text-center text-muted-foreground py-12">{t('noPlayersYet')}</p>}
         </div>
       </Container>
     </section>

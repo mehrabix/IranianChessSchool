@@ -38,7 +38,7 @@ export default async function TournamentDetailPage({ params }: { params: Promise
       <Container size="lg">
         <Link href="/dashboard" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-6">
           <ArrowLeft className="h-4 w-4" />
-          Back to Dashboard
+          {t('backToDashboard')}
         </Link>
 
         <div className="grid gap-6 lg:grid-cols-3">
@@ -100,7 +100,7 @@ export default async function TournamentDetailPage({ params }: { params: Promise
                         <div className="flex-1">
                           <p className="text-sm font-medium">{player.userName || player.userId}</p>
                           <p className="text-xs text-muted-foreground">
-                            Score: {player.score} · Joined {player.joinedAt ? new Date(player.joinedAt).toLocaleDateString() : ''}
+                            {t('score')}: {player.score} · {t('joined')} {player.joinedAt ? new Date(player.joinedAt).toLocaleDateString() : ''}
                           </p>
                         </div>
                       </div>

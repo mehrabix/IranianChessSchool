@@ -27,7 +27,8 @@
     "followUs": "Подписывайтесь",
     "contact": "Контакты",
     "email": "info@iranianchessschool.com",
-    "copyright": "© {year} Iranian Chess School. Все права защищены."
+    "copyright": "© {year} Iranian Chess School. Все права защищены.",
+    "social": "Социальные сети"
   },
   "home": {
     "hero": {
@@ -258,7 +259,8 @@
       "post6ReadTime": "6 мин",
       "post6Category": "Эндшпиль",
       "readMore": "Читать далее"
-    }
+    },
+    "previewPlaceholder": "Превью"
   },
   "contact": {
     "hero": {
@@ -293,7 +295,9 @@
       "instagram": "Instagram",
       "youtube": "YouTube",
       "telegram": "Telegram"
-    }
+    },
+    "validation": "Валидация",
+    "success": "Успешно"
   },
   "kids": {
     "hero": {
@@ -463,14 +467,17 @@
       "google": "Google",
       "github": "GitHub",
       "hasAccount": "Уже есть аккаунт?",
-      "signIn": "Войти"
+      "signIn": "Войти",
+      "emailExists": "Этот email уже зарегистрирован"
     },
     "error": {
       "title": "Ошибка аутентификации",
       "description": "Что-то пошло не так при входе",
       "message": "Пожалуйста, попробуйте снова или обратитесь в поддержку, если проблема не исчезнет.",
-      "tryAgain": "Попробовать снова"
-    }
+      "tryAgain": "Попробовать снова",
+      "registrationFailed": "Регистрация не удалась"
+    },
+    "validation": "Валидация"
   },
   "courses": {
     "hero": {
@@ -508,7 +515,11 @@
       "tryAgain": "Нужно ещё {percent}% для сдачи. Попробуйте снова.",
       "correct": "Верно!",
       "incorrect": "Неверно."
-    }
+    },
+    "lessonNotFound": "Урок не найден",
+    "backToCourse": "Назад к курсу",
+    "minutes": "мин",
+    "error": "Ошибка"
   },
   "dashboard": {
     "welcome": "С возвращением",
@@ -602,7 +613,53 @@
     "leaveTournament": "Покинуть турнир",
     "players": "Игроки",
     "noPlayers": "Игроков пока нет.",
-    "image": "Изображение"
+    "image": "Изображение",
+    "social": "Социальные сети",
+    "feedAndCommunity": "Лента и сообщество",
+    "leaderboard": "Таблица лидеров",
+    "topPlayers": "Лучшие игроки",
+    "unknownLesson": "Неизвестный урок",
+    "anonymous": "Аноним",
+    "score": "Счёт",
+    "joined": "Присоединился",
+    "completionRate": "Процент завершения",
+    "completedWithCount": "Завершено: {count}",
+    "remainingWithCount": "Осталось: {count}",
+    "weeklyActivity": "Активность за неделю",
+    "lessonsCount": "{count} уроков",
+    "thisWeekSummary": "На этой неделе: {lessons} уроков, {xp} XP заработано",
+    "tournaments": "Турниры",
+    "tournamentNamePlaceholder": "Введите название турнира",
+    "create": "Создать",
+    "playersCount": "{count} игроков",
+    "join": "Участвовать",
+    "noTournaments": "Нет турниров",
+    "groups": "Группы",
+    "groupNamePlaceholder": "Введите название группы",
+    "descriptionOptionalPlaceholder": "Описание (необязательно)",
+    "createGroup": "Создать группу",
+    "membersCount": "{count} участников",
+    "noGroups": "Нет групп",
+    "imagePreview": "Превью изображения",
+    "removeImage": "Удалить изображение",
+    "postImage": "Изображение поста",
+    "unknownMember": "Неизвестный участник",
+    "joinedDate": "Дата вступления",
+    "topPlayersByXp": "Лучшие игроки по опыту",
+    "level": "Уровень",
+    "rating": "Рейтинг",
+    "xpShort": "Опыт",
+    "noPlayersYet": "Пока нет игроков",
+    "roleStudent": "Ученик",
+    "followers": "Подписчики",
+    "following": "Подписки",
+    "likes": "Лайки",
+    "comments": "Комментарии",
+    "recentPosts": "Последние посты",
+    "noPostsYet": "Пока нет постов",
+    "achievements": "Достижения",
+    "noAchievements": "Нет достижений",
+    "invalidPgnFile": "Неверный PGN файл"
   },
   "groups": {
     "title": "Группы",
@@ -610,7 +667,8 @@
     "groupName": "Название группы",
     "description": "Описание",
     "join": "Вступить",
-    "leave": "Покинуть"
+    "leave": "Покинуть",
+    "validation": "Валидация"
   },
   "tournaments": {
     "title": "Турниры",
@@ -619,7 +677,9 @@
     "type": "Тип",
     "maxPlayers": "Макс. игроков",
     "join": "Участвовать",
-    "leave": "Покинуть"
+    "leave": "Покинуть",
+    "validation": "Валидация",
+    "error": "Ошибка"
   },
   "admin": {
     "nav": {
@@ -627,7 +687,8 @@
       "courses": "Курсы",
       "posts": "Записи",
       "users": "Пользователи",
-      "settings": "Настройки"
+      "settings": "Настройки",
+      "brand": "Админ"
     },
     "dashboard": {
       "heading": "Панель администратора",
@@ -663,7 +724,11 @@
       "newLesson": "Новый урок",
       "deleteLesson": "Удалить урок",
       "lessonTitle": "Название урока",
-      "lessonType": "Тип",
+      "lessonType": {
+        "text": "Текст",
+        "video": "Видео",
+        "quiz": "Тест"
+      },
       "lessonContent": "Содержание",
       "lessonVideoUrl": "URL видео",
       "lessonDuration": "Длительность (минут)",
@@ -671,7 +736,17 @@
       "imageUrl": "URL изображения",
       "courseInfo": "Информация о курсе",
       "status": "Статус",
-      "createLesson": "Создать урок"
+      "createLesson": "Создать урок",
+      "level": {
+        "beginner": "Начинающий (0-500)",
+        "improver": "Улучшающийся (500-800)",
+        "intermediate": "Средний (800-1200)",
+        "advanced": "Продвинутый (1200-1600)",
+        "club": "Клубный (1600-2000)"
+      },
+      "imageUrlPlaceholder": "Введите URL изображения",
+      "courseId": "ID курса",
+      "videoUrlPlaceholder": "Введите URL видео"
     },
     "posts": {
       "heading": "Управление записями",
@@ -688,8 +763,11 @@
       "edit": "Редактировать",
       "save": "Сохранить",
       "publish": "Опубликовать",
-      "cancel": "Отмена"
-    }
+      "cancel": "Отмена",
+      "pgn": "PGN"
+    },
+    "brand": "Бренд",
+    "validation": "Валидация"
   },
   "puzzles": {
     "title": "Задачи",
@@ -712,6 +790,27 @@
     "finalScore": "Итоговый счёт",
     "puzzlesSolved": "Задач решено",
     "noPuzzles": "Задачи недоступны.",
-    "dailyLoadError": "Не удалось загрузить задачу дня"
-  }
-}
+    "dailyLoadError": "Не удалось загрузить задачу дня",
+    "validation": "Валидация",
+    "error": "Ошибка"
+  },
+  "common": "Общие",
+  "chess": "Шахматы",
+  "achievements": "Достижения",
+  "levels": "Уровни",
+  "plans": "Тарифы",
+  "notifications": "Уведомления",
+  "theme": "Тема",
+  "leaderboard": "Таблица лидеров",
+  "progress": "Прогресс",
+  "lessons": "Уроки",
+  "comments": "Комментарии",
+  "users": "Пользователи",
+  "upload": "Загрузка",
+  "payments": "Платежи",
+  "xp": "Опыт",
+  "ai": "ИИ",
+  "cron": "Планировщик",
+  "posts": "Посты",
+  "quizzes": "Тесты"
+}\n

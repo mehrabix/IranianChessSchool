@@ -75,7 +75,7 @@ function PostEditForm({ postId }: { postId: string }) {
                 <Input id="image" value={image} onChange={e => setImage(e.target.value)} />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="pgn">PGN</Label>
+                <Label htmlFor="pgn">{t('pgn')}</Label>
                 <Textarea id="pgn" value={pgn} onChange={e => setPgn(e.target.value)} className="min-h-[100px] font-mono" />
               </div>
               <div className="flex gap-2">

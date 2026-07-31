@@ -27,7 +27,13 @@
     "followUs": "Follow Us",
     "contact": "Contact",
     "email": "info@iranianchessschool.com",
-    "copyright": "© {year} Iranian Chess School. All rights reserved."
+    "copyright": "© {year} Iranian Chess School. All rights reserved.",
+    "social": {
+      "youtube": "YouTube",
+      "instagram": "Instagram",
+      "discord": "Discord",
+      "telegram": "Telegram"
+    }
   },
   "home": {
     "hero": {
@@ -258,7 +264,8 @@
       "post6ReadTime": "6 min",
       "post6Category": "Endgames",
       "readMore": "Read more"
-    }
+    },
+    "previewPlaceholder": "This is a preview of this blog post. The full article will be available soon. In the meantime, check out our courses and puzzles to improve your chess skills."
   },
   "contact": {
     "hero": {
@@ -293,6 +300,12 @@
       "instagram": "Instagram",
       "youtube": "YouTube",
       "telegram": "Telegram"
+    },
+    "validation": {
+      "fieldsRequired": "Name, email, and message are required"
+    },
+    "success": {
+      "messageReceived": "Message received. We will get back to you soon."
     }
   },
   "kids": {
@@ -463,13 +476,21 @@
       "google": "Google",
       "github": "GitHub",
       "hasAccount": "Already have an account?",
-      "signIn": "Sign in"
+      "signIn": "Sign in",
+      "emailExists": "An account with this email already exists"
     },
     "error": {
       "title": "Authentication Error",
       "description": "Something went wrong during sign in",
       "message": "Please try again or contact support if the problem persists.",
-      "tryAgain": "Try Again"
+      "tryAgain": "Try Again",
+      "registrationFailed": "Registration failed"
+    },
+    "validation": {
+      "nameTooShort": "Name is too short",
+      "invalidEmail": "Enter a valid email",
+      "passwordTooShort": "Password must be at least 8 characters",
+      "emailExists": "An account with this email already exists"
     }
   },
   "courses": {
@@ -508,6 +529,12 @@
       "tryAgain": "You need {percent}% more to pass. Try again.",
       "correct": "Correct!",
       "incorrect": "Incorrect."
+    },
+    "lessonNotFound": "Lesson not found.",
+    "backToCourse": "Back to Course",
+    "minutes": "min",
+    "error": {
+      "notFound": "Course not found"
     }
   },
   "dashboard": {
@@ -602,7 +629,53 @@
     "leaveTournament": "Leave Tournament",
     "players": "Players",
     "noPlayers": "No players yet.",
-    "image": "Image"
+    "image": "Image",
+    "social": "Social",
+    "feedAndCommunity": "Feed & Community",
+    "leaderboard": "Leaderboard",
+    "topPlayers": "Top Players",
+    "unknownLesson": "unknown",
+    "anonymous": "Anonymous",
+    "score": "Score",
+    "joined": "Joined",
+    "completionRate": "Completion Rate",
+    "completedWithCount": "Completed ({count})",
+    "remainingWithCount": "Remaining ({count})",
+    "weeklyActivity": "Weekly Activity",
+    "lessonsCount": "{count} lessons",
+    "thisWeekSummary": "This Week: {lessons} lessons, {xp} XP earned",
+    "tournaments": "Tournaments",
+    "tournamentNamePlaceholder": "Tournament name",
+    "create": "Create",
+    "playersCount": "players",
+    "join": "Join",
+    "noTournaments": "No tournaments yet.",
+    "groups": "Groups",
+    "groupNamePlaceholder": "Group name",
+    "descriptionOptionalPlaceholder": "Description (optional)",
+    "createGroup": "Create Group",
+    "membersCount": "members",
+    "noGroups": "No groups yet.",
+    "imagePreview": "Preview",
+    "removeImage": "Remove image",
+    "postImage": "Post",
+    "unknownMember": "Unknown",
+    "joinedDate": "Joined",
+    "topPlayersByXp": "Top players by XP",
+    "level": "Level",
+    "rating": "Rating",
+    "xpShort": "XP",
+    "noPlayersYet": "No players yet!",
+    "roleStudent": "STUDENT",
+    "followers": "followers",
+    "following": "following",
+    "likes": "likes",
+    "comments": "comments",
+    "recentPosts": "Recent Posts",
+    "noPostsYet": "No posts yet.",
+    "achievements": "Achievements",
+    "noAchievements": "No achievements yet.",
+    "invalidPgnFile": "Invalid PGN file"
   },
   "groups": {
     "title": "Groups",
@@ -610,7 +683,10 @@
     "groupName": "Group Name",
     "description": "Description",
     "join": "Join",
-    "leave": "Leave"
+    "leave": "Leave",
+    "validation": {
+      "nameRequired": "Name required"
+    }
   },
   "tournaments": {
     "title": "Tournaments",
@@ -619,7 +695,13 @@
     "type": "Type",
     "maxPlayers": "Max Players",
     "join": "Join",
-    "leave": "Leave"
+    "leave": "Leave",
+    "validation": {
+      "nameRequired": "Name required"
+    },
+    "error": {
+      "full": "Tournament full"
+    }
   },
   "puzzles": {
     "title": "Puzzles",
@@ -642,7 +724,15 @@
     "finalScore": "Final Score",
     "puzzlesSolved": "Puzzles solved",
     "noPuzzles": "No puzzles available.",
-    "dailyLoadError": "Failed to load daily puzzle"
+    "dailyLoadError": "Failed to load daily puzzle",
+    "validation": {
+      "fieldsRequired": "puzzleId and solved are required"
+    },
+    "error": {
+      "notFound": "Puzzle not found",
+      "noneAvailable": "No puzzles available",
+      "recordFailed": "Failed to record attempt"
+    }
   },
   "admin": {
     "nav": {
@@ -650,7 +740,8 @@
       "courses": "Courses",
       "posts": "Posts",
       "users": "Users",
-      "settings": "Settings"
+      "settings": "Settings",
+      "brand": "Admin"
     },
     "dashboard": {
       "heading": "Admin Dashboard",
@@ -686,7 +777,11 @@
       "newLesson": "New Lesson",
       "deleteLesson": "Delete Lesson",
       "lessonTitle": "Lesson Title",
-      "lessonType": "Type",
+      "lessonType": {
+        "text": "Text",
+        "video": "Video",
+        "quiz": "Quiz"
+      },
       "lessonContent": "Content",
       "lessonVideoUrl": "Video URL",
       "lessonDuration": "Duration (minutes)",
@@ -694,7 +789,17 @@
       "imageUrl": "Image URL",
       "courseInfo": "Course Info",
       "status": "Status",
-      "createLesson": "Create Lesson"
+      "createLesson": "Create Lesson",
+      "level": {
+        "beginner": "Beginner (0-500)",
+        "improver": "Improver (500-800)",
+        "intermediate": "Intermediate (800-1200)",
+        "advanced": "Advanced (1200-1600)",
+        "club": "Club (1600-2000)"
+      },
+      "imageUrlPlaceholder": "https://...",
+      "courseId": "ID",
+      "videoUrlPlaceholder": "https://..."
     },
     "posts": {
       "heading": "Manage Posts",
@@ -711,7 +816,200 @@
       "edit": "Edit",
       "save": "Save",
       "publish": "Publish",
-      "cancel": "Cancel"
+      "cancel": "Cancel",
+      "pgn": "PGN"
+    },
+    "brand": "Admin",
+    "validation": {
+      "courseIdRequired": "courseId is required",
+      "titleAndCourseIdRequired": "Title and courseId are required",
+      "idAndTitleRequired": "ID and title are required",
+      "moduleIdRequired": "moduleId is required",
+      "titleModuleIdCourseIdRequired": "Title, moduleId, and courseId are required",
+      "titleRequired": "Title is required",
+      "idAndContentRequired": "ID and content are required"
+    }
+  },
+  "common": {
+    "error": {
+      "unauthorized": "Unauthorized",
+      "forbidden": "Forbidden",
+      "notFound": "Not found",
+      "failed": "Failed",
+      "internalServerError": "Internal server error",
+      "notAuthenticated": "Not authenticated"
+    },
+    "validation": {
+      "idRequired": "ID is required",
+      "contentRequired": "Content is required"
+    }
+  },
+  "chess": {
+    "undo": "Undo",
+    "reset": "Reset",
+    "engineAnalysis": "Engine Analysis",
+    "evaluate": "Evaluate",
+    "topLines": "Top Lines",
+    "score": "Score",
+    "depth": "Depth",
+    "best": "Best",
+    "notAvailable": "N/A",
+    "principalVariation": "PV",
+    "engineError": "Engine error",
+    "aiCoach": "AI Coach",
+    "analyzing": "Analyzing...",
+    "explainPosition": "Explain Position",
+    "aiCoachUnavailable": "AI coach unavailable. Add an API key to enable.",
+    "engine": {
+      "initFailed": "Failed to initialize engine",
+      "evalTimedOut": "Engine evaluation timed out",
+      "notInitialized": "Engine not initialized"
+    },
+    "validation": {
+      "pgnRequired": "PGN is required",
+      "invalidPgn": "Invalid PGN",
+      "noMoves": "No moves in PGN",
+      "usernameRequired": "Username is required"
+    },
+    "error": {
+      "analysisFailed": "Analysis failed",
+      "importFailed": "Failed to import games",
+      "lichessUserNotFound": "Lichess user not found",
+      "ratingHistoryNotFound": "Rating history not found",
+      "lichessGamesNotFound": "Games not found on Lichess",
+      "dailyPuzzleFailed": "Failed to fetch daily puzzle",
+      "openingExplorerFailed": "Failed to fetch opening explorer",
+      "chesscomProfileNotFound": "Chess.com profile not found",
+      "chesscomStatsNotFound": "Chess.com stats not found",
+      "chesscomGamesNotFound": "Games not found on Chess.com"
+    }
+  },
+  "achievements": {
+    "title": {
+      "firstPuzzle": "First Puzzle Solved",
+      "tenPuzzles": "Puzzle Apprentice",
+      "hundredPuzzles": "Puzzle Master",
+      "firstLesson": "First Steps",
+      "firstCourse": "Course Graduate",
+      "streak7": "Week Warrior",
+      "streak30": "Monthly Master",
+      "firstPost": "Social Starter",
+      "firstComment": "Conversationalist"
+    },
+    "desc": {
+      "firstPuzzle": "Solved your first puzzle",
+      "tenPuzzles": "Solved 10 puzzles",
+      "hundredPuzzles": "Solved 100 puzzles",
+      "firstLesson": "Completed your first lesson",
+      "firstCourse": "Completed your first course",
+      "streak7": "7-day streak",
+      "streak30": "30-day streak",
+      "firstPost": "Created your first post",
+      "firstComment": "Wrote your first comment"
+    }
+  },
+  "levels": {
+    "bronze": "Bronze",
+    "silver": "Silver",
+    "gold": "Gold",
+    "platinum": "Platinum",
+    "diamond": "Diamond",
+    "master": "Master",
+    "grandmaster": "Grandmaster"
+  },
+  "plans": {
+    "standard": "Standard",
+    "premium": "Premium",
+    "vip": "VIP"
+  },
+  "notifications": {
+    "likedYourPost": "{name} liked your post",
+    "commentedOnYourPost": "{name} commented on your post",
+    "followedYou": "{name} started following you"
+  },
+  "theme": {
+    "toggleTheme": "Toggle theme"
+  },
+  "leaderboard": {
+    "error": {
+      "fetchFailed": "Failed to fetch leaderboard"
+    }
+  },
+  "progress": {
+    "validation": {
+      "lessonIdRequired": "lessonId is required"
+    }
+  },
+  "lessons": {
+    "error": {
+      "notFound": "Lesson not found"
+    },
+    "validation": {
+      "queryRequired": "id, moduleId, or courseId is required"
+    }
+  },
+  "comments": {
+    "error": {
+      "fetchFailed": "Failed to fetch comments",
+      "addFailed": "Failed to add comment"
+    }
+  },
+  "users": {
+    "error": {
+      "cannotFollowSelf": "Cannot follow yourself",
+      "toggleFollowFailed": "Failed to toggle follow"
+    }
+  },
+  "upload": {
+    "error": {
+      "noFile": "No file provided",
+      "failed": "Failed to upload file"
+    }
+  },
+  "payments": {
+    "error": {
+      "invalidPlan": "Invalid plan",
+      "checkoutFailed": "Failed to create checkout",
+      "noCustomer": "No Stripe customer found",
+      "portalFailed": "Failed to create portal",
+      "webhookError": "Webhook error"
+    }
+  },
+  "xp": {
+    "error": {
+      "invalidAction": "Invalid action"
+    }
+  },
+  "ai": {
+    "error": {
+      "fenRequired": "FEN required",
+      "unavailable": "AI unavailable",
+      "allProvidersFailed": "All AI providers failed"
+    }
+  },
+  "cron": {
+    "error": {
+      "fetchPuzzleFromLichess": "Failed to fetch puzzle from Lichess"
+    }
+  },
+  "posts": {
+    "error": {
+      "fetchFailed": "Failed to fetch posts",
+      "createFailed": "Failed to create post",
+      "updateFailed": "Failed to update post",
+      "deleteFailed": "Failed to delete post",
+      "toggleLikeFailed": "Failed to toggle like"
+    },
+    "validation": {
+      "idAndContentRequired": "ID and content are required"
+    }
+  },
+  "quizzes": {
+    "error": {
+      "notFound": "Quiz not found",
+      "maxAttempts": "Max attempts reached",
+      "attemptNotFound": "Attempt not found",
+      "alreadySubmitted": "Already submitted"
     }
   }
 }

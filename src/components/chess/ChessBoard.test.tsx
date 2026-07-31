@@ -4,6 +4,10 @@ import { render } from '@testing-library/react';
 import { Chess } from 'chess.js';
 import { ChessBoard } from './ChessBoard';
 
+vi.mock('next-intl', () => ({
+  useTranslations: () => (key: string) => key,
+}));
+
 vi.mock('react-chessboard', () => ({
   Chessboard: function MockChessboard() { return null; },
   ChessboardProvider: function MockProvider({ children }: { children: React.ReactNode }) { return <div data-testid="chessboard-provider">{children}</div>; },

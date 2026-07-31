@@ -12,7 +12,7 @@ interface AICoachPanelProps {
 }
 
 export function AICoachPanel({ fen, pgn }: AICoachPanelProps) {
-  const t = useTranslations('dashboard');
+  const t = useTranslations('chess');
   const [analysis, setAnalysis] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -30,7 +30,7 @@ export function AICoachPanel({ fen, pgn }: AICoachPanelProps) {
       const data = await res.json();
       setAnalysis(data.explanation || '');
     } catch {
-      setError('AI coach unavailable. Add an API key to enable.');
+      setError(t('aiCoachUnavailable'));
     } finally {
       setLoading(false);
     }
@@ -41,13 +41,13 @@ export function AICoachPanel({ fen, pgn }: AICoachPanelProps) {
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-sm">
           <Bot className="h-4 w-4" />
-          AI Coach
+          {t('aiCoach')}
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-3">
         <Button size="sm" onClick={handleExplain} disabled={loading} className="w-full gap-2">
           {loading ? <Loader2 className="h-3 w-3 animate-spin" /> : <Lightbulb className="h-3 w-3" />}
-          {loading ? 'Analyzing...' : 'Explain Position'}
+          {loading ? t('analyzing') : t('explainPosition')}
         </Button>
         {error && <p className="text-xs text-muted-foreground">{error}</p>}
         {analysis && (

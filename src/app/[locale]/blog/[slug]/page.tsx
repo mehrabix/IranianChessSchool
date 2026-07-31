@@ -75,8 +75,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <p key={key} className="text-lg">{t(`posts.${key}`)}</p>
             ))}
             <p>
-              This is a preview of this blog post. The full article will be available soon.
-              In the meantime, check out our courses and puzzles to improve your chess skills.
+              {t('previewPlaceholder')}
             </p>
           </div>
         </article>

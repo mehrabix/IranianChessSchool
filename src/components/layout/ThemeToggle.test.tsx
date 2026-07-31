@@ -3,6 +3,10 @@ import { describe, it, expect, vi } from 'vitest';
 import { render } from '@testing-library/react';
 import { ThemeToggle } from './ThemeToggle';
 
+vi.mock('next-intl', () => ({
+  useTranslations: () => (key: string) => key,
+}));
+
 vi.mock('next-themes', () => ({
   useTheme: () => ({ theme: 'light', setTheme: vi.fn() }),
 }));
