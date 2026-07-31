@@ -114,7 +114,7 @@ describe('SocialPage', () => {
       expect(container.textContent).toContain('Edit');
     });
 
-    const editButton = container.querySelector('[aria-label="Edit post"]');
+    const editButton = container.querySelector('[aria-label="Edit"]');
     expect(editButton).toBeTruthy();
 
     if (editButton) {

@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import TournamentDetailPage from './page';
 
 vi.mock('next-intl/server', () => ({
-  getTranslations: () => async () => (key: string) => {
+  getTranslations: async () => (key: string) => {
     const map: Record<string, string> = {
       players: 'Players', noPlayers: 'No players yet.',
       joinTournament: 'Join Tournament', leaveTournament: 'Leave Tournament',
@@ -12,7 +12,7 @@ vi.mock('next-intl/server', () => ({
     };
     return map[key] || key;
   },
-  getLocale: () => async () => 'en',
+  getLocale: async () => 'en',
 }));
 
 vi.mock('@/lib/auth', () => ({
@@ -38,9 +38,30 @@ vi.mock('lucide-react', () => ({
   LogOut: () => <span />,
 }));
 
+vi.mock('@/components/ui/badge', () => ({
+  Badge: ({ children }: any) => <span>{children}</span>,
+}));
+
+vi.mock('@/components/ui/avatar', () => ({
+  Avatar: ({ children }: any) => <div>{children}</div>,
+  AvatarImage: () => null,
+  AvatarFallback: ({ children }: any) => <span>{children}</span>,
+}));
+
+vi.mock('@/components/ui/card', () => ({
+  Card: ({ children }: any) => <div>{children}</div>,
+  CardHeader: ({ children }: any) => <div>{children}</div>,
+  CardTitle: ({ children }: any) => <div>{children}</div>,
+  CardContent: ({ children }: any) => <div>{children}</div>,
+}));
+
+vi.mock('@/components/ui/container', () => ({
+  Container: ({ children }: any) => <div>{children}</div>,
+}));
+
 const mockTournament = {
   id: 't1',
-  name: 'King\'s Gambit Showdown',
+  name: "King's Gambit Showdown",
   description: 'A fun tournament for all levels',
   type: 'SWISS',
   status: 'UPCOMING',
@@ -70,7 +91,7 @@ describe('TournamentDetailPage', () => {
     globalThis.fetch = createFetchMock(mockTournament) as any;
     const jsx = await TournamentDetailPage({ params: Promise.resolve({ id: 't1', locale: 'en' }) });
     const { container } = render(jsx);
-    expect(container.textContent).toContain('King\'s Gambit Showdown');
+    expect(container.textContent).toContain("King's Gambit Showdown");
     expect(container.textContent).toContain('A fun tournament for all levels');
   });
 

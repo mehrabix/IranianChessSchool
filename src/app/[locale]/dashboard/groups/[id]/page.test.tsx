@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import GroupDetailPage from './page';
 
 vi.mock('next-intl/server', () => ({
-  getTranslations: () => async () => (key: string) => {
+  getTranslations: async () => (key: string) => {
     const map: Record<string, string> = {
       members: 'Members', noMembers: 'No members yet.',
       joinGroup: 'Join Group', leaveGroup: 'Leave Group',
@@ -12,7 +12,7 @@ vi.mock('next-intl/server', () => ({
     };
     return map[key] || key;
   },
-  getLocale: () => async () => 'en',
+  getLocale: async () => 'en',
 }));
 
 vi.mock('@/lib/auth', () => ({
@@ -35,6 +35,27 @@ vi.mock('lucide-react', () => ({
   Users: () => <span />,
   LogIn: () => <span />,
   LogOut: () => <span />,
+}));
+
+vi.mock('@/components/ui/badge', () => ({
+  Badge: ({ children }: any) => <span>{children}</span>,
+}));
+
+vi.mock('@/components/ui/avatar', () => ({
+  Avatar: ({ children }: any) => <div>{children}</div>,
+  AvatarImage: () => null,
+  AvatarFallback: ({ children }: any) => <span>{children}</span>,
+}));
+
+vi.mock('@/components/ui/card', () => ({
+  Card: ({ children }: any) => <div>{children}</div>,
+  CardHeader: ({ children }: any) => <div>{children}</div>,
+  CardTitle: ({ children }: any) => <div>{children}</div>,
+  CardContent: ({ children }: any) => <div>{children}</div>,
+}));
+
+vi.mock('@/components/ui/container', () => ({
+  Container: ({ children }: any) => <div>{children}</div>,
 }));
 
 const mockGroup = {
@@ -82,7 +103,7 @@ describe('GroupDetailPage', () => {
     globalThis.fetch = createFetchMock({ group: mockGroup }) as any;
     const jsx = await GroupDetailPage({ params: Promise.resolve({ id: 'g1', locale: 'en' }) });
     const { container } = render(jsx);
-    expect(container.textContent).toContain('3 members');
+    expect(container.textContent).toContain('3 Members');
   });
 
   it('renders members list', async () => {
