@@ -16,7 +16,8 @@
     "db:generate": "drizzle-kit generate --config=drizzle/config.ts",
     "db:push": "drizzle-kit push --config=drizzle/config.ts",
     "db:studio": "drizzle-kit studio --config=drizzle/config.ts",
-    "db:seed": "tsx drizzle/seed.ts"
+    "db:seed": "tsx drizzle/seed.ts",
+    "validate-i18n": "tsx scripts/validate-i18n.ts"
   },
   "dependencies": {
     "@auth/core": "^0.34.3",
