@@ -55,7 +55,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
             <SheetHeader className="border-b px-4 py-3">
               <SheetTitle className="text-lg font-semibold">{t('backToDashboard')}</SheetTitle>
             </SheetHeader>
-            <SidebarNav t={t} pathname={pathname} isActive={isActive} collapsed={false} onNavigate={() => setSidebarOpen(false)} />
+            <SidebarNav t={t} isActive={isActive} collapsed={false} onNavigate={() => setSidebarOpen(false)} />
           </SheetContent>
         </Sheet>
         <span className="text-sm font-medium truncate">
@@ -78,7 +78,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
           </Button>
         </div>
 
-        <SidebarNav t={t} pathname={pathname} isActive={isActive} collapsed={!sidebarOpen} />
+        <SidebarNav t={t} isActive={isActive} collapsed={!sidebarOpen} />
       </aside>
 
       {/* Main content */}

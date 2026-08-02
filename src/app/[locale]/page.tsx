@@ -42,8 +42,15 @@ const students = [
   { nameKey: 'student3Name', gainKey: 'student3Gain', quoteKey: 'student3Quote', ratingKey: 'student3Rating' },
 ];
 
+const pricingPlans = [
+  { nameKey: 'standard', priceKey: 'standardPrice', periodKey: 'standardPeriod', descKey: 'standardDesc', ctaKey: 'standardCta', popular: false, features: ['standardF1', 'standardF2', 'standardF3', 'standardF4', 'standardF5', 'standardF6'] },
+  { nameKey: 'premium', priceKey: 'premiumPrice', periodKey: 'premiumPeriod', descKey: 'premiumDesc', ctaKey: 'premiumCta', popular: true, features: ['premiumF1', 'premiumF2', 'premiumF3', 'premiumF4', 'premiumF5', 'premiumF6'] },
+  { nameKey: 'vip', priceKey: 'vipPrice', periodKey: 'vipPeriod', descKey: 'vipDesc', ctaKey: 'vipCta', popular: false, features: ['vipF1', 'vipF2', 'vipF3', 'vipF4', 'vipF5', 'vipF6'] },
+];
+
 export default async function HomePage() {
   const t = await getTranslations('home');
+  const tp = await getTranslations('pricing');
   const session = await auth();
   const ctaHref = session?.user ? '/dashboard' : '/pricing';
   return (
@@ -250,6 +257,58 @@ export default async function HomePage() {
               </Card>
             </div>
           </div>
+        </Container>
+      </section>
+
+      <section className="py-20 md:py-28">
+        <Container size="lg">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              {t('pricing.heading')}
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              {t('pricing.subtitle')}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {pricingPlans.map((plan) => (
+              <Card key={plan.nameKey} className={`relative overflow-hidden ${plan.popular ? 'border-emerald-500 shadow-lg shadow-emerald-500/10' : ''}`}>
+                {plan.popular && (
+                  <div className="absolute top-0 end-0">
+                    <div className="bg-emerald-600 text-white text-xs font-semibold px-4 py-1 rounded-bl-lg">
+                      {tp('plans.mostPopular')}
+                    </div>
+                  </div>
+                )}
+                <CardContent className="p-8 space-y-6">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold">{tp(`plans.${plan.nameKey}`)}</h3>
+                    <p className="text-sm text-muted-foreground">{tp(`plans.${plan.descKey}`)}</p>
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-4xl font-bold">{tp(`plans.${plan.priceKey}`)}</span>
+                      <span className="text-muted-foreground">{tp(`plans.${plan.periodKey}`)}</span>
+                    </div>
+                  </div>
+                  <ul className="space-y-3">
+                    {plan.features.map((f, i) => (
+                      <li key={i} className="flex items-start gap-3 text-sm">
+                        <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                        {tp(`plans.${f}`)}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href={ctaHref}>
+                    <Button className="w-full h-11 gap-2" variant={plan.popular ? 'default' : 'outline'}>
+                      {tp(`plans.${plan.ctaKey}`)} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <p className="text-center text-sm text-muted-foreground mt-8">
+            {tp('plans.finePrint')}
+          </p>
         </Container>
       </section>
 
