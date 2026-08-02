@@ -7,6 +7,7 @@ import { Container } from '@/components/ui/container';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { CheckCircle2, Clock, BookOpen, TrendingUp, Target, Zap } from 'lucide-react';
+import { tKey } from '@/lib/t-key';
 
 function getWeekDays(locale: string) {
   const today = new Date();
