@@ -28,7 +28,12 @@
     "contact": "تماس",
     "email": "info@iranianchessschool.com",
     "copyright": "© {year} آموزشگاه شطرنج ایران. تمامی حقوق محفوظ است.",
-    "social": "شبکه‌های اجتماعی"
+    "social": {
+      "youtube": "یوتیوب",
+      "instagram": "اینستاگرام",
+      "discord": "دیسکورد",
+      "telegram": "تلگرام"
+    }
   },
   "home": {
     "hero": {
@@ -296,8 +301,12 @@
       "youtube": "یوتیوب",
       "telegram": "تلگرام"
     },
-    "validation": "اعتبارسنجی",
-    "success": "موفقیت"
+    "validation": {
+      "fieldsRequired": "نام، ایمیل و پیام الزامی است"
+    },
+    "success": {
+      "messageReceived": "پیام دریافت شد. به زودی با شما تماس خواهیم گرفت."
+    }
   },
   "kids": {
     "hero": {
@@ -477,7 +486,12 @@
       "tryAgain": "تلاش مجدد",
       "registrationFailed": "ثبت‌نام ناموفق بود"
     },
-    "validation": "اعتبارسنجی"
+    "validation": {
+      "nameTooShort": "نام خیلی کوتاه است",
+      "invalidEmail": "ایمیل معتبر وارد کنید",
+      "passwordTooShort": "رمز عبور باید حداقل ۸ کاراکتر باشد",
+      "emailExists": "این ایمیل قبلاً ثبت شده است"
+    }
   },
   "courses": {
     "hero": {
@@ -519,7 +533,9 @@
     "lessonNotFound": "درس پیدا نشد",
     "backToCourse": "بازگشت به دوره",
     "minutes": "دقیقه",
-    "error": "خطا"
+    "error": {
+      "notFound": "دوره پیدا نشد"
+    }
   },
   "dashboard": {
     "welcome": "خوش برگشتی",
@@ -668,7 +684,9 @@
     "description": "توضیحات",
     "join": "عضویت",
     "leave": "خروج",
-    "validation": "اعتبارسنجی"
+    "validation": {
+      "nameRequired": "نام الزامی است"
+    }
   },
   "tournaments": {
     "title": "مسابقات",
@@ -678,15 +696,19 @@
     "maxPlayers": "حداکثر بازیکنان",
     "join": "شرکت",
     "leave": "خروج",
-    "validation": "اعتبارسنجی",
-    "error": "خطا"
+    "validation": {
+      "nameRequired": "نام الزامی است"
+    },
+    "error": {
+      "full": "مسابقه پر است"
+    }
   },
   "puzzles": {
     "title": "معماها",
     "subtitle": "تاکتیک‌های خود را تقویت کنید",
     "dailyPuzzle": "معمای روز",
     "puzzleRush": "مسابقه معما",
-    "streak": "连胜",
+    "streak": "رکورد متوالی",
     "streakCount": "{count} معما پشت سر هم حل شد",
     "timeRemaining": "زمان",
     "score": "امتیاز",
@@ -703,8 +725,14 @@
     "puzzlesSolved": "معماهای حل شده",
     "noPuzzles": "معمایی موجود نیست.",
     "dailyLoadError": "بارگذاری معمای روز ناموفق بود",
-    "validation": "اعتبارسنجی",
-    "error": "خطا"
+    "validation": {
+      "fieldsRequired": "شناسه معما و حل شده الزامی است"
+    },
+    "error": {
+      "notFound": "معما پیدا نشد",
+      "noneAvailable": "معمایی موجود نیست",
+      "recordFailed": "ثبت تلاش ناموفق بود"
+    }
   },
   "admin": {
     "nav": {
@@ -792,25 +820,196 @@
       "pgn": "PGN"
     },
     "brand": "برند",
-    "validation": "اعتبارسنجی"
+    "validation": {
+      "courseIdRequired": "شناسه دوره الزامی است",
+      "titleAndCourseIdRequired": "عنوان و شناسه دوره الزامی است",
+      "idAndTitleRequired": "شناسه و عنوان الزامی است",
+      "moduleIdRequired": "شناسه ماژول الزامی است",
+      "titleModuleIdCourseIdRequired": "عنوان، شناسه ماژول و شناسه دوره الزامی است",
+      "titleRequired": "عنوان الزامی است",
+      "idAndContentRequired": "شناسه و محتوا الزامی است"
+    }
   },
-  "common": "عمومی",
-  "chess": "شطرنج",
-  "achievements": "دستاوردها",
-  "levels": "سطوح",
-  "plans": "طرح‌ها",
-  "notifications": "اعلان‌ها",
-  "theme": "پوسته",
-  "leaderboard": "جدول امتیازات",
-  "progress": "پیشرفت",
-  "lessons": "درس‌ها",
-  "comments": "نظرات",
-  "users": "کاربران",
-  "upload": "بارگذاری",
-  "payments": "پرداخت‌ها",
-  "xp": "امتیاز",
-  "ai": "هوش مصنوعی",
-  "cron": "زمان‌بندی",
-  "posts": "پست‌ها",
-  "quizzes": "آزمون‌ها"
-}\n
+  "common": {
+    "error": {
+      "unauthorized": "دسترسی غیرمجاز",
+      "forbidden": "ممنوع",
+      "notFound": "پیدا نشد",
+      "failed": "ناموفق",
+      "internalServerError": "خطای داخلی سرور",
+      "notAuthenticated": "احراز هویت نشده"
+    },
+    "validation": {
+      "idRequired": "شناسه الزامی است",
+      "contentRequired": "محتوا الزامی است"
+    }
+  },
+  "chess": {
+    "undo": "برگشت",
+    "reset": "بازنشانی",
+    "engineAnalysis": "تحلیل موتور",
+    "evaluate": "ارزیابی",
+    "topLines": "برترین خطوط",
+    "score": "امتیاز",
+    "depth": "عمق",
+    "best": "بهترین",
+    "notAvailable": "N/A",
+    "principalVariation": "PV",
+    "engineError": "خطای موتور",
+    "aiCoach": "مربی هوش مصنوعی",
+    "analyzing": "در حال تحلیل...",
+    "explainPosition": "توضیح موقعیت",
+    "aiCoachUnavailable": "مربی هوش مصنوعی در دسترس نیست. کلید API اضافه کنید.",
+    "engine": {
+      "initFailed": "راه‌اندازی موتور ناموفق بود",
+      "evalTimedOut": "زمان ارزیابی موتور به پایان رسید",
+      "notInitialized": "موتور راه‌اندازی نشده"
+    },
+    "validation": {
+      "pgnRequired": "PGN الزامی است",
+      "invalidPgn": "PGN نامعتبر",
+      "noMoves": "حرکتی در PGN نیست",
+      "usernameRequired": "نام کاربری الزامی است"
+    },
+    "error": {
+      "analysisFailed": "تحلیل ناموفق بود",
+      "importFailed": "وارد کردن بازی‌ها ناموفق بود",
+      "lichessUserNotFound": "کاربر Lichess پیدا نشد",
+      "ratingHistoryNotFound": "تاریخچه رتبه‌بندی پیدا نشد",
+      "lichessGamesNotFound": "بازی‌ها در Lichess پیدا نشد",
+      "dailyPuzzleFailed": "دریافت معمای روز ناموفق بود",
+      "openingExplorerFailed": "دریافت کاوشگر گشایش ناموفق بود",
+      "chesscomProfileNotFound": "پروفایل Chess.com پیدا نشد",
+      "chesscomStatsNotFound": "آمار Chess.com پیدا نشد",
+      "chesscomGamesNotFound": "بازی‌ها در Chess.com پیدا نشد"
+    }
+  },
+  "achievements": {
+    "title": {
+      "firstPuzzle": "اولین معمای حل شده",
+      "tenPuzzles": "شاگرد معماها",
+      "hundredPuzzles": "استاد معماها",
+      "firstLesson": "اولین قدم‌ها",
+      "firstCourse": "فارغ‌التحصیل دوره",
+      "streak7": "جنگجوی هفته",
+      "streak30": "استاد ماه",
+      "firstPost": "آغازگر اجتماعی",
+      "firstComment": "اهل گفتگو"
+    },
+    "desc": {
+      "firstPuzzle": "اولین معمای خود را حل کردید",
+      "tenPuzzles": "۱۰ معما حل کردید",
+      "hundredPuzzles": "۱۰۰ معما حل کردید",
+      "firstLesson": "اولین درس خود را کامل کردید",
+      "firstCourse": "اولین دوره خود را کامل کردید",
+      "streak7": "۷ روز متوالی",
+      "streak30": "۳۰ روز متوالی",
+      "firstPost": "اولین پست خود را ایجاد کردید",
+      "firstComment": "اولین نظر خود را نوشتید"
+    }
+  },
+  "levels": {
+    "bronze": "برنز",
+    "silver": "نقره",
+    "gold": "طلا",
+    "platinum": "پلاتین",
+    "diamond": "الماس",
+    "master": "استاد",
+    "grandmaster": "استاد بزرگ"
+  },
+  "plans": {
+    "standard": "استاندارد",
+    "premium": "پریمیوم",
+    "vip": "VIP"
+  },
+  "notifications": {
+    "likedYourPost": "{name} پست شما را لایک کرد",
+    "commentedOnYourPost": "{name} روی پست شما نظر داد",
+    "followedYou": "{name} شما را دنبال کرد"
+  },
+  "theme": {
+    "toggleTheme": "تغییر پوسته"
+  },
+  "leaderboard": {
+    "error": {
+      "fetchFailed": "دریافت جدول امتیازات ناموفق بود"
+    }
+  },
+  "progress": {
+    "validation": {
+      "lessonIdRequired": "شناسه درس الزامی است"
+    }
+  },
+  "lessons": {
+    "error": {
+      "notFound": "درس پیدا نشد"
+    },
+    "validation": {
+      "queryRequired": "شناسه یا شناسه ماژول یا شناسه دوره الزامی است"
+    }
+  },
+  "comments": {
+    "error": {
+      "fetchFailed": "دریافت نظرات ناموفق بود",
+      "addFailed": "افزودن نظر ناموفق بود"
+    }
+  },
+  "users": {
+    "error": {
+      "cannotFollowSelf": "نمی‌توانید خودتان را دنبال کنید",
+      "toggleFollowFailed": "تغییر وضعیت دنبال کردن ناموفق بود"
+    }
+  },
+  "upload": {
+    "error": {
+      "noFile": "فایلی ارائه نشده",
+      "failed": "بارگذاری فایل ناموفق بود"
+    }
+  },
+  "payments": {
+    "error": {
+      "invalidPlan": "طرح نامعتبر",
+      "checkoutFailed": "ایجاد پرداخت ناموفق بود",
+      "noCustomer": "مشتری Stripe پیدا نشد",
+      "portalFailed": "ایجاد پورتال ناموفق بود",
+      "webhookError": "خطای وب‌هوک"
+    }
+  },
+  "xp": {
+    "error": {
+      "invalidAction": "عملیات نامعتبر"
+    }
+  },
+  "ai": {
+    "error": {
+      "fenRequired": "FEN الزامی است",
+      "unavailable": "هوش مصنوعی در دسترس نیست",
+      "allProvidersFailed": "همه ارائه‌دهندگان هوش مصنوعی ناموفق بودند"
+    }
+  },
+  "cron": {
+    "error": {
+      "fetchPuzzleFromLichess": "دریافت معما از Lichess ناموفق بود"
+    }
+  },
+  "posts": {
+    "error": {
+      "fetchFailed": "دریافت پست‌ها ناموفق بود",
+      "createFailed": "ایجاد پست ناموفق بود",
+      "updateFailed": "به‌روزرسانی پست ناموفق بود",
+      "deleteFailed": "حذف پست ناموفق بود",
+      "toggleLikeFailed": "تغییر وضعیت لایک ناموفق بود"
+    },
+    "validation": {
+      "idAndContentRequired": "شناسه و محتوا الزامی است"
+    }
+  },
+  "quizzes": {
+    "error": {
+      "notFound": "آزمون پیدا نشد",
+      "maxAttempts": "حداکثر تلاش‌ها",
+      "attemptNotFound": "تلاش پیدا نشد",
+      "alreadySubmitted": "قبلاً ارسال شده"
+    }
+  }
+}

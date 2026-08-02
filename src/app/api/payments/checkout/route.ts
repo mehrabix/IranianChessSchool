@@ -10,35 +10,41 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const { plan } = await req.json();
-    const { getStripe, PLANS } = await import('@/lib/stripe');
-    const stripe = getStripe();
-    const planConfig = PLANS[plan as keyof typeof PLANS];
-    if (!planConfig) {
-      return NextResponse.json({ error: 'Invalid plan' }, { status: 400 });
-    }
+    const { plan, provider: providerType } = await req.json();
+    const { getPaymentProvider } = await import('@/lib/payment');
 
-    const checkoutSession = await stripe.checkout.sessions.create({
-      mode: 'subscription',
-      customer_email: session.user.email,
-      line_items: [{
-        price_data: {
-          currency: 'usd',
-          product_data: { name: planConfig.name },
-          unit_amount: planConfig.price,
-          recurring: { interval: 'month' },
-        },
-        quantity: 1,
-      }],
-      subscription_data: { trial_period_days: 7 },
-      success_url: `${req.nextUrl.origin}/dashboard?checkout=success`,
-      cancel_url: `${req.nextUrl.origin}/pricing?checkout=canceled`,
-      metadata: { userId: session.user.id, plan },
+    const provider = getPaymentProvider(providerType);
+    const result = await provider.createCheckout({
+      userId: session.user.id,
+      email: session.user.email,
+      plan,
+      baseUrl: req.nextUrl.origin,
     });
 
-    return NextResponse.json({ url: checkoutSession.url });
+    // For Iranian gateways, store the pending payment
+    if (result.transactionId && provider.type !== 'STRIPE') {
+      const { db, pendingPayments } = await import('@/lib/db');
+      const crypto = await import('crypto');
+      const { PLANS } = await import('@/lib/payment/plans');
+
+      await db.insert(pendingPayments).values({
+        id: crypto.randomUUID(),
+        userId: session.user.id,
+        authority: result.transactionId,
+        plan,
+        amount: PLANS[plan as keyof typeof PLANS]?.priceIrt ?? 0,
+        provider: provider.type,
+        status: 'PENDING',
+        createdAt: new Date(),
+      });
+    }
+
+    return NextResponse.json({
+      url: result.redirectUrl,
+      transactionId: result.transactionId,
+    });
   } catch (e) {
-    console.error('Stripe checkout error:', e);
+    console.error('Checkout error:', e);
     return NextResponse.json({ error: 'Failed to create checkout' }, { status: 500 });
   }
 }

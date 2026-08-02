@@ -28,7 +28,12 @@
     "contact": "Kontakt",
     "email": "info@iranianchessschool.com",
     "copyright": "© {year} Iranian Chess School. Alle rettigheter forbeholdt.",
-    "social": "Sosial"
+    "social": {
+      "youtube": "YouTube",
+      "instagram": "Instagram",
+      "discord": "Discord",
+      "telegram": "Telegram"
+    }
   },
   "home": {
     "hero": {
@@ -296,8 +301,12 @@
       "youtube": "YouTube",
       "telegram": "Telegram"
     },
-    "validation": "Validering",
-    "success": "Suksess"
+    "validation": {
+      "fieldsRequired": "Navn, e-post og melding kreves"
+    },
+    "success": {
+      "messageReceived": "Melding mottatt. Vi kontakter deg snart."
+    }
   },
   "kids": {
     "hero": {
@@ -477,7 +486,12 @@
       "tryAgain": "Prøv igjen",
       "registrationFailed": "Registrering mislyktes"
     },
-    "validation": "Validering"
+    "validation": {
+      "nameTooShort": "Navn for kort",
+      "invalidEmail": "Skriv inn en gyldig e-post",
+      "passwordTooShort": "Passord må være minst 8 tegn",
+      "emailExists": "En konto med denne e-posten finnes allerede"
+    }
   },
   "courses": {
     "hero": {
@@ -519,7 +533,9 @@
     "lessonNotFound": "Leksjon ikke funnet",
     "backToCourse": "Tilbake til kurs",
     "minutes": "minutter",
-    "error": "Feil"
+    "error": {
+      "notFound": "Kurs ikke funnet"
+    }
   },
   "dashboard": {
     "welcome": "Velkommen tilbake",
@@ -668,7 +684,9 @@
     "description": "Beskrivelse",
     "join": "Bli med",
     "leave": "Forlat",
-    "validation": "Validering"
+    "validation": {
+      "nameRequired": "Navn kreves"
+    }
   },
   "tournaments": {
     "title": "Turneringer",
@@ -678,8 +696,12 @@
     "maxPlayers": "Maks Spillere",
     "join": "Delta",
     "leave": "Forlat",
-    "validation": "Validering",
-    "error": "Feil"
+    "validation": {
+      "nameRequired": "Navn kreves"
+    },
+    "error": {
+      "full": "Turnering full"
+    }
   },
   "admin": {
     "nav": {
@@ -767,7 +789,15 @@
       "pgn": "PGN"
     },
     "brand": "Merkevare",
-    "validation": "Validering"
+    "validation": {
+      "courseIdRequired": "courseId kreves",
+      "titleAndCourseIdRequired": "Tittel og courseId kreves",
+      "idAndTitleRequired": "ID og tittel kreves",
+      "moduleIdRequired": "moduleId kreves",
+      "titleModuleIdCourseIdRequired": "Tittel, moduleId og courseId kreves",
+      "titleRequired": "Tittel kreves",
+      "idAndContentRequired": "ID og innhold kreves"
+    }
   },
   "puzzles": {
     "title": "Oppgaver",
@@ -791,26 +821,195 @@
     "puzzlesSolved": "Oppgaver løst",
     "noPuzzles": "Ingen oppgaver tilgjengelig.",
     "dailyLoadError": "Kunne ikke laste dagens oppgave",
-    "validation": "Validering",
-    "error": "Feil"
+    "validation": {
+      "fieldsRequired": "puzzleId og solved kreves"
+    },
+    "error": {
+      "notFound": "Oppgave ikke funnet",
+      "noneAvailable": "Ingen oppgaver tilgjengelig",
+      "recordFailed": "Kunne ikke registrere forsøk"
+    }
   },
-  "common": "Felles",
-  "chess": "Sjakk",
-  "achievements": "Prestasjoner",
-  "levels": "Nivåer",
-  "plans": "Planer",
-  "notifications": "Varsler",
-  "theme": "Tema",
-  "leaderboard": "Ledertavle",
-  "progress": "Fremgang",
-  "lessons": "Leksjoner",
-  "comments": "Kommentarer",
-  "users": "Brukere",
-  "upload": "Last opp",
-  "payments": "Betalinger",
-  "xp": "EP",
-  "ai": "KI",
-  "cron": "Tidsplan",
-  "posts": "Innlegg",
-  "quizzes": "Quizzer"
+  "common": {
+    "error": {
+      "unauthorized": "Uautorisert",
+      "forbidden": "Forbudt",
+      "notFound": "Ikke funnet",
+      "failed": "Mislyktes",
+      "internalServerError": "Intern serverfeil",
+      "notAuthenticated": "Ikke autentisert"
+    },
+    "validation": {
+      "idRequired": "ID kreves",
+      "contentRequired": "Innhold kreves"
+    }
+  },
+  "chess": {
+    "undo": "Angre",
+    "reset": "Tilbakestill",
+    "engineAnalysis": "Motoranalyse",
+    "evaluate": "Evaluer",
+    "topLines": "Topplinjer",
+    "score": "Poeng",
+    "depth": "Dybde",
+    "best": "Beste",
+    "notAvailable": "I/T",
+    "principalVariation": "HV",
+    "engineError": "Motorfeil",
+    "aiCoach": "KI-trener",
+    "analyzing": "Analyserer...",
+    "explainPosition": "Forklar posisjon",
+    "aiCoachUnavailable": "KI-trener utilgjengelig. Legg til en API-nøkkel.",
+    "engine": {
+      "initFailed": "Kunne ikke initialisere motor",
+      "evalTimedOut": "Motorevaluering tok for lang tid",
+      "notInitialized": "Motor ikke initialisert"
+    },
+    "validation": {
+      "pgnRequired": "PGN kreves",
+      "invalidPgn": "Ugyldig PGN",
+      "noMoves": "Ingen trekk i PGN",
+      "usernameRequired": "Brukernavn kreves"
+    },
+    "error": {
+      "analysisFailed": "Analyse mislyktes",
+      "importFailed": "Import mislyktes",
+      "lichessUserNotFound": "Lichess-bruker ikke funnet",
+      "ratingHistoryNotFound": "Ratinghistorikk ikke funnet",
+      "lichessGamesNotFound": "Partier ikke funnet på Lichess",
+      "dailyPuzzleFailed": "Kunne ikke hente daglig oppgave",
+      "openingExplorerFailed": "Kunne ikke hente åpningsdatabase",
+      "chesscomProfileNotFound": "Chess.com-profil ikke funnet",
+      "chesscomStatsNotFound": "Chess.com-statistikk ikke funnet",
+      "chesscomGamesNotFound": "Partier ikke funnet på Chess.com"
+    }
+  },
+  "achievements": {
+    "title": {
+      "firstPuzzle": "Første oppgave løst",
+      "tenPuzzles": "Oppgave-lærling",
+      "hundredPuzzles": "Oppgave-mester",
+      "firstLesson": "Første steg",
+      "firstCourse": "Kurs-utdannet",
+      "streak7": "Ukeskriger",
+      "streak30": "Månedsmester",
+      "firstPost": "Sosial start",
+      "firstComment": "Samtalepartner"
+    },
+    "desc": {
+      "firstPuzzle": "Løste din første oppgave",
+      "tenPuzzles": "Løste 10 oppgaver",
+      "hundredPuzzles": "Løste 100 oppgaver",
+      "firstLesson": "Fullførte din første leksjon",
+      "firstCourse": "Fullførte ditt første kurs",
+      "streak7": "7-dagers rekke",
+      "streak30": "30-dagers rekke",
+      "firstPost": "Opprettet ditt første innlegg",
+      "firstComment": "Skrev din første kommentar"
+    }
+  },
+  "levels": {
+    "bronze": "Bronse",
+    "silver": "Sølv",
+    "gold": "Gull",
+    "platinum": "Platina",
+    "diamond": "Diamant",
+    "master": "Mester",
+    "grandmaster": "Stormester"
+  },
+  "plans": {
+    "standard": "Standard",
+    "premium": "Premium",
+    "vip": "VIP"
+  },
+  "notifications": {
+    "likedYourPost": "{name} likte innlegget ditt",
+    "commentedOnYourPost": "{name} kommenterte på innlegget ditt",
+    "followedYou": "{name} begynte å følge deg"
+  },
+  "theme": {
+    "toggleTheme": "Bytt tema"
+  },
+  "leaderboard": {
+    "error": {
+      "fetchFailed": "Kunne ikke hente toppliste"
+    }
+  },
+  "progress": {
+    "validation": {
+      "lessonIdRequired": "lessonId kreves"
+    }
+  },
+  "lessons": {
+    "error": {
+      "notFound": "Leksjon ikke funnet"
+    },
+    "validation": {
+      "queryRequired": "id, moduleId eller courseId kreves"
+    }
+  },
+  "comments": {
+    "error": {
+      "fetchFailed": "Kunne ikke hente kommentarer",
+      "addFailed": "Kunne ikke legge til kommentar"
+    }
+  },
+  "users": {
+    "error": {
+      "cannotFollowSelf": "Kan ikke følge deg selv",
+      "toggleFollowFailed": "Kunne ikke endre følging"
+    }
+  },
+  "upload": {
+    "error": {
+      "noFile": "Ingen fil oppgitt",
+      "failed": "Opplasting mislyktes"
+    }
+  },
+  "payments": {
+    "error": {
+      "invalidPlan": "Ugyldig plan",
+      "checkoutFailed": "Kunne ikke opprette betaling",
+      "noCustomer": "Ingen Stripe-kunde funnet",
+      "portalFailed": "Kunne ikke opprette portal",
+      "webhookError": "Webhook-feil"
+    }
+  },
+  "xp": {
+    "error": {
+      "invalidAction": "Ugyldig handling"
+    }
+  },
+  "ai": {
+    "error": {
+      "fenRequired": "FEN kreves",
+      "unavailable": "KI utilgjengelig",
+      "allProvidersFailed": "Alle KI-leverandører mislyktes"
+    }
+  },
+  "cron": {
+    "error": {
+      "fetchPuzzleFromLichess": "Kunne ikke hente oppgave fra Lichess"
+    }
+  },
+  "posts": {
+    "error": {
+      "fetchFailed": "Kunne ikke hente innlegg",
+      "createFailed": "Kunne ikke opprette innlegg",
+      "updateFailed": "Kunne ikke oppdatere innlegg",
+      "deleteFailed": "Kunne ikke slette innlegg",
+      "toggleLikeFailed": "Kunne ikke endre likerklikk"
+    },
+    "validation": {
+      "idAndContentRequired": "ID og innhold kreves"
+    }
+  },
+  "quizzes": {
+    "error": {
+      "notFound": "Quiz ikke funnet",
+      "maxAttempts": "Maks antall forsøk nådd",
+      "attemptNotFound": "Forsøk ikke funnet",
+      "alreadySubmitted": "Allerede sendt inn"
+    }
+  }
 }

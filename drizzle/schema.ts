@@ -18,6 +18,7 @@ export const users = sqliteTable('users', {
   stripeCustomerId: text('stripe_customer_id'),
   subscriptionId: text('subscription_id'),
   subscriptionStatus: text('subscription_status'),
+  paymentProvider: text('payment_provider'),
   createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
   updatedAt: integer('updated_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
 });
@@ -105,6 +106,7 @@ export const subscriptions = sqliteTable('subscriptions', {
   id: text('id').primaryKey(),
   userId: text('user_id').references(() => users.id),
   stripeSubscriptionId: text('stripe_subscription_id'),
+  providerSubscriptionId: text('provider_subscription_id'),
   plan: text('plan', { enum: ['STANDARD', 'PREMIUM', 'VIP'] }),
   status: text('status', { enum: ['ACTIVE', 'CANCELED', 'PAST_DUE'] }),
   currentPeriodStart: integer('current_period_start', { mode: 'timestamp' }),
@@ -262,4 +264,16 @@ export const notifications = sqliteTable('notifications', {
   link: text('link'),
   read: integer('read', { mode: 'boolean' }).default(false),
   createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});
+
+export const pendingPayments = sqliteTable('pending_payments', {
+  id: text('id').primaryKey(),
+  userId: text('user_id').references(() => users.id),
+  authority: text('authority').unique().notNull(),
+  plan: text('plan'),
+  amount: integer('amount').notNull(),
+  provider: text('provider'),
+  status: text('status', { enum: ['PENDING', 'VERIFIED', 'FAILED'] }).default('PENDING'),
+  refId: text('ref_id'),
+  createdAt: integer('created_at', { mode: 'timestamp' }),
 });

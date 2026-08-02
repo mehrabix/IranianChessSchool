@@ -28,7 +28,12 @@
     "contact": "Contact",
     "email": "info@iranianchessschool.com",
     "copyright": "© {year} Iranian Chess School. Tous droits réservés.",
-    "social": "Social"
+    "social": {
+      "youtube": "YouTube",
+      "instagram": "Instagram",
+      "discord": "Discord",
+      "telegram": "Telegram"
+    }
   },
   "home": {
     "hero": {
@@ -296,8 +301,12 @@
       "youtube": "YouTube",
       "telegram": "Telegram"
     },
-    "validation": "Validation",
-    "success": "Succès"
+    "validation": {
+      "fieldsRequired": "Nom, email et message sont requis"
+    },
+    "success": {
+      "messageReceived": "Message reçu. Nous vous répondrons bientôt."
+    }
   },
   "kids": {
     "hero": {
@@ -477,7 +486,12 @@
       "tryAgain": "Réessayer",
       "registrationFailed": "Échec de l'inscription"
     },
-    "validation": "Validation"
+    "validation": {
+      "nameTooShort": "Nom trop court",
+      "invalidEmail": "Entrez un email valide",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères",
+      "emailExists": "Un compte avec cet email existe déjà"
+    }
   },
   "courses": {
     "hero": {
@@ -519,7 +533,9 @@
     "lessonNotFound": "Leçon introuvable",
     "backToCourse": "Retour au cours",
     "minutes": "minutes",
-    "error": "Erreur"
+    "error": {
+      "notFound": "Cours non trouvé"
+    }
   },
   "dashboard": {
     "welcome": "Bon retour",
@@ -564,8 +580,8 @@
     "importGames": "Importer des parties",
     "username": "Nom d'utilisateur",
     "importing": "Importation...",
-    "noGamesFound": "Aucune partie trouvee.",
-    "uploadPgnFile": "Telecharger un fichier PGN",
+    "noGamesFound": "Aucune partie trouvée.",
+    "uploadPgnFile": "Télécharger un fichier PGN",
     "chooseFile": "Choisir un fichier .pgn",
     "pgnPlaceholder": "Coller le PGN ici...",
     "fen": "FEN",
@@ -668,7 +684,9 @@
     "description": "Description",
     "join": "Rejoindre",
     "leave": "Quitter",
-    "validation": "Validation"
+    "validation": {
+      "nameRequired": "Nom requis"
+    }
   },
   "tournaments": {
     "title": "Tournois",
@@ -678,8 +696,12 @@
     "maxPlayers": "Max Joueurs",
     "join": "Participer",
     "leave": "Quitter",
-    "validation": "Validation",
-    "error": "Erreur"
+    "validation": {
+      "nameRequired": "Nom requis"
+    },
+    "error": {
+      "full": "Tournoi complet"
+    }
   },
   "admin": {
     "nav": {
@@ -767,7 +789,15 @@
       "pgn": "PGN"
     },
     "brand": "Marque",
-    "validation": "Validation"
+    "validation": {
+      "courseIdRequired": "courseId requis",
+      "titleAndCourseIdRequired": "Titre et courseId requis",
+      "idAndTitleRequired": "ID et titre requis",
+      "moduleIdRequired": "moduleId requis",
+      "titleModuleIdCourseIdRequired": "Titre, moduleId et courseId requis",
+      "titleRequired": "Titre requis",
+      "idAndContentRequired": "ID et contenu requis"
+    }
   },
   "puzzles": {
     "title": "Puzzles",
@@ -791,26 +821,195 @@
     "puzzlesSolved": "Puzzles résolus",
     "noPuzzles": "Aucun puzzle disponible.",
     "dailyLoadError": "Échec du chargement du puzzle du jour",
-    "validation": "Validation",
-    "error": "Erreur"
+    "validation": {
+      "fieldsRequired": "puzzleId et solved requis"
+    },
+    "error": {
+      "notFound": "Puzzle non trouvé",
+      "noneAvailable": "Aucun puzzle disponible",
+      "recordFailed": "Échec d'enregistrement de la tentative"
+    }
   },
-  "common": "Commun",
-  "chess": "Échecs",
-  "achievements": "Réalisations",
-  "levels": "Niveaux",
-  "plans": "Forfaits",
-  "notifications": "Notifications",
-  "theme": "Thème",
-  "leaderboard": "Classement",
-  "progress": "Progression",
-  "lessons": "Leçons",
-  "comments": "Commentaires",
-  "users": "Utilisateurs",
-  "upload": "Téléverser",
-  "payments": "Paiements",
-  "xp": "XP",
-  "ai": "IA",
-  "cron": "Planification",
-  "posts": "Publications",
-  "quizzes": "Quiz"
+  "common": {
+    "error": {
+      "unauthorized": "Non autorisé",
+      "forbidden": "Interdit",
+      "notFound": "Non trouvé",
+      "failed": "Échoué",
+      "internalServerError": "Erreur interne du serveur",
+      "notAuthenticated": "Non authentifié"
+    },
+    "validation": {
+      "idRequired": "ID requis",
+      "contentRequired": "Contenu requis"
+    }
+  },
+  "chess": {
+    "undo": "Annuler",
+    "reset": "Réinitialiser",
+    "engineAnalysis": "Analyse du moteur",
+    "evaluate": "Évaluer",
+    "topLines": "Meilleures lignes",
+    "score": "Score",
+    "depth": "Profondeur",
+    "best": "Meilleur",
+    "notAvailable": "N/D",
+    "principalVariation": "VP",
+    "engineError": "Erreur du moteur",
+    "aiCoach": "Coach IA",
+    "analyzing": "Analyse en cours...",
+    "explainPosition": "Expliquer la position",
+    "aiCoachUnavailable": "Coach IA indisponible. Ajoutez une clé API.",
+    "engine": {
+      "initFailed": "Échec d'initialisation du moteur",
+      "evalTimedOut": "Évaluation du moteur expirée",
+      "notInitialized": "Moteur non initialisé"
+    },
+    "validation": {
+      "pgnRequired": "PGN requis",
+      "invalidPgn": "PGN invalide",
+      "noMoves": "Aucun coup dans le PGN",
+      "usernameRequired": "Nom d'utilisateur requis"
+    },
+    "error": {
+      "analysisFailed": "Analyse échouée",
+      "importFailed": "Échec de l'importation",
+      "lichessUserNotFound": "Utilisateur Lichess non trouvé",
+      "ratingHistoryNotFound": "Historique de classement non trouvé",
+      "lichessGamesNotFound": "Parties non trouvées sur Lichess",
+      "dailyPuzzleFailed": "Échec de récupération du puzzle quotidien",
+      "openingExplorerFailed": "Échec de récupération de l'explorateur d'ouvertures",
+      "chesscomProfileNotFound": "Profil Chess.com non trouvé",
+      "chesscomStatsNotFound": "Statistiques Chess.com non trouvées",
+      "chesscomGamesNotFound": "Parties non trouvées sur Chess.com"
+    }
+  },
+  "achievements": {
+    "title": {
+      "firstPuzzle": "Premier puzzle résolu",
+      "tenPuzzles": "Apprenti puzzle",
+      "hundredPuzzles": "Maître puzzle",
+      "firstLesson": "Premiers pas",
+      "firstCourse": "Diplômé du cours",
+      "streak7": "Guerrier de la semaine",
+      "streak30": "Maître du mois",
+      "firstPost": "Débutant social",
+      "firstComment": "Conversationnel"
+    },
+    "desc": {
+      "firstPuzzle": "Vous avez résolu votre premier puzzle",
+      "tenPuzzles": "Vous avez résolu 10 puzzles",
+      "hundredPuzzles": "Vous avez résolu 100 puzzles",
+      "firstLesson": "Vous avez terminé votre première leçon",
+      "firstCourse": "Vous avez terminé votre premier cours",
+      "streak7": "Série de 7 jours",
+      "streak30": "Série de 30 jours",
+      "firstPost": "Vous avez créé votre premier post",
+      "firstComment": "Vous avez écrit votre premier commentaire"
+    }
+  },
+  "levels": {
+    "bronze": "Bronze",
+    "silver": "Argent",
+    "gold": "Or",
+    "platinum": "Platine",
+    "diamond": "Diamant",
+    "master": "Maître",
+    "grandmaster": "Grand Maître"
+  },
+  "plans": {
+    "standard": "Standard",
+    "premium": "Premium",
+    "vip": "VIP"
+  },
+  "notifications": {
+    "likedYourPost": "{name} a aimé votre publication",
+    "commentedOnYourPost": "{name} a commenté votre publication",
+    "followedYou": "{name} a commencé à vous suivre"
+  },
+  "theme": {
+    "toggleTheme": "Changer le thème"
+  },
+  "leaderboard": {
+    "error": {
+      "fetchFailed": "Échec de récupération du classement"
+    }
+  },
+  "progress": {
+    "validation": {
+      "lessonIdRequired": "lessonId requis"
+    }
+  },
+  "lessons": {
+    "error": {
+      "notFound": "Leçon non trouvée"
+    },
+    "validation": {
+      "queryRequired": "id, moduleId ou courseId requis"
+    }
+  },
+  "comments": {
+    "error": {
+      "fetchFailed": "Échec de récupération des commentaires",
+      "addFailed": "Échec d'ajout du commentaire"
+    }
+  },
+  "users": {
+    "error": {
+      "cannotFollowSelf": "Vous ne pouvez pas vous suivre vous-même",
+      "toggleFollowFailed": "Échec du changement de suivi"
+    }
+  },
+  "upload": {
+    "error": {
+      "noFile": "Aucun fichier fourni",
+      "failed": "Échec du téléchargement du fichier"
+    }
+  },
+  "payments": {
+    "error": {
+      "invalidPlan": "Plan invalide",
+      "checkoutFailed": "Échec de création du paiement",
+      "noCustomer": "Aucun client Stripe trouvé",
+      "portalFailed": "Échec de création du portail",
+      "webhookError": "Erreur webhook"
+    }
+  },
+  "xp": {
+    "error": {
+      "invalidAction": "Action invalide"
+    }
+  },
+  "ai": {
+    "error": {
+      "fenRequired": "FEN requis",
+      "unavailable": "IA indisponible",
+      "allProvidersFailed": "Tous les fournisseurs IA ont échoué"
+    }
+  },
+  "cron": {
+    "error": {
+      "fetchPuzzleFromLichess": "Échec de récupération du puzzle depuis Lichess"
+    }
+  },
+  "posts": {
+    "error": {
+      "fetchFailed": "Échec de récupération des publications",
+      "createFailed": "Échec de création de la publication",
+      "updateFailed": "Échec de mise à jour de la publication",
+      "deleteFailed": "Échec de suppression de la publication",
+      "toggleLikeFailed": "Échec du changement de like"
+    },
+    "validation": {
+      "idAndContentRequired": "ID et contenu requis"
+    }
+  },
+  "quizzes": {
+    "error": {
+      "notFound": "Quiz non trouvé",
+      "maxAttempts": "Nombre maximum de tentatives atteint",
+      "attemptNotFound": "Tentative non trouvée",
+      "alreadySubmitted": "Déjà soumis"
+    }
+  }
 }

@@ -28,7 +28,12 @@
     "contact": "Контакты",
     "email": "info@iranianchessschool.com",
     "copyright": "© {year} Iranian Chess School. Все права защищены.",
-    "social": "Социальные сети"
+    "social": {
+      "youtube": "YouTube",
+      "instagram": "Instagram",
+      "discord": "Discord",
+      "telegram": "Telegram"
+    }
   },
   "home": {
     "hero": {
@@ -296,8 +301,12 @@
       "youtube": "YouTube",
       "telegram": "Telegram"
     },
-    "validation": "Валидация",
-    "success": "Успешно"
+    "validation": {
+      "fieldsRequired": "Имя, email и сообщение обязательны"
+    },
+    "success": {
+      "messageReceived": "Сообщение получено. Мы свяжемся с вами в ближайшее время."
+    }
   },
   "kids": {
     "hero": {
@@ -477,7 +486,12 @@
       "tryAgain": "Попробовать снова",
       "registrationFailed": "Регистрация не удалась"
     },
-    "validation": "Валидация"
+    "validation": {
+      "nameTooShort": "Имя слишком короткое",
+      "invalidEmail": "Введите действительный email",
+      "passwordTooShort": "Пароль должен быть не менее 8 символов",
+      "emailExists": "Аккаунт с таким email уже существует"
+    }
   },
   "courses": {
     "hero": {
@@ -519,7 +533,9 @@
     "lessonNotFound": "Урок не найден",
     "backToCourse": "Назад к курсу",
     "minutes": "мин",
-    "error": "Ошибка"
+    "error": {
+      "notFound": "Курс не найден"
+    }
   },
   "dashboard": {
     "welcome": "С возвращением",
@@ -561,10 +577,10 @@
     "moveByMove": "Ход за ходом",
     "dailyPuzzle": "Задача дня",
     "puzzleRush": "Пазл-раш",
-    "importGames": "Import partiy",
+    "importGames": "Импорт партий",
     "username": "Имя пользователя",
-    "importing": "Import...",
-    "noGamesFound": "Partii ne naydeny.",
+    "importing": "Импорт...",
+    "noGamesFound": "Партии не найдены.",
     "uploadPgnFile": "Загрузить PGN файл",
     "chooseFile": "Выбрать .pgn файл",
     "pgnPlaceholder": "Вставьте PGN сюда...",
@@ -668,7 +684,9 @@
     "description": "Описание",
     "join": "Вступить",
     "leave": "Покинуть",
-    "validation": "Валидация"
+    "validation": {
+      "nameRequired": "Требуется название"
+    }
   },
   "tournaments": {
     "title": "Турниры",
@@ -678,8 +696,12 @@
     "maxPlayers": "Макс. игроков",
     "join": "Участвовать",
     "leave": "Покинуть",
-    "validation": "Валидация",
-    "error": "Ошибка"
+    "validation": {
+      "nameRequired": "Требуется название"
+    },
+    "error": {
+      "full": "Турнир заполнен"
+    }
   },
   "admin": {
     "nav": {
@@ -767,7 +789,15 @@
       "pgn": "PGN"
     },
     "brand": "Бренд",
-    "validation": "Валидация"
+    "validation": {
+      "courseIdRequired": "Требуется courseId",
+      "titleAndCourseIdRequired": "Требуется title и courseId",
+      "idAndTitleRequired": "Требуется ID и title",
+      "moduleIdRequired": "Требуется moduleId",
+      "titleModuleIdCourseIdRequired": "Требуется title, moduleId и courseId",
+      "titleRequired": "Требуется title",
+      "idAndContentRequired": "Требуется ID и content"
+    }
   },
   "puzzles": {
     "title": "Задачи",
@@ -791,26 +821,195 @@
     "puzzlesSolved": "Задач решено",
     "noPuzzles": "Задачи недоступны.",
     "dailyLoadError": "Не удалось загрузить задачу дня",
-    "validation": "Валидация",
-    "error": "Ошибка"
+    "validation": {
+      "fieldsRequired": "Требуется puzzleId и solved"
+    },
+    "error": {
+      "notFound": "Задача не найдена",
+      "noneAvailable": "Нет доступных задач",
+      "recordFailed": "Не удалось записать попытку"
+    }
   },
-  "common": "Общие",
-  "chess": "Шахматы",
-  "achievements": "Достижения",
-  "levels": "Уровни",
-  "plans": "Тарифы",
-  "notifications": "Уведомления",
-  "theme": "Тема",
-  "leaderboard": "Таблица лидеров",
-  "progress": "Прогресс",
-  "lessons": "Уроки",
-  "comments": "Комментарии",
-  "users": "Пользователи",
-  "upload": "Загрузка",
-  "payments": "Платежи",
-  "xp": "Опыт",
-  "ai": "ИИ",
-  "cron": "Планировщик",
-  "posts": "Посты",
-  "quizzes": "Тесты"
-}\n
+  "common": {
+    "error": {
+      "unauthorized": "Нет доступа",
+      "forbidden": "Запрещено",
+      "notFound": "Не найдено",
+      "failed": "Ошибка",
+      "internalServerError": "Внутренняя ошибка сервера",
+      "notAuthenticated": "Не авторизован"
+    },
+    "validation": {
+      "idRequired": "Требуется ID",
+      "contentRequired": "Требуется контент"
+    }
+  },
+  "chess": {
+    "undo": "Отменить",
+    "reset": "Сброс",
+    "engineAnalysis": "Анализ движка",
+    "evaluate": "Оценить",
+    "topLines": "Лучшие линии",
+    "score": "Оценка",
+    "depth": "Глубина",
+    "best": "Лучший",
+    "notAvailable": "Н/Д",
+    "principalVariation": "ГВ",
+    "engineError": "Ошибка движка",
+    "aiCoach": "ИИ-тренер",
+    "analyzing": "Анализ...",
+    "explainPosition": "Объяснить позицию",
+    "aiCoachUnavailable": "ИИ-тренер недоступен. Добавьте API-ключ.",
+    "engine": {
+      "initFailed": "Не удалось инициализировать движок",
+      "evalTimedOut": "Время оценки движка истекло",
+      "notInitialized": "Движок не инициализирован"
+    },
+    "validation": {
+      "pgnRequired": "Требуется PGN",
+      "invalidPgn": "Неверный PGN",
+      "noMoves": "Нет ходов в PGN",
+      "usernameRequired": "Требуется имя пользователя"
+    },
+    "error": {
+      "analysisFailed": "Анализ не удался",
+      "importFailed": "Не удалось импортировать партии",
+      "lichessUserNotFound": "Пользователь Lichess не найден",
+      "ratingHistoryNotFound": "История рейтинга не найдена",
+      "lichessGamesNotFound": "Партии на Lichess не найдены",
+      "dailyPuzzleFailed": "Не удалось загрузить ежедневную задачу",
+      "openingExplorerFailed": "Не удалось загрузить дебютную базу",
+      "chesscomProfileNotFound": "Профиль Chess.com не найден",
+      "chesscomStatsNotFound": "Статистика Chess.com не найдена",
+      "chesscomGamesNotFound": "Партии на Chess.com не найдены"
+    }
+  },
+  "achievements": {
+    "title": {
+      "firstPuzzle": "Первая решённая задача",
+      "tenPuzzles": "Ученик задач",
+      "hundredPuzzles": "Мастер задач",
+      "firstLesson": "Первые шаги",
+      "firstCourse": "Выпускник курса",
+      "streak7": "Воин недели",
+      "streak30": "Мастер месяца",
+      "firstPost": "Социальный старт",
+      "firstComment": "Собеседник"
+    },
+    "desc": {
+      "firstPuzzle": "Решили свою первую задачу",
+      "tenPuzzles": "Решили 10 задач",
+      "hundredPuzzles": "Решили 100 задач",
+      "firstLesson": "Завершили первый урок",
+      "firstCourse": "Завершили первый курс",
+      "streak7": "Серия из 7 дней",
+      "streak30": "Серия из 30 дней",
+      "firstPost": "Создали первый пост",
+      "firstComment": "Написали первый комментарий"
+    }
+  },
+  "levels": {
+    "bronze": "Бронза",
+    "silver": "Серебро",
+    "gold": "Золото",
+    "platinum": "Платина",
+    "diamond": "Алмаз",
+    "master": "Мастер",
+    "grandmaster": "Гроссмейстер"
+  },
+  "plans": {
+    "standard": "Стандарт",
+    "premium": "Премиум",
+    "vip": "VIP"
+  },
+  "notifications": {
+    "likedYourPost": "{name} понравился ваш пост",
+    "commentedOnYourPost": "{name} прокомментировал ваш пост",
+    "followedYou": "{name} подписался на вас"
+  },
+  "theme": {
+    "toggleTheme": "Переключить тему"
+  },
+  "leaderboard": {
+    "error": {
+      "fetchFailed": "Не удалось загрузить таблицу лидеров"
+    }
+  },
+  "progress": {
+    "validation": {
+      "lessonIdRequired": "Требуется lessonId"
+    }
+  },
+  "lessons": {
+    "error": {
+      "notFound": "Урок не найден"
+    },
+    "validation": {
+      "queryRequired": "Требуется id, moduleId или courseId"
+    }
+  },
+  "comments": {
+    "error": {
+      "fetchFailed": "Не удалось загрузить комментарии",
+      "addFailed": "Не удалось добавить комментарий"
+    }
+  },
+  "users": {
+    "error": {
+      "cannotFollowSelf": "Нельзя подписаться на себя",
+      "toggleFollowFailed": "Не удалось изменить подписку"
+    }
+  },
+  "upload": {
+    "error": {
+      "noFile": "Файл не предоставлен",
+      "failed": "Не удалось загрузить файл"
+    }
+  },
+  "payments": {
+    "error": {
+      "invalidPlan": "Неверный план",
+      "checkoutFailed": "Не удалось создать оплату",
+      "noCustomer": "Клиент Stripe не найден",
+      "portalFailed": "Не удалось создать портал",
+      "webhookError": "Ошибка вебхука"
+    }
+  },
+  "xp": {
+    "error": {
+      "invalidAction": "Неверное действие"
+    }
+  },
+  "ai": {
+    "error": {
+      "fenRequired": "Требуется FEN",
+      "unavailable": "ИИ недоступен",
+      "allProvidersFailed": "Все ИИ-провайдеры недоступны"
+    }
+  },
+  "cron": {
+    "error": {
+      "fetchPuzzleFromLichess": "Не удалось загрузить задачу из Lichess"
+    }
+  },
+  "posts": {
+    "error": {
+      "fetchFailed": "Не удалось загрузить посты",
+      "createFailed": "Не удалось создать пост",
+      "updateFailed": "Не удалось обновить пост",
+      "deleteFailed": "Не удалось удалить пост",
+      "toggleLikeFailed": "Не удалось изменить лайк"
+    },
+    "validation": {
+      "idAndContentRequired": "Требуется ID и контент"
+    }
+  },
+  "quizzes": {
+    "error": {
+      "notFound": "Тест не найден",
+      "maxAttempts": "Достигнут лимит попыток",
+      "attemptNotFound": "Попытка не найдена",
+      "alreadySubmitted": "Уже отправлено"
+    }
+  }
+}

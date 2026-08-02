@@ -3,16 +3,17 @@
 import { useState } from 'react';
 import { useRouter } from '@/i18n/routing';
 import { Button } from '@/components/ui/button';
-import { Loader2, ArrowRight } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 
 interface CheckoutButtonProps {
   plan: string;
+  provider?: string;
   variant?: 'default' | 'outline';
   className?: string;
   children: React.ReactNode;
 }
 
-export function CheckoutButton({ plan, variant = 'default', className, children }: CheckoutButtonProps) {
+export function CheckoutButton({ plan, provider, variant = 'default', className, children }: CheckoutButtonProps) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -22,7 +23,7 @@ export function CheckoutButton({ plan, variant = 'default', className, children 
       const res = await fetch('/api/payments/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ plan }),
+        body: JSON.stringify({ plan, provider }),
       });
       const data = await res.json();
       if (data.url) {

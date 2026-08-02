@@ -28,4 +28,4 @@ export {
   isNotNull,
 } from 'drizzle-orm';
 
-export const { users, accounts, sessions, verificationTokens, courses, modules, lessons, puzzles, progress, subscriptions, posts, achievements, bookings, quizzes, quizQuestions, quizAttempts, quizAnswers, comments, likes, follows, groups, groupMembers, tournaments, tournamentPlayers, notifications } = schema;
+export const { users, accounts, sessions, verificationTokens, courses, modules, lessons, puzzles, progress, subscriptions, posts, achievements, bookings, quizzes, quizQuestions, quizAttempts, quizAnswers, comments, likes, follows, groups, groupMembers, tournaments, tournamentPlayers, notifications, pendingPayments } = schema;

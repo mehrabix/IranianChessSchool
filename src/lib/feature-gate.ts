@@ -1,4 +1,4 @@
-import { db, users as usersTable, eq } from '@/lib/db';
+import { db, users, subscriptions, eq, desc } from '@/lib/db';
 
 export type Plan = 'STANDARD' | 'PREMIUM' | 'VIP';
 
@@ -13,14 +13,26 @@ export async function getUserSubscription(userId: string): Promise<{
   plan: Plan | null;
 }> {
   const [user] = await db
-    .select({ subscriptionStatus: usersTable.subscriptionStatus })
-    .from(usersTable)
-    .where(eq(usersTable.id, userId))
+    .select({ subscriptionStatus: users.subscriptionStatus })
+    .from(users)
+    .where(eq(users.id, userId))
     .limit(1);
 
   const status = user?.subscriptionStatus ?? null;
-  const plan = status === 'ACTIVE' ? (process.env.STRIPE_DEFAULT_PLAN as Plan) || 'STANDARD' : null;
 
+  if (status !== 'ACTIVE') {
+    return { status, plan: null };
+  }
+
+  // Read plan from the subscriptions table
+  const [sub] = await db
+    .select({ plan: subscriptions.plan })
+    .from(subscriptions)
+    .where(eq(subscriptions.userId, userId))
+    .orderBy(desc(subscriptions.currentPeriodEnd))
+    .limit(1);
+
+  const plan = (sub?.plan as Plan) || 'STANDARD';
   return { status, plan };
 }
 
