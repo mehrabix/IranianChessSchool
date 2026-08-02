@@ -41,7 +41,7 @@ export default async function FAQPage() {
                   </div>
                   <h2 className="text-2xl font-bold tracking-tight">{t(`categories.${section.categoryKey}`)}</h2>
                 </div>
-                <Accordion type="single" collapsible className="space-y-3">
+                <Accordion className="space-y-3">
                   {section.items.map((faq) => (
                     <AccordionItem key={faq} value={faq} className="rounded-xl border bg-card">
                       <AccordionTrigger className="px-4 py-3 text-sm md:text-base font-medium hover:underline-offset-2">
