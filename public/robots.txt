@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://iranian-chess-school.vercel.app/sitemap.xml

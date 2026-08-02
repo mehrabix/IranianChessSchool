@@ -21,7 +21,15 @@ export const metadata: Metadata = {
     description: "Structured chess training for all levels. Courses, puzzles, analysis, and community.",
     siteName: "Iranian Chess School",
     type: "website",
+    locale: "en_US",
+    images: [{ url: "https://iranian-chess-school.vercel.app/images/og-image.png", width: 1200, height: 630 }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Iranian Chess School",
+    description: "Structured chess training for all levels. Courses, puzzles, analysis, and community.",
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -34,6 +42,7 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#059669" />
+        <script dangerouslySetInnerHTML={{ __html: `if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js')}` }} />
         <script
           dangerouslySetInnerHTML={{
             __html: [

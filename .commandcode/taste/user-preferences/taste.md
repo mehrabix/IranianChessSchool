@@ -12,3 +12,5 @@
 - Prefers idempotent, deterministic database seeding: use fixed IDs (not random), delete old rows before inserting, and temporarily disable FK constraints (`PRAGMA foreign_keys = OFF`) to guarantee a clean slate on every run. Confidence: 0.85
 - Prefers a zero-lint-error baseline — when running ESLint, addresses all errors (not just newly introduced ones) to maintain a clean project, including adjusting ESLint config (e.g., ignoring third-party assets, treating `no-explicit-any` as warn, using `argsIgnorePattern` for underscore-prefixed params). Confidence: 0.75
 - Uses conventional commit format (`feat:`, `fix:`, etc.) for git commit messages. Confidence: 0.80
+- Requires comprehensive i18n coverage — all user-visible strings must be translated across every supported locale. Hardcoded or untranslated text in any locale is a blocking issue, and new translation keys must be synced to all locale files (not just English). Confidence: 0.85
+- Prefers zero layout shift (CLS) in navigation components. When nav causes visual jumps on route changes, expects a full rewrite with client-side state management rather than incremental CSS patches. Confidence: 0.80

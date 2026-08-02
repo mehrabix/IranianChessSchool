@@ -107,97 +107,44 @@ export function Navbar() {
                   </div>
                 </div>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem render={<Link href="/dashboard" />}>
-                  <LayoutDashboard className="h-4 w-4" />
-                  {t('dashboard')}
-                </DropdownMenuItem>
-                <DropdownMenuItem render={<Link href="/courses" />}>
-                  <BookOpen className="h-4 w-4" />
-                  {t('courses')}
-                </DropdownMenuItem>
-                <DropdownMenuItem render={<Link href="/dashboard/progress" />}>
-                  <TrendingUp className="h-4 w-4" />
-                  {t('myProgress')}
-                </DropdownMenuItem>
+                <DropdownMenuItem render={<Link href="/dashboard" />}><LayoutDashboard className="h-4 w-4" />{t('dashboard')}</DropdownMenuItem>
+                <DropdownMenuItem render={<Link href="/courses" />}><BookOpen className="h-4 w-4" />{t('courses')}</DropdownMenuItem>
+                <DropdownMenuItem render={<Link href="/dashboard/progress" />}><TrendingUp className="h-4 w-4" />{t('myProgress')}</DropdownMenuItem>
+                {session.user?.role === 'ADMIN' && (<><DropdownMenuSeparator /><DropdownMenuItem render={<Link href="/admin" />}><Shield className="h-4 w-4" />{t('admin')}</DropdownMenuItem></>)}
                 <DropdownMenuSeparator />
-                {session.user?.role === 'ADMIN' && (
-                  <>
-                    <DropdownMenuItem render={<Link href="/admin" />}>
-                      <Shield className="h-4 w-4" />
-                      {t('admin')}
-                    </DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                  </>
-                )}
-                <DropdownMenuItem onClick={() => signOut()} className="text-destructive focus:text-destructive">
-                  <LogOut className="h-4 w-4 mr-2" />
-                  {t('signOut')}
-                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => signOut()} className="text-destructive focus:text-destructive"><LogOut className="h-4 w-4 mr-2" />{t('signOut')}</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
             <div className="flex items-center gap-2">
-              <Button variant="ghost" size="sm" render={<Link href="/auth/signin" />}>
-                {t('signIn')}
-              </Button>
-              <Button size="sm" render={<Link href="/pricing" />}>
-                {t('tryFree')}
-              </Button>
+              <Button variant="ghost" size="sm" render={<Link href="/auth/signin" />}>{t('signIn')}</Button>
+              <Button size="sm" render={<Link href="/pricing" />}>{t('tryFree')}</Button>
             </div>
           )}
 
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-            <SheetTrigger render={<Button variant="ghost" size="icon" className="md:hidden" />}>
-              <Menu className="h-5 w-5" />
-            </SheetTrigger>
+            <SheetTrigger render={<Button variant="ghost" size="icon" className="md:hidden"><Menu className="h-5 w-5" /></Button>} />
             <SheetContent side="right" className="w-[280px] sm:w-[320px]">
               <SheetHeader className="mb-6">
-                <SheetTitle className="flex items-center gap-2">
-                  <ChessKnight className="h-5 w-5 text-primary" />
-                  {t('brand')}
-                </SheetTitle>
+                <SheetTitle className="flex items-center gap-2"><ChessKnight className="h-5 w-5 text-primary" />{t('brand')}</SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-1">
                 {navLinks.map((link) => (
                   <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)}
-                    className={cn(
-                      'flex items-center gap-3 px-3 py-2.5 text-base font-medium rounded-md transition-colors',
-                      isActive(link.href) ? 'text-foreground bg-accent' : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
-                    )}
-                  >
-                    {t(link.labelKey)}
-                  </Link>
+                    className={cn('flex items-center gap-3 px-3 py-2.5 text-base font-medium rounded-md transition-colors',
+                      isActive(link.href) ? 'text-foreground bg-accent' : 'text-muted-foreground hover:text-foreground hover:bg-accent/50')}
+                  >{t(link.labelKey)}</Link>
                 ))}
               </nav>
-              {session && (
-                <>
-                  <div className="my-4 mx-3 h-px bg-border" />
-                  <div className="px-3 py-2 text-sm text-muted-foreground">{t('loggedInAs', { name: String(session.user?.name ?? '') })}</div>
-                  <div className="flex flex-col gap-1 mt-2">
-                    <Link href="/dashboard" onClick={() => setMobileOpen(false)}
-                      className="flex items-center gap-3 px-3 py-2.5 text-base font-medium rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                    >
-                      <LayoutDashboard className="h-5 w-5 shrink-0" />
-                      {t('dashboard')}
-                    </Link>
-                    {session.user?.role === 'ADMIN' && (
-                      <Link href="/admin" onClick={() => setMobileOpen(false)}
-                        className="flex items-center gap-3 px-3 py-2.5 text-base font-medium rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                      >
-                        <Shield className="h-5 w-5 shrink-0" />
-                        {t('admin')}
-                      </Link>
-                    )}
-                    <button
-                      onClick={() => { signOut(); setMobileOpen(false); }}
-                      className="flex items-center gap-3 px-3 py-2.5 text-base font-medium rounded-md text-red-500 hover:bg-red-50 transition-colors"
-                    >
-                      <LogOut className="h-5 w-5 shrink-0" />
-                      {t('signOut')}
-                    </button>
-                  </div>
-                </>
-              )}
+              {session && (<>
+                <div className="my-4 mx-3 h-px bg-border" />
+                <div className="px-3 py-2 text-sm text-muted-foreground">{t('loggedInAs', { name: String(session.user?.name ?? '') })}</div>
+                <div className="flex flex-col gap-1 mt-2">
+                  <Link href="/dashboard" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 px-3 py-2.5 text-base font-medium rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"><LayoutDashboard className="h-5 w-5 shrink-0" />{t('dashboard')}</Link>
+                  {session.user?.role === 'ADMIN' && <Link href="/admin" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 px-3 py-2.5 text-base font-medium rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"><Shield className="h-5 w-5 shrink-0" />{t('admin')}</Link>}
+                  <button onClick={() => { signOut(); setMobileOpen(false); }} className="flex items-center gap-3 px-3 py-2.5 text-base font-medium rounded-md text-destructive hover:bg-destructive/10 transition-colors"><LogOut className="h-5 w-5 shrink-0" />{t('signOut')}</button>
+                </div>
+              </>)}
             </SheetContent>
           </Sheet>
         </div>
