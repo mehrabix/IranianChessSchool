@@ -423,7 +423,10 @@
       "vipF6": "Messagerie directe avec le coach",
       "vipCta": "Devenir VIP",
       "mostPopular": "Le plus populaire",
-      "finePrint": "Tous les forfaits incluent un essai gratuit de 7 jours. Aucune carte bancaire requise. Annulation à tout moment."
+      "finePrint": "Tous les forfaits incluent un essai gratuit de 7 jours. Aucune carte bancaire requise. Annulation à tout moment.",
+      "periodLabel": "Monthly",
+      "annualLabel": "Annual",
+      "annualDiscount": "Save 17%"
     },
     "compare": {
       "heading": "Comparer les forfaits",
@@ -449,10 +452,7 @@
       "advanced": "Avancé",
       "weekly": "Hebdomadaire",
       "monthly": "Mensuel",
-      "weekly4x": "Hebdomadaire (4x/mois)",
-      "periodLabel": "Monthly",
-      "annualLabel": "Annual",
-      "annualDiscount": "Save 17%"
+      "weekly4x": "Hebdomadaire (4x/mois)"
     },
     "cta": {
       "heading": "Vous ne savez pas quel forfait choisir ?",

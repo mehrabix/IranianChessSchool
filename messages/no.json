@@ -423,7 +423,10 @@
       "vipF6": "Direkte meldinger til trener",
       "vipCta": "Velg VIP",
       "mostPopular": "Mest Populær",
-      "finePrint": "Alle planer inkluderer en 7-dagers gratis prøveperiode. Ingen kredittkort kreves. Avslutt når som helst."
+      "finePrint": "Alle planer inkluderer en 7-dagers gratis prøveperiode. Ingen kredittkort kreves. Avslutt når som helst.",
+      "periodLabel": "Monthly",
+      "annualLabel": "Annual",
+      "annualDiscount": "Save 17%"
     },
     "compare": {
       "heading": "Sammenlign planer",
@@ -449,10 +452,7 @@
       "advanced": "Avansert",
       "weekly": "Ukentlig",
       "monthly": "Månedlig",
-      "weekly4x": "Ukentlig (4x/mnd)",
-      "periodLabel": "Monthly",
-      "annualLabel": "Annual",
-      "annualDiscount": "Save 17%"
+      "weekly4x": "Ukentlig (4x/mnd)"
     },
     "cta": {
       "heading": "Ikke sikker på hvilken plan som passer?",

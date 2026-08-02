@@ -422,7 +422,10 @@
       "vipF6": "Direct coach messaging",
       "vipCta": "Go VIP",
       "mostPopular": "Most Popular",
-      "finePrint": "All plans include a 7-day free trial. No credit card required. Cancel anytime."
+      "finePrint": "All plans include a 7-day free trial. No credit card required. Cancel anytime.",
+      "periodLabel": "Monthly",
+      "annualLabel": "Annual",
+      "annualDiscount": "Save 17%"
     },
     "compare": {
       "heading": "Compare plans",
@@ -448,10 +451,7 @@
       "advanced": "Advanced",
       "weekly": "Weekly",
       "monthly": "Monthly",
-      "weekly4x": "Weekly (4x/mo)",
-      "periodLabel": "Monthly",
-      "annualLabel": "Annual",
-      "annualDiscount": "Save 17%"
+      "weekly4x": "Weekly (4x/mo)"
     },
     "faq": {
       "heading": "Frequently Asked Questions",

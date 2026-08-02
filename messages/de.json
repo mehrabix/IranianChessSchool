@@ -423,7 +423,10 @@
       "vipF6": "Direkte Trainer-Nachrichten",
       "vipCta": "VIP wählen",
       "mostPopular": "Am beliebtesten",
-      "finePrint": "Alle Pläne beinhalten eine 7-tägige kostenlose Testversion. Keine Kreditkarte erforderlich. Jederzeit kündbar."
+      "finePrint": "Alle Pläne beinhalten eine 7-tägige kostenlose Testversion. Keine Kreditkarte erforderlich. Jederzeit kündbar.",
+      "periodLabel": "Monthly",
+      "annualLabel": "Annual",
+      "annualDiscount": "Save 17%"
     },
     "compare": {
       "heading": "Pläne vergleichen",
@@ -449,10 +452,7 @@
       "advanced": "Erweitert",
       "weekly": "Wöchentlich",
       "monthly": "Monatlich",
-      "weekly4x": "Wöchentlich (4x/Monat)",
-      "periodLabel": "Monthly",
-      "annualLabel": "Annual",
-      "annualDiscount": "Save 17%"
+      "weekly4x": "Wöchentlich (4x/Monat)"
     },
     "cta": {
       "heading": "Nicht sicher, welcher Plan der richtige ist?",

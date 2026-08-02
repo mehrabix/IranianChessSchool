@@ -423,7 +423,10 @@
       "vipF6": "Messaggistica diretta con l'istruttore",
       "vipCta": "Scegli VIP",
       "mostPopular": "Più Popolare",
-      "finePrint": "Tutti i piani includono una prova gratuita di 7 giorni. Nessuna carta di credito richiesta. Annulla quando vuoi."
+      "finePrint": "Tutti i piani includono una prova gratuita di 7 giorni. Nessuna carta di credito richiesta. Annulla quando vuoi.",
+      "periodLabel": "Monthly",
+      "annualLabel": "Annual",
+      "annualDiscount": "Save 17%"
     },
     "compare": {
       "heading": "Confronta i piani",
@@ -449,10 +452,7 @@
       "advanced": "Avanzato",
       "weekly": "Settimanale",
       "monthly": "Mensile",
-      "weekly4x": "Settimanale (4x/mese)",
-      "periodLabel": "Monthly",
-      "annualLabel": "Annual",
-      "annualDiscount": "Save 17%"
+      "weekly4x": "Settimanale (4x/mese)"
     },
     "cta": {
       "heading": "Non sei sicuro di quale piano sia giusto?",

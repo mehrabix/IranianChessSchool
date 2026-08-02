@@ -423,7 +423,10 @@
       "vipF6": "Mensajería directa con el entrenador",
       "vipCta": "Ir a VIP",
       "mostPopular": "Más popular",
-      "finePrint": "Todos los planes incluyen una prueba gratuita de 7 días. No se requiere tarjeta de crédito. Cancela cuando quieras."
+      "finePrint": "Todos los planes incluyen una prueba gratuita de 7 días. No se requiere tarjeta de crédito. Cancela cuando quieras.",
+      "periodLabel": "Monthly",
+      "annualLabel": "Annual",
+      "annualDiscount": "Save 17%"
     },
     "compare": {
       "heading": "Comparar planes",
@@ -449,10 +452,7 @@
       "advanced": "Avanzado",
       "weekly": "Semanal",
       "monthly": "Mensual",
-      "weekly4x": "Semanal (4x/mes)",
-      "periodLabel": "Monthly",
-      "annualLabel": "Annual",
-      "annualDiscount": "Save 17%"
+      "weekly4x": "Semanal (4x/mes)"
     },
     "cta": {
       "heading": "¿No estás seguro de qué plan te conviene?",
