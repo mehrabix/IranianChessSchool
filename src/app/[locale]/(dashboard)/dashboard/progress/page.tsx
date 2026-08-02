@@ -11,10 +11,17 @@ import { tKey } from '@/lib/t-key';
 
 function getWeekDays(locale: string) {
   const today = new Date();
+  const dayOfWeek = today.getDay();
+  const isFa = locale === 'fa';
+  const startOffset = isFa ? ((dayOfWeek + 1) % 7) : (dayOfWeek === 0 ? 6 : dayOfWeek - 1);
+  const weekStart = new Date(today);
+  weekStart.setDate(today.getDate() - startOffset);
+  weekStart.setHours(0, 0, 0, 0);
+
   const result: { label: string; date: Date }[] = [];
-  for (let i = 6; i >= 0; i--) {
-    const d = new Date(today);
-    d.setDate(d.getDate() - i);
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(weekStart);
+    d.setDate(weekStart.getDate() + i);
     result.push({ label: new Intl.DateTimeFormat(locale, { weekday: 'short' }).format(d), date: d });
   }
   return result;
@@ -26,7 +33,9 @@ function dayKey(date: Date) {
 
 export default async function ProgressPage() {
   const t = await getTranslations('dashboard');
+  const tAll = await getTranslations();
   const locale = await getLocale();
+  const getText = (v: string | null) => tKey(v, tAll);
   const session = await auth();
   if (!session?.user) {
     redirect({ href: '/auth/signin', locale });
@@ -206,7 +215,7 @@ export default async function ProgressPage() {
                 <div key={course.id} className="rounded-lg border p-4">
                   <div className="flex items-center justify-between mb-2">
                     <div>
-                      <p className="font-medium">{course.title}</p>
+                      <p className="font-medium">{getText(course.title)}</p>
                       <p className="text-xs text-muted-foreground">{course.level}</p>
                     </div>
                     <Badge variant={course.completed === course.total && course.total > 0 ? 'default' : 'secondary'}>
