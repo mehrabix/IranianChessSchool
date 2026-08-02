@@ -1089,7 +1089,7 @@
       "alreadySubmitted": "Already submitted"
     }
   },
-  "_courses": {
+  "coursesContent": {
     "chessFundamentals": {
       "title": "Chess Fundamentals",
       "description": "Learn the basic rules, piece movement, and fundamental concepts of chess. Perfect for absolute beginners.",
