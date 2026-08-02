@@ -155,20 +155,20 @@ export default function AnalysisPage() {
                     onReset={resetGame}
                   />
                   <div className="flex items-center gap-2">
-                    <Button variant="outline" size="icon" onClick={() => goToMove(0)} disabled={currentMove < 0}>
-                      <SkipBack className="h-4 w-4 rtl:rotate-180" />
+                    <Button variant="outline" size="icon" onClick={() => goToMove(history.length - 1)} disabled={currentMove >= history.length - 1} className="order-5 rtl:order-1">
+                      <SkipForward className="h-4 w-4 rtl:rotate-180" />
                     </Button>
-                    <Button variant="outline" size="icon" onClick={() => goToMove(currentMove - 1)} disabled={currentMove < 0}>
-                      <ChevronLeft className="h-4 w-4 rtl:rotate-180" />
-                    </Button>
-                    <span className="text-sm text-muted-foreground min-w-[60px] text-center">
-                      {currentMove < 0 ? '-' : `${currentMove + 1}/${history.length}`}
-                    </span>
-                    <Button variant="outline" size="icon" onClick={() => goToMove(currentMove + 1)} disabled={currentMove >= history.length - 1}>
+                    <Button variant="outline" size="icon" onClick={() => goToMove(currentMove + 1)} disabled={currentMove >= history.length - 1} className="order-4 rtl:order-2">
                       <ChevronRight className="h-4 w-4 rtl:rotate-180" />
                     </Button>
-                    <Button variant="outline" size="icon" onClick={() => goToMove(history.length - 1)} disabled={currentMove >= history.length - 1}>
-                      <SkipForward className="h-4 w-4 rtl:rotate-180" />
+                    <span className="text-sm text-muted-foreground min-w-[60px] text-center order-3">
+                      {currentMove < 0 ? '-' : `${currentMove + 1}/${history.length}`}
+                    </span>
+                    <Button variant="outline" size="icon" onClick={() => goToMove(currentMove - 1)} disabled={currentMove < 0} className="order-2 rtl:order-4">
+                      <ChevronLeft className="h-4 w-4 rtl:rotate-180" />
+                    </Button>
+                    <Button variant="outline" size="icon" onClick={() => goToMove(0)} disabled={currentMove < 0} className="order-1 rtl:order-5">
+                      <SkipBack className="h-4 w-4 rtl:rotate-180" />
                     </Button>
                     <Button variant="outline" size="icon" onClick={flipBoard}>
                       <FlipHorizontal className="h-4 w-4" />
