@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useSession } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
@@ -30,6 +30,8 @@ const typeIcons: Record<string, typeof Target> = {
   POSTS: MessageCircle,
 };
 
+const daysLeft = (endsAt: number) => Math.max(0, Math.ceil((endsAt - Date.now()) / (1000 * 60 * 60 * 24)));
+
 export default function ChallengesPage() {
   const t = useTranslations('dashboard');
   const { data: session } = useSession();
@@ -37,7 +39,7 @@ export default function ChallengesPage() {
   const [loading, setLoading] = useState(true);
   const [joining, setJoining] = useState<Set<string>>(new Set());
 
-  async function fetchChallenges() {
+  const fetchChallenges = useCallback(async () => {
     setLoading(true);
     const res = await fetch('/api/challenges');
     const data = await res.json();
@@ -52,9 +54,9 @@ export default function ChallengesPage() {
     }
     setChallenges(data.challenges || []);
     setLoading(false);
-  }
+  }, [session]);
 
-  useEffect(() => { fetchChallenges(); }, []); {/* eslint-disable-line react-hooks/set-state-in-effect */}
+  useEffect(() => { fetchChallenges(); }, [fetchChallenges]); {/* eslint-disable-line react-hooks/set-state-in-effect */}
 
   async function handleJoin(challengeId: string) {
     setJoining(prev => new Set(prev).add(challengeId));
@@ -64,8 +66,6 @@ export default function ChallengesPage() {
   }
 
   if (loading) return <section className="py-20"><Container size="md" className="flex justify-center"><Loader2 className="h-6 w-6 animate-spin" /></Container></section>;
-
-  const daysLeft = (endsAt: number) => Math.max(0, Math.ceil((endsAt - Date.now()) / (1000 * 60 * 60 * 24)));
 
   return (
     <section className="py-8">
