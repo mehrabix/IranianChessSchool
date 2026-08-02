@@ -73,8 +73,8 @@ export default async function Footer() {
               </div>
             </div>
             <div>
-              <h3 className="font-semibold mb-2 text-sm uppercase tracking-wider text-muted-foreground">{tfooter('newsletter') || 'Newsletter'}</h3>
-              <p className="text-xs text-muted-foreground mb-3">{tfooter('newsletterDesc') || 'Get chess tips and updates delivered to your inbox.'}</p>
+              <h3 className="font-semibold mb-2 text-sm uppercase tracking-wider text-muted-foreground">{tfooter('newsletter')}</h3>
+              <p className="text-xs text-muted-foreground mb-3">{tfooter('newsletterDesc')}</p>
               <form action="/api/contact" method="POST" className="flex gap-2">
                 <Input name="email" type="email" placeholder={tfooter('email')} className="h-9 text-sm" required />
                 <Button type="submit" size="sm" className="h-9 shrink-0"><Send className="h-3.5 w-3.5" /></Button>

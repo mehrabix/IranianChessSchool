@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useSession, signOut } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -48,8 +49,10 @@ const navLinks = [
 export function Navbar() {
   const { data: session } = useSession();
   const t = useTranslations('nav');
+  const locale = useLocale();
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const isRtl = locale === 'fa';
 
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/';
@@ -123,7 +126,7 @@ export function Navbar() {
 
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger render={<Button variant="ghost" size="icon" className="md:hidden"><Menu className="h-5 w-5" /></Button>} />
-            <SheetContent side="right" className="w-[280px] sm:w-[320px]">
+            <SheetContent side={isRtl ? 'left' : 'right'} className="w-[280px] sm:w-[320px]">
               <SheetHeader className="mb-6">
                 <SheetTitle className="flex items-center gap-2"><ChessKnight className="h-5 w-5 text-primary" />Iranian Chess School</SheetTitle>
               </SheetHeader>
