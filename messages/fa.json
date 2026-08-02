@@ -459,15 +459,15 @@
       "cta": "۷ روز رایگان امتحان کنید"
     },
     "faq": {
-      "heading": "Frequently Asked Questions",
-      "pricingQ1": "How does the free trial work?",
-      "pricingA1": "All plans include a 7-day free trial. No credit card required. Cancel anytime during the trial at no cost.",
-      "pricingQ2": "Can I switch plans later?",
-      "pricingA2": "Yes! You can upgrade or downgrade at any time. If you upgrade, you will be charged the prorated difference. Downgrades take effect at the end of your billing period.",
-      "pricingQ3": "What payment methods do you accept?",
-      "pricingA3": "We accept all major credit cards via Stripe, and Iranian payment gateways (Zarinpal, Zibal, NextPay, IDPay, PayPing).",
-      "pricingQ4": "Is there a money-back guarantee?",
-      "pricingA4": "Yes! If you are not satisfied within the first 14 days, we will issue a full refund. No questions asked."
+      "heading": "سوالات متداول",
+      "pricingQ1": "دوره آزمایشی رایگان چگونه کار می‌کند؟",
+      "pricingA1": "همه طرح‌ها شامل ۷ روز آزمایشی رایگان هستند. بدون نیاز به کارت اعتباری. هر زمان در طول دوره آزمایشی لغو کنید.",
+      "pricingQ2": "آیا می‌توانم بعداً طرح را تغییر دهم؟",
+      "pricingA2": "بله! می‌توانید هر زمان ارتقا یا تنزل دهید. در ارتقا مابه‌التفاوت محاسبه می‌شود. تنزل در پایان دوره اعمال می‌شود.",
+      "pricingQ3": "چه روش‌های پرداختی را می‌پذیرید؟",
+      "pricingA3": "تمام کارت‌های اعتباری اصلی از طریق Stripe و درگاه‌های ایرانی (زرین‌پال، زیبال، نکست‌پی، آیدی‌پی، پی‌پینگ).",
+      "pricingQ4": "آیا ضمانت بازگشت وجه وجود دارد؟",
+      "pricingA4": "بله! اگر ظرف ۱۴ روز اول راضی نبودید، وجه شما به طور کامل بازگردانده می‌شود."
     }
   },
   "auth": {
