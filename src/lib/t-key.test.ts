@@ -6,38 +6,31 @@ function makeT(translations: Record<string, string>) {
 }
 
 describe('tKey', () => {
-  it('returns empty string for null/empty', () => {
-    expect(tKey(null, makeT({}))).toBe('');
-    expect(tKey('', makeT({}))).toBe('');
+  const t = makeT({
+    'coursesContent.chessFundamentals.title': 'مبانی شطرنج',
+    'coursesContent.chessFundamentals.modules.board': 'صفحه و مهره‌ها',
+    'coursesContent.chessFundamentals.lessons.intro': 'معرفی صفحه شطرنج',
+  });
+
+  it('returns empty for null/empty', () => {
+    expect(tKey(null, t)).toBe('');
+    expect(tKey('', t)).toBe('');
   });
 
   it('returns plain text unchanged', () => {
-    expect(tKey('Hello World', makeT({}))).toBe('Hello World');
+    expect(tKey('Hello', t)).toBe('Hello');
   });
 
-  it('resolves coursesContent:: nested key', () => {
-    const t = makeT({
-      'coursesContent.chessFundamentals.title': 'مبانی شطرنج',
-    });
+  it('resolves coursesContent:: key', () => {
     expect(tKey('coursesContent::chessFundamentals::title', t)).toBe('مبانی شطرنج');
   });
 
-  it('resolves coursesContent:: module key', () => {
-    const t = makeT({
-      'coursesContent.chessFundamentals.modules.board': 'صفحه و مهره‌ها',
-    });
-    expect(tKey('coursesContent::chessFundamentals::modules::board', t)).toBe('صفحه و مهره‌ها');
+  it('resolves legacy _courses:: key', () => {
+    expect(tKey('_courses::chessFundamentals::title', t)).toBe('مبانی شطرنج');
   });
 
-  it('resolves coursesContent:: lesson key', () => {
-    const t = makeT({
-      'coursesContent.chessFundamentals.lessons.intro': 'معرفی صفحه شطرنج',
-    });
-    expect(tKey('coursesContent::chessFundamentals::lessons::intro', t)).toBe('معرفی صفحه شطرنج');
-  });
-
-  it('returns raw key if translation missing', () => {
-    const t = makeT({});
-    expect(tKey('coursesContent::chessFundamentals::title', t)).toBe('coursesContent::chessFundamentals::title');
+  it('resolves legacy nested key', () => {
+    expect(tKey('_courses::chessFundamentals::modules::board', t)).toBe('صفحه و مهره‌ها');
+    expect(tKey('_courses::chessFundamentals::lessons::intro', t)).toBe('معرفی صفحه شطرنج');
   });
 });
