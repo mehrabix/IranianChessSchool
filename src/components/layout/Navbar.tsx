@@ -62,9 +62,9 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2 font-bold text-xl shrink-0 w-[200px]">
+        <Link href="/" className="flex items-center gap-2 font-bold text-xl shrink-0">
           <ChessKnight className="h-6 w-6 text-primary" />
-          <span>Iranian Chess School</span>
+          <span>ICS</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-0.5 flex-1 justify-center">
@@ -128,7 +128,7 @@ export function Navbar() {
             <SheetTrigger render={<Button variant="ghost" size="icon" className="md:hidden"><Menu className="h-5 w-5" /></Button>} />
             <SheetContent side={isRtl ? 'left' : 'right'} className="w-[280px] sm:w-[320px]">
               <SheetHeader className="mb-6">
-                <SheetTitle className="flex items-center gap-2"><ChessKnight className="h-5 w-5 text-primary" />Iranian Chess School</SheetTitle>
+                <SheetTitle className="flex items-center gap-2"><ChessKnight className="h-5 w-5 text-primary" />ICS</SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-1">
                 {navLinks.map((link) => (
