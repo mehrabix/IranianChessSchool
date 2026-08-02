@@ -1091,32 +1091,32 @@
       "alreadySubmitted": "Уже отправлено"
     }
   },
-  "_courses": {
+  "coursesContent": {
     "chessFundamentals": {
-      "title": "Основы шахмат",
-      "description": "Изучите основные правила, движения фигур и фундаментальные концепции шахмат. Идеально для начинающих.",
+      "title": "Chess Fundamentals",
+      "description": "Learn the basic rules, piece movement, and fundamental concepts of chess. Perfect for absolute beginners.",
       "modules": {
-        "board": "Доска и фигуры",
-        "tactics": "Основы тактики"
+        "board": "The Board & Pieces",
+        "tactics": "Basic Tactics"
       },
       "lessons": {
-        "intro": "Знакомство с шахматной доской",
-        "pieceMoves": "Как ходят фигуры",
-        "checkmates": "Основные маты",
-        "forks": "Вилки",
-        "pins": "Связки",
-        "skewers": "Сквозные удары"
+        "intro": "Introduction to the Chessboard",
+        "pieceMoves": "How Pieces Move",
+        "checkmates": "Basic Checkmates",
+        "forks": "Forks",
+        "pins": "Pins",
+        "skewers": "Skewers"
       }
     },
     "intermediateStrategy": {
-      "title": "Средняя стратегия",
-      "description": "Углубите понимание позиционной игры, пешечных структур и стратегических концепций.",
+      "title": "Intermediate Strategy",
+      "description": "Deepen your understanding of positional chess, pawn structures, and strategic concepts.",
       "modules": {
-        "positional": "Основы позиционной игры"
+        "positional": "Positional Fundamentals"
       },
       "lessons": {
-        "centerControl": "Контроль центра",
-        "development": "Развитие фигур"
+        "centerControl": "Center Control",
+        "development": "Piece Development"
       }
     }
   }

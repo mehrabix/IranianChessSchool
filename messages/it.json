@@ -1091,32 +1091,32 @@
       "alreadySubmitted": "Già inviato"
     }
   },
-  "_courses": {
+  "coursesContent": {
     "chessFundamentals": {
-      "title": "Fondamenti di Scacchi",
-      "description": "Impara le regole base, il movimento dei pezzi e i concetti fondamentali degli scacchi. Perfetto per principianti assoluti.",
+      "title": "Chess Fundamentals",
+      "description": "Learn the basic rules, piece movement, and fundamental concepts of chess. Perfect for absolute beginners.",
       "modules": {
-        "board": "La Scacchiera e i Pezzi",
-        "tactics": "Tattiche di Base"
+        "board": "The Board & Pieces",
+        "tactics": "Basic Tactics"
       },
       "lessons": {
-        "intro": "Introduzione alla Scacchiera",
-        "pieceMoves": "Come si Muovono i Pezzi",
-        "checkmates": "Scacchi Matti Fondamentali",
-        "forks": "Forchette",
-        "pins": "Inchiodature",
-        "skewers": "Infilate"
+        "intro": "Introduction to the Chessboard",
+        "pieceMoves": "How Pieces Move",
+        "checkmates": "Basic Checkmates",
+        "forks": "Forks",
+        "pins": "Pins",
+        "skewers": "Skewers"
       }
     },
     "intermediateStrategy": {
-      "title": "Strategia Intermedia",
-      "description": "Approfondisci la comprensione degli scacchi posizionali, delle strutture pedonali e dei concetti strategici.",
+      "title": "Intermediate Strategy",
+      "description": "Deepen your understanding of positional chess, pawn structures, and strategic concepts.",
       "modules": {
-        "positional": "Fondamenti Posizionali"
+        "positional": "Positional Fundamentals"
       },
       "lessons": {
-        "centerControl": "Controllo del Centro",
-        "development": "Sviluppo dei Pezzi"
+        "centerControl": "Center Control",
+        "development": "Piece Development"
       }
     }
   }
