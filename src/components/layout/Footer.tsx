@@ -49,15 +49,15 @@ export default async function Footer() {
           <div>
             <h3 className="font-semibold mb-4 text-sm uppercase tracking-wider text-muted-foreground">{tfooter('followUs')}</h3>
             <div className="flex flex-col gap-2.5">
-              {[
-                { key: 'YouTube', icon: Video },
-                { key: 'Instagram', icon: Camera },
-                { key: 'Discord', icon: MessageCircle },
-                { key: 'Telegram', icon: Send },
+              {[{
+                key: 'youtube', icon: Video },
+                { key: 'instagram', icon: Camera },
+                { key: 'discord', icon: MessageCircle },
+                { key: 'telegram', icon: Send },
               ].map((link) => (
                 <Link key={link.key} href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
                   <link.icon className="size-4" />
-                  {link.key}
+                  {tfooter(`social.${link.key}` as never)}
                 </Link>
               ))}
             </div>

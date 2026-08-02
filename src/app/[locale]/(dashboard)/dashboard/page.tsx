@@ -16,7 +16,7 @@ function courseLevelLabel(level: string | null, locale: string) {
     const fa: Record<string, string> = { beginner: 'مبتدی', improver: 'در حال پیشرفت', intermediate: 'متوسط', advanced: 'پیشرفته', club: 'باشگاهی' };
     return fa[key] || level;
   }
-  const en: Record<string, string> = { beginner: 'Beginner', improver: 'Improver', intermediate: 'Intermediate', advanced: 'Advanced', club: 'Club Player' };
+    const en: Record<string, string> = { beginner: 'Beginner', improver: 'Improver', intermediate: 'Intermediate', advanced: 'Advanced', club: 'Club' };
   return en[key] || level;
 }
 

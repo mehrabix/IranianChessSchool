@@ -14,20 +14,12 @@ export default async function SubscriptionPage() {
   const t = await getTranslations('dashboard');
 
   const [user] = await db
-    .select({
-      subscriptionStatus: users.subscriptionStatus,
-      paymentProvider: users.paymentProvider,
-    })
-    .from(users)
-    .where(eq(users.id, userId))
-    .limit(1);
+    .select({ subscriptionStatus: users.subscriptionStatus, paymentProvider: users.paymentProvider })
+    .from(users).where(eq(users.id, userId)).limit(1);
 
-  const [sub] = await db
-    .select()
-    .from(subscriptions)
+  const [sub] = await db.select().from(subscriptions)
     .where(eq(subscriptions.userId, userId))
-    .orderBy(desc(subscriptions.currentPeriodEnd))
-    .limit(1);
+    .orderBy(desc(subscriptions.currentPeriodEnd)).limit(1);
 
   const isActive = user?.subscriptionStatus === 'ACTIVE';
   const provider = user?.paymentProvider || 'STRIPE';
@@ -36,24 +28,23 @@ export default async function SubscriptionPage() {
     <section className="py-8">
       <div className="mx-auto max-w-2xl px-4">
         <Link href="/dashboard" className="mb-6 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="h-4 w-4 rtl:rotate-180" />
-          {t('backToDashboard')}
+          <ArrowLeft className="h-4 w-4 rtl:rotate-180" />{t('backToDashboard')}
         </Link>
 
-        <h1 className="mb-2 text-2xl font-bold">Subscription</h1>
-        <p className="mb-8 text-muted-foreground">Manage your subscription and billing</p>
+        <h1 className="mb-2 text-2xl font-bold">{t('subscription')}</h1>
+        <p className="mb-8 text-muted-foreground">{t('subscriptionDesc')}</p>
 
         <Card className="p-6">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-muted-foreground">Status</p>
+                <p className="text-sm text-muted-foreground">{t('status')}</p>
                 <p className={`text-lg font-semibold ${isActive ? 'text-emerald-600' : 'text-destructive'}`}>
-                  {isActive ? 'Active' : 'Inactive'}
+                  {isActive ? t('active') : t('inactive')}
                 </p>
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Plan</p>
+                <p className="text-sm text-muted-foreground">{t('plan')}</p>
                 <p className="text-lg font-semibold">{sub?.plan || '—'}</p>
               </div>
             </div>
@@ -61,49 +52,30 @@ export default async function SubscriptionPage() {
             {sub && (
               <>
                 <hr />
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm text-muted-foreground">Current Period</p>
-                    <p className="text-sm">
-                      {sub.currentPeriodStart
-                        ? new Date(sub.currentPeriodStart).toLocaleDateString()
-                        : '—'}{' '}
-                      —{' '}
-                      {sub.currentPeriodEnd
-                        ? new Date(sub.currentPeriodEnd).toLocaleDateString()
-                        : '—'}
-                    </p>
-                  </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">{t('currentPeriod')}</p>
+                  <p className="text-sm">
+                    {sub.currentPeriodStart ? new Date(sub.currentPeriodStart).toLocaleDateString() : '—'} —{' '}
+                    {sub.currentPeriodEnd ? new Date(sub.currentPeriodEnd).toLocaleDateString() : '—'}
+                  </p>
                 </div>
               </>
             )}
 
             <hr />
-
             <div className="flex flex-wrap gap-3">
               {provider === 'STRIPE' ? (
                 <form action="/api/payments/portal" method="POST">
                   <Button type="submit" variant="outline" className="gap-2">
-                    Manage in Stripe <ExternalLink className="h-4 w-4" />
+                    {t('manageInStripe')} <ExternalLink className="h-4 w-4" />
                   </Button>
                 </form>
-              ) : (
-                <p className="text-sm text-muted-foreground">
-                  Payment provider: {provider}. Use the provider&apos;s portal to manage your payment method.
-                </p>
-              )}
-
-              <Link href="/pricing">
-                <Button variant="outline">
-                  {isActive ? 'Change Plan' : 'View Plans'}
-                </Button>
-              </Link>
+              ) : null}
+              <Link href="/pricing"><Button variant="outline">{isActive ? t('changePlan') : t('viewPlans')}</Button></Link>
             </div>
 
             {sub?.cancelAtPeriodEnd && (
-              <p className="mt-2 text-sm text-amber-600">
-                Your subscription will be cancelled at the end of the current period.
-              </p>
+              <p className="mt-2 text-sm text-amber-600">{t('cancelAtPeriodEnd')}</p>
             )}
           </div>
         </Card>

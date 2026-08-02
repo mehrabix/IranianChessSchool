@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
+import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
@@ -29,14 +30,8 @@ const typeIcons: Record<string, typeof Target> = {
   POSTS: MessageCircle,
 };
 
-const typeLabels: Record<string, string> = {
-  PUZZLES: 'Puzzles',
-  LESSONS: 'Lessons',
-  GAMES: 'Games',
-  POSTS: 'Posts',
-};
-
 export default function ChallengesPage() {
+  const t = useTranslations('dashboard');
   const { data: session } = useSession();
   const [challenges, setChallenges] = useState<Challenge[]>([]);
   const [loading, setLoading] = useState(true);
@@ -77,9 +72,9 @@ export default function ChallengesPage() {
       <Container size="lg">
         <div className="flex items-center gap-3 mb-2">
           <TrendingUp className="h-6 w-6 text-emerald-600" />
-          <h1 className="text-2xl font-bold">Weekly Challenges</h1>
+          <h1 className="text-2xl font-bold">{t('challenges')}</h1>
         </div>
-        <p className="text-muted-foreground mb-8">Complete challenges to earn bonus XP and badges.</p>
+        <p className="text-muted-foreground mb-8">{t('challengesDesc')}</p>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {challenges.map((ch) => {
@@ -95,11 +90,11 @@ export default function ChallengesPage() {
                       </div>
                       <div>
                         <CardTitle className="text-base">{ch.title}</CardTitle>
-                        <p className="text-xs text-muted-foreground">{typeLabels[ch.type] || ch.type}</p>
+                        <p className="text-xs text-muted-foreground">{t(`${ch.type.toLowerCase()}Type` as never)}</p>
                       </div>
                     </div>
                     <Badge variant="secondary" className="gap-1 shrink-0">
-                      <Zap className="h-3 w-3 text-amber-500" />+{ch.xpReward} XP
+                      <Zap className="h-3 w-3 text-amber-500" />+{ch.xpReward} {t('xpShort')}
                     </Badge>
                   </div>
                   {ch.description && <p className="text-sm text-muted-foreground mt-2">{ch.description}</p>}
@@ -107,24 +102,18 @@ export default function ChallengesPage() {
                 <CardContent>
                   {ch.completed ? (
                     <div className="text-center py-3">
-                      <Badge className="bg-emerald-600">Completed! +{ch.xpReward} XP earned</Badge>
+                      <Badge className="bg-emerald-600">{t('challengeCompleted', { xp: ch.xpReward })}</Badge>
                     </div>
                   ) : (
                     <>
                       <div className="flex items-center justify-between text-xs text-muted-foreground mb-2">
                         <span>{ch.progress || 0} / {ch.goal}</span>
-                        <span>{daysLeft(ch.endsAt)} days left</span>
+                        <span>{t('daysLeft', { count: daysLeft(ch.endsAt) })}</span>
                       </div>
                       <Progress value={pct} className="h-2 mb-3" />
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="w-full"
-                        onClick={() => handleJoin(ch.id)}
-                        disabled={joining.has(ch.id)}
-                      >
+                      <Button variant="outline" size="sm" className="w-full" onClick={() => handleJoin(ch.id)} disabled={joining.has(ch.id)}>
                         {joining.has(ch.id) ? <Loader2 className="h-3 w-3 animate-spin me-1" /> : <Zap className="h-3 w-3 me-1" />}
-                        Log Progress
+                        {t('logProgress')}
                       </Button>
                     </>
                   )}
@@ -135,7 +124,7 @@ export default function ChallengesPage() {
           {challenges.length === 0 && (
             <div className="col-span-full text-center py-12 text-muted-foreground">
               <Target className="h-12 w-12 mx-auto mb-3 opacity-30" />
-              <p>No active challenges this week. Check back soon!</p>
+              <p>{t('noChallenges')}</p>
             </div>
           )}
         </div>

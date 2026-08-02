@@ -74,9 +74,9 @@ export default function HomeworkPage() {
   }
 
   const statusBadge = (status: string) => {
-    if (status === 'PENDING') return <Badge variant="secondary" className="gap-1"><Clock className="h-3 w-3" />{t('pending') || 'Pending'}</Badge>;
-    if (status === 'SUBMITTED') return <Badge variant="default" className="gap-1 bg-blue-600"><Send className="h-3 w-3" />{t('submitted') || 'Submitted'}</Badge>;
-    return <Badge variant="default" className="gap-1 bg-emerald-600"><CheckCircle2 className="h-3 w-3" />{t('reviewed') || 'Reviewed'}</Badge>;
+    if (status === 'PENDING') return <Badge variant="secondary" className="gap-1"><Clock className="h-3 w-3" />{t('pending')}</Badge>;
+    if (status === 'SUBMITTED') return <Badge variant="default" className="gap-1 bg-blue-600"><Send className="h-3 w-3" />{t('submitted')}</Badge>;
+    return <Badge variant="default" className="gap-1 bg-emerald-600"><CheckCircle2 className="h-3 w-3" />{t('reviewed')}</Badge>;
   };
 
   if (loading) return <section className="py-20"><Container size="md" className="flex justify-center"><Loader2 className="h-6 w-6 animate-spin" /></Container></section>;
@@ -84,8 +84,8 @@ export default function HomeworkPage() {
   return (
     <section className="py-8">
       <Container size="lg">
-        <h1 className="text-2xl font-bold mb-2">{t('homework') || 'Homework'}</h1>
-        <p className="text-muted-foreground mb-8">{isCoach ? 'Review and assign homework to your students.' : 'View and submit your assigned homework.'}</p>
+        <h1 className="text-2xl font-bold mb-2">{t('homework')}</h1>
+        <p className="text-muted-foreground mb-8">{isCoach ? t('homeworkCoachDesc') || 'Review and assign homework to your students.' : t('homeworkStudentDesc') || 'View and submit your assigned homework.'}</p>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {homeworks.map((hw) => (
@@ -99,12 +99,12 @@ export default function HomeworkPage() {
               </CardHeader>
               <CardContent>
                 <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                  <span className="flex items-center gap-1"><User className="h-3 w-3" />{isCoach ? 'Student' : 'Coach'}</span>
+                  <span className="flex items-center gap-1"><User className="h-3 w-3" />{isCoach ? t('roleStudent') : t('coach') || 'Coach'}</span>
                   <span>{new Date(hw.assignedAt).toLocaleDateString()}</span>
                 </div>
                 {hw.coachNotes && (
                   <div className="mt-3 p-2 rounded bg-muted/50 text-xs">
-                    <span className="font-medium flex items-center gap-1"><MessageCircle className="h-3 w-3" />Coach:</span>
+                    <span className="font-medium flex items-center gap-1"><MessageCircle className="h-3 w-3" />{t('coachFeedback')}</span>
                     <p className="mt-1">{hw.coachNotes}</p>
                   </div>
                 )}
@@ -114,27 +114,27 @@ export default function HomeworkPage() {
           {homeworks.length === 0 && (
             <div className="col-span-full text-center py-12 text-muted-foreground">
               <FileText className="h-12 w-12 mx-auto mb-3 opacity-30" />
-              <p>{t('noHomework') || 'No homework yet.'}</p>
+              <p>{t('noHomework')}</p>
             </div>
           )}
         </div>
 
         {selected && !isCoach && (
           <Card className="mt-8">
-            <CardHeader><CardTitle>{t('submitHomework') || 'Submit Homework'}: {selected.title}</CardTitle></CardHeader>
+            <CardHeader><CardTitle>{t('submitHomework')}: {selected.title}</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               {selected.description && <p className="text-sm text-muted-foreground">{selected.description}</p>}
               <div>
-                <label className="text-sm font-medium block mb-1">{t('pgnNotation') || 'PGN Notation'}</label>
-                <Textarea value={pgn} onChange={(e) => setPgn(e.target.value)} placeholder="1. e4 e5 2. Nf3 Nc6 ..." rows={6} />
+                <label className="text-sm font-medium block mb-1">{t('pgnNotation')}</label>
+                <Textarea value={pgn} onChange={(e) => setPgn(e.target.value)} rows={6} />
               </div>
               <div>
-                <label className="text-sm font-medium block mb-1">{t('notes') || 'Notes (optional)'}</label>
-                <Input value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="Your thoughts about this homework..." />
+                <label className="text-sm font-medium block mb-1">{t('notes')}</label>
+                <Input value={notes} onChange={(e) => setNotes(e.target.value)} />
               </div>
               <Button onClick={handleSubmit} disabled={submitting || !pgn.trim()}>
                 {submitting && <Loader2 className="h-4 w-4 animate-spin me-2" />}
-                <Send className="h-4 w-4 me-2" />{t('post') || 'Submit'}
+                <Send className="h-4 w-4 me-2" />{t('post')}
               </Button>
             </CardContent>
           </Card>
@@ -142,14 +142,14 @@ export default function HomeworkPage() {
 
         {isCoach && homeworks.filter(h => h.status === 'SUBMITTED').map(hw => (
           <Card key={`review-${hw.id}`} className="mt-4">
-            <CardHeader><CardTitle className="text-base">Review: {hw.title}</CardTitle></CardHeader>
+            <CardHeader><CardTitle className="text-base">{t('review')}: {hw.title}</CardTitle></CardHeader>
             <CardContent className="space-y-3">
               {hw.pgn && <pre className="text-xs bg-muted p-3 rounded overflow-x-auto max-h-32">{hw.pgn}</pre>}
-              {hw.studentNotes && <p className="text-sm text-muted-foreground">Student notes: {hw.studentNotes}</p>}
+              {hw.studentNotes && <p className="text-sm text-muted-foreground">{t('studentNotes')}: {hw.studentNotes}</p>}
               <div className="flex gap-2">
-                <Input value={reviewNotes} onChange={(e) => setReviewNotes(e.target.value)} placeholder="Your review feedback..." className="flex-1" />
+                <Input value={reviewNotes} onChange={(e) => setReviewNotes(e.target.value)} className="flex-1" />
                 <Button size="sm" onClick={() => handleReview(hw.id)} disabled={reviewing || !reviewNotes.trim()}>
-                  {reviewing && <Loader2 className="h-3 w-3 animate-spin me-1" />}{t('post') || 'Review'}
+                  {reviewing && <Loader2 className="h-3 w-3 animate-spin me-1" />}{t('post')}
                 </Button>
               </div>
             </CardContent>
