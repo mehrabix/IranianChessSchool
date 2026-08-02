@@ -33,7 +33,9 @@
       "instagram": "Instagram",
       "discord": "Discord",
       "telegram": "Telegram"
-    }
+    },
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Get chess tips and updates delivered to your inbox."
   },
   "home": {
     "hero": {
@@ -112,6 +114,20 @@
       "cta": "Start gratis prøveperiode",
       "viewFaq": "Se FAQ",
       "finePrint": "Ingen forpliktelse. Avslutt når som helst. Gratis i 7 dager."
+    },
+    "whoFor": {
+      "heading": "Hvem er dette for?",
+      "subtitle": "Iransk Sjakkskole er designet for tre typer spillere",
+      "card1Title": "Fast på et ratingplatå",
+      "card1Desc": "Du har truffet en vegg og kan ikke bryte forbi din nåværende Elo. Vår strukturerte tilnærming identifiserer svakhetene dine og gir deg en klar vei fremover.",
+      "card2Title": "Ingen klar retning",
+      "card2Desc": "Du hopper mellom YouTube-videoer, tilfeldige oppgaver og lynpartier uten en plan. Vi gir deg et komplett veikart fra start til slutt.",
+      "card3Title": "Trenger et støttende fellesskap",
+      "card3Desc": "Du lærer best med andre. Vårt fellesskap på over 1200 spillere, live-undervisning og trenertilbakemeldinger holder deg motivert."
+    },
+    "pricing": {
+      "heading": "Enkel, transparent prising",
+      "subtitle": "Start gratis. Oppgrader når du er klar."
     }
   },
   "about": {

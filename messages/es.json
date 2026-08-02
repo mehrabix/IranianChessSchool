@@ -33,7 +33,9 @@
       "instagram": "Instagram",
       "discord": "Discord",
       "telegram": "Telegram"
-    }
+    },
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Get chess tips and updates delivered to your inbox."
   },
   "home": {
     "hero": {
@@ -112,6 +114,20 @@
       "cta": "Empieza tu prueba gratuita",
       "viewFaq": "Ver FAQ",
       "finePrint": "Sin compromiso. Cancela cuando quieras. 7 días gratis."
+    },
+    "whoFor": {
+      "heading": "¿Para quién es esto?",
+      "subtitle": "La Escuela de Ajedrez Iraní está diseñada para tres tipos de jugadores",
+      "card1Title": "Estancado en una meseta de rating",
+      "card1Desc": "Has chocado contra una pared y no puedes superar tu Elo actual. Nuestro enfoque estructurado identifica tus debilidades y te da un camino claro.",
+      "card2Title": "Sin dirección clara",
+      "card2Desc": "Saltas entre videos de YouTube, puzzles aleatorios y partidas blitz sin un plan. Te damos una hoja de ruta completa de principio a fin.",
+      "card3Title": "Necesitas una comunidad de apoyo",
+      "card3Desc": "Aprendes mejor con otros. Nuestra comunidad de más de 1200 jugadores, clases en vivo y retroalimentación de entrenadores te mantienen motivado."
+    },
+    "pricing": {
+      "heading": "Precios simples y transparentes",
+      "subtitle": "Comienza gratis. Mejora cuando estés listo."
     }
   },
   "about": {
@@ -512,7 +528,10 @@
       "backToCourse": "Volver al curso",
       "practiceBoard": "Tablero de práctica",
       "markComplete": "Marcar como completada",
-      "completed": "Completado"
+      "completed": "Completado",
+      "text": "Text",
+      "video": "Video",
+      "quiz": "Quiz"
     },
     "quiz": {
       "loading": "Cargando cuestionario...",

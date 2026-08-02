@@ -33,7 +33,9 @@
       "instagram": "Instagram",
       "discord": "Discord",
       "telegram": "Telegram"
-    }
+    },
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Get chess tips and updates delivered to your inbox."
   },
   "home": {
     "hero": {
@@ -112,6 +114,20 @@
       "cta": "Inizia la Prova Gratuita",
       "viewFaq": "Vedi le FAQ",
       "finePrint": "Nessun impegno. Annulla quando vuoi. Gratuito per 7 giorni."
+    },
+    "whoFor": {
+      "heading": "Per chi è?",
+      "subtitle": "La Scuola di Scacchi Iraniana è pensata per tre tipi di giocatori",
+      "card1Title": "Bloccato su un plateau di rating",
+      "card1Desc": "Hai colpito un muro e non riesci a superare il tuo Elo attuale. Il nostro approccio strutturato identifica i tuoi punti deboli e ti dà un percorso chiaro.",
+      "card2Title": "Nessuna direzione chiara",
+      "card2Desc": "Salti tra video YouTube, puzzle casuali e partite blitz senza un piano. Ti diamo una tabella di marcia completa dall'inizio alla fine.",
+      "card3Title": "Hai bisogno di una comunità di supporto",
+      "card3Desc": "Impari meglio con gli altri. La nostra comunità di oltre 1200 giocatori, lezioni dal vivo e feedback degli allenatori ti mantengono motivato."
+    },
+    "pricing": {
+      "heading": "Prezzi semplici e trasparenti",
+      "subtitle": "Inizia gratis. Aggiorna quando sei pronto."
     }
   },
   "about": {

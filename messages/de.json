@@ -33,7 +33,9 @@
       "instagram": "Instagram",
       "discord": "Discord",
       "telegram": "Telegram"
-    }
+    },
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Get chess tips and updates delivered to your inbox."
   },
   "home": {
     "hero": {
@@ -112,6 +114,20 @@
       "cta": "Kostenlose Testversion starten",
       "viewFaq": "FAQ ansehen",
       "finePrint": "Keine Verpflichtung. Jederzeit kündbar. 7 Tage kostenlos."
+    },
+    "whoFor": {
+      "heading": "Für wen ist das?",
+      "subtitle": "Die Iranische Schachschule ist für drei Arten von Spielern konzipiert",
+      "card1Title": "Auf einem Rating-Plateau festgefahren",
+      "card1Desc": "Du bist gegen eine Wand gelaufen und kommst nicht über dein aktuelles Elo hinaus. Unser strukturierter Ansatz identifiziert deine Schwächen und gibt dir einen klaren Weg nach vorne.",
+      "card2Title": "Keine klare Richtung",
+      "card2Desc": "Du springst zwischen YouTube-Videos, zufälligen Rätseln und Blitzpartien ohne Plan. Wir geben dir eine komplette Roadmap von Anfang bis Ende.",
+      "card3Title": "Brauchst eine unterstützende Gemeinschaft",
+      "card3Desc": "Du lernst am besten mit anderen. Unsere Community von über 1200 Spielern, Live-Unterricht und Trainer-Feedback hält dich motiviert."
+    },
+    "pricing": {
+      "heading": "Einfache, transparente Preisgestaltung",
+      "subtitle": "Starte kostenlos. Upgrade, wenn du bereit bist."
     }
   },
   "about": {

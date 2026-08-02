@@ -33,7 +33,9 @@
       "instagram": "Instagram",
       "discord": "Discord",
       "telegram": "Telegram"
-    }
+    },
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Get chess tips and updates delivered to your inbox."
   },
   "home": {
     "hero": {
@@ -112,6 +114,20 @@
       "cta": "Essai gratuit",
       "viewFaq": "Voir la FAQ",
       "finePrint": "Sans engagement. Annulation à tout moment. Gratuit pendant 7 jours."
+    },
+    "whoFor": {
+      "heading": "Pour qui est-ce?",
+      "subtitle": "L'École d'Échecs Iranienne est conçue pour trois types de joueurs",
+      "card1Title": "Bloqué à un plateau de classement",
+      "card1Desc": "Vous avez heurté un mur et ne pouvez pas dépasser votre Elo actuel. Notre approche structurée identifie vos faiblesses et vous donne un chemin clair.",
+      "card2Title": "Pas de direction claire",
+      "card2Desc": "Vous sautez entre des vidéos YouTube, des puzzles aléatoires et des parties blitz sans plan. Nous vous donnons une feuille de route complète.",
+      "card3Title": "Besoin d'une communauté de soutien",
+      "card3Desc": "Vous apprenez mieux avec les autres. Notre communauté de plus de 1200 joueurs, des cours en direct et les retours des entraîneurs vous gardent motivé."
+    },
+    "pricing": {
+      "heading": "Tarification simple et transparente",
+      "subtitle": "Commencez gratuitement. Passez à la vitesse supérieure quand vous êtes prêt."
     }
   },
   "about": {

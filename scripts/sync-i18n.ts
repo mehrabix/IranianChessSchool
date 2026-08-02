@@ -12,46 +12,30 @@ function readJson(filePath: string): Record<string, unknown> {
 }
 
 const en = readJson(enPath);
-const enDashboard = en.dashboard as Record<string, unknown>;
+
+// Recursively sync missing keys from en into locale
+function syncKeys(enObj: Record<string, unknown>, locObj: Record<string, unknown>): number {
+  let added = 0;
+  for (const [key, value] of Object.entries(enObj)) {
+    if (!(key in locObj)) {
+      locObj[key] = value;
+      added++;
+    } else if (typeof value === 'object' && value !== null && !Array.isArray(value) &&
+               typeof locObj[key] === 'object' && locObj[key] !== null && !Array.isArray(locObj[key])) {
+      added += syncKeys(value as Record<string, unknown>, locObj[key] as Record<string, unknown>);
+    }
+  }
+  return added;
+}
 
 for (const locale of locales) {
   const localePath = path.join(messagesDir, `${locale}.json`);
   const loc = readJson(localePath);
-  const locDashboard = loc.dashboard as Record<string, unknown>;
-
-  if (!locDashboard) {
-    console.log(`${locale}: missing dashboard entirely, skipping`);
-    continue;
-  }
-
-  let added = 0;
-  for (const [key, value] of Object.entries(enDashboard)) {
-    if (!(key in locDashboard)) {
-      locDashboard[key] = typeof value === 'string' && value.includes('{')
-        ? value // Keep interpolation patterns
-        : value;
-      added++;
-    }
-  }
-
+  const added = syncKeys(en, loc as Record<string, unknown>);
   if (added > 0) {
     fs.writeFileSync(localePath, JSON.stringify(loc, null, 2) + '\n');
     console.log(`${locale}: added ${added} missing keys`);
   } else {
     console.log(`${locale}: no missing keys`);
-  }
-}
-
-// Also sync footer.social
-for (const locale of locales) {
-  const localePath = path.join(messagesDir, `${locale}.json`);
-  const loc = readJson(localePath);
-  const locFooter = loc.footer as Record<string, unknown>;
-  const enFooter = en.footer as Record<string, unknown>;
-
-  if (locFooter && typeof locFooter.social !== 'object') {
-    locFooter.social = enFooter.social;
-    fs.writeFileSync(localePath, JSON.stringify(loc, null, 2) + '\n');
-    console.log(`${locale}: fixed footer.social`);
   }
 }
