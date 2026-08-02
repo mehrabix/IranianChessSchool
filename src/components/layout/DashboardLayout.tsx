@@ -20,7 +20,7 @@ import {
 import { cn } from '@/lib/utils';
 
 const sidebarLinks = [
-  { href: '/dashboard', label: 'dashboard', icon: LayoutDashboard },
+  { href: '/dashboard', label: 'backToDashboard', icon: LayoutDashboard },
   { href: '/courses', label: 'myCourses', icon: BookOpen },
   { href: '/dashboard/analysis', label: 'analysis', icon: Brain },
   { href: '/dashboard/puzzles', label: 'dailyPuzzle', icon: Puzzle },
