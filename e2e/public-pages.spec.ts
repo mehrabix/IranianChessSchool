@@ -21,12 +21,12 @@ test.describe('Public Pages', () => {
   test('contact page loads', async ({ page }) => {
     await page.goto('/en/contact');
     await expect(page.getByText('Get in Touch')).toBeVisible();
-    await expect(page.locator('form')).toBeVisible();
+    await expect(page.getByRole('button', { name: /send message/i })).toBeVisible();
   });
 
   test('pricing page loads', async ({ page }) => {
     await page.goto('/en/pricing');
-    await expect(page.getByRole('heading', { name: /pricing/i })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Simple, transparent pricing' })).toBeVisible();
   });
 
   test('kids page loads', async ({ page }) => {
