@@ -17,10 +17,16 @@ const INTERMEDIATE_ID = 'course-intermediate-001';
 const MOD_POSITIONAL_ID = 'mod-positional-001';
 
 async function seed() {
-  // Clear old English content first
+  // Disable FK checks to allow clean deletion even with constraints
+  await client.execute('PRAGMA foreign_keys = OFF');
+
+  // Clear all old content
   await db.delete(lessons).run();
   await db.delete(modules).run();
   await db.delete(courses).run();
+
+  // Re-enable FK checks
+  await client.execute('PRAGMA foreign_keys = ON');
 
   const beginnerCourse = await db.insert(courses).values({
     id: BEGINNER_ID,
