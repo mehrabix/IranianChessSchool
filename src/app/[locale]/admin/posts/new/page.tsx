@@ -37,7 +37,7 @@ export default function NewPostPage() {
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
         <div className="mb-6">
           <Link href="/admin/posts" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-            <ArrowLeft className="h-4 w-4" /> {t('cancel')}
+            <ArrowLeft className="h-4 w-4 rtl:rotate-180" /> {t('cancel')}
           </Link>
         </div>
         <Card>

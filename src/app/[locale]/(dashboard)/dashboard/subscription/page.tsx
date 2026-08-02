@@ -11,7 +11,7 @@ export default async function SubscriptionPage() {
   const session = await auth();
   if (!session?.user?.id) redirect({ href: '/auth/signin', locale: 'en' });
   const userId = session!.user!.id;
-  const t = await getTranslations('pricing');
+  const t = await getTranslations('dashboard');
 
   const [user] = await db
     .select({
@@ -36,8 +36,8 @@ export default async function SubscriptionPage() {
     <section className="py-8">
       <div className="mx-auto max-w-2xl px-4">
         <Link href="/dashboard" className="mb-6 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="h-4 w-4" />
-          Back to Dashboard
+          <ArrowLeft className="h-4 w-4 rtl:rotate-180" />
+          {t('backToDashboard')}
         </Link>
 
         <h1 className="mb-2 text-2xl font-bold">Subscription</h1>

@@ -68,7 +68,7 @@ export default async function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href={ctaHref}>
                   <Button size="lg" className="w-full sm:w-auto gap-2 text-base h-12 px-8">
-                    {t('hero.cta')} <ArrowRight className="h-4 w-4" />
+                    {t('hero.cta')} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
                   </Button>
                 </Link>
                 <Link href="/about">
@@ -219,7 +219,7 @@ export default async function HomePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href={ctaHref}>
               <Button size="lg" variant="secondary" className="w-full sm:w-auto h-12 px-8 text-base gap-2 bg-white text-emerald-900 hover:bg-white/90">
-                {t('cta.cta')} <ArrowRight className="h-4 w-4" />
+                {t('cta.cta')} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
               </Button>
             </Link>
             <Link href="/faq">

@@ -47,7 +47,7 @@ export default async function CourseDetailPage(props: { params: Promise<{ id: st
       <Container size="lg">
         <div className="mb-6">
           <Button variant="ghost" size="sm" render={<Link href="/courses" />}>
-            <ArrowLeft className="h-4 w-4 mr-1" /> {t('detail.backToCourses')}
+            <ArrowLeft className="h-4 w-4 me-1 rtl:rotate-180" /> {t('detail.backToCourses')}
           </Button>
         </div>
         <div className="grid gap-8 lg:grid-cols-[1fr_300px]">

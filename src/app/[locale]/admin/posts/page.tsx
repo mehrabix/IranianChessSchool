@@ -44,7 +44,7 @@ export default async function AdminPostsPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Button variant="ghost" size="sm" render={<Link href={`/admin/posts/${post.id}`} />}>
-                    {t('edit')} <ArrowRight className="h-3 w-3 ml-1" />
+                    {t('edit')} <ArrowRight className="h-3 w-3 ms-1 rtl:rotate-180" />
                   </Button>
                 </div>
               </CardHeader>

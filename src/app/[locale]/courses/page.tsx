@@ -1,5 +1,5 @@
-import { getTranslations } from 'next-intl/server';
-import { db, courses, eq, asc } from '@/lib/db';
+import { getTranslations, getLocale } from 'next-intl/server';
+import { db, courses, eq } from '@/lib/db';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,8 +7,20 @@ import { Container } from '@/components/ui/container';
 import { Link } from '@/i18n/routing';
 import { BookOpen, Clock, ArrowRight } from 'lucide-react';
 
+function courseLevelLabel(level: string | null, locale: string) {
+  if (!level) return '';
+  const key = level.toLowerCase();
+  if (locale === 'fa') {
+    const fa: Record<string, string> = { beginner: 'مبتدی', improver: 'در حال پیشرفت', intermediate: 'متوسط', advanced: 'پیشرفته', club: 'باشگاهی' };
+    return fa[key] || level;
+  }
+  const en: Record<string, string> = { beginner: 'Beginner', improver: 'Improver', intermediate: 'Intermediate', advanced: 'Advanced', club: 'Club Player' };
+  return en[key] || level;
+}
+
 export default async function CoursesPage() {
   const tc = await getTranslations('courses');
+  const locale = await getLocale();
   const all = await db
     .select()
     .from(courses)
@@ -34,9 +46,9 @@ export default async function CoursesPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center justify-between">
-                    <Badge variant="secondary">{course.level}</Badge>
+                    <Badge variant="secondary">{courseLevelLabel(course.level, locale)}</Badge>
                     <Button variant="ghost" size="sm" render={<Link href={`/courses/${course.id}`} />}>
-                      {tc('hero.viewCourse')} <ArrowRight className="h-3 w-3 ml-1" />
+                      {tc('hero.viewCourse')} <ArrowRight className="h-3 w-3 ms-1 rtl:rotate-180" />
                     </Button>
                   </div>
                 </CardContent>

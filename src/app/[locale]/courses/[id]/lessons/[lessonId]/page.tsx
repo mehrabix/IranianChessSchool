@@ -36,7 +36,7 @@ export default async function LessonPage(props: { params: Promise<{ id: string; 
       <Container size="lg">
         <div className="mb-6">
           <Button variant="ghost" size="sm" render={<Link href={`/courses/${courseId}`} />}>
-            <ArrowLeft className="h-4 w-4 mr-1" /> {t('backToCourse')}
+            <ArrowLeft className="h-4 w-4 me-1 rtl:rotate-180" /> {t('backToCourse')}
           </Button>
         </div>
         <div className="grid gap-8 lg:grid-cols-[1fr_300px]">
@@ -49,12 +49,12 @@ export default async function LessonPage(props: { params: Promise<{ id: string; 
             <div className="flex items-center justify-between mt-8">
               {prevLesson ? (
                 <Button variant="outline" render={<Link href={`/courses/${courseId}/lessons/${prevLesson.id}`} />}>
-                  <ArrowLeft className="h-4 w-4 mr-1" /> {prevLesson.title}
+                  <ArrowLeft className="h-4 w-4 me-1 rtl:rotate-180" /> {prevLesson.title}
                 </Button>
               ) : <div />}
               {nextLesson ? (
                 <Button render={<Link href={`/courses/${courseId}/lessons/${nextLesson.id}`} />}>
-                  {nextLesson.title} <ArrowRight className="h-4 w-4 ml-1" />
+                  {nextLesson.title} <ArrowRight className="h-4 w-4 ms-1 rtl:rotate-180" />
                 </Button>
               ) : <div />}
             </div>

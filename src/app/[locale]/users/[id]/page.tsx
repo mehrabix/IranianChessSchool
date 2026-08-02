@@ -48,7 +48,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ id: st
     <section className="py-8">
       <Container size="md">
         <Link href="/dashboard" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground mb-6">
-          <ArrowLeft className="h-3.5 w-3.5" /> {t('backToDashboard')}
+          <ArrowLeft className="h-3.5 w-3.5 rtl:rotate-180" /> {t('backToDashboard')}
         </Link>
 
         <Card className="mb-6">

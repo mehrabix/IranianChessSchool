@@ -61,7 +61,7 @@ export function LessonEditForm({ lesson, courseId }: { lesson: Lesson; courseId:
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
         <div className="mb-6">
           <Button variant="ghost" size="sm" render={<Link href={`/admin/courses/${courseId}`} />}>
-            <ArrowLeft className="h-4 w-4 mr-1" /> {t('cancel')}
+            <ArrowLeft className="h-4 w-4 me-1 rtl:rotate-180" /> {t('cancel')}
           </Button>
         </div>
         <Card>

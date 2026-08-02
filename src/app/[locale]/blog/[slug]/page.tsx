@@ -50,7 +50,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <Container size="md">
         <div className="mb-8">
           <Link href="/blog" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
-            <ArrowLeft className="h-3.5 w-3.5" />
+            <ArrowLeft className="h-3.5 w-3.5 rtl:rotate-180" />
             {t('posts.readMore').replace('Read more', 'Back to Blog')}
           </Link>
         </div>

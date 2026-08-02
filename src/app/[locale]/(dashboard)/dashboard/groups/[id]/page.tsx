@@ -35,7 +35,7 @@ export default async function GroupDetailPage({ params }: { params: Promise<{ id
     <section className="py-8">
       <Container size="lg">
         <Link href="/dashboard" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-6">
-          <ArrowLeft className="h-4 w-4" />
+          <ArrowLeft className="h-4 w-4 rtl:rotate-180" />
           {t('backToDashboard')}
         </Link>
 

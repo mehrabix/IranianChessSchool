@@ -43,13 +43,15 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
     return pathname.startsWith(href);
   };
 
+  const sheetSide = typeof document !== 'undefined' && document.documentElement.dir === 'rtl' ? 'right' : 'left';
+
   return (
     <div className="flex h-[calc(100vh-var(--navbar-height))]">
       {/* Mobile top bar */}
-      <div className="md:hidden fixed top-[var(--navbar-height)] left-0 right-0 z-40 flex h-12 items-center gap-2 border-b bg-background px-4">
+      <div className="md:hidden fixed top-[var(--navbar-height)] start-0 end-0 z-40 flex h-12 items-center gap-2 border-b bg-background px-4">
         <Sheet onOpenChange={(open) => setSidebarOpen(open)} open={sidebarOpen}>
           <SheetTrigger render={<Button variant="ghost" size="icon" className="shrink-0"><Menu className="h-5 w-5" /></Button>} />
-          <SheetContent side="left" className="w-[260px] p-0">
+          <SheetContent side={sheetSide as 'left' | 'right'} className="w-[260px] p-0">
             <SheetHeader className="border-b px-4 py-3">
               <SheetTitle className="text-lg font-semibold">{t('backToDashboard')}</SheetTitle>
             </SheetHeader>
@@ -66,13 +68,13 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
       {/* Desktop sidebar */}
       <aside
         className={cn(
-          'hidden md:flex flex-col border-r bg-muted/30 transition-all duration-300 shrink-0',
+          'hidden md:flex flex-col border-e bg-muted/30 transition-all duration-300 shrink-0',
           sidebarOpen ? 'w-56' : 'w-16'
         )}
       >
         <div className="flex h-12 items-center justify-end border-b px-2">
           <Button variant="ghost" size="icon" className="h-8 w-8" onClick={toggleSidebar}>
-            {sidebarOpen ? <ChevronLeft className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
+            {sidebarOpen ? <ChevronLeft className="h-4 w-4 rtl:rotate-180" /> : <ChevronRight className="h-4 w-4 rtl:rotate-180" />}
           </Button>
         </div>
 

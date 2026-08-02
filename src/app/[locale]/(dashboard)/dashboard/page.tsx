@@ -8,6 +8,17 @@ import { Progress } from '@/components/ui/progress';
 import { Link } from '@/i18n/routing';
 import { BookOpen, CheckCircle, TrendingUp, ArrowRight, Zap, Star, Clock, Award, Brain, Target, MessageCircle, Trophy } from 'lucide-react';
 
+function courseLevelLabel(level: string | null, locale: string) {
+  if (!level) return '';
+  const key = level.toLowerCase();
+  if (locale === 'fa') {
+    const fa: Record<string, string> = { beginner: 'مبتدی', improver: 'در حال پیشرفت', intermediate: 'متوسط', advanced: 'پیشرفته', club: 'باشگاهی' };
+    return fa[key] || level;
+  }
+  const en: Record<string, string> = { beginner: 'Beginner', improver: 'Improver', intermediate: 'Intermediate', advanced: 'Advanced', club: 'Club Player' };
+  return en[key] || level;
+}
+
 async function getUserProgress(userId: string) {
   return db
     .select()
@@ -193,8 +204,8 @@ export default async function DashboardPage() {
               <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
                 <MessageCircle className="h-5 w-5 text-pink-600 shrink-0" />
                 <div>
-                  <CardTitle className="text-xs font-medium text-muted-foreground">Social</CardTitle>
-                  <p className="text-sm font-medium">Feed & Community</p>
+                  <CardTitle className="text-xs font-medium text-muted-foreground">{t('social')}</CardTitle>
+                  <p className="text-sm font-medium">{t('feedAndCommunity')}</p>
                 </div>
               </CardHeader>
             </Link>
@@ -204,8 +215,8 @@ export default async function DashboardPage() {
               <CardHeader className="flex-row items-center gap-3 space-y-0 py-4">
                 <Trophy className="h-5 w-5 text-amber-600 shrink-0" />
                 <div>
-                  <CardTitle className="text-xs font-medium text-muted-foreground">Leaderboard</CardTitle>
-                  <p className="text-sm font-medium">Top Players</p>
+                  <CardTitle className="text-xs font-medium text-muted-foreground">{t('leaderboard')}</CardTitle>
+                  <p className="text-sm font-medium">{t('topPlayers')}</p>
                 </div>
               </CardHeader>
             </Link>
@@ -238,10 +249,10 @@ export default async function DashboardPage() {
                     <div className="flex items-center justify-between mb-2">
                       <div>
                         <p className="font-medium">{course.title}</p>
-                        <p className="text-xs text-muted-foreground">{course.level} &middot; {course.done}/{course.total} {t('lessons')}</p>
+                        <p className="text-xs text-muted-foreground">{courseLevelLabel(course.level, locale)} &middot; {course.done}/{course.total} {t('lessons')}</p>
                       </div>
                       <Button variant="ghost" size="sm" render={<Link href={`/courses/${course.id}`} />}>
-                        {t('continue')} <ArrowRight className="h-3 w-3 ml-1" />
+                        {t('continue')} <ArrowRight className="h-3 w-3 ms-1 rtl:rotate-180" />
                       </Button>
                     </div>
                     <Progress value={course.percent} className="h-2" />

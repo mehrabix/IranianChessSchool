@@ -85,7 +85,7 @@ export default function SignInPage() {
               </div>
             )}
             <Button type="submit" className="w-full h-11 text-base gap-2 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 shadow-lg shadow-emerald-500/20">
-              {t('submit')} <ArrowRight className="h-4 w-4" />
+              {t('submit')} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
             </Button>
           </form>
           <div className="relative">
@@ -105,7 +105,7 @@ export default function SignInPage() {
           <p className="text-center text-sm text-muted-foreground">
             {t('noAccount')}{' '}
             <Link href="/auth/register" className="font-semibold text-emerald-600 hover:text-emerald-500 transition-colors">
-              {t('signUp')} <ArrowRight className="h-3 w-3 inline" />
+              {t('signUp')} <ArrowRight className="h-3 w-3 inline rtl:rotate-180" />
             </Link>
           </p>
         </CardContent>

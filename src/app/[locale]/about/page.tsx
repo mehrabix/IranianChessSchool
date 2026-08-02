@@ -96,7 +96,7 @@ export default async function AboutPage() {
           <p className="text-lg text-emerald-100/80">{t('cta.subtitle')}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" variant="secondary" className="bg-white text-emerald-900 hover:bg-white/90 h-12 px-8 gap-2" render={<Link href={ctaHref} />}>
-              {t('cta.cta')} <ArrowRight className="h-4 w-4" />
+              {t('cta.cta')} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
             </Button>
             <Button size="lg" variant="ghost" className="text-white/80 hover:text-white hover:bg-white/10 h-12 px-8" render={<Link href="/contact" />}>
               {t('cta.contactUs')}

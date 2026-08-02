@@ -49,7 +49,7 @@ function LessonForm({ courseId }: { courseId: string }) {
       <Container size="sm">
         <div className="mb-6">
           <Button variant="ghost" size="sm" render={<Link href={`/admin/courses/${courseId}`} />}>
-            <ArrowLeft className="h-4 w-4 mr-1" /> {t('cancel')}
+            <ArrowLeft className="h-4 w-4 me-1 rtl:rotate-180" /> {t('cancel')}
           </Button>
         </div>
         <Card>

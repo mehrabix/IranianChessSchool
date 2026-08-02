@@ -55,7 +55,7 @@ export default async function AdminCoursesPage() {
                       {course.published ? t('coursePublished') : t('draft')}
                     </Badge>
                     <Button variant="ghost" size="sm" render={<Link href={`/admin/courses/${course.id}`} />}>
-                      {t('edit')} <ArrowRight className="h-3 w-3 ml-1" />
+                      {t('edit')} <ArrowRight className="h-3 w-3 ms-1 rtl:rotate-180" />
                     </Button>
                   </div>
                 </CardHeader>

@@ -98,7 +98,7 @@ export default async function PricingPage() {
                     ))}
                   </ul>
                   <CheckoutButton plan={plan.nameKey.toUpperCase()} variant={plan.popular ? "default" : "outline"}>
-                    {t(`plans.${plan.ctaKey}`)} <ArrowRight className="h-4 w-4" />
+                    {t(`plans.${plan.ctaKey}`)} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
                   </CheckoutButton>
                 </CardContent>
               </Card>
@@ -150,7 +150,7 @@ export default async function PricingPage() {
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t('cta.heading')}</h2>
           <p className="text-lg text-emerald-100/80">{t('cta.subtitle')}</p>
           <Button size="lg" variant="secondary" className="bg-white text-emerald-900 hover:bg-white/90 h-12 px-8 gap-2" render={<Link href={ctaHref} />}>
-            {t('cta.cta')} <ArrowRight className="h-4 w-4" />
+            {t('cta.cta')} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
           </Button>
         </Container>
       </section>

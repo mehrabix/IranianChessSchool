@@ -111,7 +111,7 @@ export function Navbar() {
                   {t('leaderboard')}
                 </DropdownMenuItem>
                 <DropdownMenuItem render={<Link href="/dashboard/progress" />}>
-                  <ChevronRight className="h-4 w-4" />
+                  <ChevronRight className="h-4 w-4 rtl:rotate-180" />
                   {t('myProgress')}
                 </DropdownMenuItem>
                 {session.user?.role === 'ADMIN' && (
