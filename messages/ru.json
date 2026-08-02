@@ -35,7 +35,8 @@
       "telegram": "Telegram"
     },
     "newsletter": "Newsletter",
-    "newsletterDesc": "Get chess tips and updates delivered to your inbox."
+    "newsletterDesc": "Get chess tips and updates delivered to your inbox.",
+    "brand_short": "ICS"
   },
   "home": {
     "hero": {
