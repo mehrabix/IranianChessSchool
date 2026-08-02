@@ -512,7 +512,10 @@
       "backToCourse": "Back to Course",
       "practiceBoard": "Practice Board",
       "markComplete": "Mark as Complete",
-      "completed": "Completed"
+      "completed": "Completed",
+      "text": "Text",
+      "video": "Video",
+      "quiz": "Quiz"
     },
     "quiz": {
       "loading": "Loading quiz...",
@@ -1010,6 +1013,35 @@
       "maxAttempts": "Max attempts reached",
       "attemptNotFound": "Attempt not found",
       "alreadySubmitted": "Already submitted"
+    }
+  },
+  "_courses": {
+    "chessFundamentals": {
+      "title": "Chess Fundamentals",
+      "description": "Learn the basic rules, piece movement, and fundamental concepts of chess. Perfect for absolute beginners.",
+      "modules": {
+        "board": "The Board & Pieces",
+        "tactics": "Basic Tactics"
+      },
+      "lessons": {
+        "intro": "Introduction to the Chessboard",
+        "pieceMoves": "How Pieces Move",
+        "checkmates": "Basic Checkmates",
+        "forks": "Forks",
+        "pins": "Pins",
+        "skewers": "Skewers"
+      }
+    },
+    "intermediateStrategy": {
+      "title": "Intermediate Strategy",
+      "description": "Deepen your understanding of positional chess, pawn structures, and strategic concepts.",
+      "modules": {
+        "positional": "Positional Fundamentals"
+      },
+      "lessons": {
+        "centerControl": "Center Control",
+        "development": "Piece Development"
+      }
     }
   }
 }

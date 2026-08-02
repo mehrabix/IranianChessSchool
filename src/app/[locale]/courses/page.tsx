@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Container } from '@/components/ui/container';
 import { Link } from '@/i18n/routing';
 import { BookOpen, Clock, ArrowRight } from 'lucide-react';
+import { tKey } from '@/lib/t-key';
 
 function courseLevelLabel(level: string | null, locale: string) {
   if (!level) return '';
@@ -20,12 +21,15 @@ function courseLevelLabel(level: string | null, locale: string) {
 
 export default async function CoursesPage() {
   const tc = await getTranslations('courses');
+  const t = await getTranslations();
   const locale = await getLocale();
   const all = await db
     .select()
     .from(courses)
     .where(eq(courses.published, true))
     .orderBy(courses.createdAt);
+
+  const getText = (v: string | null) => tKey(v, t);
 
   return (
     <>
@@ -41,8 +45,8 @@ export default async function CoursesPage() {
             {all.map((course) => (
               <Card key={course.id} className="group hover:shadow-lg transition-all">
                 <CardHeader>
-                  <CardTitle>{course.title}</CardTitle>
-                  <p className="text-sm text-muted-foreground">{course.description}</p>
+                  <CardTitle>{getText(course.title)}</CardTitle>
+                  <p className="text-sm text-muted-foreground">{getText(course.description)}</p>
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center justify-between">

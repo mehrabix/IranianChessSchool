@@ -512,7 +512,10 @@
       "backToCourse": "بازگشت به دوره",
       "practiceBoard": "تخته تمرین",
       "markComplete": "علامت به عنوان تکمیل شده",
-      "completed": "تکمیل شده"
+      "completed": "تکمیل شده",
+      "text": "متن",
+      "video": "ویدیو",
+      "quiz": "آزمون"
     },
     "quiz": {
       "loading": "در حال بارگذاری آزمون...",
@@ -1010,6 +1013,35 @@
       "maxAttempts": "حداکثر تلاش‌ها",
       "attemptNotFound": "تلاش پیدا نشد",
       "alreadySubmitted": "قبلاً ارسال شده"
+    }
+  },
+  "_courses": {
+    "chessFundamentals": {
+      "title": "مبانی شطرنج",
+      "description": "یادگیری قوانین پایه، حرکات مهره‌ها و مفاهیم اساسی شطرنج. مناسب برای مبتدیان کامل.",
+      "modules": {
+        "board": "صفحه و مهره‌ها",
+        "tactics": "تاکتیک‌های پایه"
+      },
+      "lessons": {
+        "intro": "معرفی صفحه شطرنج",
+        "pieceMoves": "حرکات مهره‌ها",
+        "checkmates": "کیش و مات‌های پایه",
+        "forks": "چنگال",
+        "pins": "آچمز",
+        "skewers": "سیخ"
+      }
+    },
+    "intermediateStrategy": {
+      "title": "استراتژی متوسط",
+      "description": "درک خود را از شطرنج موقعیتی، ساختارهای پیاده و مفاهیم استراتژیک عمیق‌تر کنید.",
+      "modules": {
+        "positional": "اصول موقعیتی"
+      },
+      "lessons": {
+        "centerControl": "کنترل مرکز",
+        "development": "گسترش مهره‌ها"
+      }
     }
   }
 }

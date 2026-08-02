@@ -512,7 +512,10 @@
       "backToCourse": "Torna al corso",
       "practiceBoard": "Scacchiera pratica",
       "markComplete": "Segna come completato",
-      "completed": "Completato"
+      "completed": "Completato",
+      "text": "Testo",
+      "video": "Video",
+      "quiz": "Quiz"
     },
     "quiz": {
       "loading": "Caricamento quiz...",
@@ -1010,6 +1013,35 @@
       "maxAttempts": "Limite tentativi raggiunto",
       "attemptNotFound": "Tentativo non trovato",
       "alreadySubmitted": "Già inviato"
+    }
+  },
+  "_courses": {
+    "chessFundamentals": {
+      "title": "Fondamenti di Scacchi",
+      "description": "Impara le regole base, il movimento dei pezzi e i concetti fondamentali degli scacchi. Perfetto per principianti assoluti.",
+      "modules": {
+        "board": "La Scacchiera e i Pezzi",
+        "tactics": "Tattiche di Base"
+      },
+      "lessons": {
+        "intro": "Introduzione alla Scacchiera",
+        "pieceMoves": "Come si Muovono i Pezzi",
+        "checkmates": "Scacchi Matti Fondamentali",
+        "forks": "Forchette",
+        "pins": "Inchiodature",
+        "skewers": "Infilate"
+      }
+    },
+    "intermediateStrategy": {
+      "title": "Strategia Intermedia",
+      "description": "Approfondisci la comprensione degli scacchi posizionali, delle strutture pedonali e dei concetti strategici.",
+      "modules": {
+        "positional": "Fondamenti Posizionali"
+      },
+      "lessons": {
+        "centerControl": "Controllo del Centro",
+        "development": "Sviluppo dei Pezzi"
+      }
     }
   }
 }

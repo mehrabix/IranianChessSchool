@@ -1011,5 +1011,34 @@
       "attemptNotFound": "Intento no encontrado",
       "alreadySubmitted": "Ya enviado"
     }
+  },
+  "_courses": {
+    "chessFundamentals": {
+      "title": "Fundamentos del Ajedrez",
+      "description": "Aprende las reglas básicas, el movimiento de las piezas y los conceptos fundamentales del ajedrez. Perfecto para principiantes.",
+      "modules": {
+        "board": "El Tablero y las Piezas",
+        "tactics": "Tácticas Básicas"
+      },
+      "lessons": {
+        "intro": "Introducción al Tablero",
+        "pieceMoves": "Cómo se Mueven las Piezas",
+        "checkmates": "Jaque Mates Básicos",
+        "forks": "Tenedores",
+        "pins": "Clavadas",
+        "skewers": "Pinchos"
+      }
+    },
+    "intermediateStrategy": {
+      "title": "Estrategia Intermedia",
+      "description": "Profundiza tu comprensión del ajedrez posicional, las estructuras de peones y los conceptos estratégicos.",
+      "modules": {
+        "positional": "Fundamentos Posicionales"
+      },
+      "lessons": {
+        "centerControl": "Control del Centro",
+        "development": "Desarrollo de Piezas"
+      }
+    }
   }
 }

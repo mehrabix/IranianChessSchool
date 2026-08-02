@@ -512,7 +512,10 @@
       "backToCourse": "Tilbake til kurs",
       "practiceBoard": "Treningsbrett",
       "markComplete": "Merk som fullført",
-      "completed": "Fullført"
+      "completed": "Fullført",
+      "text": "Tekst",
+      "video": "Video",
+      "quiz": "Quiz"
     },
     "quiz": {
       "loading": "Laster quiz...",
@@ -1010,6 +1013,35 @@
       "maxAttempts": "Maks antall forsøk nådd",
       "attemptNotFound": "Forsøk ikke funnet",
       "alreadySubmitted": "Allerede sendt inn"
+    }
+  },
+  "_courses": {
+    "chessFundamentals": {
+      "title": "Sjakkfundamenter",
+      "description": "Lær de grunnleggende reglene, brikkebevegelser og fundamentale konsepter i sjakk. Perfekt for nybegynnere.",
+      "modules": {
+        "board": "Brettet og Brikkene",
+        "tactics": "Grunnleggende Taktikk"
+      },
+      "lessons": {
+        "intro": "Introduksjon til Sjakkbrettet",
+        "pieceMoves": "Hvordan Brikkene Beveger Seg",
+        "checkmates": "Grunnleggende Sjakkmatter",
+        "forks": "Gafler",
+        "pins": "Bindinger",
+        "skewers": "Spidding"
+      }
+    },
+    "intermediateStrategy": {
+      "title": "Middels Strategi",
+      "description": "Utdyp din forståelse av posisjonell sjakk, bondestrukturer og strategiske konsepter.",
+      "modules": {
+        "positional": "Posisjonelle Fundamenter"
+      },
+      "lessons": {
+        "centerControl": "Sentrumskontroll",
+        "development": "Brikkeutvikling"
+      }
     }
   }
 }

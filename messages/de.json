@@ -512,7 +512,10 @@
       "backToCourse": "Zurück zum Kurs",
       "practiceBoard": "Übungsbrett",
       "markComplete": "Als abgeschlossen markieren",
-      "completed": "Abgeschlossen"
+      "completed": "Abgeschlossen",
+      "text": "Text",
+      "video": "Video",
+      "quiz": "Quiz"
     },
     "quiz": {
       "loading": "Quiz wird geladen...",
@@ -1010,6 +1013,35 @@
       "maxAttempts": "Maximale Versuche erreicht",
       "attemptNotFound": "Versuch nicht gefunden",
       "alreadySubmitted": "Bereits eingereicht"
+    }
+  },
+  "_courses": {
+    "chessFundamentals": {
+      "title": "Schach-Grundlagen",
+      "description": "Lerne die Grundregeln, Figurenbewegungen und grundlegende Konzepte des Schachs. Perfekt für absolute Anfänger.",
+      "modules": {
+        "board": "Das Brett und die Figuren",
+        "tactics": "Grundlegende Taktiken"
+      },
+      "lessons": {
+        "intro": "Einführung in das Schachbrett",
+        "pieceMoves": "Wie sich die Figuren bewegen",
+        "checkmates": "Grundlegende Schachmatts",
+        "forks": "Gabeln",
+        "pins": "Fesselungen",
+        "skewers": "Spieße"
+      }
+    },
+    "intermediateStrategy": {
+      "title": "Mittelstufen-Strategie",
+      "description": "Vertiefe dein Verständnis von Positionsschach, Bauernstrukturen und strategischen Konzepten.",
+      "modules": {
+        "positional": "Positionsgrundlagen"
+      },
+      "lessons": {
+        "centerControl": "Zentrumskontrolle",
+        "development": "Figurenentwicklung"
+      }
     }
   }
 }

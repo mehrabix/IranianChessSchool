@@ -512,7 +512,10 @@
       "backToCourse": "Retour au cours",
       "practiceBoard": "Échiquier d'entraînement",
       "markComplete": "Marquer comme terminé",
-      "completed": "Terminé"
+      "completed": "Terminé",
+      "text": "Texte",
+      "video": "Vidéo",
+      "quiz": "Quiz"
     },
     "quiz": {
       "loading": "Chargement du quiz...",
@@ -1010,6 +1013,35 @@
       "maxAttempts": "Nombre maximum de tentatives atteint",
       "attemptNotFound": "Tentative non trouvée",
       "alreadySubmitted": "Déjà soumis"
+    }
+  },
+  "_courses": {
+    "chessFundamentals": {
+      "title": "Fondamentaux des Échecs",
+      "description": "Apprenez les règles de base, le mouvement des pièces et les concepts fondamentaux des échecs. Parfait pour les débutants.",
+      "modules": {
+        "board": "L'Échiquier et les Pièces",
+        "tactics": "Tactiques de Base"
+      },
+      "lessons": {
+        "intro": "Introduction à l'Échiquier",
+        "pieceMoves": "Comment se Déplacent les Pièces",
+        "checkmates": "Les Mats Fondamentaux",
+        "forks": "Fourchettes",
+        "pins": "Clouages",
+        "skewers": "Enfilades"
+      }
+    },
+    "intermediateStrategy": {
+      "title": "Stratégie Intermédiaire",
+      "description": "Approfondissez votre compréhension du jeu positionnel, des structures de pions et des concepts stratégiques.",
+      "modules": {
+        "positional": "Fondamentaux Positionnels"
+      },
+      "lessons": {
+        "centerControl": "Contrôle du Centre",
+        "development": "Développement des Pièces"
+      }
     }
   }
 }

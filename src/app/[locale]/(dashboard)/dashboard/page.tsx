@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Link } from '@/i18n/routing';
 import { BookOpen, CheckCircle, TrendingUp, ArrowRight, Zap, Star, Clock, Award, Brain, Target, MessageCircle, Trophy } from 'lucide-react';
+import { tKey } from '@/lib/t-key';
 
 function courseLevelLabel(level: string | null, locale: string) {
   if (!level) return '';
@@ -73,6 +74,7 @@ function getActivityMap(activities: { completedAt: Date | null }[]) {
 
 export default async function DashboardPage() {
   const t = await getTranslations('dashboard');
+  const tAll = await getTranslations();
   const locale = await getLocale();
   const session = await auth();
   if (!session?.user) {
@@ -105,6 +107,8 @@ export default async function DashboardPage() {
     .filter(p => p.completedAt)
     .sort((a, b) => (b.completedAt?.getTime() ?? 0) - (a.completedAt?.getTime() ?? 0))
     .slice(0, 10);
+
+  const getText = (v: string | null) => tKey(v, tAll);
 
   return (
     <section className="relative py-20 bg-gradient-to-br from-background via-emerald-50/30 to-background">
@@ -248,7 +252,7 @@ export default async function DashboardPage() {
                   <div key={course.id} className="rounded-lg border p-4">
                     <div className="flex items-center justify-between mb-2">
                       <div>
-                        <p className="font-medium">{course.title}</p>
+                        <p className="font-medium">{getText(course.title)}</p>
                         <p className="text-xs text-muted-foreground">{courseLevelLabel(course.level, locale)} &middot; {course.done}/{course.total} {t('lessons')}</p>
                       </div>
                       <Button variant="ghost" size="sm" render={<Link href={`/courses/${course.id}`} />}>
