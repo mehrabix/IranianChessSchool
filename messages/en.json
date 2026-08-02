@@ -448,7 +448,21 @@
       "advanced": "Advanced",
       "weekly": "Weekly",
       "monthly": "Monthly",
-      "weekly4x": "Weekly (4x/mo)"
+      "weekly4x": "Weekly (4x/mo)",
+      "periodLabel": "Monthly",
+      "annualLabel": "Annual",
+      "annualDiscount": "Save 17%"
+    },
+    "faq": {
+      "heading": "Frequently Asked Questions",
+      "pricingQ1": "How does the free trial work?",
+      "pricingA1": "All plans include a 7-day free trial. No credit card required. Cancel anytime during the trial at no cost.",
+      "pricingQ2": "Can I switch plans later?",
+      "pricingA2": "Yes! You can upgrade or downgrade at any time. If you upgrade, you will be charged the prorated difference. Downgrades take effect at the end of your billing period.",
+      "pricingQ3": "What payment methods do you accept?",
+      "pricingA3": "We accept all major credit cards via Stripe, and Iranian payment gateways (Zarinpal, Zibal, NextPay, IDPay, PayPing).",
+      "pricingQ4": "Is there a money-back guarantee?",
+      "pricingA4": "Yes! If you are not satisfied within the first 14 days, we will issue a full refund. No questions asked."
     },
     "cta": {
       "heading": "Not sure which plan is right?",
@@ -728,8 +742,8 @@
     "studentNotes": "Student notes",
     "coachFeedback": "Coach feedback",
     "coach": "Coach",
-    "type": "Type",
-    "statusLabel": "Status"
+    "homeworkCoachDesc": "Review and assign homework to your students.",
+    "homeworkStudentDesc": "View and submit your assigned homework."
   },
   "groups": {
     "title": "Groups",
@@ -807,6 +821,12 @@
       "managePosts": "Manage Posts"
     },
     "accessDenied": "Access denied.",
+    "anonymous": "Unknown",
+    "active": "Active",
+    "inactive": "Inactive",
+    "banned": "Banned",
+    "demote": "Demote",
+    "makeAdmin": "Make Admin",
     "courses": {
       "heading": "Manage Courses",
       "subtitle": "Manage your course catalog",
@@ -896,7 +916,10 @@
     "validation": {
       "idRequired": "ID is required",
       "contentRequired": "Content is required"
-    }
+    },
+    "notFound": "Page not found",
+    "pageNotFoundDesc": "The page you are looking for does not exist.",
+    "goBackHome": "Go back home"
   },
   "chess": {
     "undo": "Undo",

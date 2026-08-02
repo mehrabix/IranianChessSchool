@@ -448,12 +448,26 @@
       "advanced": "Avansert",
       "weekly": "Ukentlig",
       "monthly": "Månedlig",
-      "weekly4x": "Ukentlig (4x/mnd)"
+      "weekly4x": "Ukentlig (4x/mnd)",
+      "periodLabel": "Monthly",
+      "annualLabel": "Annual",
+      "annualDiscount": "Save 17%"
     },
     "cta": {
       "heading": "Ikke sikker på hvilken plan som passer?",
       "subtitle": "Start med vår 7-dagers gratis prøveperiode. Ingen forpliktelse, ingen kredittkort nødvendig.",
       "cta": "Prøv Gratis i 7 Dager"
+    },
+    "faq": {
+      "heading": "Frequently Asked Questions",
+      "pricingQ1": "How does the free trial work?",
+      "pricingA1": "All plans include a 7-day free trial. No credit card required. Cancel anytime during the trial at no cost.",
+      "pricingQ2": "Can I switch plans later?",
+      "pricingA2": "Yes! You can upgrade or downgrade at any time. If you upgrade, you will be charged the prorated difference. Downgrades take effect at the end of your billing period.",
+      "pricingQ3": "What payment methods do you accept?",
+      "pricingA3": "We accept all major credit cards via Stripe, and Iranian payment gateways (Zarinpal, Zibal, NextPay, IDPay, PayPing).",
+      "pricingQ4": "Is there a money-back guarantee?",
+      "pricingA4": "Yes! If you are not satisfied within the first 14 days, we will issue a full refund. No questions asked."
     }
   },
   "auth": {
@@ -729,7 +743,9 @@
     "coachFeedback": "Trenerens tilbakemelding",
     "coach": "Trener",
     "type": "Type",
-    "statusLabel": "Status"
+    "statusLabel": "Status",
+    "homeworkCoachDesc": "Review and assign homework to your students.",
+    "homeworkStudentDesc": "View and submit your assigned homework."
   },
   "groups": {
     "title": "Grupper",
@@ -851,7 +867,13 @@
       "titleModuleIdCourseIdRequired": "Tittel, moduleId og courseId kreves",
       "titleRequired": "Tittel kreves",
       "idAndContentRequired": "ID og innhold kreves"
-    }
+    },
+    "anonymous": "Unknown",
+    "active": "Active",
+    "inactive": "Inactive",
+    "banned": "Banned",
+    "demote": "Demote",
+    "makeAdmin": "Make Admin"
   },
   "puzzles": {
     "title": "Oppgaver",
@@ -896,7 +918,10 @@
     "validation": {
       "idRequired": "ID kreves",
       "contentRequired": "Innhold kreves"
-    }
+    },
+    "notFound": "Page not found",
+    "pageNotFoundDesc": "The page you are looking for does not exist.",
+    "goBackHome": "Go back home"
   },
   "chess": {
     "undo": "Angre",

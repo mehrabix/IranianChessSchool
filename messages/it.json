@@ -448,12 +448,26 @@
       "advanced": "Avanzato",
       "weekly": "Settimanale",
       "monthly": "Mensile",
-      "weekly4x": "Settimanale (4x/mese)"
+      "weekly4x": "Settimanale (4x/mese)",
+      "periodLabel": "Monthly",
+      "annualLabel": "Annual",
+      "annualDiscount": "Save 17%"
     },
     "cta": {
       "heading": "Non sei sicuro di quale piano sia giusto?",
       "subtitle": "Inizia con la nostra prova gratuita di 7 giorni. Nessun impegno, nessuna carta di credito richiesta.",
       "cta": "Prova Gratis per 7 Giorni"
+    },
+    "faq": {
+      "heading": "Frequently Asked Questions",
+      "pricingQ1": "How does the free trial work?",
+      "pricingA1": "All plans include a 7-day free trial. No credit card required. Cancel anytime during the trial at no cost.",
+      "pricingQ2": "Can I switch plans later?",
+      "pricingA2": "Yes! You can upgrade or downgrade at any time. If you upgrade, you will be charged the prorated difference. Downgrades take effect at the end of your billing period.",
+      "pricingQ3": "What payment methods do you accept?",
+      "pricingA3": "We accept all major credit cards via Stripe, and Iranian payment gateways (Zarinpal, Zibal, NextPay, IDPay, PayPing).",
+      "pricingQ4": "Is there a money-back guarantee?",
+      "pricingA4": "Yes! If you are not satisfied within the first 14 days, we will issue a full refund. No questions asked."
     }
   },
   "auth": {
@@ -729,7 +743,9 @@
     "coachFeedback": "Feedback dell'allenatore",
     "coach": "Allenatore",
     "type": "Tipo",
-    "statusLabel": "Stato"
+    "statusLabel": "Stato",
+    "homeworkCoachDesc": "Review and assign homework to your students.",
+    "homeworkStudentDesc": "View and submit your assigned homework."
   },
   "groups": {
     "title": "Gruppi",
@@ -851,7 +867,13 @@
       "titleModuleIdCourseIdRequired": "Titolo, moduleId e courseId richiesti",
       "titleRequired": "Titolo richiesto",
       "idAndContentRequired": "ID e contenuto richiesti"
-    }
+    },
+    "anonymous": "Unknown",
+    "active": "Active",
+    "inactive": "Inactive",
+    "banned": "Banned",
+    "demote": "Demote",
+    "makeAdmin": "Make Admin"
   },
   "puzzles": {
     "title": "Puzzle",
@@ -896,7 +918,10 @@
     "validation": {
       "idRequired": "ID richiesto",
       "contentRequired": "Contenuto richiesto"
-    }
+    },
+    "notFound": "Page not found",
+    "pageNotFoundDesc": "The page you are looking for does not exist.",
+    "goBackHome": "Go back home"
   },
   "chess": {
     "undo": "Annulla",

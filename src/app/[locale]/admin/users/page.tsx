@@ -25,7 +25,7 @@ export default async function AdminUsersPage() {
         <Link href="/admin" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-6">
           <ArrowLeft className="h-4 w-4 rtl:rotate-180" />{t('nav.dashboard')}
         </Link>
-        <h1 className="text-2xl font-bold mb-8">{t('nav.users') || 'Users'}</h1>
+        <h1 className="text-2xl font-bold mb-8">{t('nav.users')}</h1>
 
         <div className="space-y-3">
           {users.map((user) => (
@@ -33,13 +33,13 @@ export default async function AdminUsersPage() {
               <CardContent className="flex items-center justify-between py-4">
                 <div className="flex items-center gap-4">
                   <div>
-                    <p className="font-medium">{user.name || 'Unknown'}</p>
+                    <p className="font-medium">{user.name || t('anonymous') || 'Unknown'}</p>
                     <p className="text-sm text-muted-foreground">{user.email}</p>
                   </div>
                   <div className="flex gap-2">
                     <Badge variant="secondary">{user.role}</Badge>
-                    {user.subscriptionStatus === 'ACTIVE' && <Badge className="bg-emerald-600">Active</Badge>}
-                    {user.subscriptionStatus === 'BANNED' && <Badge className="bg-red-600">Banned</Badge>}
+                    {user.subscriptionStatus === 'ACTIVE' && <Badge className="bg-emerald-600">{t('active') || 'Active'}</Badge>}
+                    {user.subscriptionStatus === 'BANNED' && <Badge className="bg-red-600">{t('banned') || 'Banned'}</Badge>}
                   </div>
                 </div>
                 <div className="flex gap-2">
@@ -47,7 +47,7 @@ export default async function AdminUsersPage() {
                     <input type="hidden" name="userId" value={user.id} />
                     <input type="hidden" name="role" value={user.role === 'ADMIN' ? 'STUDENT' : 'ADMIN'} />
                     <Button type="submit" variant="outline" size="sm" className="gap-1">
-                      <Shield className="h-3.5 w-3.5" /> {user.role === 'ADMIN' ? 'Demote' : 'Make Admin'}
+                      <Shield className="h-3.5 w-3.5" /> {user.role === 'ADMIN' ? (t('demote') || 'Demote') : (t('makeAdmin') || 'Make Admin')}
                     </Button>
                   </form>
                 </div>

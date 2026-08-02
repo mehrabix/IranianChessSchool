@@ -448,12 +448,26 @@
       "advanced": "Avanzado",
       "weekly": "Semanal",
       "monthly": "Mensual",
-      "weekly4x": "Semanal (4x/mes)"
+      "weekly4x": "Semanal (4x/mes)",
+      "periodLabel": "Monthly",
+      "annualLabel": "Annual",
+      "annualDiscount": "Save 17%"
     },
     "cta": {
       "heading": "¿No estás seguro de qué plan te conviene?",
       "subtitle": "Empieza con nuestra prueba gratuita de 7 días. Sin compromiso, sin necesidad de tarjeta.",
       "cta": "Prueba gratis 7 días"
+    },
+    "faq": {
+      "heading": "Frequently Asked Questions",
+      "pricingQ1": "How does the free trial work?",
+      "pricingA1": "All plans include a 7-day free trial. No credit card required. Cancel anytime during the trial at no cost.",
+      "pricingQ2": "Can I switch plans later?",
+      "pricingA2": "Yes! You can upgrade or downgrade at any time. If you upgrade, you will be charged the prorated difference. Downgrades take effect at the end of your billing period.",
+      "pricingQ3": "What payment methods do you accept?",
+      "pricingA3": "We accept all major credit cards via Stripe, and Iranian payment gateways (Zarinpal, Zibal, NextPay, IDPay, PayPing).",
+      "pricingQ4": "Is there a money-back guarantee?",
+      "pricingA4": "Yes! If you are not satisfied within the first 14 days, we will issue a full refund. No questions asked."
     }
   },
   "auth": {
@@ -729,7 +743,9 @@
     "coachFeedback": "Comentarios del entrenador",
     "coach": "Entrenador",
     "type": "Tipo",
-    "statusLabel": "Estado"
+    "statusLabel": "Estado",
+    "homeworkCoachDesc": "Review and assign homework to your students.",
+    "homeworkStudentDesc": "View and submit your assigned homework."
   },
   "groups": {
     "title": "Grupos",
@@ -882,7 +898,13 @@
       "titleModuleIdCourseIdRequired": "Título, moduleId y courseId son obligatorios",
       "titleRequired": "El título es obligatorio",
       "idAndContentRequired": "ID y contenido son obligatorios"
-    }
+    },
+    "anonymous": "Unknown",
+    "active": "Active",
+    "inactive": "Inactive",
+    "banned": "Banned",
+    "demote": "Demote",
+    "makeAdmin": "Make Admin"
   },
   "common": {
     "error": {
@@ -896,7 +918,10 @@
     "validation": {
       "idRequired": "ID es obligatorio",
       "contentRequired": "El contenido es obligatorio"
-    }
+    },
+    "notFound": "Page not found",
+    "pageNotFoundDesc": "The page you are looking for does not exist.",
+    "goBackHome": "Go back home"
   },
   "chess": {
     "undo": "Deshacer",

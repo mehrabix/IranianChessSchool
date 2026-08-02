@@ -69,7 +69,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+      <body className="min-h-full flex flex-col overflow-x-hidden" suppressHydrationWarning>
         {children}
       </body>
     </html>
