@@ -15,11 +15,9 @@ const INTERMEDIATE_ID = 'course-intermediate-001';
 const MOD_POSITIONAL_ID = 'mod-positional-001';
 
 async function seed() {
-  await client.execute('PRAGMA foreign_keys = OFF');
-  await db.delete(lessons).run();
-  await db.delete(modules).run();
-  await db.delete(courses).run();
-  await client.execute('PRAGMA foreign_keys = ON');
+  await client.execute('DELETE FROM lessons');
+  await client.execute('DELETE FROM modules');
+  await client.execute('DELETE FROM courses');
 
   await db.insert(courses).values({
     id: BEGINNER_ID,
@@ -58,6 +56,6 @@ async function seed() {
     { id: 'lesson-dev-001', title: 'coursesContent::intermediateStrategy::lessons::development', type: 'TEXT', order: 2, moduleId: MOD_POSITIONAL_ID, courseId: INTERMEDIATE_ID, duration: 15 },
   ]);
 
-  console.log('Seed completed');
+  console.log('Seed completed — all English data cleared, courses inserted with i18n keys');
 }
 seed().catch(console.error);

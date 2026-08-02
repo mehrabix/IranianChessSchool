@@ -60,14 +60,14 @@ export default function PricingPage() {
               onClick={() => setAnnual(false)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${!annual ? 'bg-background shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}
             >
-              {t('plans.periodLabel') || 'Monthly'}
+              {t('plans.periodLabel')}
             </button>
             <button
               onClick={() => setAnnual(true)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${annual ? 'bg-background shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}
             >
-              {t('plans.annualLabel') || 'Annual'}
-              <span className="ms-1.5 text-emerald-600 text-xs font-bold">{t('plans.annualDiscount') || 'Save 17%'}</span>
+              {t('plans.annualLabel')}
+              <span className="ms-1.5 text-emerald-600 text-xs font-bold">{t('plans.annualDiscount')}</span>
             </button>
           </div>
         </Container>
