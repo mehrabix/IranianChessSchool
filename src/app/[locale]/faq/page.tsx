@@ -1,7 +1,13 @@
 import { getTranslations } from 'next-intl/server';
 import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
-import { Sparkles, ChevronDown, BookOpen, CreditCard, Users, Clock, RefreshCw } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Sparkles, BookOpen, CreditCard, Users, Clock, RefreshCw } from "lucide-react";
 
 const faqSections = [
   { icon: BookOpen, categoryKey: 'general', items: ['whatIs', 'whoAreCoaches', 'needFarsi'] },
@@ -35,19 +41,18 @@ export default async function FAQPage() {
                   </div>
                   <h2 className="text-2xl font-bold tracking-tight">{t(`categories.${section.categoryKey}`)}</h2>
                 </div>
-                <div className="space-y-3">
+                <Accordion type="single" collapsible className="space-y-3">
                   {section.items.map((faq) => (
-                    <details key={faq} className="group rounded-xl border bg-card hover:shadow-sm transition-shadow">
-                      <summary className="flex items-center justify-between p-4 cursor-pointer list-none">
-                        <span className="font-medium text-sm md:text-base pr-4">{t(`questions.${faq}.q`)}</span>
-                        <ChevronDown className="h-4 w-4 text-muted-foreground shrink-0 group-open:rotate-180 transition-transform" />
-                      </summary>
-                      <div className="px-4 pb-4">
+                    <AccordionItem key={faq} value={faq} className="rounded-xl border bg-card">
+                      <AccordionTrigger className="px-4 py-3 text-sm md:text-base font-medium hover:underline-offset-2">
+                        {t(`questions.${faq}.q`)}
+                      </AccordionTrigger>
+                      <AccordionContent className="px-4 pb-4">
                         <p className="text-sm text-muted-foreground leading-relaxed">{t(`questions.${faq}.a`)}</p>
-                      </div>
-                    </details>
+                      </AccordionContent>
+                    </AccordionItem>
                   ))}
-                </div>
+                </Accordion>
               </div>
             ))}
           </div>
