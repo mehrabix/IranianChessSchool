@@ -52,11 +52,19 @@ async function getCourseProgress(courseId: string, userId: string) {
   return { total, done, percent: total > 0 ? Math.round((done / total) * 100) : 0 };
 }
 
-function getWeekDays() {
+function getWeekDays(locale: string) {
+  const today = new Date();
+  const dayOfWeek = today.getDay();
+  const isFa = locale === 'fa';
+  const startOffset = isFa ? ((dayOfWeek + 1) % 7) : (dayOfWeek === 0 ? 6 : dayOfWeek - 1);
+  const weekStart = new Date(today);
+  weekStart.setDate(today.getDate() - startOffset);
+  weekStart.setHours(0, 0, 0, 0);
+
   const days = [];
-  for (let i = 6; i >= 0; i--) {
-    const d = new Date();
-    d.setDate(d.getDate() - i);
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(weekStart);
+    d.setDate(weekStart.getDate() + i);
     days.push(d);
   }
   return days;
@@ -100,7 +108,7 @@ export default async function DashboardPage() {
     })
   );
 
-  const weekDays = getWeekDays();
+  const weekDays = getWeekDays(locale);
   const activityMap = getActivityMap(userP.filter(p => p.completedAt).map(p => ({ completedAt: p.completedAt ? new Date(p.completedAt) : null })));
 
   const recentActivity = userP
