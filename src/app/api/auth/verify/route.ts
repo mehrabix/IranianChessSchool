@@ -16,14 +16,18 @@ export async function POST(req: NextRequest) {
   await db.insert(verificationTokens).values({ identifier: user.id, token, expires });
 
   if (process.env.RESEND_API_KEY) {
-    const { Resend } = await import('resend');
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    await resend.emails.send({
-      from: 'Iranian Chess School <noreply@iranianchessschool.com>',
-      to: email,
-      subject: 'Verify your email',
-      html: `<p>Click <a href="${process.env.AUTH_URL || 'http://localhost:3000'}/auth/verify?token=${token}">here</a> to verify your email.</p>`,
-    }).catch(() => {});
+    try {
+      await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          from: 'Iranian Chess School <noreply@iranianchessschool.com>',
+          to: [email],
+          subject: 'Verify your email',
+          html: `<p>Click <a href="${process.env.AUTH_URL || 'http://localhost:3000'}/auth/verify?token=${token}">here</a> to verify your email.</p>`,
+        }),
+      });
+    } catch {}
   }
 
   return NextResponse.json({ ok: true });

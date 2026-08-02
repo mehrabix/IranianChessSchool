@@ -16,14 +16,18 @@ export async function POST(req: NextRequest) {
   await db.insert(verificationTokens).values({ identifier: user.id, token, expires });
 
   if (process.env.RESEND_API_KEY) {
-    const { Resend } = await import('resend');
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    await resend.emails.send({
-      from: 'Iranian Chess School <noreply@iranianchessschool.com>',
-      to: email,
-      subject: 'Reset your password',
-      html: `<p>Click <a href="${process.env.AUTH_URL || 'http://localhost:3000'}/auth/reset-password?token=${token}">here</a> to reset your password. This link expires in 1 hour.</p>`,
-    }).catch(() => {});
+    try {
+      await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          from: 'Iranian Chess School <noreply@iranianchessschool.com>',
+          to: [email],
+          subject: 'Reset your password',
+          html: `<p>Click <a href="${process.env.AUTH_URL || 'http://localhost:3000'}/auth/reset-password?token=${token}">here</a> to reset your password. This link expires in 1 hour.</p>`,
+        }),
+      });
+    } catch {}
   }
 
   return NextResponse.json({ ok: true });

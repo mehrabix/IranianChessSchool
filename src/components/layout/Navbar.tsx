@@ -71,8 +71,8 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 font-bold text-xl shrink-0">
           <ChessKnight className="h-6 w-6 text-primary" />
-          <span className="hidden sm:inline">Iranian Chess School</span>
-          <span className="sm:hidden">ICS</span>
+          <span className="hidden xl:inline">Iranian Chess School</span>
+          <span className="xl:hidden">ICS</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-1 flex-1 justify-center">

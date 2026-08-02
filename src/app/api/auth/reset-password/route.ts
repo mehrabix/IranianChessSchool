@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
   if (!token || !password) return NextResponse.json({ error: 'Token and password required' }, { status: 400 });
   if (password.length < 8) return NextResponse.json({ error: 'Password too short' }, { status: 400 });
 
-  const { db, users, verificationTokens, eq, and } = await import('@/lib/db');
+  const { db, users, verificationTokens, eq, and, sql } = await import('@/lib/db');
 
   const [vt] = await db.select().from(verificationTokens)
     .where(and(eq(verificationTokens.token, token), sql`${verificationTokens.expires} > ${Date.now()}`))
@@ -22,5 +22,3 @@ export async function POST(req: NextRequest) {
 
   return NextResponse.json({ ok: true });
 }
-
-const { sql } = await import('@/lib/db');
