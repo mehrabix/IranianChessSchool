@@ -294,3 +294,25 @@ export const homeworks = sqliteTable('homeworks', {
   submittedAt: integer('submitted_at', { mode: 'timestamp' }),
   reviewedAt: integer('reviewed_at', { mode: 'timestamp' }),
 });
+
+export const challenges = sqliteTable('challenges', {
+  id: text('id').primaryKey(),
+  title: text('title').notNull(),
+  description: text('description'),
+  type: text('type', { enum: ['PUZZLES', 'LESSONS', 'GAMES', 'POSTS'] }).notNull(),
+  goal: integer('goal').notNull(),
+  xpReward: integer('xp_reward').default(100),
+  startsAt: integer('starts_at', { mode: 'timestamp' }).notNull(),
+  endsAt: integer('ends_at', { mode: 'timestamp' }).notNull(),
+  active: integer('active', { mode: 'boolean' }).default(true),
+  createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});
+
+export const challengeProgress = sqliteTable('challenge_progress', {
+  id: text('id').primaryKey(),
+  challengeId: text('challenge_id').references(() => challenges.id).notNull(),
+  userId: text('user_id').references(() => users.id).notNull(),
+  progress: integer('progress').default(0),
+  completed: integer('completed', { mode: 'boolean' }).default(false),
+  completedAt: integer('completed_at', { mode: 'timestamp' }),
+});
