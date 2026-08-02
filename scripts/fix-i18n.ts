@@ -3,10 +3,8 @@ import * as path from 'node:path';
 
 const messagesDir = path.resolve('messages');
 const enPath = path.join(messagesDir, 'en.json');
-const esPath = path.join(messagesDir, 'es.json');
 
 const en = JSON.parse(fs.readFileSync(enPath, 'utf-8'));
-const es = JSON.parse(fs.readFileSync(esPath, 'utf-8'));
 
 // Also read en to get proper values for translation
 type JsonValue = string | number | boolean | null | JsonObject | JsonValue[];

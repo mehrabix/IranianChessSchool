@@ -1,7 +1,6 @@
 import { drizzle } from 'drizzle-orm/libsql';
 import { createClient } from '@libsql/client';
 import { courses, modules, lessons } from './schema';
-import { eq } from 'drizzle-orm';
 
 const tursoUrl = process.env.TURSO_DATABASE_URL;
 const isValidUrl = tursoUrl && tursoUrl.startsWith('libsql://');

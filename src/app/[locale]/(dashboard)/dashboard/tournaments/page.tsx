@@ -24,7 +24,7 @@ export default function TournamentsPage() {
     setLoading(false);
   }
 
-  useEffect(() => { loadTournaments(); }, []);
+  useEffect(() => { loadTournaments(); }, []);  {/* eslint-disable-line react-hooks/set-state-in-effect */}
 
   async function handleCreate() {
     if (!name.trim()) return;

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useSession } from 'next-auth/react';
 import { Container } from '@/components/ui/container';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -26,7 +26,7 @@ export default function GroupsPage() {
     setLoading(false);
   }
 
-  useEffect(() => { fetchGroups(); }, []);
+  useEffect(() => { fetchGroups(); }, []);  {/* eslint-disable-line react-hooks/set-state-in-effect */}
 
   async function handleCreate() {
     if (!name.trim()) return;

@@ -8,7 +8,8 @@ import { AnimatedChessBoard } from '@/components/landing/AnimatedChessBoard';
 import { auth } from '@/lib/auth';
 import {
   ChessKnight, BookOpen, Users, Trophy, BarChart3, MessageCircle,
-  Sparkles, Star, CheckCircle2, ArrowRight, Globe
+  Sparkles, Star, CheckCircle2, ArrowRight, Globe, Compass,
+  TrendingUp,
 } from 'lucide-react';
 
 const features = [
@@ -202,6 +203,51 @@ export default async function HomePage() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-20 md:py-28 bg-muted/30">
+        <Container size="lg">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              {t('whoFor.heading')}
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              {t('whoFor.subtitle')}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-b from-amber-400/20 to-amber-600/20 rounded-2xl blur opacity-50 group-hover:opacity-100 transition-opacity" />
+              <Card className="relative text-center p-8 h-full">
+                <div className="w-14 h-14 rounded-2xl bg-amber-100 flex items-center justify-center mx-auto mb-5">
+                  <TrendingUp className="h-7 w-7 text-amber-600" />
+                </div>
+                <CardTitle className="mb-3">{t('whoFor.card1Title')}</CardTitle>
+                <p className="text-sm text-muted-foreground leading-relaxed">{t('whoFor.card1Desc')}</p>
+              </Card>
+            </div>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-b from-blue-400/20 to-blue-600/20 rounded-2xl blur opacity-50 group-hover:opacity-100 transition-opacity" />
+              <Card className="relative text-center p-8 h-full">
+                <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center mx-auto mb-5">
+                  <Compass className="h-7 w-7 text-blue-600" />
+                </div>
+                <CardTitle className="mb-3">{t('whoFor.card2Title')}</CardTitle>
+                <p className="text-sm text-muted-foreground leading-relaxed">{t('whoFor.card2Desc')}</p>
+              </Card>
+            </div>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-b from-purple-400/20 to-purple-600/20 rounded-2xl blur opacity-50 group-hover:opacity-100 transition-opacity" />
+              <Card className="relative text-center p-8 h-full">
+                <div className="w-14 h-14 rounded-2xl bg-purple-100 flex items-center justify-center mx-auto mb-5">
+                  <Users className="h-7 w-7 text-purple-600" />
+                </div>
+                <CardTitle className="mb-3">{t('whoFor.card3Title')}</CardTitle>
+                <p className="text-sm text-muted-foreground leading-relaxed">{t('whoFor.card3Desc')}</p>
+              </Card>
             </div>
           </div>
         </Container>

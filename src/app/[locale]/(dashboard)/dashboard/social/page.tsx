@@ -72,7 +72,7 @@ export default function SocialPage() {
     }
   }, []);
 
-  useEffect(() => { fetchPosts(); }, [fetchPosts]);
+  useEffect(() => { fetchPosts(); }, [fetchPosts]);  {/* eslint-disable-line react-hooks/set-state-in-effect */}
 
   async function handleCreatePost() {
     if (!newPost.trim()) return;

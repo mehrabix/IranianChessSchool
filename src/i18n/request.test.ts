@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 
 vi.mock('next-intl/server', () => ({
-  getRequestConfig: (fn: Function) => fn,
+  getRequestConfig: (fn: (...args: unknown[]) => unknown) => fn,
 }));
 
 vi.mock('@/i18n/routing', () => ({

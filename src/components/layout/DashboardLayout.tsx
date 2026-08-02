@@ -91,13 +91,11 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
 
 function SidebarNav({
   t,
-  pathname,
   isActive,
   collapsed,
   onNavigate,
 }: {
   t: ReturnType<typeof useTranslations<'dashboard'>>;
-  pathname: string;
   isActive: (href: string) => boolean;
   collapsed: boolean;
   onNavigate?: () => void;

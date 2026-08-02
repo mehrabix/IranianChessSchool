@@ -38,6 +38,17 @@ export function EngineEval({ fen, onBestMove }: EngineEvalProps) {
     }
   }
 
+  // Convert centipawn score to a 0-100% bar position
+  // Clamp between -500 and +500 centipawns, map to 5%-95%
+  function evalBarPercent(score: number): number {
+    const clamped = Math.max(-500, Math.min(500, score * 100));
+    return Math.round(((clamped + 500) / 1000) * 90 + 5);
+  }
+
+  const barPercent = evalResult ? evalBarPercent(evalResult.score) : 50;
+  const whitePercent = barPercent;
+  const blackPercent = 100 - whitePercent;
+
   if (error) return <p className="text-sm text-red-500">{t('engineError')}: {error}</p>;
 
   return (
@@ -49,6 +60,22 @@ export function EngineEval({ fen, onBestMove }: EngineEvalProps) {
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-3">
+        {/* Visual evaluation bar */}
+        <div className="relative h-6 w-full rounded-full border overflow-hidden">
+          <div
+            className="absolute inset-y-0 left-0 bg-white border-r transition-all duration-300"
+            style={{ width: `${whitePercent}%` }}
+          >
+            <span className="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-black/70">
+              {evalResult ? `${evalResult.score > 0 ? '+' : ''}${evalResult.score.toFixed(1)}` : ''}
+            </span>
+          </div>
+          <div
+            className="absolute inset-y-0 right-0 bg-black/80 transition-all duration-300"
+            style={{ width: `${blackPercent}%` }}
+          />
+        </div>
+
         <div className="flex gap-2">
           <Button size="sm" onClick={handleEvaluate} disabled={!isReady || isThinking}>
             {isThinking ? <Loader2 className="h-3 w-3 animate-spin mr-1" /> : null}

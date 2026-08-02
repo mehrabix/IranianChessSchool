@@ -106,6 +106,16 @@
       "student3Gain": "+614",
       "points": "points"
     },
+    "whoFor": {
+      "heading": "Who Is This For?",
+      "subtitle": "Iranian Chess School is designed for three types of players",
+      "card1Title": "Stuck at a Rating Plateau",
+      "card1Desc": "You've hit a wall and can't break past your current Elo. Our structured approach identifies your weaknesses and gives you a clear path forward.",
+      "card2Title": "No Clear Direction",
+      "card2Desc": "You're jumping between YouTube videos, random puzzles, and blitz games without a plan. We give you a complete roadmap from start to finish.",
+      "card3Title": "Need a Supportive Community",
+      "card3Desc": "You learn best with others. Our community of 1200+ improvers, live classes, and coach feedback keeps you motivated and accountable."
+    },
     "cta": {
       "heading": "Ready to Transform Your Chess?",
       "subtitle": "Join 1200+ students already improving with our structured program. Start your 7-day free trial today.",
