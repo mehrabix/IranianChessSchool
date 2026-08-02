@@ -21,7 +21,7 @@ export function LanguageSwitcher() {
       <DropdownMenuTrigger render={<Button variant="ghost" size="icon" className="h-8 w-8" />}>
         <Globe className="h-4 w-4" />
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="w-36">
         {locales.map((l) => (
           <DropdownMenuItem key={l} onClick={() => router.replace(pathname, { locale: l })}>
             {localeNames[l]}

@@ -106,7 +106,7 @@ export function Navbar() {
                   <AvatarFallback className="text-xs">{session.user?.name?.[0]?.toUpperCase() || '?'}</AvatarFallback>
                 </Avatar>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-56">
+              <DropdownMenuContent align="end" className="w-[calc(100vw-2rem)] max-w-56 sm:w-56">
                 <div className="flex items-center gap-3 px-3 py-2">
                   <Avatar className="h-10 w-10">
                     <AvatarImage src={session.user?.image || ''} />
