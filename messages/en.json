@@ -281,7 +281,9 @@
       "post6Category": "Endgames",
       "readMore": "Read more"
     },
-    "previewPlaceholder": "This is a preview of this blog post. The full article will be available soon. In the meantime, check out our courses and puzzles to improve your chess skills."
+    "previewPlaceholder": "This is a preview of this blog post. The full article will be available soon. In the meantime, check out our courses and puzzles to improve your chess skills.",
+    "readMore": "Read more",
+    "backToBlog": "Back to Blog"
   },
   "contact": {
     "hero": {

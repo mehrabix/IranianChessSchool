@@ -282,7 +282,9 @@
       "post6Category": "Endspiele",
       "readMore": "Weiterlesen"
     },
-    "previewPlaceholder": "Vorschau"
+    "previewPlaceholder": "Vorschau",
+    "readMore": "Read more",
+    "backToBlog": "Back to Blog"
   },
   "contact": {
     "hero": {

@@ -282,7 +282,9 @@
       "post6Category": "Finales",
       "readMore": "Leer más"
     },
-    "previewPlaceholder": "Esta es una vista previa de esta entrada del blog. El artículo completo estará disponible próximamente. Mientras tanto, echa un vistazo a nuestros cursos y problemas para mejorar tus habilidades de ajedrez."
+    "previewPlaceholder": "Esta es una vista previa de esta entrada del blog. El artículo completo estará disponible próximamente. Mientras tanto, echa un vistazo a nuestros cursos y problemas para mejorar tus habilidades de ajedrez.",
+    "readMore": "Read more",
+    "backToBlog": "Back to Blog"
   },
   "contact": {
     "hero": {

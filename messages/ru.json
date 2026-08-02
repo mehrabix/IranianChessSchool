@@ -282,7 +282,9 @@
       "post6Category": "Эндшпиль",
       "readMore": "Читать далее"
     },
-    "previewPlaceholder": "Превью"
+    "previewPlaceholder": "Превью",
+    "readMore": "Read more",
+    "backToBlog": "Back to Blog"
   },
   "contact": {
     "hero": {
