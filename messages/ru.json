@@ -21,7 +21,7 @@
     "leaderboard": "Таблица лидеров"
   },
   "footer": {
-    "brand": "Iranian Chess School",
+    "brand": "Шахматная школа Ирана",
     "description": "Освойте игру, мыслите глубже. Структурированное обучение шахматам для всех уровней с реальными тренерами и поддерживающим сообществом.",
     "quickLinks": "Быстрые ссылки",
     "followUs": "Подписывайтесь",
@@ -459,13 +459,13 @@
       "cta": "Попробовать бесплатно на 7 дней"
     },
     "faq": {
-      "heading": "Frequently Asked Questions",
+      "heading": "Часто задаваемые вопросы",
       "pricingQ1": "How does the free trial work?",
-      "pricingA1": "All plans include a 7-day free trial. No credit card required. Cancel anytime during the trial at no cost.",
+      "pricingA1": "Все планы включают 7-дневную бесплатную пробную версию. Кредитная карта не требуется. Отмените в любое время в течение пробного периода.",
       "pricingQ2": "Can I switch plans later?",
-      "pricingA2": "Yes! You can upgrade or downgrade at any time. If you upgrade, you will be charged the prorated difference. Downgrades take effect at the end of your billing period.",
+      "pricingA2": "Да! Вы можете обновить или понизить тариф в любое время. При обновлении взимается пропорциональная разница. Понижение вступает в силу в конце расчетного периода.",
       "pricingQ3": "What payment methods do you accept?",
-      "pricingA3": "We accept all major credit cards via Stripe, and Iranian payment gateways (Zarinpal, Zibal, NextPay, IDPay, PayPing).",
+      "pricingA3": "Мы принимаем все основные кредитные карты через Stripe и иранские платежные шлюзы (Zarinpal, Zibal, NextPay, IDPay, PayPing).",
       "pricingQ4": "Is there a money-back guarantee?",
       "pricingA4": "Yes! If you are not satisfied within the first 14 days, we will issue a full refund. No questions asked."
     }
@@ -714,10 +714,10 @@
     "reviewed": "Reviewed",
     "homework": "Homework",
     "noHomework": "No homework yet.",
-    "submitHomework": "Submit Homework",
+    "submitHomework": "Отправить задание",
     "pgnNotation": "PGN Notation",
     "notes": "Notes",
-    "challenges": "Weekly Challenges",
+    "challenges": "Еженедельные задания",
     "challengesDesc": "Complete challenges to earn bonus XP and badges.",
     "challengeCompleted": "Completed! +{xp} XP earned",
     "daysLeft": "{count} дн. осталось",
@@ -873,7 +873,7 @@
     "inactive": "Inactive",
     "banned": "Banned",
     "demote": "Demote",
-    "makeAdmin": "Make Admin"
+    "makeAdmin": "Сделать админом"
   },
   "puzzles": {
     "title": "Задачи",
@@ -1093,30 +1093,30 @@
   },
   "coursesContent": {
     "chessFundamentals": {
-      "title": "Chess Fundamentals",
-      "description": "Learn the basic rules, piece movement, and fundamental concepts of chess. Perfect for absolute beginners.",
+      "title": "Основы шахмат",
+      "description": "Изучите основные правила, движения фигур и фундаментальные концепции шахмат. Идеально для начинающих.",
       "modules": {
-        "board": "The Board & Pieces",
-        "tactics": "Basic Tactics"
+        "board": "Доска и фигуры",
+        "tactics": "Основы тактики"
       },
       "lessons": {
-        "intro": "Introduction to the Chessboard",
-        "pieceMoves": "How Pieces Move",
-        "checkmates": "Basic Checkmates",
-        "forks": "Forks",
-        "pins": "Pins",
-        "skewers": "Skewers"
+        "intro": "Знакомство с шахматной доской",
+        "pieceMoves": "Как ходят фигуры",
+        "checkmates": "Основные маты",
+        "forks": "Вилки",
+        "pins": "Связки",
+        "skewers": "Сквозные удары"
       }
     },
     "intermediateStrategy": {
-      "title": "Intermediate Strategy",
-      "description": "Deepen your understanding of positional chess, pawn structures, and strategic concepts.",
+      "title": "Средняя стратегия",
+      "description": "Углубите понимание позиционной игры, пешечных структур и стратегических концепций.",
       "modules": {
-        "positional": "Positional Fundamentals"
+        "positional": "Основы позиционной игры"
       },
       "lessons": {
-        "centerControl": "Center Control",
-        "development": "Piece Development"
+        "centerControl": "Контроль центра",
+        "development": "Развитие фигур"
       }
     }
   }

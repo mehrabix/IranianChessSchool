@@ -21,7 +21,7 @@
     "leaderboard": "جدول امتیازات"
   },
   "footer": {
-    "brand": "آموزشگاه شطرنج ایران",
+    "brand": "مدرسه شطرنج ایران",
     "description": "بر بازی مسلط شو، عمیق‌تر فکر کن. آموزش ساختاریافته شطرنج برای همه سطوح با مربیان واقعی و یک جامعه حامی.",
     "quickLinks": "لینک‌های سریع",
     "followUs": "ما را دنبال کنید",
@@ -714,10 +714,10 @@
     "reviewed": "Reviewed",
     "homework": "Homework",
     "noHomework": "No homework yet.",
-    "submitHomework": "Submit Homework",
+    "submitHomework": "ارسال تکلیف",
     "pgnNotation": "PGN Notation",
     "notes": "Notes",
-    "challenges": "Weekly Challenges",
+    "challenges": "چالش‌های هفتگی",
     "challengesDesc": "Complete challenges to earn bonus XP and badges.",
     "challengeCompleted": "Completed! +{xp} XP earned",
     "daysLeft": "{count} روز مانده",
@@ -904,7 +904,7 @@
     "inactive": "Inactive",
     "banned": "Banned",
     "demote": "Demote",
-    "makeAdmin": "Make Admin"
+    "makeAdmin": "مدیر کردن"
   },
   "common": {
     "error": {
@@ -1093,30 +1093,30 @@
   },
   "coursesContent": {
     "chessFundamentals": {
-      "title": "Chess Fundamentals",
-      "description": "Learn the basic rules, piece movement, and fundamental concepts of chess. Perfect for absolute beginners.",
+      "title": "مبانی شطرنج",
+      "description": "یادگیری قوانین پایه، حرکات مهره‌ها و مفاهیم اساسی شطرنج. مناسب برای مبتدیان کامل.",
       "modules": {
-        "board": "The Board & Pieces",
-        "tactics": "Basic Tactics"
+        "board": "صفحه و مهره‌ها",
+        "tactics": "تاکتیک‌های پایه"
       },
       "lessons": {
-        "intro": "Introduction to the Chessboard",
-        "pieceMoves": "How Pieces Move",
-        "checkmates": "Basic Checkmates",
-        "forks": "Forks",
-        "pins": "Pins",
-        "skewers": "Skewers"
+        "intro": "معرفی صفحه شطرنج",
+        "pieceMoves": "حرکات مهره‌ها",
+        "checkmates": "کیش و مات‌های پایه",
+        "forks": "چنگال",
+        "pins": "آچمز",
+        "skewers": "سیخ"
       }
     },
     "intermediateStrategy": {
-      "title": "Intermediate Strategy",
-      "description": "Deepen your understanding of positional chess, pawn structures, and strategic concepts.",
+      "title": "استراتژی متوسط",
+      "description": "درک خود را از شطرنج موقعیتی، ساختارهای پیاده و مفاهیم استراتژیک عمیق‌تر کنید.",
       "modules": {
-        "positional": "Positional Fundamentals"
+        "positional": "اصول موقعیتی"
       },
       "lessons": {
-        "centerControl": "Center Control",
-        "development": "Piece Development"
+        "centerControl": "کنترل مرکز",
+        "development": "گسترش مهره‌ها"
       }
     }
   }
