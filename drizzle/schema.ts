@@ -316,3 +316,37 @@ export const challengeProgress = sqliteTable('challenge_progress', {
   completed: integer('completed', { mode: 'boolean' }).default(false),
   completedAt: integer('completed_at', { mode: 'timestamp' }),
 });
+
+export const games = sqliteTable('games', {
+  id: text('id').primaryKey(),
+  userId: text('user_id').references(() => users.id).notNull(),
+  white: text('white'),
+  black: text('black'),
+  result: text('result', { enum: ['1-0', '0-1', '1/2-1/2', '*'] }),
+  pgn: text('pgn'),
+  fen: text('fen'),
+  platform: text('platform', { enum: ['MANUAL', 'CHESSCOM', 'LICHESS'] }),
+  platformId: text('platform_id'),
+  rated: integer('rated', { mode: 'boolean' }).default(true),
+  whiteElo: integer('white_elo'),
+  blackElo: integer('black_elo'),
+  eco: text('eco'),
+  opening: text('opening'),
+  timeControl: text('time_control'),
+  playedAt: integer('played_at', { mode: 'timestamp' }),
+  createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});
+
+export const payments = sqliteTable('payments', {
+  id: text('id').primaryKey(),
+  userId: text('user_id').references(() => users.id).notNull(),
+  subscriptionId: text('subscription_id').references(() => subscriptions.id),
+  provider: text('provider').notNull(),
+  amount: integer('amount').notNull(),
+  currency: text('currency').notNull().default('USD'),
+  status: text('status', { enum: ['PENDING', 'COMPLETED', 'FAILED', 'REFUNDED'] }).notNull(),
+  providerRefId: text('provider_ref_id'),
+  providerMetadata: text('provider_metadata'),
+  invoiceUrl: text('invoice_url'),
+  createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+});
