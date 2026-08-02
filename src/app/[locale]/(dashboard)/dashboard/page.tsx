@@ -163,7 +163,7 @@ export default async function DashboardPage() {
               <Star className="h-5 w-5 text-yellow-500 shrink-0" />
               <div>
                 <CardTitle className="text-xs font-medium text-muted-foreground">{t('stats.streak')}</CardTitle>
-                <p className="text-2xl font-bold">{recentActivity.filter((_, i) => i < 7).length}d</p>
+                <p className="text-2xl font-bold">{recentActivity.filter((_, i) => i < 7).length}</p>
               </div>
             </CardHeader>
           </Card>

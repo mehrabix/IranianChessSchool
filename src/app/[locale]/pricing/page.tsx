@@ -154,7 +154,7 @@ export default function PricingPage() {
       <section className="py-20 bg-muted/30">
         <Container size="md">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t('faq.heading')}</h2>
           </div>
           <div className="space-y-3 max-w-2xl mx-auto">
             {[
