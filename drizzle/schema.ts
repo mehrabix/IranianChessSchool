@@ -277,3 +277,20 @@ export const pendingPayments = sqliteTable('pending_payments', {
   refId: text('ref_id'),
   createdAt: integer('created_at', { mode: 'timestamp' }),
 });
+
+export const homeworks = sqliteTable('homeworks', {
+  id: text('id').primaryKey(),
+  coachId: text('coach_id').references(() => users.id).notNull(),
+  studentId: text('student_id').references(() => users.id).notNull(),
+  lessonId: text('lesson_id').references(() => lessons.id),
+  courseId: text('course_id').references(() => courses.id),
+  title: text('title').notNull(),
+  description: text('description'),
+  pgn: text('pgn'),
+  status: text('status', { enum: ['PENDING', 'SUBMITTED', 'REVIEWED'] }).default('PENDING'),
+  coachNotes: text('coach_notes'),
+  studentNotes: text('student_notes'),
+  assignedAt: integer('assigned_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
+  submittedAt: integer('submitted_at', { mode: 'timestamp' }),
+  reviewedAt: integer('reviewed_at', { mode: 'timestamp' }),
+});
