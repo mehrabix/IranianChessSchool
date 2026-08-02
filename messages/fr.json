@@ -15,7 +15,7 @@
     "signOut": "Déconnexion",
     "loggedInAs": "Connecté en tant que {name}",
     "myProgress": "Ma progression",
-    "brand": "Iranian Chess School",
+    "brand": "ICS",
     "brandShort": "ICS",
     "social": "Social",
     "leaderboard": "Classement"
@@ -35,7 +35,8 @@
       "telegram": "Telegram"
     },
     "newsletter": "Newsletter",
-    "newsletterDesc": "Get chess tips and updates delivered to your inbox."
+    "newsletterDesc": "Get chess tips and updates delivered to your inbox.",
+    "brand_short": "ICS"
   },
   "home": {
     "hero": {
@@ -459,13 +460,13 @@
       "cta": "Essai gratuit de 7 jours"
     },
     "faq": {
-      "heading": "Frequently Asked Questions",
+      "heading": "Questions Fréquentes",
       "pricingQ1": "How does the free trial work?",
-      "pricingA1": "All plans include a 7-day free trial. No credit card required. Cancel anytime during the trial at no cost.",
+      "pricingA1": "Tous les forfaits incluent un essai gratuit de 7 jours. Aucune carte de crédit requise. Annulez à tout moment pendant la période d'essai.",
       "pricingQ2": "Can I switch plans later?",
-      "pricingA2": "Yes! You can upgrade or downgrade at any time. If you upgrade, you will be charged the prorated difference. Downgrades take effect at the end of your billing period.",
+      "pricingA2": "Oui ! Vous pouvez passer à un forfait supérieur ou inférieur à tout moment. Pour les mises à niveau, la différence au prorata est facturée. Les rétrogradations prennent effet à la fin de la période de facturation.",
       "pricingQ3": "What payment methods do you accept?",
-      "pricingA3": "We accept all major credit cards via Stripe, and Iranian payment gateways (Zarinpal, Zibal, NextPay, IDPay, PayPing).",
+      "pricingA3": "Nous acceptons toutes les principales cartes de crédit via Stripe et les passerelles de paiement iraniennes (Zarinpal, Zibal, NextPay, IDPay, PayPing).",
       "pricingQ4": "Is there a money-back guarantee?",
       "pricingA4": "Yes! If you are not satisfied within the first 14 days, we will issue a full refund. No questions asked."
     }
@@ -609,7 +610,7 @@
     "noBlunders": "Aucune erreur trouvée ! Partie solide.",
     "moveByMove": "Coup par coup",
     "dailyPuzzle": "Puzzle du jour",
-    "puzzleRush": "Puzzle Rush",
+    "puzzleRush": "Défi Éclair",
     "importGames": "Importer des parties",
     "username": "Nom d'utilisateur",
     "importing": "Importation...",
@@ -714,10 +715,10 @@
     "reviewed": "Reviewed",
     "homework": "Homework",
     "noHomework": "No homework yet.",
-    "submitHomework": "Submit Homework",
+    "submitHomework": "Rendre le Devoir",
     "pgnNotation": "PGN Notation",
     "notes": "Notes",
-    "challenges": "Weekly Challenges",
+    "challenges": "Défis Hebdomadaires",
     "challengesDesc": "Complete challenges to earn bonus XP and badges.",
     "challengeCompleted": "Completed! +{xp} XP earned",
     "daysLeft": "{count} j restants",
@@ -873,13 +874,13 @@
     "inactive": "Inactive",
     "banned": "Banned",
     "demote": "Demote",
-    "makeAdmin": "Make Admin"
+    "makeAdmin": "Nommer Admin"
   },
   "puzzles": {
     "title": "Puzzles",
     "subtitle": "Aiguisez votre tactique",
     "dailyPuzzle": "Puzzle du jour",
-    "puzzleRush": "Puzzle Rush",
+    "puzzleRush": "Défi Éclair",
     "streak": "Série",
     "streakCount": "{count} résolus d'affilée",
     "timeRemaining": "Temps",
@@ -1093,30 +1094,30 @@
   },
   "coursesContent": {
     "chessFundamentals": {
-      "title": "Chess Fundamentals",
-      "description": "Learn the basic rules, piece movement, and fundamental concepts of chess. Perfect for absolute beginners.",
+      "title": "Fondamentaux des Échecs",
+      "description": "Apprenez les règles de base, le mouvement des pièces et les concepts fondamentaux. Parfait pour les débutants.",
       "modules": {
-        "board": "The Board & Pieces",
-        "tactics": "Basic Tactics"
+        "board": "L'Échiquier et les Pièces",
+        "tactics": "Tactiques de Base"
       },
       "lessons": {
-        "intro": "Introduction to the Chessboard",
-        "pieceMoves": "How Pieces Move",
-        "checkmates": "Basic Checkmates",
+        "intro": "Introduction à l'Échiquier",
+        "pieceMoves": "Comment se Déplacent les Pièces",
+        "checkmates": "Les Mats Fondamentaux",
         "forks": "Forks",
         "pins": "Pins",
         "skewers": "Skewers"
       }
     },
     "intermediateStrategy": {
-      "title": "Intermediate Strategy",
+      "title": "Stratégie Intermédiaire",
       "description": "Deepen your understanding of positional chess, pawn structures, and strategic concepts.",
       "modules": {
-        "positional": "Positional Fundamentals"
+        "positional": "Fondamentaux Positionnels"
       },
       "lessons": {
-        "centerControl": "Center Control",
-        "development": "Piece Development"
+        "centerControl": "Contrôle du Centre",
+        "development": "Développement des Pièces"
       }
     }
   }
