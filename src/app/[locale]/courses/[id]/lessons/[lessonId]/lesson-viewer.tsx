@@ -57,8 +57,8 @@ export function LessonViewer({ lesson, courseId }: { lesson: Lesson; courseId: s
           />
         </div>
       )}
-      <div className="grid gap-6 lg:grid-cols-[1fr_400px] mb-6">
-        <div>
+      <div className="grid gap-6 xl:grid-cols-[1fr_400px] mb-6">
+        <div className="min-w-0">
           {lesson.content && (
             <div className="prose prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: lesson.content }} />
           )}
@@ -71,13 +71,12 @@ export function LessonViewer({ lesson, courseId }: { lesson: Lesson; courseId: s
                 {t('lesson.practiceBoard')}
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="pt-0 px-3 sm:px-6">
               <ChessBoard
                 game={game}
                 onMove={makeMove}
                 onReset={reset}
                 onUndo={undo}
-                boardWidth={360}
               />
             </CardContent>
           </Card>

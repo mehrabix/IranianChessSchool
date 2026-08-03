@@ -21,8 +21,8 @@ interface ChessBoardProps {
 export function ChessBoard({ game, onMove, onReset, onUndo, showControls = true, boardWidth }: ChessBoardProps) {
   const t = useTranslations('chess');
   return (
-    <div className="flex flex-col items-center gap-4">
-      <div className="relative" style={boardWidth ? { width: boardWidth } : undefined}>
+    <div className="flex flex-col items-center gap-4 w-full">
+      <div className="relative w-full max-w-[560px]" style={boardWidth ? { maxWidth: boardWidth } : undefined}>
         <ChessboardProvider
           options={{
             position: game.fen(),

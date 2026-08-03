@@ -144,33 +144,33 @@ export default function AnalysisPage() {
           </div>
         )}
 
-        <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
-          <div className="space-y-4">
+        <div className="grid gap-6 xl:grid-cols-[1fr_360px]">
+          <div className="space-y-4 min-w-0">
             <Card>
-              <CardContent className="pt-6">
+              <CardContent className="pt-6 px-3 sm:px-6">
                 <div className="flex flex-col items-center gap-4">
                   <ChessBoard
                     game={game}
                     onMove={makeMove}
                     onReset={resetGame}
                   />
-                  <div className="flex items-center gap-2">
-                    <Button variant="outline" size="icon" onClick={() => goToMove(history.length - 1)} disabled={currentMove >= history.length - 1} className="order-5 rtl:order-1">
+                  <div className="flex items-center gap-1 sm:gap-2 flex-wrap justify-center">
+                    <Button variant="outline" size="icon" className="h-8 w-8 sm:h-9 sm:w-9" onClick={() => goToMove(history.length - 1)} disabled={currentMove >= history.length - 1}>
                       <SkipForward className="h-4 w-4 rtl:rotate-180" />
                     </Button>
-                    <Button variant="outline" size="icon" onClick={() => goToMove(currentMove + 1)} disabled={currentMove >= history.length - 1} className="order-4 rtl:order-2">
+                    <Button variant="outline" size="icon" className="h-8 w-8 sm:h-9 sm:w-9" onClick={() => goToMove(currentMove + 1)} disabled={currentMove >= history.length - 1}>
                       <ChevronRight className="h-4 w-4 rtl:rotate-180" />
                     </Button>
-                    <span className="text-sm text-muted-foreground min-w-[60px] text-center order-3">
+                    <span className="text-sm text-muted-foreground min-w-[60px] text-center">
                       {currentMove < 0 ? '-' : `${currentMove + 1}/${history.length}`}
                     </span>
-                    <Button variant="outline" size="icon" onClick={() => goToMove(currentMove - 1)} disabled={currentMove < 0} className="order-2 rtl:order-4">
+                    <Button variant="outline" size="icon" className="h-8 w-8 sm:h-9 sm:w-9" onClick={() => goToMove(currentMove - 1)} disabled={currentMove < 0}>
                       <ChevronLeft className="h-4 w-4 rtl:rotate-180" />
                     </Button>
-                    <Button variant="outline" size="icon" onClick={() => goToMove(0)} disabled={currentMove < 0} className="order-1 rtl:order-5">
+                    <Button variant="outline" size="icon" className="h-8 w-8 sm:h-9 sm:w-9" onClick={() => goToMove(0)} disabled={currentMove < 0}>
                       <SkipBack className="h-4 w-4 rtl:rotate-180" />
                     </Button>
-                    <Button variant="outline" size="icon" onClick={flipBoard}>
+                    <Button variant="outline" size="icon" className="h-8 w-8 sm:h-9 sm:w-9" onClick={flipBoard}>
                       <FlipHorizontal className="h-4 w-4" />
                     </Button>
                   </div>
