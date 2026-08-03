@@ -3,7 +3,7 @@
     "home": "Главная",
     "about": "О нас",
     "kids": "Дети",
-    "faq": "FAQ",
+    "faq": "Вопросы",
     "blog": "Блог",
     "contact": "Контакты",
     "pricing": "Цены",
@@ -34,8 +34,8 @@
       "discord": "Discord",
       "telegram": "Telegram"
     },
-    "newsletter": "Newsletter",
-    "newsletterDesc": "Get chess tips and updates delivered to your inbox.",
+    "newsletter": "Рассылка",
+    "newsletterDesc": "Получайте шахматные советы и обновления на вашу почту.",
     "brand_short": "ICS"
   },
   "home": {
@@ -169,7 +169,7 @@
   },
   "faq": {
     "hero": {
-      "badge": "FAQ",
+      "badge": "ЧаВо",
       "heading": "Часто задаваемые вопросы",
       "subtitle": "Всё, что нужно знать об Iranian Chess School"
     },
@@ -283,8 +283,8 @@
       "readMore": "Читать далее"
     },
     "previewPlaceholder": "Превью",
-    "readMore": "Read more",
-    "backToBlog": "Back to Blog"
+    "readMore": "Читать далее",
+    "backToBlog": "Назад в блог"
   },
   "contact": {
     "hero": {
@@ -296,8 +296,8 @@
       "heading": "Отправьте нам сообщение",
       "name": "Имя",
       "namePlaceholder": "Ваше имя",
-      "email": "Email",
-      "emailPlaceholder": "you@example.com",
+      "email": "Эл. почта",
+      "emailPlaceholder": "vy@primer.ru",
       "subject": "Тема",
       "subjectPlaceholder": "Чем мы можем помочь?",
       "message": "Сообщение",
@@ -308,17 +308,17 @@
     },
     "info": {
       "heading": "Контактная информация",
-      "email": "Email",
+      "email": "Эл. почта",
       "emailAddress": "info@iranianchessschool.com",
-      "whatsapp": "WhatsApp",
-      "phone": "+1 (234) 567-890",
+      "whatsapp": "Ватсап",
+      "phone": "+7 (999) 123-45-67",
       "location": "Местоположение",
       "locationText": "Онлайн — по всему миру",
       "followUs": "Подписывайтесь",
       "followUsText": "Оставайтесь на связи в соцсетях для получения советов, новостей и событий сообщества.",
-      "instagram": "Instagram",
-      "youtube": "YouTube",
-      "telegram": "Telegram"
+      "instagram": "Инстаграм",
+      "youtube": "Ютуб",
+      "telegram": "Телеграм"
     },
     "validation": {
       "fieldsRequired": "Имя, email и сообщение обязательны"
@@ -426,9 +426,9 @@
       "vipCta": "Выбрать VIP",
       "mostPopular": "Самый популярный",
       "finePrint": "Все тарифы включают 7-дневный бесплатный пробный период. Без кредитной карты. Отмена в любое время.",
-      "periodLabel": "Monthly",
-      "annualLabel": "Annual",
-      "annualDiscount": "Save 17%"
+      "periodLabel": "Месяц",
+      "annualLabel": "Год",
+      "annualDiscount": "Экономия 17%"
     },
     "compare": {
       "heading": "Сравнение тарифов",
@@ -463,22 +463,22 @@
     },
     "faq": {
       "heading": "Часто задаваемые вопросы",
-      "pricingQ1": "How does the free trial work?",
+      "pricingQ1": "Как работает бесплатный пробный период?",
       "pricingA1": "Все планы включают 7-дневную бесплатную пробную версию. Кредитная карта не требуется. Отмените в любое время в течение пробного периода.",
-      "pricingQ2": "Can I switch plans later?",
+      "pricingQ2": "Можно ли сменить тариф позже?",
       "pricingA2": "Да! Вы можете обновить или понизить тариф в любое время. При обновлении взимается пропорциональная разница. Понижение вступает в силу в конце расчетного периода.",
-      "pricingQ3": "What payment methods do you accept?",
+      "pricingQ3": "Какие способы оплаты вы принимаете?",
       "pricingA3": "Мы принимаем все основные кредитные карты через Stripe и иранские платежные шлюзы (Zarinpal, Zibal, NextPay, IDPay, PayPing).",
-      "pricingQ4": "Is there a money-back guarantee?",
-      "pricingA4": "Yes! If you are not satisfied within the first 14 days, we will issue a full refund. No questions asked."
+      "pricingQ4": "Есть ли гарантия возврата денег?",
+      "pricingA4": "Да! Если вы не удовлетворены в течение первых 14 дней, мы вернем полную стоимость."
     }
   },
   "auth": {
     "signin": {
       "title": "С возвращением",
       "description": "Войдите, чтобы продолжить свой шахматный путь",
-      "email": "Email",
-      "emailPlaceholder": "you@example.com",
+      "email": "Эл. почта",
+      "emailPlaceholder": "vy@primer.ru",
       "password": "Пароль",
       "passwordPlaceholder": "Введите ваш пароль",
       "submit": "Войти",
@@ -494,8 +494,8 @@
       "description": "Начните свой структурированный шахматный путь",
       "name": "Имя",
       "namePlaceholder": "Ваше имя",
-      "email": "Email",
-      "emailPlaceholder": "you@example.com",
+      "email": "Эл. почта",
+      "emailPlaceholder": "vy@primer.ru",
       "password": "Пароль",
       "passwordPlaceholder": "Мин. 8 символов",
       "submit": "Создать аккаунт",
@@ -712,17 +712,17 @@
     "achievements": "Достижения",
     "noAchievements": "Нет достижений",
     "invalidPgnFile": "Неверный PGN файл",
-    "pending": "Pending",
-    "submitted": "Submitted",
-    "reviewed": "Reviewed",
-    "homework": "Homework",
-    "noHomework": "No homework yet.",
+    "pending": "Ожидание",
+    "submitted": "Отправлено",
+    "reviewed": "Проверено",
+    "homework": "Задания",
+    "noHomework": "Заданий пока нет.",
     "submitHomework": "Отправить задание",
-    "pgnNotation": "PGN Notation",
-    "notes": "Notes",
+    "pgnNotation": "Нотация PGN",
+    "notes": "Заметки",
     "challenges": "Еженедельные задания",
-    "challengesDesc": "Complete challenges to earn bonus XP and badges.",
-    "challengeCompleted": "Completed! +{xp} XP earned",
+    "challengesDesc": "Выполняйте задания, чтобы заработать бонусный опыт и значки.",
+    "challengeCompleted": "Выполнено! +{xp} опыта",
     "daysLeft": "{count} дн. осталось",
     "logProgress": "Записать прогресс",
     "noChallenges": "На этой неделе нет активных заданий. Загляните позже!",
@@ -747,8 +747,8 @@
     "coach": "Тренер",
     "type": "Тип",
     "statusLabel": "Статус",
-    "homeworkCoachDesc": "Review and assign homework to your students.",
-    "homeworkStudentDesc": "View and submit your assigned homework."
+    "homeworkCoachDesc": "Просматривайте и назначайте задания вашим ученикам.",
+    "homeworkStudentDesc": "Просматривайте и отправляйте назначенные задания."
   },
   "groups": {
     "title": "Группы",
@@ -871,11 +871,11 @@
       "titleRequired": "Требуется title",
       "idAndContentRequired": "Требуется ID и content"
     },
-    "anonymous": "Unknown",
-    "active": "Active",
-    "inactive": "Inactive",
-    "banned": "Banned",
-    "demote": "Demote",
+    "anonymous": "Неизвестный",
+    "active": "Активен",
+    "inactive": "Неактивен",
+    "banned": "Заблокирован",
+    "demote": "Понизить",
     "makeAdmin": "Сделать админом"
   },
   "puzzles": {
@@ -922,9 +922,9 @@
       "idRequired": "Требуется ID",
       "contentRequired": "Требуется контент"
     },
-    "notFound": "Page not found",
-    "pageNotFoundDesc": "The page you are looking for does not exist.",
-    "goBackHome": "Go back home"
+    "notFound": "Страница не найдена",
+    "pageNotFoundDesc": "Страница, которую вы ищете, не существует.",
+    "goBackHome": "На главную"
   },
   "chess": {
     "undo": "Отменить",

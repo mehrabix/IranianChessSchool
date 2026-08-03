@@ -35,7 +35,7 @@
       "telegram": "Telegram"
     },
     "newsletter": "Newsletter",
-    "newsletterDesc": "Get chess tips and updates delivered to your inbox.",
+    "newsletterDesc": "Recevez des conseils et mises à jour d'échecs dans votre boîte mail.",
     "brand_short": "ICS"
   },
   "home": {
@@ -283,8 +283,8 @@
       "readMore": "Lire la suite"
     },
     "previewPlaceholder": "Aperçu",
-    "readMore": "Read more",
-    "backToBlog": "Back to Blog"
+    "readMore": "Lire la suite",
+    "backToBlog": "Retour au Blog"
   },
   "contact": {
     "hero": {
@@ -297,7 +297,7 @@
       "name": "Nom",
       "namePlaceholder": "Votre nom",
       "email": "Email",
-      "emailPlaceholder": "you@example.com",
+      "emailPlaceholder": "vous@exemple.fr",
       "subject": "Sujet",
       "subjectPlaceholder": "Comment pouvons-nous vous aider ?",
       "message": "Message",
@@ -426,9 +426,9 @@
       "vipCta": "Devenir VIP",
       "mostPopular": "Le plus populaire",
       "finePrint": "Tous les forfaits incluent un essai gratuit de 7 jours. Aucune carte bancaire requise. Annulation à tout moment.",
-      "periodLabel": "Monthly",
-      "annualLabel": "Annual",
-      "annualDiscount": "Save 17%"
+      "periodLabel": "Mensuel",
+      "annualLabel": "Annuel",
+      "annualDiscount": "Économisez 17%"
     },
     "compare": {
       "heading": "Comparer les forfaits",
@@ -463,14 +463,14 @@
     },
     "faq": {
       "heading": "Questions Fréquentes",
-      "pricingQ1": "How does the free trial work?",
+      "pricingQ1": "Comment fonctionne l'essai gratuit ?",
       "pricingA1": "Tous les forfaits incluent un essai gratuit de 7 jours. Aucune carte de crédit requise. Annulez à tout moment pendant la période d'essai.",
-      "pricingQ2": "Can I switch plans later?",
+      "pricingQ2": "Puis-je changer de forfait plus tard ?",
       "pricingA2": "Oui ! Vous pouvez passer à un forfait supérieur ou inférieur à tout moment. Pour les mises à niveau, la différence au prorata est facturée. Les rétrogradations prennent effet à la fin de la période de facturation.",
-      "pricingQ3": "What payment methods do you accept?",
+      "pricingQ3": "Quels moyens de paiement acceptez-vous ?",
       "pricingA3": "Nous acceptons toutes les principales cartes de crédit via Stripe et les passerelles de paiement iraniennes (Zarinpal, Zibal, NextPay, IDPay, PayPing).",
-      "pricingQ4": "Is there a money-back guarantee?",
-      "pricingA4": "Yes! If you are not satisfied within the first 14 days, we will issue a full refund. No questions asked."
+      "pricingQ4": "Y a-t-il une garantie de remboursement ?",
+      "pricingA4": "Oui ! Si vous n'êtes pas satisfait dans les 14 premiers jours, nous vous rembourserons intégralement."
     }
   },
   "auth": {
@@ -712,17 +712,17 @@
     "achievements": "Réalisations",
     "noAchievements": "Aucune réalisation",
     "invalidPgnFile": "Fichier PGN invalide",
-    "pending": "Pending",
-    "submitted": "Submitted",
-    "reviewed": "Reviewed",
-    "homework": "Homework",
-    "noHomework": "No homework yet.",
+    "pending": "En attente",
+    "submitted": "Soumis",
+    "reviewed": "Révisé",
+    "homework": "Devoirs",
+    "noHomework": "Pas encore de devoirs.",
     "submitHomework": "Rendre le Devoir",
-    "pgnNotation": "PGN Notation",
+    "pgnNotation": "Notation PGN",
     "notes": "Notes",
     "challenges": "Défis Hebdomadaires",
-    "challengesDesc": "Complete challenges to earn bonus XP and badges.",
-    "challengeCompleted": "Completed! +{xp} XP earned",
+    "challengesDesc": "Relevez des défis pour gagner des bonus XP et des badges.",
+    "challengeCompleted": "Terminé ! +{xp} XP gagnés",
     "daysLeft": "{count} j restants",
     "logProgress": "Enregistrer la progression",
     "noChallenges": "Aucun défi actif cette semaine. Revenez bientôt !",
@@ -747,8 +747,8 @@
     "coach": "Entraîneur",
     "type": "Type",
     "statusLabel": "Statut",
-    "homeworkCoachDesc": "Review and assign homework to your students.",
-    "homeworkStudentDesc": "View and submit your assigned homework."
+    "homeworkCoachDesc": "Révisez et assignez des devoirs à vos élèves.",
+    "homeworkStudentDesc": "Consultez et soumettez vos devoirs."
   },
   "groups": {
     "title": "Groupes",
@@ -871,11 +871,11 @@
       "titleRequired": "Titre requis",
       "idAndContentRequired": "ID et contenu requis"
     },
-    "anonymous": "Unknown",
-    "active": "Active",
-    "inactive": "Inactive",
-    "banned": "Banned",
-    "demote": "Demote",
+    "anonymous": "Inconnu",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "banned": "Banni",
+    "demote": "Rétrograder",
     "makeAdmin": "Nommer Admin"
   },
   "puzzles": {
@@ -922,9 +922,9 @@
       "idRequired": "ID requis",
       "contentRequired": "Contenu requis"
     },
-    "notFound": "Page not found",
-    "pageNotFoundDesc": "The page you are looking for does not exist.",
-    "goBackHome": "Go back home"
+    "notFound": "Page introuvable",
+    "pageNotFoundDesc": "La page que vous cherchez n'existe pas.",
+    "goBackHome": "Retour à l'accueil"
   },
   "chess": {
     "undo": "Annuler",
@@ -1106,14 +1106,14 @@
         "intro": "Introduction à l'Échiquier",
         "pieceMoves": "Comment se Déplacent les Pièces",
         "checkmates": "Les Mats Fondamentaux",
-        "forks": "Forks",
-        "pins": "Pins",
-        "skewers": "Skewers"
+        "forks": "Fourchettes",
+        "pins": "Clouages",
+        "skewers": "Enfilades"
       }
     },
     "intermediateStrategy": {
       "title": "Stratégie Intermédiaire",
-      "description": "Deepen your understanding of positional chess, pawn structures, and strategic concepts.",
+      "description": "Approfondissez votre compréhension du jeu positionnel, des structures de pions et des concepts stratégiques.",
       "modules": {
         "positional": "Fondamentaux Positionnels"
       },

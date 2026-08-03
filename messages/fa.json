@@ -283,8 +283,8 @@
       "readMore": "بیشتر بخوانید"
     },
     "previewPlaceholder": "پیش‌نمایش",
-    "readMore": "Read more",
-    "backToBlog": "Back to Blog"
+    "readMore": "بیشتر بخوانید",
+    "backToBlog": "بازگشت به وبلاگ"
   },
   "contact": {
     "hero": {
@@ -712,17 +712,17 @@
     "achievements": "دستاوردها",
     "noAchievements": "دستاوردی وجود ندارد",
     "invalidPgnFile": "فایل PGN نامعتبر",
-    "pending": "Pending",
-    "submitted": "Submitted",
-    "reviewed": "Reviewed",
-    "homework": "Homework",
-    "noHomework": "No homework yet.",
+    "pending": "در انتظار",
+    "submitted": "ارسال شده",
+    "reviewed": "بررسی شده",
+    "homework": "تکالیف",
+    "noHomework": "هنوز تکلیفی ندارید.",
     "submitHomework": "ارسال تکلیف",
-    "pgnNotation": "PGN Notation",
-    "notes": "Notes",
+    "pgnNotation": "نمادگذاری PGN",
+    "notes": "یادداشت‌ها",
     "challenges": "چالش‌های هفتگی",
-    "challengesDesc": "Complete challenges to earn bonus XP and badges.",
-    "challengeCompleted": "Completed! +{xp} XP earned",
+    "challengesDesc": "چالش‌ها را کامل کنید تا امتیاز و نشان‌های جایزه کسب کنید.",
+    "challengeCompleted": "تکمیل شد! {xp}+ امتیاز کسب شد",
     "daysLeft": "{count} روز مانده",
     "logProgress": "ثبت پیشرفت",
     "noChallenges": "هیچ چالش فعالی این هفته نیست. به زودی بررسی کنید!",
@@ -747,8 +747,8 @@
     "coach": "مربی",
     "type": "نوع",
     "statusLabel": "وضعیت",
-    "homeworkCoachDesc": "Review and assign homework to your students.",
-    "homeworkStudentDesc": "View and submit your assigned homework."
+    "homeworkCoachDesc": "تکالیف دانش‌آموزان خود را بررسی و تعیین کنید.",
+    "homeworkStudentDesc": "تکالیف تعیین شده خود را مشاهده و ارسال کنید."
   },
   "groups": {
     "title": "گروه‌ها",
@@ -902,11 +902,11 @@
       "titleRequired": "عنوان الزامی است",
       "idAndContentRequired": "شناسه و محتوا الزامی است"
     },
-    "anonymous": "Unknown",
-    "active": "Active",
-    "inactive": "Inactive",
-    "banned": "Banned",
-    "demote": "Demote",
+    "anonymous": "ناشناس",
+    "active": "فعال",
+    "inactive": "غیرفعال",
+    "banned": "مسدود شده",
+    "demote": "تنزل رتبه",
     "makeAdmin": "مدیر کردن"
   },
   "common": {
@@ -922,9 +922,9 @@
       "idRequired": "شناسه الزامی است",
       "contentRequired": "محتوا الزامی است"
     },
-    "notFound": "Page not found",
-    "pageNotFoundDesc": "The page you are looking for does not exist.",
-    "goBackHome": "Go back home"
+    "notFound": "صفحه پیدا نشد",
+    "pageNotFoundDesc": "صفحه‌ای که به دنبال آن هستید وجود ندارد.",
+    "goBackHome": "بازگشت به خانه"
   },
   "chess": {
     "undo": "برگشت",
@@ -935,8 +935,8 @@
     "score": "امتیاز",
     "depth": "عمق",
     "best": "بهترین",
-    "notAvailable": "N/A",
-    "principalVariation": "PV",
+    "notAvailable": "ناموجود",
+    "principalVariation": "شاخه اصلی",
     "engineError": "خطای موتور",
     "aiCoach": "مربی هوش مصنوعی",
     "analyzing": "در حال تحلیل...",

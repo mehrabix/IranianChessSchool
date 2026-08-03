@@ -3,13 +3,13 @@
     "home": "Home",
     "about": "Chi Siamo",
     "kids": "Bambini",
-    "faq": "FAQ",
+    "faq": "Domande",
     "blog": "Blog",
     "contact": "Contatti",
     "pricing": "Prezzi",
     "courses": "Corsi",
-    "dashboard": "Dashboard",
-    "admin": "Admin",
+    "dashboard": "Pannello",
+    "admin": "Ammin.",
     "signIn": "Accedi",
     "tryFree": "Prova Gratis",
     "signOut": "Esci",
@@ -35,7 +35,7 @@
       "telegram": "Telegram"
     },
     "newsletter": "Newsletter",
-    "newsletterDesc": "Get chess tips and updates delivered to your inbox.",
+    "newsletterDesc": "Ricevi consigli e aggiornamenti sugli scacchi nella tua casella email.",
     "brand_short": "ICS"
   },
   "home": {
@@ -169,7 +169,7 @@
   },
   "faq": {
     "hero": {
-      "badge": "FAQ",
+      "badge": "Domande",
       "heading": "Domande Frequenti",
       "subtitle": "Tutto ciò che devi sapere su Iranian Chess School"
     },
@@ -283,8 +283,8 @@
       "readMore": "Leggi di più"
     },
     "previewPlaceholder": "Anteprima",
-    "readMore": "Read more",
-    "backToBlog": "Back to Blog"
+    "readMore": "Leggi di più",
+    "backToBlog": "Torna al Blog"
   },
   "contact": {
     "hero": {
@@ -426,9 +426,9 @@
       "vipCta": "Scegli VIP",
       "mostPopular": "Più Popolare",
       "finePrint": "Tutti i piani includono una prova gratuita di 7 giorni. Nessuna carta di credito richiesta. Annulla quando vuoi.",
-      "periodLabel": "Monthly",
-      "annualLabel": "Annual",
-      "annualDiscount": "Save 17%"
+      "periodLabel": "Mensile",
+      "annualLabel": "Annuale",
+      "annualDiscount": "Risparmia 17%"
     },
     "compare": {
       "heading": "Confronta i piani",
@@ -463,14 +463,14 @@
     },
     "faq": {
       "heading": "Domande Frequenti",
-      "pricingQ1": "How does the free trial work?",
+      "pricingQ1": "Come funziona la prova gratuita?",
       "pricingA1": "Tutti i piani includono una prova gratuita di 7 giorni. Nessuna carta di credito richiesta. Annulla in qualsiasi momento durante il periodo di prova.",
-      "pricingQ2": "Can I switch plans later?",
+      "pricingQ2": "Posso cambiare piano in seguito?",
       "pricingA2": "Sì! Puoi passare a un piano superiore o inferiore in qualsiasi momento. Per gli upgrade viene addebitata la differenza proporzionale. I downgrade hanno effetto alla fine del periodo di fatturazione.",
-      "pricingQ3": "What payment methods do you accept?",
+      "pricingQ3": "Quali metodi di pagamento accettate?",
       "pricingA3": "Accettiamo tutte le principali carte di credito tramite Stripe e gateway di pagamento iraniani (Zarinpal, Zibal, NextPay, IDPay, PayPing).",
-      "pricingQ4": "Is there a money-back guarantee?",
-      "pricingA4": "Yes! If you are not satisfied within the first 14 days, we will issue a full refund. No questions asked."
+      "pricingQ4": "C'è una garanzia di rimborso?",
+      "pricingA4": "Sì! Se non sei soddisfatto entro i primi 14 giorni, emetteremo un rimborso completo."
     }
   },
   "auth": {
@@ -712,17 +712,17 @@
     "achievements": "Obiettivi",
     "noAchievements": "Nessun obiettivo",
     "invalidPgnFile": "File PGN non valido",
-    "pending": "Pending",
-    "submitted": "Submitted",
-    "reviewed": "Reviewed",
-    "homework": "Homework",
-    "noHomework": "No homework yet.",
+    "pending": "In attesa",
+    "submitted": "Inviato",
+    "reviewed": "Revisionato",
+    "homework": "Compiti",
+    "noHomework": "Nessun compito.",
     "submitHomework": "Consegna Compito",
-    "pgnNotation": "PGN Notation",
-    "notes": "Notes",
+    "pgnNotation": "Notazione PGN",
+    "notes": "Note",
     "challenges": "Sfide Settimanali",
-    "challengesDesc": "Complete challenges to earn bonus XP and badges.",
-    "challengeCompleted": "Completed! +{xp} XP earned",
+    "challengesDesc": "Completa le sfide per guadagnare XP bonus e badge.",
+    "challengeCompleted": "Completato! +{xp} XP guadagnati",
     "daysLeft": "{count} g rimanenti",
     "logProgress": "Registra progresso",
     "noChallenges": "Nessuna sfida attiva questa settimana. Torna presto!",
@@ -747,8 +747,8 @@
     "coach": "Allenatore",
     "type": "Tipo",
     "statusLabel": "Stato",
-    "homeworkCoachDesc": "Review and assign homework to your students.",
-    "homeworkStudentDesc": "View and submit your assigned homework."
+    "homeworkCoachDesc": "Rivedi e assegna compiti ai tuoi studenti.",
+    "homeworkStudentDesc": "Visualizza e invia i tuoi compiti assegnati."
   },
   "groups": {
     "title": "Gruppi",
@@ -778,12 +778,12 @@
   },
   "admin": {
     "nav": {
-      "dashboard": "Dashboard",
+      "dashboard": "Pannello",
       "courses": "Corsi",
       "posts": "Articoli",
       "users": "Utenti",
       "settings": "Impostazioni",
-      "brand": "Admin"
+      "brand": "Ammin."
     },
     "dashboard": {
       "heading": "Pannello amministratore",
@@ -871,11 +871,11 @@
       "titleRequired": "Titolo richiesto",
       "idAndContentRequired": "ID e contenuto richiesti"
     },
-    "anonymous": "Unknown",
-    "active": "Active",
-    "inactive": "Inactive",
-    "banned": "Banned",
-    "demote": "Demote",
+    "anonymous": "Sconosciuto",
+    "active": "Attivo",
+    "inactive": "Inattivo",
+    "banned": "Bannato",
+    "demote": "Retrocedi",
     "makeAdmin": "Rendi Admin"
   },
   "puzzles": {
@@ -922,9 +922,9 @@
       "idRequired": "ID richiesto",
       "contentRequired": "Contenuto richiesto"
     },
-    "notFound": "Page not found",
-    "pageNotFoundDesc": "The page you are looking for does not exist.",
-    "goBackHome": "Go back home"
+    "notFound": "Pagina non trovata",
+    "pageNotFoundDesc": "La pagina che stai cercando non esiste.",
+    "goBackHome": "Torna alla home"
   },
   "chess": {
     "undo": "Annulla",
@@ -1106,14 +1106,14 @@
         "intro": "Introduzione alla Scacchiera",
         "pieceMoves": "Come si Muovono i Pezzi",
         "checkmates": "Scacchi Matti Fondamentali",
-        "forks": "Forks",
-        "pins": "Pins",
-        "skewers": "Skewers"
+        "forks": "Inforcature",
+        "pins": "Inchiodature",
+        "skewers": "Infilsate"
       }
     },
     "intermediateStrategy": {
       "title": "Strategia Intermedia",
-      "description": "Deepen your understanding of positional chess, pawn structures, and strategic concepts.",
+      "description": "Approfondisci la comprensione dello scacchi posizionali, delle strutture pedonali e dei concetti strategici.",
       "modules": {
         "positional": "Fondamenti Posizionali"
       },

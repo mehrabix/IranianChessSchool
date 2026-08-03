@@ -9,6 +9,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Container } from "@/components/ui/container";
 import { Sparkles, CheckCircle2, ArrowRight, Star, Zap, Crown } from "lucide-react";
 import { CheckoutButton } from "@/components/shared/CheckoutButton";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const plans = [
   {
@@ -156,22 +162,19 @@ export default function PricingPage() {
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t('faq.heading')}</h2>
           </div>
-          <div className="space-y-3 max-w-2xl mx-auto">
+          <Accordion className="space-y-3 max-w-2xl mx-auto">
             {[
-              { q: t('faq.pricingQ1') || 'How does the free trial work?', a: t('faq.pricingA1') || 'All plans include a 7-day free trial. No credit card required. Cancel anytime during the trial at no cost.' },
-              { q: t('faq.pricingQ2') || 'Can I switch plans later?', a: t('faq.pricingA2') || 'Yes! You can upgrade or downgrade at any time. If you upgrade, you will be charged the prorated difference. Downgrades take effect at the end of your billing period.' },
-              { q: t('faq.pricingQ3') || 'What payment methods do you accept?', a: t('faq.pricingA3') || 'We accept all major credit cards via Stripe, and Iranian payment gateways (Zarinpal, Zibal, NextPay, IDPay, PayPing).' },
-              { q: t('faq.pricingQ4') || 'Is there a money-back guarantee?', a: t('faq.pricingA4') || 'Yes! If you are not satisfied within the first 14 days, we will issue a full refund. No questions asked.' },
-            ].map((item, i) => (
-              <details key={i} className="group rounded-xl border bg-card">
-                <summary className="flex items-center justify-between px-6 py-4 cursor-pointer select-none">
-                  <span className="font-medium text-sm">{item.q}</span>
-                  <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="px-6 pb-4 text-sm text-muted-foreground leading-relaxed">{item.a}</div>
-              </details>
+              { id: 'pricing-q1', q: t('faq.pricingQ1') || 'How does the free trial work?', a: t('faq.pricingA1') || 'All plans include a 7-day free trial. No credit card required. Cancel anytime during the trial at no cost.' },
+              { id: 'pricing-q2', q: t('faq.pricingQ2') || 'Can I switch plans later?', a: t('faq.pricingA2') || 'Yes! You can upgrade or downgrade at any time. If you upgrade, you will be charged the prorated difference. Downgrades take effect at the end of your billing period.' },
+              { id: 'pricing-q3', q: t('faq.pricingQ3') || 'What payment methods do you accept?', a: t('faq.pricingA3') || 'We accept all major credit cards via Stripe, and Iranian payment gateways (Zarinpal, Zibal, NextPay, IDPay, PayPing).' },
+              { id: 'pricing-q4', q: t('faq.pricingQ4') || 'Is there a money-back guarantee?', a: t('faq.pricingA4') || 'Yes! If you are not satisfied within the first 14 days, we will issue a full refund. No questions asked.' },
+            ].map((item) => (
+              <AccordionItem key={item.id} value={item.id} className="rounded-xl border bg-card">
+                <AccordionTrigger className="px-6 py-4 font-medium text-sm">{item.q}</AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-sm text-muted-foreground leading-relaxed">{item.a}</AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
         </Container>
       </section>
 
@@ -187,13 +190,5 @@ export default function PricingPage() {
         </Container>
       </section>
     </>
-  );
-}
-
-function ChevronDown(props: { className?: string }) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={props.className}>
-      <path d="m6 9 6 6 6-6" />
-    </svg>
   );
 }

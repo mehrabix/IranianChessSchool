@@ -35,7 +35,7 @@
       "telegram": "Telegram"
     },
     "newsletter": "Newsletter",
-    "newsletterDesc": "Get chess tips and updates delivered to your inbox.",
+    "newsletterDesc": "Erhalte Schachtips und Updates direkt in deinen Posteingang.",
     "brand_short": "ICS"
   },
   "home": {
@@ -283,8 +283,8 @@
       "readMore": "Weiterlesen"
     },
     "previewPlaceholder": "Vorschau",
-    "readMore": "Read more",
-    "backToBlog": "Back to Blog"
+    "readMore": "Weiterlesen",
+    "backToBlog": "Zurück zum Blog"
   },
   "contact": {
     "hero": {
@@ -426,9 +426,9 @@
       "vipCta": "VIP wählen",
       "mostPopular": "Am beliebtesten",
       "finePrint": "Alle Pläne beinhalten eine 7-tägige kostenlose Testversion. Keine Kreditkarte erforderlich. Jederzeit kündbar.",
-      "periodLabel": "Monthly",
-      "annualLabel": "Annual",
-      "annualDiscount": "Save 17%"
+      "periodLabel": "Monatlich",
+      "annualLabel": "Jährlich",
+      "annualDiscount": "17% sparen"
     },
     "compare": {
       "heading": "Pläne vergleichen",
@@ -463,14 +463,14 @@
     },
     "faq": {
       "heading": "Häufig gestellte Fragen",
-      "pricingQ1": "How does the free trial work?",
+      "pricingQ1": "Wie funktioniert die kostenlose Testversion?",
       "pricingA1": "Alle Pläne beinhalten eine 7-tägige kostenlose Testversion. Keine Kreditkarte erforderlich. Jederzeit während der Testphase kündbar.",
-      "pricingQ2": "Can I switch plans later?",
+      "pricingQ2": "Kann ich später den Plan wechseln?",
       "pricingA2": "Ja! Du kannst jederzeit upgraden oder downgraden. Bei Upgrades wird die anteilige Differenz berechnet. Downgrades werden am Ende der Abrechnungsperiode wirksam.",
-      "pricingQ3": "What payment methods do you accept?",
+      "pricingQ3": "Welche Zahlungsmethoden akzeptieren Sie?",
       "pricingA3": "Wir akzeptieren alle gängigen Kreditkarten über Stripe und iranische Zahlungsgateways (Zarinpal, Zibal, NextPay, IDPay, PayPing).",
-      "pricingQ4": "Is there a money-back guarantee?",
-      "pricingA4": "Yes! If you are not satisfied within the first 14 days, we will issue a full refund. No questions asked."
+      "pricingQ4": "Gibt es eine Geld-zurück-Garantie?",
+      "pricingA4": "Ja! Wenn du innerhalb der ersten 14 Tage nicht zufrieden bist, erstatten wir den vollen Betrag."
     }
   },
   "auth": {
@@ -712,17 +712,17 @@
     "achievements": "Erfolge",
     "noAchievements": "Keine Erfolge",
     "invalidPgnFile": "Ungültige PGN-Datei",
-    "pending": "Pending",
-    "submitted": "Submitted",
-    "reviewed": "Reviewed",
-    "homework": "Homework",
-    "noHomework": "No homework yet.",
+    "pending": "Ausstehend",
+    "submitted": "Eingereicht",
+    "reviewed": "Überprüft",
+    "homework": "Hausaufgaben",
+    "noHomework": "Noch keine Hausaufgaben.",
     "submitHomework": "Aufgabe abgeben",
-    "pgnNotation": "PGN Notation",
-    "notes": "Notes",
+    "pgnNotation": "PGN-Notation",
+    "notes": "Notizen",
     "challenges": "Wöchentliche Herausforderungen",
-    "challengesDesc": "Complete challenges to earn bonus XP and badges.",
-    "challengeCompleted": "Completed! +{xp} XP earned",
+    "challengesDesc": "Schließe Herausforderungen ab, um Bonus-XP und Abzeichen zu verdienen.",
+    "challengeCompleted": "Abgeschlossen! +{xp} XP verdient",
     "daysLeft": "{count} Tg. übrig",
     "logProgress": "Fortschritt melden",
     "noChallenges": "Keine aktiven Herausforderungen diese Woche. Schau bald wieder vorbei!",
@@ -747,8 +747,8 @@
     "coach": "Trainer",
     "type": "Typ",
     "statusLabel": "Status",
-    "homeworkCoachDesc": "Review and assign homework to your students.",
-    "homeworkStudentDesc": "View and submit your assigned homework."
+    "homeworkCoachDesc": "Überprüfe und weise deinen Schülern Hausaufgaben zu.",
+    "homeworkStudentDesc": "Sieh deine zugewiesenen Hausaufgaben an und reiche sie ein."
   },
   "groups": {
     "title": "Gruppen",
@@ -871,11 +871,11 @@
       "titleRequired": "Titel erforderlich",
       "idAndContentRequired": "ID und Inhalt erforderlich"
     },
-    "anonymous": "Unknown",
-    "active": "Active",
-    "inactive": "Inactive",
-    "banned": "Banned",
-    "demote": "Demote",
+    "anonymous": "Unbekannt",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "banned": "Gesperrt",
+    "demote": "Zurückstufen",
     "makeAdmin": "Zum Admin machen"
   },
   "puzzles": {
@@ -922,9 +922,9 @@
       "idRequired": "ID erforderlich",
       "contentRequired": "Inhalt erforderlich"
     },
-    "notFound": "Page not found",
-    "pageNotFoundDesc": "The page you are looking for does not exist.",
-    "goBackHome": "Go back home"
+    "notFound": "Seite nicht gefunden",
+    "pageNotFoundDesc": "Die gesuchte Seite existiert nicht.",
+    "goBackHome": "Zur Startseite"
   },
   "chess": {
     "undo": "Rückgängig",
@@ -1106,14 +1106,14 @@
         "intro": "Einführung in das Schachbrett",
         "pieceMoves": "Wie sich die Figuren bewegen",
         "checkmates": "Grundlegende Schachmatts",
-        "forks": "Forks",
-        "pins": "Pins",
-        "skewers": "Skewers"
+        "forks": "Gabeln",
+        "pins": "Fesselungen",
+        "skewers": "Spieße"
       }
     },
     "intermediateStrategy": {
       "title": "Mittelstufen-Strategie",
-      "description": "Deepen your understanding of positional chess, pawn structures, and strategic concepts.",
+      "description": "Vertiefe dein Verständnis von positionellem Schach, Bauernstrukturen und strategischen Konzepten.",
       "modules": {
         "positional": "Positionsgrundlagen"
       },

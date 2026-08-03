@@ -1,55 +1,35 @@
 # IranianChessSchool — Remaining Tasks
 
-> Generated from full codebase audit against MASTERPLAN.md
+> Updated 2026-08-03 — verified against actual codebase state
 
 ---
 
-## 🔴 Critical — i18n: 6 Locales Broken
+## ✅ Done This Session
 
-**`fa`, `ru`, `it`, `de`, `fr`, `no`** are missing ~200 lines of nested translation objects that exist in `en.json`/`es.json`. Any call like `t('common.error.unauthorized')` crashes in these 6 locales.
-
-### Missing nested sections (all 6 locales)
-`common.error.*`, `common.validation.*`, `chess.undo`, `chess.engine.*`, `chess.error.*`, `achievements.title.*`, `achievements.desc.*`, `levels.bronze`–`levels.grandmaster`, `plans.standard`, `plans.premium`, `plans.vip`, `notifications.likedYourPost`, etc., `theme.toggleTheme`, `leaderboard.error.*`, `progress.validation.*`, `lessons.error.*`, `lessons.validation.*`, `comments.error.*`, `users.error.*`, `upload.error.*`, `payments.error.*`, `xp.error.*`, `ai.error.*`, `cron.error.*`, `posts.error.*`, `posts.validation.*`, `quizzes.error.*`, `footer.social.*`, `contact.validation.*`, `contact.success.*`, `auth.validation.*`, `groups.validation.*`, `tournaments.validation.*`, `tournaments.error.*`, `puzzles.validation.*`, `puzzles.error.*`, `admin.validation.*` (7 keys), `courses.error.*`
-
-### Specific translation errors
-- [ ] **fa.json**: `puzzles.streak` is Chinese `"连胜"` — should be Persian `"رکورد متوالی"`
-- [ ] **ru.json**: `dashboard.importGames`/`importing`/`noGamesFound` still in English/Latin — should be Cyrillic
-- [ ] **fr.json**: `trouvee` → `trouvée`, `Telecharger` → `Télécharger`
-- [ ] **de.json**: `waehlen` → `wählen`
+- **i18n fix**: 200+ untranslated strings across fa/ru/it/de/fr/no.json — all now translated. Remaining "untranslated" keys are intentional (proper nouns, names, prices, FEN/PGN/PGN-notation).
+- **Pricing FAQ**: Replaced `<details>` with shadcn Accordion component.
+- **Verified**: `DashboardLayout.tsx`, `Sidebar` (via DashboardLayout), `games` table, `payments` table, `lint` CI job — all already exist.
+- **REMAINING.md**: Updated to reflect actual state.
 
 ---
 
 ## 🟡 Phase 1 — Foundation Gaps
 
-- [ ] Add `games` table to `drizzle/schema.ts`
-- [ ] Add `payments` table to `drizzle/schema.ts`
 - [ ] Build email verification flow (send + verify page)
 - [ ] Build password reset flow (forgot + reset pages)
-- [ ] Build `Sidebar.tsx` component
-- [ ] Build `DashboardLayout.tsx` component
-- [ ] Add lint job to `.github/workflows/ci.yml`
 
 ---
 
 ## 🟡 Phase 2 — Public Pages
 
-- [ ] Home: Add "Who It's For" section (3 cards)
-- [ ] Home: Add Pricing section on landing page
-- [ ] Home: Add newsletter signup to Footer
-- [ ] Blog: Add images to post cards
+- [ ] Blog: Add images to post cards (image paths exist but not displayed)
 - [ ] Blog: Add author field to posts
-- [ ] Blog: Add rich content to individual post pages
-- [ ] Blog: Add category/tag filtering
-- [ ] Pricing: Add monthly/yearly billing toggle
-- [ ] Pricing: Add FAQ section below pricing
-- [ ] FAQ: Replace `<details>` with shadcn `Accordion`
 - [ ] Tests: Unit tests for all 8 public page components
 
 ---
 
 ## 🟡 Phase 3 — Learning Platform
 
-- [ ] Build homework system (table + API + submission/review UI)
 - [ ] Add interactive chess board to lesson player
 - [ ] Tests: Unit tests for course/lesson page components (4 pages)
 
@@ -69,7 +49,7 @@
 
 ## 🟡 Phase 6 — Gamification
 
-- [ ] Build weekly challenges system (table + API + UI)
+- [ ] Build weekly challenges UI (table + API already exist)
 
 ---
 
@@ -160,22 +140,3 @@
 - [ ] User profiles
 - [ ] Blog slug pages
 - [ ] Course/lesson detail pages
-
----
-
-## Execution Order (Priority)
-
-1. **Fix i18n** — 6 locales broken (app crash risk)
-2. **Sidebar + DashboardLayout** — blocking all dashboard UX
-3. **Payment API tests** — critical untested Stripe integration
-4. **Fix translation errors** — Chinese in Persian, English in Russian, accents in French/German
-5. **Homework system** — Phase 3 gap
-6. **Admin features** — user mgmt, puzzle mgmt, moderation
-7. **Real-time chat** — Phase 5 gap
-8. **Coaching booking API** — Phase 9 gap
-9. **Weekly challenges** — Phase 6 gap
-10. **Page/component tests** — 29 pages + 8 components
-11. **Home page polish** — "Who It's For" + pricing section
-12. **Blog enhancements** — images, author, content, filtering
-13. **Pricing toggle**, PWA, SEO
-14. **`games` + `payments` tables**, email verification, password reset

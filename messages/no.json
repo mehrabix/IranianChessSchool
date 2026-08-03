@@ -34,8 +34,8 @@
       "discord": "Discord",
       "telegram": "Telegram"
     },
-    "newsletter": "Newsletter",
-    "newsletterDesc": "Get chess tips and updates delivered to your inbox.",
+    "newsletter": "Nyhetsbrev",
+    "newsletterDesc": "Få sjakktips og oppdateringer levert til innboksen din.",
     "brand_short": "ICS"
   },
   "home": {
@@ -283,8 +283,8 @@
       "readMore": "Les mer"
     },
     "previewPlaceholder": "Forhåndsvisning",
-    "readMore": "Read more",
-    "backToBlog": "Back to Blog"
+    "readMore": "Les mer",
+    "backToBlog": "Tilbake til Blogg"
   },
   "contact": {
     "hero": {
@@ -426,9 +426,9 @@
       "vipCta": "Velg VIP",
       "mostPopular": "Mest Populær",
       "finePrint": "Alle planer inkluderer en 7-dagers gratis prøveperiode. Ingen kredittkort kreves. Avslutt når som helst.",
-      "periodLabel": "Monthly",
-      "annualLabel": "Annual",
-      "annualDiscount": "Save 17%"
+      "periodLabel": "Månedlig",
+      "annualLabel": "Årlig",
+      "annualDiscount": "Spar 17%"
     },
     "compare": {
       "heading": "Sammenlign planer",
@@ -463,14 +463,14 @@
     },
     "faq": {
       "heading": "Ofte Stilte Spørsmål",
-      "pricingQ1": "How does the free trial work?",
+      "pricingQ1": "Hvordan fungerer den gratis prøveperioden?",
       "pricingA1": "Alle planer inkluderer en 7-dagers gratis prøveperiode. Ingen kredittkort kreves. Avbryt når som helst i prøveperioden.",
-      "pricingQ2": "Can I switch plans later?",
+      "pricingQ2": "Kan jeg bytte plan senere?",
       "pricingA2": "Ja! Du kan oppgradere eller nedgradere når som helst. Ved oppgradering belastes prorata differanse. Nedgradering trer i kraft ved slutten av faktureringsperioden.",
-      "pricingQ3": "What payment methods do you accept?",
+      "pricingQ3": "Hvilke betalingsmetoder aksepterer dere?",
       "pricingA3": "Vi aksepterer alle større kredittkort via Stripe og iranske betalingsgatewayer (Zarinpal, Zibal, NextPay, IDPay, PayPing).",
-      "pricingQ4": "Is there a money-back guarantee?",
-      "pricingA4": "Yes! If you are not satisfied within the first 14 days, we will issue a full refund. No questions asked."
+      "pricingQ4": "Har dere pengene-tilbake-garanti?",
+      "pricingA4": "Ja! Hvis du ikke er fornøyd innen de første 14 dagene, gir vi full refusjon."
     }
   },
   "auth": {
@@ -548,7 +548,7 @@
       "completed": "Fullført",
       "text": "Tekst",
       "video": "Video",
-      "quiz": "Quiz"
+      "quiz": "Prøve"
     },
     "quiz": {
       "loading": "Laster quiz...",
@@ -712,17 +712,17 @@
     "achievements": "Prestasjoner",
     "noAchievements": "Ingen prestasjoner",
     "invalidPgnFile": "Ugyldig PGN-fil",
-    "pending": "Pending",
-    "submitted": "Submitted",
-    "reviewed": "Reviewed",
-    "homework": "Homework",
-    "noHomework": "No homework yet.",
+    "pending": "Venter",
+    "submitted": "Sendt inn",
+    "reviewed": "Gjennomgått",
+    "homework": "Hjemmelekser",
+    "noHomework": "Ingen hjemmelekser ennå.",
     "submitHomework": "Lever Oppgave",
-    "pgnNotation": "PGN Notation",
-    "notes": "Notes",
+    "pgnNotation": "PGN-notasjon",
+    "notes": "Notater",
     "challenges": "Ukentlige Utfordringer",
-    "challengesDesc": "Complete challenges to earn bonus XP and badges.",
-    "challengeCompleted": "Completed! +{xp} XP earned",
+    "challengesDesc": "Fullfør utfordringer for å tjene bonus-EP og merker.",
+    "challengeCompleted": "Fullført! +{xp} EP opptjent",
     "daysLeft": "{count} d igjen",
     "logProgress": "Loggfør fremgang",
     "noChallenges": "Ingen aktive utfordringer denne uken. Kom tilbake snart!",
@@ -747,8 +747,8 @@
     "coach": "Trener",
     "type": "Type",
     "statusLabel": "Status",
-    "homeworkCoachDesc": "Review and assign homework to your students.",
-    "homeworkStudentDesc": "View and submit your assigned homework."
+    "homeworkCoachDesc": "Gjennomgå og tildel hjemmelekser til elevene dine.",
+    "homeworkStudentDesc": "Se og send inn tildelte hjemmelekser."
   },
   "groups": {
     "title": "Grupper",
@@ -822,7 +822,7 @@
       "lessonType": {
         "text": "Tekst",
         "video": "Video",
-        "quiz": "Quiz"
+        "quiz": "Prøve"
       },
       "lessonContent": "Innhold",
       "lessonVideoUrl": "Video-URL",
@@ -871,11 +871,11 @@
       "titleRequired": "Tittel kreves",
       "idAndContentRequired": "ID og innhold kreves"
     },
-    "anonymous": "Unknown",
-    "active": "Active",
-    "inactive": "Inactive",
-    "banned": "Banned",
-    "demote": "Demote",
+    "anonymous": "Ukjent",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "banned": "Utstengt",
+    "demote": "Degrader",
     "makeAdmin": "Gjør til Admin"
   },
   "puzzles": {
@@ -922,9 +922,9 @@
       "idRequired": "ID kreves",
       "contentRequired": "Innhold kreves"
     },
-    "notFound": "Page not found",
-    "pageNotFoundDesc": "The page you are looking for does not exist.",
-    "goBackHome": "Go back home"
+    "notFound": "Siden ble ikke funnet",
+    "pageNotFoundDesc": "Siden du leter etter finnes ikke.",
+    "goBackHome": "Gå tilbake til startsiden"
   },
   "chess": {
     "undo": "Angre",
@@ -1106,14 +1106,14 @@
         "intro": "Introduksjon til Sjakkbrettet",
         "pieceMoves": "Hvordan Brikkene Beveger Seg",
         "checkmates": "Grunnleggende Sjakkmatter",
-        "forks": "Forks",
-        "pins": "Pins",
-        "skewers": "Skewers"
+        "forks": "Gafler",
+        "pins": "Bindinger",
+        "skewers": "Spidd"
       }
     },
     "intermediateStrategy": {
       "title": "Middels Strategi",
-      "description": "Deepen your understanding of positional chess, pawn structures, and strategic concepts.",
+      "description": "Utdyp din forståelse av posisjonell sjakk, bondestrukturer og strategiske konsepter.",
       "modules": {
         "positional": "Posisjonelle Fundamenter"
       },
