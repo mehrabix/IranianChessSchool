@@ -1,3 +1,5 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
-Sitemap: https://iranian-chess-school.vercel.app/sitemap.xml
+
+Sitemap: https://iranianchessschool.com/sitemap.xml

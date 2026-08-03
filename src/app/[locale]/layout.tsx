@@ -9,6 +9,21 @@ export async function generateMetadata() {
   const t = await getTranslations('nav');
   return {
     title: `${t('brand')} — Master the Game, Think Deeper`,
+    description: 'Structured chess training for all levels. Courses, puzzles, game analysis, live coaching, and a supportive community.',
+    keywords: 'chess, learn chess, chess school, chess training, chess puzzles, chess analysis, stockfish',
+    openGraph: {
+      title: `${t('brand')} — Master the Game, Think Deeper`,
+      description: 'Structured chess training for all levels.',
+      type: 'website',
+      locale: 'en_US',
+      siteName: t('brand'),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${t('brand')} — Master the Game, Think Deeper`,
+      description: 'Structured chess training for all levels.',
+    },
+    robots: { index: true, follow: true },
   };
 }
 
